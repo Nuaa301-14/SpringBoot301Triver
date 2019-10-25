@@ -29,7 +29,7 @@ public class HotelServiceImpl implements HotelService {
     }
 
     @Override
-    public int insetHotel(Hotel hotel) {
+    public int insertHotel(Hotel hotel) {
         return 0;
     }
 

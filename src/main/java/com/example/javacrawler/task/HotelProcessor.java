@@ -143,7 +143,7 @@ public class HotelProcessor implements PageProcessor {
 //                hotelProcessor.hotelService.updateHotel(hotel);
 //            } else {
 //                // 不存在就添加到数据库中
-//                hotelProcessor.hotelService.insetHotel(hotel);
+//                hotelProcessor.hotelService.insertHotel(hotel);
 //            }
         }
     }
@@ -189,13 +189,13 @@ public class HotelProcessor implements PageProcessor {
         return site;
     }
 
-    @Scheduled(initialDelay = 1000, fixedDelay = 10000)
-    public void process() {
+//    @Scheduled(initialDelay = 1000, fixedDelay = 10000)
+    public void CrawlHotel() {
         System.setProperty("selenuim_config", "C:\\Users\\Administrator\\IdeaProjects\\javacrawler\\src\\main\\resources\\config.ini");
         Spider.create(new HotelProcessor())
                 .addUrl(url)
                 .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(1000))
-                .thread(2)
+                .thread(3)
 //                .runAsync();
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))
 //                .thread(10)

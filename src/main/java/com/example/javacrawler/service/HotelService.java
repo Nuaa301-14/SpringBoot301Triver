@@ -8,7 +8,7 @@ public interface HotelService {
 
     void updateHotel(Hotel hotel);
 
-    int insetHotel(Hotel hotel);
+    int insertHotel(Hotel hotel);
 
     Hotel getHotel(String hotelId);
 }
