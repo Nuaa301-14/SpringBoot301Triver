@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Spider;
+import us.codecraft.webmagic.downloader.selenium.SeleniumDownloader;
 import us.codecraft.webmagic.processor.PageProcessor;
 import us.codecraft.webmagic.scheduler.BloomFilterDuplicateRemover;
 import us.codecraft.webmagic.scheduler.QueueScheduler;
@@ -25,7 +26,7 @@ public class HotelProcessor implements PageProcessor {
     @Autowired
     private HotelService hotelService;
 
-    private int maxNumber = 1;
+    private int maxNumber = 5;
     private String url = "https://hotels.ctrip.com/hotel/shanghai2";
 
     private static HotelProcessor hotelProcessor;
@@ -63,6 +64,7 @@ public class HotelProcessor implements PageProcessor {
                 if (num > current && num <= maxNumber) {
                     String s = selectable.links().toString();
                     page.addTargetRequest(selectable.links().toString());
+                    System.out.println("添加 ： " + selectable.links().toString());
                 }
             }
             this.saveHotelInfo(page, selectableList);
@@ -119,14 +121,19 @@ public class HotelProcessor implements PageProcessor {
             //爬取用户推荐度
             String recommend = Jsoup.parse(html).select("div.hotelitem_judge_box a span.total_judgement_score")
                     .first().getElementsByAttribute("style").text();
-            System.out.println(recommend);
+//            System.out.println(recommend);
 
             //获取酒店的起价
-            Elements select = Jsoup.parse(html).select("li.hotel_price_icon");
-//            System.out.println(price);
+            String priceStr = Jsoup.parse(html).select("li.hotel_price_icon div.hotel_price span").text();
+            int price = Integer.parseInt(priceStr);
 
             //获得酒店的详情url
-            String url="";
+            String url = "";
+            url = Jsoup.parse(html).select("li.hotel_item_name a").attr("href");
+            if (!url.contains("https://")) {
+                url = new StringBuilder().append("https://hotels.ctrip.com").append(url).toString();
+            }
+//            System.out.println(url);
 
 
             System.out.println(hotel.toString());
@@ -147,7 +154,7 @@ public class HotelProcessor implements PageProcessor {
      * @param hotelName
      */
     private String copeName(String hotelName) {
-        if (hotelName.length()<2){
+        if (hotelName.length() < 2) {
             return hotelName;
         }
         char c0 = hotelName.charAt(0);
@@ -159,7 +166,7 @@ public class HotelProcessor implements PageProcessor {
         if (Character.isDigit(c1)) {
             begin += 1;
         }
-        return hotelName.substring(begin,hotelName.length());
+        return hotelName.substring(begin, hotelName.length());
     }
 
     /**
@@ -184,8 +191,12 @@ public class HotelProcessor implements PageProcessor {
 
     @Scheduled(initialDelay = 1000, fixedDelay = 10000)
     public void process() {
+        System.setProperty("selenuim_config", "C:\\Users\\Administrator\\IdeaProjects\\javacrawler\\src\\main\\resources\\config.ini");
         Spider.create(new HotelProcessor())
                 .addUrl(url)
+                .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(1000))
+                .thread(2)
+//                .runAsync();
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))
 //                .thread(10)
                 .run();
