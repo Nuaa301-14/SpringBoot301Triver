@@ -1,6 +1,6 @@
 package com.example.javacrawler.entity;
 
-public class Area {
+public class InternationalArea {
 
     private int id;
 
@@ -8,9 +8,9 @@ public class Area {
 
     private String city_name;
 
-    private String head_pinyin;
+    private String english_name;
 
-    private String pinyin;
+    private String country;
 
     private String url;
 
@@ -38,20 +38,20 @@ public class Area {
         this.city_name = city_name;
     }
 
-    public String getHead_pinyin() {
-        return head_pinyin;
+    public String getEnglish_name() {
+        return english_name;
     }
 
-    public void setHead_pinyin(String head_pinyin) {
-        this.head_pinyin = head_pinyin;
+    public void setEnglish_name(String english_name) {
+        this.english_name = english_name;
     }
 
-    public String getPinyin() {
-        return pinyin;
+    public String getCountry() {
+        return country;
     }
 
-    public void setPinyin(String pinyin) {
-        this.pinyin = pinyin;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public String getUrl() {
@@ -64,12 +64,12 @@ public class Area {
 
     @Override
     public String toString() {
-        return "Area{" +
+        return "InternationalArea{" +
                 "id=" + id +
                 ", city_id=" + city_id +
                 ", city_name='" + city_name + '\'' +
-                ", head_pinyin='" + head_pinyin + '\'' +
-                ", pinyin='" + pinyin + '\'' +
+                ", english_name='" + english_name + '\'' +
+                ", country='" + country + '\'' +
                 ", url='" + url + '\'' +
                 '}';
     }

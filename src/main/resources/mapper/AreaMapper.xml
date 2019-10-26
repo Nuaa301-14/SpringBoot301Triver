@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.javacrawler.mapper.AreaMapper">
+    <select id="getArea" resultType="com.example.javacrawler.entity.Area">
+        select * from ctrip_hotel_city
+        where city_id=#{param1}
+    </select>
+
+    <select id="getAreaByName" resultType="com.example.javacrawler.entity.Area">
+        select * from ctrip_hotel_city
+        where city_name=#{param1}
+    </select>
+
+    <insert id="insertArea" parameterType="com.example.javacrawler.entity.Area">
+        insert into ctrip_hotel_city
+            (city_id,city_name,head_pinyin,pinyin,url)
+        values (#{city_id},#{city_name},#{head_pinyin},#{pinyin},#{url})
+    </insert>
+</mapper>

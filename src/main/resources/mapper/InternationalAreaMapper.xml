@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.javacrawler.mapper.InternationalAreaMapper">
+
+    <select id="getInternationalArea" resultType="com.example.javacrawler.entity.InternationalArea">
+        select * from hotel_international
+        where city_id=#{param1}
+    </select>
+
+    <select id="getInternationalAreaByName" resultType="com.example.javacrawler.entity.InternationalArea">
+        select * from hotel_international
+        where city_name=#{param1}
+    </select>
+
+    <insert id="insertInternationalArea" parameterType="com.example.javacrawler.entity.InternationalArea">
+        insert into hotel_international
+            (city_id,city_name,english_name,country,url)
+        values (#{city_id},#{city_name},#{english_name},#{country},#{url})
+    </insert>
+
+
+</mapper>

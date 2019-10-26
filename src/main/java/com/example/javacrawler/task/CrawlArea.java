@@ -4,6 +4,7 @@ import com.example.javacrawler.entity.Area;
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import us.codecraft.webmagic.Page;
@@ -42,7 +43,7 @@ public class CrawlArea implements PageProcessor {
                 List<Selectable> a = dd.get(i).css("a").nodes();
                 for (Selectable selectable :
                         a) {
-                    Area area=new Area();
+                    Area area = new Area();
 
                     Document document = Jsoup.parse(selectable.toString());
                     String city_name = document.text();
@@ -53,7 +54,7 @@ public class CrawlArea implements PageProcessor {
                     //获得上面url中的数字
                     String city_id = StringUtils.getDigits(href);
                     String pinyin = city.replace(city_id, "");
-                    String url= new StringBuilder().append("https://hotels.ctrip.com").append(href).toString();
+                    String url = new StringBuilder().append("https://hotels.ctrip.com").append(href).toString();
 
                     area.setCity_id(Integer.parseInt(city_id));
                     area.setCity_name(city_name);
@@ -67,7 +68,7 @@ public class CrawlArea implements PageProcessor {
                 }
 
             }
-            page.putField("areaList",areaList);
+            page.putField("areaList", areaList);
         }
 
         System.out.println(12);
@@ -86,7 +87,10 @@ public class CrawlArea implements PageProcessor {
         return site;
     }
 
-    @Scheduled(initialDelay = 1000, fixedDelay = 1000 * 60)
+    @Autowired
+    private MybatisPipeline mybatisPipeline;
+
+//    @Scheduled(initialDelay = 1000, fixedDelay = 1000 * 60 * 10)
     public void crawlArea() {
         System.setProperty("selenuim_config", "C:\\Users\\Administrator\\IdeaProjects\\javacrawler\\src\\main\\resources\\config.ini");
         Spider.create(new CrawlArea())
@@ -95,7 +99,8 @@ public class CrawlArea implements PageProcessor {
                 .thread(3)
 //                .runAsync();
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))
-//                .thread(10)
+////                .thread(10)
+                .addPipeline(this.mybatisPipeline)
                 .run();
     }
 }
