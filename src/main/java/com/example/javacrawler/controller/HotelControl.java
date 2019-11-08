@@ -4,7 +4,6 @@ import com.example.javacrawler.entity.Hotel;
 import com.example.javacrawler.service.AreaService;
 import com.example.javacrawler.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +17,8 @@ public class HotelControl {
     private AreaService areaService;
 
 
+
+
     @RequestMapping(value = "/hello")
     public String hello(){
         Hotel hotel = hotelService.getHotel("123456");
@@ -28,8 +29,7 @@ public class HotelControl {
     }
     @RequestMapping(value = "/hello1")
     public String hello1(){
-        System.out.println(areaService.getArea(123456).toString());
-        return areaService.getArea(16).toString();
+        return "ddd";
     }
 
 }

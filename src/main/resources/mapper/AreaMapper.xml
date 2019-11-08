@@ -13,7 +13,17 @@
 
     <insert id="insertArea" parameterType="com.example.javacrawler.entity.Area">
         insert into ctrip_hotel_city
-            (city_id,city_name,head_pinyin,pinyin,url)
-        values (#{city_id},#{city_name},#{head_pinyin},#{pinyin},#{url})
+            (city_id,city_name,head_pinyin,pinyin,url,resource)
+        values (#{city_id},#{city_name},#{head_pinyin},#{pinyin},#{url},#{resource})
     </insert>
+
+    <select id="getByCity_nameOrPinyin" resultType="com.example.javacrawler.entity.Area">
+        select * from ctrip_hotel_city WHERE city_name=#{param1} or pinyin=#{param1};
+    </select>
+
+    <update id="updateAll">
+        update ctrip_hotel_city
+        set resource=#{param1}
+    </update>
+
 </mapper>

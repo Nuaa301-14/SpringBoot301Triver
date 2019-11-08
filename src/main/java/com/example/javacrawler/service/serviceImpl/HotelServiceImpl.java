@@ -25,12 +25,12 @@ public class HotelServiceImpl implements HotelService {
 
     @Override
     public void updateHotel(Hotel hotel) {
-
+        hotelMapper.updateHotel(hotel);
     }
 
     @Override
     public int insertHotel(Hotel hotel) {
-        return 0;
+        return hotelMapper.insetHotel(hotel);
     }
 
     @Override

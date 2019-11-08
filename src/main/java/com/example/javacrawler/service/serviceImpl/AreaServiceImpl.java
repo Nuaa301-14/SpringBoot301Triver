@@ -36,4 +36,14 @@ public class AreaServiceImpl implements AreaService {
     public void deleteArea(int city_id, String city_name) {
         areaMapper.deleteArea(city_id,city_name);
     }
+
+    @Override
+    public Area getByCity_nameOrPinyin(String City_nameOrPinyin) {
+        return areaMapper.getByCity_nameOrPinyin(City_nameOrPinyin);
+    }
+
+    @Override
+    public int updateAll(String resource) {
+        return areaMapper.updateAll(resource);
+    }
 }

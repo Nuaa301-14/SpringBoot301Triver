@@ -10,4 +10,9 @@ import java.util.Map;
 public interface HotelMapper {
 
     Hotel select(@Param("param")Map param);
+
+
+    void updateHotel(Hotel hotel);
+
+    int insetHotel(Hotel hotel);
 }

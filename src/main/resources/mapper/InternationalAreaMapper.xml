@@ -14,9 +14,17 @@
 
     <insert id="insertInternationalArea" parameterType="com.example.javacrawler.entity.InternationalArea">
         insert into hotel_international
-            (city_id,city_name,english_name,country,url)
-        values (#{city_id},#{city_name},#{english_name},#{country},#{url})
+            (city_id,city_name,english_name,country,url,head)
+        values (#{city_id},#{city_name},#{english_name},#{country},#{url},#{head})
     </insert>
 
-
+    <update id="updateInternationalArea" parameterType="com.example.javacrawler.entity.InternationalArea">
+        update hotel_international
+        set city_name=#{city_name},
+            english_name=#{english_name},
+            country=#{country},
+            url=#{url},
+            head=#{head}
+        where city_id=#{city_id}
+    </update>
 </mapper>

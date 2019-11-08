@@ -14,4 +14,8 @@ public interface AreaService {
     void insertArea(Area area);
 
     void deleteArea(int city_id,String city_name);
+
+    Area getByCity_nameOrPinyin(String City_nameOrPinyin);
+
+    int updateAll(String resource);
 }

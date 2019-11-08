@@ -1,4 +1,4 @@
-package com.example.javacrawler.task;
+package com.example.javacrawler.task.pipeline;
 
 import com.example.javacrawler.entity.Area;
 import com.example.javacrawler.service.AreaService;
@@ -26,9 +26,6 @@ public class MybatisPipeline implements Pipeline {
             //将数据保存到数据库中
             for (Area area :
                     areaList) {
-                if (area.getHead_pinyin().equals("Z")){
-                    System.out.println("Z");
-                }
                 if (areaService.getArea(area.getCity_id())==null){
                     // 进行插入
                     areaService.insertArea(area);

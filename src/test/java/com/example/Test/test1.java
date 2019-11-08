@@ -32,6 +32,18 @@ public class test1 {
                 s) {
             System.out.println(s1);
         }
+        String t1 = "2精选 豪枫雅致酒店(上海国际旅游度假区唐镇地铁站店) sss";
+        
+    }
+    @Test
+    public void test4(){
+        String html="<html>\n" +
+                " <head></head>\n" +
+                " <body>\n" +
+                "  <input type=\"text\" class=\"input_txt input_txtShort\" value=\"北京\" _lastvalue=\"北京\" autocomplete=\"on\" maxlength=\"100\" name=\"cityName\" id=\"txtCity\" _cqnotice=\"中文/拼音/英文\">\n" +
+                " </body>\n" +
+                "</html>";
+        System.out.println(Jsoup.parse(html).getElementsByTag("input").attr("value"));
     }
 
 }

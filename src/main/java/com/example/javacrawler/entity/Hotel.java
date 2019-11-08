@@ -24,6 +24,12 @@ public class Hotel {
 
     private String TargetUrl;
 
+    private int Price;
+
+    private String area;
+
+    private String Recommend;
+
     public String getHotelName() {
         return HotelName;
     }
@@ -112,15 +118,47 @@ public class Hotel {
         TargetUrl = targetUrl;
     }
 
+    public int getPrice() {
+        return Price;
+    }
+
+    public void setPrice(int price) {
+        Price = price;
+    }
+
+    public String getRecommend() {
+        return Recommend;
+    }
+
+    public void setRecommend(String recommend) {
+        Recommend = recommend;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
     @Override
     public String toString() {
         return "Hotel{" +
                 "HotelName='" + HotelName + '\'' +
                 ", HotelCountry='" + HotelCountry + '\'' +
                 ", HotelLocation='" + HotelLocation + '\'' +
+                ", EnglishName='" + EnglishName + '\'' +
                 ", Comprehensive=" + Comprehensive +
                 ", CommentNumber=" + CommentNumber +
+                ", Rank=" + Rank +
                 ", HotelId='" + HotelId + '\'' +
+                ", Source='" + Source + '\'' +
+                ", Introduce='" + Introduce + '\'' +
+                ", TargetUrl='" + TargetUrl + '\'' +
+                ", Price=" + Price +
+                ", area='" + area + '\'' +
+                ", Recommend='" + Recommend + '\'' +
                 '}';
     }
 }

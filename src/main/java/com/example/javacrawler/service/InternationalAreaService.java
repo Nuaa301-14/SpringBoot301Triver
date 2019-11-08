@@ -14,4 +14,6 @@ public interface InternationalAreaService {
 
     int deleteInternationalArea(int city_id, String city_name);
 
+
+
 }

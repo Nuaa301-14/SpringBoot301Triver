@@ -41,5 +41,17 @@ public interface AreaMapper {
      */
     int deleteArea(int city_id,String city_name);
 
+    /**
+     * 搜索数据库
+     * @param City_nameOrPinyin
+     * @return
+     */
+    Area getByCity_nameOrPinyin(String City_nameOrPinyin);
 
+    /**
+     * 更新来源
+     * @param resource
+     * @return
+     */
+    int updateAll(String resource);
 }

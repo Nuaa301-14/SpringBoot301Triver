@@ -14,6 +14,8 @@ public class Area {
 
     private String url;
 
+    private String resource;
+
     public int getId() {
         return id;
     }
@@ -62,6 +64,14 @@ public class Area {
         this.url = url;
     }
 
+    public String getResource() {
+        return resource;
+    }
+
+    public void setResource(String resource) {
+        this.resource = resource;
+    }
+
     @Override
     public String toString() {
         return "Area{" +
@@ -71,6 +81,7 @@ public class Area {
                 ", head_pinyin='" + head_pinyin + '\'' +
                 ", pinyin='" + pinyin + '\'' +
                 ", url='" + url + '\'' +
+                ", resource='" + resource + '\'' +
                 '}';
     }
 }

@@ -77,75 +77,7 @@ public class HotelProcessor implements PageProcessor {
      * @param page
      */
     private void saveHotelInfo(Page page, List<Selectable> selectableList) {
-        for (Selectable selectable :
-                selectableList) {
-            Hotel hotel = new Hotel();
-            String html = selectable.toString();
-//            hotel.setHotelId("123456");
-            String hotelId = Jsoup.parse(html).select("div.hotel_new_list")
-                    .first().attr("id");
-            hotel.setHotelId(hotelId);
 
-
-            String[] split = Jsoup.parse(html).select("li.hotel_item_name h2.hotel_name")
-                    .first().getElementsByTag("a").text()
-                    .split(" ");
-            String hotelName = split[split.length - 1];
-            hotel.setHotelName(this.copeName(hotelName));
-
-
-            hotel.setHotelCountry("China");
-
-
-            String[] s = Jsoup.parse(html).select("p.hotel_item_htladdress").
-                    first().text().split(" ");
-            StringBuilder hotelLocation = new StringBuilder();
-            for (int i = 0; i < s.length - 1; i++) {
-                hotelLocation.append(s[i]);
-            }
-            hotel.setHotelLocation(String.valueOf(hotelLocation));
-
-
-            String text = Jsoup.parse(html).select("div.hotelitem_judge_box a span.hotel_value")
-                    .first().text();
-            float comprehensive = Float.parseFloat(text);
-            hotel.setComprehensive(comprehensive);
-
-            String comment = Jsoup.parse(html).select("div.hotelitem_judge_box a span.hotel_judgement")
-                    .first().getElementsByAttribute("style")
-                    .text();
-            System.out.println(comment);
-            hotel.setCommentNumber(Integer.parseInt(comment));
-
-
-            //爬取用户推荐度
-            String recommend = Jsoup.parse(html).select("div.hotelitem_judge_box a span.total_judgement_score")
-                    .first().getElementsByAttribute("style").text();
-//            System.out.println(recommend);
-
-            //获取酒店的起价
-            String priceStr = Jsoup.parse(html).select("li.hotel_price_icon div.hotel_price span").text();
-            int price = Integer.parseInt(priceStr);
-
-            //获得酒店的详情url
-            String url = "";
-            url = Jsoup.parse(html).select("li.hotel_item_name a").attr("href");
-            if (!url.contains("https://")) {
-                url = new StringBuilder().append("https://hotels.ctrip.com").append(url).toString();
-            }
-//            System.out.println(url);
-
-
-            System.out.println(hotel.toString());
-
-//            if (hotelProcessor.hotelService.isExist(hotel)) {
-//                // 如果存在进行更新
-//                hotelProcessor.hotelService.updateHotel(hotel);
-//            } else {
-//                // 不存在就添加到数据库中
-//                hotelProcessor.hotelService.insertHotel(hotel);
-//            }
-        }
     }
 
     /**
@@ -200,7 +132,6 @@ public class HotelProcessor implements PageProcessor {
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))
 //                .thread(10)
                 .run();
-//        System.out.println("sdaf");
 
     }
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <!-- ${result} 动态字-->
+    <p th:text="'' + ${result}"/>
+</div>
+<!-- @{/login} 会直接访问 项目下的login接口-->
+<h4 style="color: red" th:text=" ${msg}"></h4>
+<form th:action="@{login.html}" method="post">
+    <div>
+        <input id="user_name" name="userName" type="text" placeholder="用户名" aria-describedby="basic-addon1"/>
+    </div>
+    <br/>
+    <div>
+        <input id="password" name="password" type="password" placeholder="密码" aria-describedby="basic-addon2"/>
+    </div>
+    <br/>
+    <button type="submit" style="width:190px;">登 录</button>
+</form>
+
+<a href="/crawlInternationalArea">爬取信息</a>
+
+<form th:action="@{/crawl}" method="post">
+    <div>
+        <input id="name" name="name" type="text" placeholder="输入地区" aria-describedby="basic-addon1"/>
+    </div>
+    <br/>
+    <button type="submit" style="width:190px;">登 录</button>
+</form>
+
+<form th:action="@{/login}" method="post">
+    <div>
+        <input id="username" name="userName" type="text" placeholder="用户名" aria-describedby="basic-addon1"/>
+    </div>
+    <br/>
+    <div>
+        <input id="passwd" name="password" type="password" placeholder="密码" aria-describedby="basic-addon2"/>
+    </div>
+    <br/>
+    <button type="submit" style="width:190px;">登 录</button>
+    <a href="/login">shiro</a>
+</form>
+</body>
+</html>

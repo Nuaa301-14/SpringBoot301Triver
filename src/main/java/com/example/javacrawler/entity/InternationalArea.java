@@ -14,6 +14,8 @@ public class InternationalArea {
 
     private String url;
 
+    private String head;
+
     public int getId() {
         return id;
     }
@@ -62,6 +64,14 @@ public class InternationalArea {
         this.url = url;
     }
 
+    public String getHead() {
+        return head;
+    }
+
+    public void setHead(String head) {
+        this.head = head;
+    }
+
     @Override
     public String toString() {
         return "InternationalArea{" +
@@ -71,6 +81,7 @@ public class InternationalArea {
                 ", english_name='" + english_name + '\'' +
                 ", country='" + country + '\'' +
                 ", url='" + url + '\'' +
+                ", head='" + head + '\'' +
                 '}';
     }
 }
