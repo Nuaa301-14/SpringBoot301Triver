@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 public class JavacrawlerApplication{
     static {
-        System.setProperty("selenuim_config", "C:\\Users\\Administrator\\IdeaProjects\\javacrawler\\src\\main\\resources\\config.ini");
+        System.setProperty("selenuim_config", "E:\\作业\\软工综合课设\\代码\\src\\main\\resources");
     }
 
     public static void main(String[] args) {
