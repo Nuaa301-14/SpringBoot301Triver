@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.javacrawler.mapper.SpotMapper">
+
+    <select id="select" parameterType="java.util.Map" resultType="com.example.javacrawler.entity.Spot">
+        SELECT * FROM spot
+        <where>
+            <if test="param.spotId!=null">
+                and spotId=#{param.spotId}
+            </if>
+        </where>
+    </select>
+
+    <update id="updateSpot" parameterType="com.example.javacrawler.entity.Spot">
+        update spot
+        set spotName=#{SpotName},
+            spotCountry=#{SpotCountry},
+            spotLocation=#{SpotLocation},
+            spotScore=#{SpotScore},
+            soldNumber=#{SoldNumber},
+            spotPrice=#{SpotPrice},
+            recommend=#{Recommend},
+            source=#{Source},
+            url=#{SpotUrl},
+            area=#{SpotArea},
+            introduce=#{Introduce}
+        where spotId=#{SpotId}
+    </update>
+
+    <insert id="insertSpot" parameterType="com.example.javacrawler.entity.Spot">
+        insert into spot
+            (spotName,spotId,spotCountry,spotLocation,spotScore,soldNumber,spotPrice,recommend,source,url,area,introduce)
+        values (#{SpotName},#{SpotId},#{SpotCountry},#{SpotLocation},
+        #{SpotScore},#{SoldNumber},#{SpotPrice},#{Recommend},#{Source},#{SpotUrl},#{SpotArea},#{Introduce})
+    </insert>
+</mapper>
