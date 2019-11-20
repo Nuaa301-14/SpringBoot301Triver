@@ -1,0 +1,7211 @@
+{
+  "hotCityList": [
+    {
+      "cityId": 101,
+      "cityNameCn": "北京",
+      "cityNameEn": "beijing"
+    },
+    {
+      "cityId": 201,
+      "cityNameCn": "上海",
+      "cityNameEn": "shanghai"
+    },
+    {
+      "cityId": 2001,
+      "cityNameCn": "广州",
+      "cityNameEn": "guangzhou"
+    },
+    {
+      "cityId": 2003,
+      "cityNameCn": "深圳",
+      "cityNameEn": "shenzhen"
+    },
+    {
+      "cityId": 2301,
+      "cityNameCn": "成都",
+      "cityNameEn": "chengdu"
+    },
+    {
+      "cityId": 1201,
+      "cityNameCn": "杭州",
+      "cityNameEn": "hangzhou"
+    },
+    {
+      "cityId": 2701,
+      "cityNameCn": "西安",
+      "cityNameEn": "xian"
+    },
+    {
+      "cityId": 401,
+      "cityNameCn": "重庆",
+      "cityNameEn": "chongqing"
+    },
+    {
+      "cityId": 1801,
+      "cityNameCn": "武汉",
+      "cityNameEn": "wuhan"
+    },
+    {
+      "cityId": 1901,
+      "cityNameCn": "长沙",
+      "cityNameEn": "changsha"
+    },
+    {
+      "cityId": 1101,
+      "cityNameCn": "南京",
+      "cityNameEn": "nanjing"
+    },
+    {
+      "cityId": 1401,
+      "cityNameCn": "厦门",
+      "cityNameEn": "xiamen"
+    },
+    {
+      "cityId": 2102,
+      "cityNameCn": "南宁",
+      "cityNameEn": "nanning"
+    },
+    {
+      "cityId": 2007,
+      "cityNameCn": "东莞",
+      "cityNameEn": "dongguan"
+    },
+    {
+      "cityId": 1601,
+      "cityNameCn": "青岛",
+      "cityNameEn": "qingdao"
+    },
+    {
+      "cityId": 301,
+      "cityNameCn": "天津",
+      "cityNameEn": "tianjin"
+    },
+    {
+      "cityId": 2501,
+      "cityNameCn": "昆明",
+      "cityNameEn": "kunming"
+    },
+    {
+      "cityId": 1102,
+      "cityNameCn": "苏州",
+      "cityNameEn": "suzhou"
+    },
+    {
+      "cityId": 2005,
+      "cityNameCn": "佛山",
+      "cityNameEn": "foshan"
+    },
+    {
+      "cityId": 1501,
+      "cityNameCn": "南昌",
+      "cityNameEn": "nanchang"
+    },
+    {
+      "cityId": 802,
+      "cityNameCn": "沈阳",
+      "cityNameEn": "shenyang"
+    },
+    {
+      "cityId": 2401,
+      "cityNameCn": "贵阳",
+      "cityNameEn": "guiyang"
+    },
+    {
+      "cityId": 1301,
+      "cityNameCn": "合肥",
+      "cityNameEn": "hefei"
+    },
+    {
+      "cityId": 1602,
+      "cityNameCn": "济南",
+      "cityNameEn": "jinan"
+    },
+    {
+      "cityId": 1701,
+      "cityNameCn": "郑州",
+      "cityNameEn": "zhengzhou"
+    },
+    {
+      "cityId": 801,
+      "cityNameCn": "大连",
+      "cityNameEn": "dalian"
+    },
+    {
+      "cityId": 2010,
+      "cityNameCn": "惠州",
+      "cityNameEn": "huizhou"
+    },
+    {
+      "cityId": 1402,
+      "cityNameCn": "福州",
+      "cityNameEn": "fuzhou"
+    },
+    {
+      "cityId": 601,
+      "cityNameCn": "太原",
+      "cityNameEn": "taiyuan"
+    },
+    {
+      "cityId": 1001,
+      "cityNameCn": "哈尔滨",
+      "cityNameEn": "harbin"
+    }
+  ],
+  "hotelCityList": [
+    {
+      "cityId": 2405,
+      "cityNameCn": "安顺",
+      "cityNameEn": "anshun"
+    },
+    {
+      "cityId": 12390007,
+      "cityNameCn": "安吉县",
+      "cityNameEn": "anji"
+    },
+    {
+      "cityId": 1716,
+      "cityNameCn": "安阳",
+      "cityNameEn": "anyang"
+    },
+    {
+      "cityId": 803,
+      "cityNameCn": "鞍山",
+      "cityNameEn": "anshan"
+    },
+    {
+      "cityId": 1303,
+      "cityNameCn": "安庆",
+      "cityNameEn": "anqing"
+    },
+    {
+      "cityId": 7320006,
+      "cityNameCn": "阿尔山",
+      "cityNameEn": "aershan"
+    },
+    {
+      "cityId": 2714,
+      "cityNameCn": "安康",
+      "cityNameEn": "ankang"
+    },
+    {
+      "cityId": 3109,
+      "cityNameCn": "阿克苏地区",
+      "cityNameEn": "akesu"
+    },
+    {
+      "cityId": 2395,
+      "cityNameCn": "阿坝藏族羌族自治州",
+      "cityNameEn": "aba"
+    },
+    {
+      "cityId": 16030013,
+      "cityNameCn": "安丘",
+      "cityNameEn": "anqiu"
+    },
+    {
+      "cityId": 3118,
+      "cityNameCn": "阿勒泰地区",
+      "cityNameEn": "aletai"
+    },
+    {
+      "cityId": 25010006,
+      "cityNameCn": "安宁",
+      "cityNameEn": "anning"
+    },
+    {
+      "cityId": 716,
+      "cityNameCn": "阿拉善盟",
+      "cityNameEn": "alashan"
+    },
+    {
+      "cityId": 14030008,
+      "cityNameCn": "安溪县",
+      "cityNameEn": "anxi"
+    },
+    {
+      "cityId": 5140009,
+      "cityNameCn": "安平县",
+      "cityNameEn": "anping"
+    },
+    {
+      "cityId": 18220005,
+      "cityNameCn": "安陆",
+      "cityNameEn": "anlu"
+    },
+    {
+      "cityId": 5120047,
+      "cityNameCn": "安新县",
+      "cityNameEn": "anxin"
+    },
+    {
+      "cityId": 5120041,
+      "cityNameCn": "安国",
+      "cityNameEn": "anguo"
+    },
+    {
+      "cityId": 9050002,
+      "cityNameCn": "安图县",
+      "cityNameEn": "antu"
+    },
+    {
+      "cityId": 2611,
+      "cityNameCn": "阿里地区",
+      "cityNameEn": "ali"
+    },
+    {
+      "cityId": 31300000,
+      "cityNameCn": "阿拉尔",
+      "cityNameEn": "alaershi"
+    },
+    {
+      "cityId": 55020001,
+      "cityNameCn": "阿合奇县",
+      "cityNameEn": "aheqi"
+    },
+    {
+      "cityId": 15160013,
+      "cityNameCn": "安远县",
+      "cityNameEn": "anyuan"
+    },
+    {
+      "cityId": 19070013,
+      "cityNameCn": "安仁县",
+      "cityNameEn": "anrenxian"
+    },
+    {
+      "cityId": 24310008,
+      "cityNameCn": "安龙县",
+      "cityNameEn": "anlongxian"
+    },
+    {
+      "cityId": 6030024,
+      "cityNameCn": "安泽县",
+      "cityNameEn": "anze"
+    },
+    {
+      "cityId": 101,
+      "cityNameCn": "北京",
+      "cityNameEn": "beijing"
+    },
+    {
+      "cityId": 2103,
+      "cityNameCn": "北海",
+      "cityNameEn": "beihai"
+    },
+    {
+      "cityId": 5030011,
+      "cityNameCn": "北戴河区",
+      "cityNameEn": "beidaihe"
+    },
+    {
+      "cityId": 512,
+      "cityNameCn": "保定",
+      "cityNameEn": "baoding"
+    },
+    {
+      "cityId": 2702,
+      "cityNameCn": "宝鸡",
+      "cityNameEn": "baoji"
+    },
+    {
+      "cityId": 702,
+      "cityNameCn": "包头",
+      "cityNameEn": "baotou"
+    },
+    {
+      "cityId": 2112,
+      "cityNameCn": "百色",
+      "cityNameEn": "baise"
+    },
+    {
+      "cityId": 1305,
+      "cityNameCn": "蚌埠",
+      "cityNameEn": "bengbu"
+    },
+    {
+      "cityId": 1618,
+      "cityNameCn": "滨州",
+      "cityNameEn": "binzhou"
+    },
+    {
+      "cityId": 2414,
+      "cityNameCn": "毕节",
+      "cityNameEn": "bijie"
+    },
+    {
+      "cityId": 805,
+      "cityNameCn": "本溪",
+      "cityNameEn": "benxi"
+    },
+    {
+      "cityId": 1312,
+      "cityNameCn": "亳州",
+      "cityNameEn": "bozhou"
+    },
+    {
+      "cityId": 31180009,
+      "cityNameCn": "布尔津县",
+      "cityNameEn": "buerjin"
+    },
+    {
+      "cityId": 2807,
+      "cityNameCn": "白银",
+      "cityNameEn": "baiyin"
+    },
+    {
+      "cityId": 918,
+      "cityNameCn": "白山",
+      "cityNameEn": "baishan"
+    },
+    {
+      "cityId": 920,
+      "cityNameCn": "白城",
+      "cityNameEn": "baicheng"
+    },
+    {
+      "cityId": 710,
+      "cityNameCn": "巴彦淖尔",
+      "cityNameEn": "bayannur"
+    },
+    {
+      "cityId": 2220,
+      "cityNameCn": "博鳌",
+      "cityNameEn": "boao"
+    },
+    {
+      "cityId": 2333,
+      "cityNameCn": "巴中",
+      "cityNameEn": "bazhong"
+    },
+    {
+      "cityId": 5110013,
+      "cityNameCn": "霸州",
+      "cityNameEn": "bazhou"
+    },
+    {
+      "cityId": 22140004,
+      "cityNameCn": "保亭黎族苗族自治县",
+      "cityNameEn": "baoting"
+    },
+    {
+      "cityId": 541,
+      "cityNameCn": "白洋淀",
+      "cityNameEn": "baiyangdian"
+    },
+    {
+      "cityId": 2510,
+      "cityNameCn": "保山",
+      "cityNameEn": "baoshan"
+    },
+    {
+      "cityId": 31160004,
+      "cityNameCn": "博乐",
+      "cityNameEn": "bole"
+    },
+    {
+      "cityId": 559,
+      "cityNameCn": "白沟镇",
+      "cityNameEn": "baigou"
+    },
+    {
+      "cityId": 11040009,
+      "cityNameCn": "宝应县",
+      "cityNameEn": "baoying"
+    },
+    {
+      "cityId": 3116,
+      "cityNameCn": "博尔塔拉蒙古自治州",
+      "cityNameEn": "boertala"
+    },
+    {
+      "cityId": 3131,
+      "cityNameCn": "巴音郭楞蒙古自治州",
+      "cityNameEn": "bayingolin"
+    },
+    {
+      "cityId": 11160007,
+      "cityNameCn": "滨海县",
+      "cityNameEn": "binhai"
+    },
+    {
+      "cityId": 26030002,
+      "cityNameCn": "波密县",
+      "cityNameEn": "bomi"
+    },
+    {
+      "cityId": 31130003,
+      "cityNameCn": "巴里坤哈萨克自治县",
+      "cityNameEn": "balikun"
+    },
+    {
+      "cityId": 16180005,
+      "cityNameCn": "博兴县",
+      "cityNameEn": "boxing"
+    },
+    {
+      "cityId": 23020007,
+      "cityNameCn": "北川羌族自治县",
+      "cityNameEn": "beichuan"
+    },
+    {
+      "cityId": 5160017,
+      "cityNameCn": "泊头",
+      "cityNameEn": "botou"
+    },
+    {
+      "cityId": 26060007,
+      "cityNameCn": "八宿县",
+      "cityNameEn": "basu"
+    },
+    {
+      "cityId": 17050008,
+      "cityNameCn": "宝丰县",
+      "cityNameEn": "baofeng"
+    },
+    {
+      "cityId": 31360001,
+      "cityNameCn": "北屯",
+      "cityNameEn": "beitunshi"
+    },
+    {
+      "cityId": 4010038,
+      "cityNameCn": "璧山县",
+      "cityNameEn": "bishanxian"
+    },
+    {
+      "cityId": 18110005,
+      "cityNameCn": "巴东县",
+      "cityNameEn": "badong"
+    },
+    {
+      "cityId": 17100008,
+      "cityNameCn": "博爱县",
+      "cityNameEn": "boai"
+    },
+    {
+      "cityId": 18340010,
+      "cityNameCn": "保康县",
+      "cityNameEn": "baokang"
+    },
+    {
+      "cityId": 22280002,
+      "cityNameCn": "白沙黎族自治县",
+      "cityNameEn": "baisha"
+    },
+    {
+      "cityId": 5050031,
+      "cityNameCn": "柏乡县",
+      "cityNameEn": "baixiang"
+    },
+    {
+      "cityId": 31090007,
+      "cityNameCn": "拜城县",
+      "cityNameEn": "baichengxian"
+    },
+    {
+      "cityId": 23060005,
+      "cityNameCn": "宝兴县",
+      "cityNameEn": "baoxing"
+    },
+    {
+      "cityId": 31310008,
+      "cityNameCn": "博湖县",
+      "cityNameEn": "bohu"
+    },
+    {
+      "cityId": 31110012,
+      "cityNameCn": "巴楚县",
+      "cityNameEn": "bachu"
+    },
+    {
+      "cityId": 5120055,
+      "cityNameCn": "博野县",
+      "cityNameEn": "boye"
+    },
+    {
+      "cityId": 21190003,
+      "cityNameCn": "巴马瑶族自治县",
+      "cityNameEn": "bama"
+    },
+    {
+      "cityId": 6060026,
+      "cityNameCn": "保德县",
+      "cityNameEn": "baode"
+    },
+    {
+      "cityId": 2301,
+      "cityNameCn": "成都",
+      "cityNameEn": "chengdu"
+    },
+    {
+      "cityId": 401,
+      "cityNameCn": "重庆",
+      "cityNameEn": "chongqing"
+    },
+    {
+      "cityId": 1901,
+      "cityNameCn": "长沙",
+      "cityNameEn": "changsha"
+    },
+    {
+      "cityId": 901,
+      "cityNameCn": "长春",
+      "cityNameEn": "changchun"
+    },
+    {
+      "cityId": 1103,
+      "cityNameCn": "常州",
+      "cityNameEn": "changzhou"
+    },
+    {
+      "cityId": 502,
+      "cityNameCn": "承德",
+      "cityNameEn": "chengde"
+    },
+    {
+      "cityId": 707,
+      "cityNameCn": "赤峰",
+      "cityNameEn": "chifeng"
+    },
+    {
+      "cityId": 5030013,
+      "cityNameCn": "昌黎县",
+      "cityNameEn": "changli"
+    },
+    {
+      "cityId": 1910,
+      "cityNameCn": "常德",
+      "cityNameEn": "changde"
+    },
+    {
+      "cityId": 907,
+      "cityNameCn": "长白山池北",
+      "cityNameEn": "chibei"
+    },
+    {
+      "cityId": 1907,
+      "cityNameCn": "郴州",
+      "cityNameEn": "chenzhou"
+    },
+    {
+      "cityId": 11020013,
+      "cityNameCn": "常熟",
+      "cityNameEn": "changshu"
+    },
+    {
+      "cityId": 516,
+      "cityNameCn": "沧州",
+      "cityNameEn": "cangzhou"
+    },
+    {
+      "cityId": 12020016,
+      "cityNameCn": "慈溪",
+      "cityNameEn": "cixi"
+    },
+    {
+      "cityId": 2016,
+      "cityNameCn": "潮州",
+      "cityNameEn": "chaozhou"
+    },
+    {
+      "cityId": 909,
+      "cityNameCn": "长白山池西",
+      "cityNameEn": "chixi"
+    },
+    {
+      "cityId": 5130021,
+      "cityNameCn": "崇礼县",
+      "cityNameEn": "chongli"
+    },
+    {
+      "cityId": 16040007,
+      "cityNameCn": "长岛县",
+      "cityNameEn": "changdaoxian"
+    },
+    {
+      "cityId": 2130,
+      "cityNameCn": "崇左",
+      "cityNameEn": "chongzuo"
+    },
+    {
+      "cityId": 1318,
+      "cityNameCn": "滁州",
+      "cityNameEn": "chuzhou"
+    },
+    {
+      "cityId": 617,
+      "cityNameCn": "长治",
+      "cityNameEn": "changzhi"
+    },
+    {
+      "cityId": 816,
+      "cityNameCn": "朝阳",
+      "cityNameEn": "chaoyang"
+    },
+    {
+      "cityId": 2518,
+      "cityNameCn": "楚雄彝族自治州",
+      "cityNameEn": "chuxiong"
+    },
+    {
+      "cityId": 2606,
+      "cityNameCn": "昌都地区",
+      "cityNameEn": "changdu"
+    },
+    {
+      "cityId": 24020004,
+      "cityNameCn": "赤水",
+      "cityNameEn": "chishui"
+    },
+    {
+      "cityId": 1320,
+      "cityNameCn": "池州",
+      "cityNameEn": "chizhou"
+    },
+    {
+      "cityId": 14020011,
+      "cityNameCn": "长乐",
+      "cityNameEn": "changle"
+    },
+    {
+      "cityId": 13010021,
+      "cityNameCn": "巢湖",
+      "cityNameEn": "chaohu"
+    },
+    {
+      "cityId": 12030006,
+      "cityNameCn": "苍南县",
+      "cityNameEn": "cangnan"
+    },
+    {
+      "cityId": 12390004,
+      "cityNameCn": "长兴县",
+      "cityNameEn": "changxing"
+    },
+    {
+      "cityId": 3115,
+      "cityNameCn": "昌吉回族自治州",
+      "cityNameEn": "changji"
+    },
+    {
+      "cityId": 25230002,
+      "cityNameCn": "澄江县",
+      "cityNameEn": "chengjiang"
+    },
+    {
+      "cityId": 18200005,
+      "cityNameCn": "赤壁",
+      "cityNameEn": "chibi"
+    },
+    {
+      "cityId": 4010022,
+      "cityNameCn": "长寿区",
+      "cityNameEn": "changshou"
+    },
+    {
+      "cityId": 16030014,
+      "cityNameCn": "昌乐县",
+      "cityNameEn": "changle"
+    },
+    {
+      "cityId": 5130018,
+      "cityNameCn": "赤城县",
+      "cityNameEn": "chicheng"
+    },
+    {
+      "cityId": 17040007,
+      "cityNameCn": "长垣县",
+      "cityNameEn": "changyuan"
+    },
+    {
+      "cityId": 5060012,
+      "cityNameCn": "曹妃甸区",
+      "cityNameEn": "tanghai"
+    },
+    {
+      "cityId": 16160011,
+      "cityNameCn": "曹县",
+      "cityNameEn": "caoxian"
+    },
+    {
+      "cityId": 18030013,
+      "cityNameCn": "长阳土家族自治县",
+      "cityNameEn": "changyang"
+    },
+    {
+      "cityId": 912,
+      "cityNameCn": "长白山池南",
+      "cityNameEn": "chinan"
+    },
+    {
+      "cityId": 12350006,
+      "cityNameCn": "常山县",
+      "cityNameEn": "changshan"
+    },
+    {
+      "cityId": 22240012,
+      "cityNameCn": "澄迈县",
+      "cityNameEn": "chengmai"
+    },
+    {
+      "cityId": 16220004,
+      "cityNameCn": "茌平县",
+      "cityNameEn": "chiping"
+    },
+    {
+      "cityId": 17130002,
+      "cityNameCn": "长葛",
+      "cityNameEn": "changge"
+    },
+    {
+      "cityId": 14090002,
+      "cityNameCn": "长汀县",
+      "cityNameEn": "changting"
+    },
+    {
+      "cityId": 16110013,
+      "cityNameCn": "苍山县",
+      "cityNameEn": "cangshan"
+    },
+    {
+      "cityId": 19240012,
+      "cityNameCn": "城步苗族自治县",
+      "cityNameEn": "chengbu"
+    },
+    {
+      "cityId": 14080013,
+      "cityNameCn": "长泰县",
+      "cityNameEn": "changtai"
+    },
+    {
+      "cityId": 5020022,
+      "cityNameCn": "承德县",
+      "cityNameEn": "chengdexian"
+    },
+    {
+      "cityId": 5150013,
+      "cityNameCn": "磁县",
+      "cityNameEn": "cixian"
+    },
+    {
+      "cityId": 19020009,
+      "cityNameCn": "茶陵县",
+      "cityNameEn": "chaling"
+    },
+    {
+      "cityId": 5150012,
+      "cityNameCn": "成安县",
+      "cityNameEn": "chengan"
+    },
+    {
+      "cityId": 19210005,
+      "cityNameCn": "辰溪县",
+      "cityNameEn": "chenxixian"
+    },
+    {
+      "cityId": 15160017,
+      "cityNameCn": "崇义县",
+      "cityNameEn": "chongyi"
+    },
+    {
+      "cityId": 4010045,
+      "cityNameCn": "城口县",
+      "cityNameEn": "chengkou"
+    },
+    {
+      "cityId": 829,
+      "cityNameCn": "长兴岛",
+      "cityNameEn": "changxingdao"
+    },
+    {
+      "cityId": 6170026,
+      "cityNameCn": "长治县",
+      "cityNameEn": "changzhixian"
+    },
+    {
+      "cityId": 6170020,
+      "cityNameCn": "长子县",
+      "cityNameEn": "zhangzixian"
+    },
+    {
+      "cityId": 801,
+      "cityNameCn": "大连",
+      "cityNameEn": "dalian"
+    },
+    {
+      "cityId": 2505,
+      "cityNameCn": "大理白族自治州",
+      "cityNameEn": "dali"
+    },
+    {
+      "cityId": 2007,
+      "cityNameCn": "东莞",
+      "cityNameEn": "dongguan"
+    },
+    {
+      "cityId": 28060008,
+      "cityNameCn": "敦煌",
+      "cityNameEn": "dunhuang"
+    },
+    {
+      "cityId": 602,
+      "cityNameCn": "大同",
+      "cityNameEn": "datong"
+    },
+    {
+      "cityId": 806,
+      "cityNameCn": "丹东",
+      "cityNameEn": "dandong"
+    },
+    {
+      "cityId": 1612,
+      "cityNameCn": "德州",
+      "cityNameEn": "dezhou"
+    },
+    {
+      "cityId": 1607,
+      "cityNameCn": "东营",
+      "cityNameEn": "dongying"
+    },
+    {
+      "cityId": 1004,
+      "cityNameCn": "大庆",
+      "cityNameEn": "daqing"
+    },
+    {
+      "cityId": 2312,
+      "cityNameCn": "德阳",
+      "cityNameEn": "deyang"
+    },
+    {
+      "cityId": 30140002,
+      "cityNameCn": "德令哈",
+      "cityNameEn": "delingha"
+    },
+    {
+      "cityId": 2560,
+      "cityNameCn": "迪庆藏族自治州",
+      "cityNameEn": "diqing"
+    },
+    {
+      "cityId": 12390008,
+      "cityNameCn": "德清县",
+      "cityNameEn": "deqing"
+    },
+    {
+      "cityId": 2340,
+      "cityNameCn": "达州",
+      "cityNameEn": "dazhou"
+    },
+    {
+      "cityId": 23920002,
+      "cityNameCn": "稻城县",
+      "cityNameEn": "daocheng"
+    },
+    {
+      "cityId": 17010021,
+      "cityNameCn": "登封",
+      "cityNameEn": "dengfeng"
+    },
+    {
+      "cityId": 21130002,
+      "cityNameCn": "东兴",
+      "cityNameEn": "dongxing"
+    },
+    {
+      "cityId": 14080002,
+      "cityNameCn": "东山县",
+      "cityNameEn": "dongshan"
+    },
+    {
+      "cityId": 2821,
+      "cityNameCn": "定西",
+      "cityNameEn": "dingxi"
+    },
+    {
+      "cityId": 12040007,
+      "cityNameCn": "东阳",
+      "cityNameEn": "dongyang"
+    },
+    {
+      "cityId": 16140010,
+      "cityNameCn": "东平县",
+      "cityNameEn": "dongping"
+    },
+    {
+      "cityId": 9050003,
+      "cityNameCn": "敦化",
+      "cityNameEn": "dunhua"
+    },
+    {
+      "cityId": 11080010,
+      "cityNameCn": "丹阳",
+      "cityNameEn": "danyang"
+    },
+    {
+      "cityId": 2216,
+      "cityNameCn": "儋州",
+      "cityNameEn": "danzhou"
+    },
+    {
+      "cityId": 8060006,
+      "cityNameCn": "东港",
+      "cityNameEn": "donggang"
+    },
+    {
+      "cityId": 11160008,
+      "cityNameCn": "东台",
+      "cityNameEn": "dongtai"
+    },
+    {
+      "cityId": 11100005,
+      "cityNameCn": "东海县",
+      "cityNameEn": "donghai"
+    },
+    {
+      "cityId": 8150004,
+      "cityNameCn": "大石桥",
+      "cityNameEn": "dashiqiao"
+    },
+    {
+      "cityId": 22180003,
+      "cityNameCn": "东方",
+      "cityNameEn": "dongfang"
+    },
+    {
+      "cityId": 11160003,
+      "cityNameCn": "大丰",
+      "cityNameEn": "dafeng"
+    },
+    {
+      "cityId": 5120044,
+      "cityNameCn": "定州",
+      "cityNameEn": "dingzhou"
+    },
+    {
+      "cityId": 12030007,
+      "cityNameCn": "洞头县",
+      "cityNameEn": "dongtou"
+    },
+    {
+      "cityId": 18070003,
+      "cityNameCn": "丹江口",
+      "cityNameEn": "danjiangkou"
+    },
+    {
+      "cityId": 4010025,
+      "cityNameCn": "大足区",
+      "cityNameEn": "dazu"
+    },
+    {
+      "cityId": 14030012,
+      "cityNameCn": "德化县",
+      "cityNameEn": "dehua"
+    },
+    {
+      "cityId": 25600003,
+      "cityNameCn": "德钦县",
+      "cityNameEn": "deqin"
+    },
+    {
+      "cityId": 23920003,
+      "cityNameCn": "丹巴县",
+      "cityNameEn": "danba"
+    },
+    {
+      "cityId": 4010024,
+      "cityNameCn": "垫江县",
+      "cityNameEn": "dianjiang"
+    },
+    {
+      "cityId": 17070014,
+      "cityNameCn": "邓州",
+      "cityNameEn": "dengzhou"
+    },
+    {
+      "cityId": 18140002,
+      "cityNameCn": "大冶",
+      "cityNameEn": "daye"
+    },
+    {
+      "cityId": 13180004,
+      "cityNameCn": "定远县",
+      "cityNameEn": "dingyuan"
+    },
+    {
+      "cityId": 16160005,
+      "cityNameCn": "东明县",
+      "cityNameEn": "dongming"
+    },
+    {
+      "cityId": 24300008,
+      "cityNameCn": "都匀",
+      "cityNameEn": "dujunshi"
+    },
+    {
+      "cityId": 16220003,
+      "cityNameCn": "东阿县",
+      "cityNameEn": "dongexian"
+    },
+    {
+      "cityId": 18030019,
+      "cityNameCn": "当阳",
+      "cityNameEn": "dangyang"
+    },
+    {
+      "cityId": 5150020,
+      "cityNameCn": "大名县",
+      "cityNameEn": "daming"
+    },
+    {
+      "cityId": 5110021,
+      "cityNameCn": "大城县",
+      "cityNameEn": "dacheng"
+    },
+    {
+      "cityId": 1028,
+      "cityNameCn": "大兴安岭地区",
+      "cityNameEn": "daxinganling"
+    },
+    {
+      "cityId": 5160011,
+      "cityNameCn": "东光县",
+      "cityNameEn": "dongguang"
+    },
+    {
+      "cityId": 14100012,
+      "cityNameCn": "大田县",
+      "cityNameEn": "datian"
+    },
+    {
+      "cityId": 25010014,
+      "cityNameCn": "东川区",
+      "cityNameEn": "dongchuan"
+    },
+    {
+      "cityId": 17140008,
+      "cityNameCn": "郸城县",
+      "cityNameEn": "dancheng"
+    },
+    {
+      "cityId": 13140006,
+      "cityNameCn": "砀山县",
+      "cityNameEn": "dangshan"
+    },
+    {
+      "cityId": 15080009,
+      "cityNameCn": "德兴",
+      "cityNameEn": "dexing"
+    },
+    {
+      "cityId": 5120052,
+      "cityNameCn": "定兴县",
+      "cityNameEn": "dingxing"
+    },
+    {
+      "cityId": 13110004,
+      "cityNameCn": "当涂县",
+      "cityNameEn": "dangtu"
+    },
+    {
+      "cityId": 6060019,
+      "cityNameCn": "代县",
+      "cityNameEn": "daixian"
+    },
+    {
+      "cityId": 5110020,
+      "cityNameCn": "大厂回族自治县",
+      "cityNameEn": "dachang"
+    },
+    {
+      "cityId": 28120007,
+      "cityNameCn": "迭部县",
+      "cityNameEn": "diebuxian"
+    },
+    {
+      "cityId": 15160005,
+      "cityNameCn": "定南县",
+      "cityNameEn": "dingnan"
+    },
+    {
+      "cityId": 22150003,
+      "cityNameCn": "定安县",
+      "cityNameEn": "dingan"
+    },
+    {
+      "cityId": 19240009,
+      "cityNameCn": "洞口县",
+      "cityNameEn": "dongkou"
+    },
+    {
+      "cityId": 9010016,
+      "cityNameCn": "德惠",
+      "cityNameEn": "dehui"
+    },
+    {
+      "cityId": 15160012,
+      "cityNameCn": "大余县",
+      "cityNameEn": "dayu"
+    },
+    {
+      "cityId": 2516,
+      "cityNameCn": "德宏傣族景颇族自治州",
+      "cityNameEn": "dehongzhou"
+    },
+    {
+      "cityId": 18220004,
+      "cityNameCn": "大悟县",
+      "cityNameEn": "dawu"
+    },
+    {
+      "cityId": 23010015,
+      "cityNameCn": "大邑县",
+      "cityNameEn": "dayi"
+    },
+    {
+      "cityId": 10020008,
+      "cityNameCn": "东宁县",
+      "cityNameEn": "dongnign"
+    },
+    {
+      "cityId": 6030029,
+      "cityNameCn": "大宁县",
+      "cityNameEn": "daning"
+    },
+    {
+      "cityId": 21300001,
+      "cityNameCn": "大新县",
+      "cityNameEn": "daxianxian"
+    },
+    {
+      "cityId": 21120003,
+      "cityNameCn": "德保县",
+      "cityNameEn": "debao"
+    },
+    {
+      "cityId": 27090007,
+      "cityNameCn": "定边县",
+      "cityNameEn": "yulindingbianxian"
+    },
+    {
+      "cityId": 6060027,
+      "cityNameCn": "定襄县",
+      "cityNameEn": "dingxiang"
+    },
+    {
+      "cityId": 23030012,
+      "cityNameCn": "峨眉山",
+      "cityNameEn": "emeishan"
+    },
+    {
+      "cityId": 1811,
+      "cityNameCn": "恩施土家族苗族自治州",
+      "cityNameEn": "enshi"
+    },
+    {
+      "cityId": 705,
+      "cityNameCn": "鄂尔多斯",
+      "cityNameEn": "ordos"
+    },
+    {
+      "cityId": 7120002,
+      "cityNameCn": "额尔古纳",
+      "cityNameEn": "eerguna"
+    },
+    {
+      "cityId": 1818,
+      "cityNameCn": "鄂州",
+      "cityNameEn": "ezhou"
+    },
+    {
+      "cityId": 7330001,
+      "cityNameCn": "二连浩特",
+      "cityNameEn": "erlianhaote"
+    },
+    {
+      "cityId": 7160003,
+      "cityNameCn": "额济纳旗",
+      "cityNameEn": "ejinaqi"
+    },
+    {
+      "cityId": 20210003,
+      "cityNameCn": "恩平",
+      "cityNameEn": "enping"
+    },
+    {
+      "cityId": 1402,
+      "cityNameCn": "福州",
+      "cityNameEn": "fuzhou"
+    },
+    {
+      "cityId": 2005,
+      "cityNameCn": "佛山",
+      "cityNameEn": "foshan"
+    },
+    {
+      "cityId": 19370008,
+      "cityNameCn": "凤凰县",
+      "cityNameEn": "fenghuang"
+    },
+    {
+      "cityId": 1307,
+      "cityNameCn": "阜阳",
+      "cityNameEn": "fuyang"
+    },
+    {
+      "cityId": 804,
+      "cityNameCn": "抚顺",
+      "cityNameEn": "fushun"
+    },
+    {
+      "cityId": 2113,
+      "cityNameCn": "防城港",
+      "cityNameEn": "fangchenggang"
+    },
+    {
+      "cityId": 1515,
+      "cityNameCn": "抚州",
+      "cityNameEn": "fu"
+    },
+    {
+      "cityId": 12020017,
+      "cityNameCn": "奉化",
+      "cityNameEn": "fenghua"
+    },
+    {
+      "cityId": 12010011,
+      "cityNameCn": "富阳",
+      "cityNameEn": "fuyang"
+    },
+    {
+      "cityId": 823,
+      "cityNameCn": "阜新",
+      "cityNameEn": "fuxin"
+    },
+    {
+      "cityId": 14020012,
+      "cityNameCn": "福清",
+      "cityNameEn": "fuqing"
+    },
+    {
+      "cityId": 14140008,
+      "cityNameCn": "福鼎",
+      "cityNameEn": "fuding"
+    },
+    {
+      "cityId": 5020019,
+      "cityNameCn": "丰宁满族自治县",
+      "cityNameEn": "fengning"
+    },
+    {
+      "cityId": 16140009,
+      "cityNameCn": "肥城",
+      "cityNameEn": "feicheng"
+    },
+    {
+      "cityId": 4010018,
+      "cityNameCn": "涪陵区",
+      "cityNameEn": "fuling"
+    },
+    {
+      "cityId": 8060005,
+      "cityNameCn": "凤城",
+      "cityNameEn": "fengcheng"
+    },
+    {
+      "cityId": 4010043,
+      "cityNameCn": "奉节县",
+      "cityNameEn": "fengjie"
+    },
+    {
+      "cityId": 31180004,
+      "cityNameCn": "富蕴县",
+      "cityNameEn": "fuyunxian"
+    },
+    {
+      "cityId": 4010021,
+      "cityNameCn": "丰都县",
+      "cityNameEn": "fengdu"
+    },
+    {
+      "cityId": 11160005,
+      "cityNameCn": "阜宁县",
+      "cityNameEn": "funing"
+    },
+    {
+      "cityId": 31150002,
+      "cityNameCn": "阜康",
+      "cityNameEn": "fukangshi"
+    },
+    {
+      "cityId": 13180008,
+      "cityNameCn": "凤阳县",
+      "cityNameEn": "fengyang"
+    },
+    {
+      "cityId": 14140010,
+      "cityNameCn": "福安",
+      "cityNameEn": "fuan"
+    },
+    {
+      "cityId": 11060017,
+      "cityNameCn": "丰县",
+      "cityNameEn": "fengxian"
+    },
+    {
+      "cityId": 13040006,
+      "cityNameCn": "繁昌县",
+      "cityNameEn": "fanchang"
+    },
+    {
+      "cityId": 13070005,
+      "cityNameCn": "阜南县",
+      "cityNameEn": "funan"
+    },
+    {
+      "cityId": 507,
+      "cityNameCn": "丰宁坝上",
+      "cityNameEn": "bashang"
+    },
+    {
+      "cityId": 6190013,
+      "cityNameCn": "汾阳",
+      "cityNameEn": "fenyang"
+    },
+    {
+      "cityId": 17040006,
+      "cityNameCn": "封丘县",
+      "cityNameEn": "fengqiu"
+    },
+    {
+      "cityId": 5150014,
+      "cityNameCn": "肥乡县",
+      "cityNameEn": "feixiang"
+    },
+    {
+      "cityId": 5140012,
+      "cityNameCn": "阜城县",
+      "cityNameEn": "fucheng"
+    },
+    {
+      "cityId": 5120034,
+      "cityNameCn": "阜平县",
+      "cityNameEn": "fupingxian"
+    },
+    {
+      "cityId": 25130002,
+      "cityNameCn": "富宁县",
+      "cityNameEn": "funing"
+    },
+    {
+      "cityId": 27080011,
+      "cityNameCn": "富平县",
+      "cityNameEn": "fuping"
+    },
+    {
+      "cityId": 9100008,
+      "cityNameCn": "扶余县",
+      "cityNameEn": "fuyu"
+    },
+    {
+      "cityId": 17070005,
+      "cityNameCn": "方城县",
+      "cityNameEn": "fangcheng"
+    },
+    {
+      "cityId": 8020016,
+      "cityNameCn": "法库县",
+      "cityNameEn": "faku"
+    },
+    {
+      "cityId": 6060016,
+      "cityNameCn": "繁峙县",
+      "cityNameEn": "fanshi"
+    },
+    {
+      "cityId": 17060007,
+      "cityNameCn": "范县",
+      "cityNameEn": "fanxian"
+    },
+    {
+      "cityId": 15090005,
+      "cityNameCn": "丰城",
+      "cityNameEn": "fengcheng"
+    },
+    {
+      "cityId": 25220009,
+      "cityNameCn": "富源县",
+      "cityNameEn": "fuyuan"
+    },
+    {
+      "cityId": 25010015,
+      "cityNameCn": "富民县",
+      "cityNameEn": "fumin"
+    },
+    {
+      "cityId": 6190017,
+      "cityNameCn": "方山县",
+      "cityNameEn": "fangshan"
+    },
+    {
+      "cityId": 21190002,
+      "cityNameCn": "凤山县",
+      "cityNameEn": "fengshan"
+    },
+    {
+      "cityId": 17140005,
+      "cityNameCn": "扶沟县",
+      "cityNameEn": "fugou"
+    },
+    {
+      "cityId": 6030031,
+      "cityNameCn": "浮山县",
+      "cityNameEn": "fushan"
+    },
+    {
+      "cityId": 31180005,
+      "cityNameCn": "福海县",
+      "cityNameEn": "fuhaixian"
+    },
+    {
+      "cityId": 27090005,
+      "cityNameCn": "府谷县",
+      "cityNameEn": "yulinfuguxian"
+    },
+    {
+      "cityId": 2001,
+      "cityNameCn": "广州",
+      "cityNameEn": "guangzhou"
+    },
+    {
+      "cityId": 2401,
+      "cityNameCn": "贵阳",
+      "cityNameEn": "guiyang"
+    },
+    {
+      "cityId": 2101,
+      "cityNameCn": "桂林",
+      "cityNameEn": "guilin"
+    },
+    {
+      "cityId": 1516,
+      "cityNameCn": "赣州",
+      "cityNameEn": "ganzhou"
+    },
+    {
+      "cityId": 2812,
+      "cityNameCn": "甘南藏族自治州",
+      "cityNameEn": "gannan"
+    },
+    {
+      "cityId": 2320,
+      "cityNameCn": "广元",
+      "cityNameEn": "guangyuan"
+    },
+    {
+      "cityId": 2111,
+      "cityNameCn": "贵港",
+      "cityNameEn": "guigang"
+    },
+    {
+      "cityId": 30140001,
+      "cityNameCn": "格尔木",
+      "cityNameEn": "geermu"
+    },
+    {
+      "cityId": 2905,
+      "cityNameCn": "固原",
+      "cityNameEn": "guyuan"
+    },
+    {
+      "cityId": 5130014,
+      "cityNameCn": "沽源县",
+      "cityNameEn": "guyuan"
+    },
+    {
+      "cityId": 2313,
+      "cityNameCn": "广安",
+      "cityNameEn": "guangan"
+    },
+    {
+      "cityId": 2392,
+      "cityNameCn": "甘孜藏族自治州",
+      "cityNameEn": "ganzi"
+    },
+    {
+      "cityId": 30150001,
+      "cityNameCn": "共和县",
+      "cityNameEn": "gonghexian"
+    },
+    {
+      "cityId": 16030011,
+      "cityNameCn": "高密",
+      "cityNameEn": "gaomi"
+    },
+    {
+      "cityId": 30150002,
+      "cityNameCn": "贵德县",
+      "cityNameEn": "guidexian"
+    },
+    {
+      "cityId": 11040007,
+      "cityNameCn": "高邮",
+      "cityNameEn": "gaoyou"
+    },
+    {
+      "cityId": 16070003,
+      "cityNameCn": "广饶县",
+      "cityNameEn": "guangrao"
+    },
+    {
+      "cityId": 5110017,
+      "cityNameCn": "固安县",
+      "cityNameEn": "guan"
+    },
+    {
+      "cityId": 17010012,
+      "cityNameCn": "巩义",
+      "cityNameEn": "gongyi"
+    },
+    {
+      "cityId": 5120037,
+      "cityNameCn": "高碑店",
+      "cityNameEn": "gaobeidian"
+    },
+    {
+      "cityId": 7120003,
+      "cityNameCn": "根河",
+      "cityNameEn": "genhe"
+    },
+    {
+      "cityId": 11100008,
+      "cityNameCn": "赣榆县",
+      "cityNameEn": "ganyu"
+    },
+    {
+      "cityId": 13280007,
+      "cityNameCn": "广德县",
+      "cityNameEn": "guangde"
+    },
+    {
+      "cityId": 15090007,
+      "cityNameCn": "高安",
+      "cityNameEn": "gaoan"
+    },
+    {
+      "cityId": 16220009,
+      "cityNameCn": "高唐县",
+      "cityNameEn": "gaotang"
+    },
+    {
+      "cityId": 9190008,
+      "cityNameCn": "公主岭",
+      "cityNameEn": "gongzhuling"
+    },
+    {
+      "cityId": 17200008,
+      "cityNameCn": "固始县",
+      "cityNameEn": "gushi"
+    },
+    {
+      "cityId": 5010035,
+      "cityNameCn": "藁城",
+      "cityNameEn": "gaocheng"
+    },
+    {
+      "cityId": 5120042,
+      "cityNameCn": "高阳县",
+      "cityNameEn": "gaoyang"
+    },
+    {
+      "cityId": 16220006,
+      "cityNameCn": "冠县",
+      "cityNameEn": "guanxian"
+    },
+    {
+      "cityId": 11100010,
+      "cityNameCn": "灌南县",
+      "cityNameEn": "guannan"
+    },
+    {
+      "cityId": 28060002,
+      "cityNameCn": "瓜州县",
+      "cityNameEn": "guazhouxian"
+    },
+    {
+      "cityId": 8150006,
+      "cityNameCn": "盖州",
+      "cityNameEn": "gaizhou"
+    },
+    {
+      "cityId": 18340006,
+      "cityNameCn": "谷城县",
+      "cityNameEn": "gucheng"
+    },
+    {
+      "cityId": 25130008,
+      "cityNameCn": "广南县",
+      "cityNameEn": "guangnan"
+    },
+    {
+      "cityId": 11100007,
+      "cityNameCn": "灌云县",
+      "cityNameEn": "guanyun"
+    },
+    {
+      "cityId": 14140004,
+      "cityNameCn": "古田县",
+      "cityNameEn": "gutian"
+    },
+    {
+      "cityId": 18230002,
+      "cityNameCn": "广水",
+      "cityNameEn": "guangshui"
+    },
+    {
+      "cityId": 6090009,
+      "cityNameCn": "高平",
+      "cityNameEn": "gaoping"
+    },
+    {
+      "cityId": 25170011,
+      "cityNameCn": "个旧",
+      "cityNameEn": "gejiu"
+    },
+    {
+      "cityId": 5150018,
+      "cityNameCn": "馆陶县",
+      "cityNameEn": "guantao"
+    },
+    {
+      "cityId": 3018,
+      "cityNameCn": "果洛藏族自治州",
+      "cityNameEn": "guoluo"
+    },
+    {
+      "cityId": 13050006,
+      "cityNameCn": "固镇县",
+      "cityNameEn": "guzhen"
+    },
+    {
+      "cityId": 19070007,
+      "cityNameCn": "桂阳县",
+      "cityNameEn": "guiyangxian"
+    },
+    {
+      "cityId": 6010016,
+      "cityNameCn": "古交",
+      "cityNameEn": "gujiao"
+    },
+    {
+      "cityId": 17200004,
+      "cityNameCn": "光山县",
+      "cityNameEn": "guangshan"
+    },
+    {
+      "cityId": 5140010,
+      "cityNameCn": "故城县",
+      "cityNameEn": "gucheng"
+    },
+    {
+      "cityId": 15160020,
+      "cityNameCn": "赣县",
+      "cityNameEn": "ganxian"
+    },
+    {
+      "cityId": 15170002,
+      "cityNameCn": "贵溪",
+      "cityNameEn": "guixi"
+    },
+    {
+      "cityId": 5150017,
+      "cityNameCn": "广平县",
+      "cityNameEn": "guangping"
+    },
+    {
+      "cityId": 5010047,
+      "cityNameCn": "高邑县",
+      "cityNameEn": "gaoyi"
+    },
+    {
+      "cityId": 19370004,
+      "cityNameCn": "古丈县",
+      "cityNameEn": "guzhangxian"
+    },
+    {
+      "cityId": 14110003,
+      "cityNameCn": "光泽县",
+      "cityNameEn": "guangze"
+    },
+    {
+      "cityId": 23120003,
+      "cityNameCn": "广汉",
+      "cityNameEn": "guanghan"
+    },
+    {
+      "cityId": 18020003,
+      "cityNameCn": "公安县",
+      "cityNameEn": "gongan"
+    },
+    {
+      "cityId": 21010017,
+      "cityNameCn": "恭城瑶族自治县",
+      "cityNameEn": "gongcheng"
+    },
+    {
+      "cityId": 6030032,
+      "cityNameCn": "古县",
+      "cityNameEn": "guxian"
+    },
+    {
+      "cityId": 5050039,
+      "cityNameCn": "广宗县",
+      "cityNameEn": "guangzong"
+    },
+    {
+      "cityId": 21110002,
+      "cityNameCn": "桂平",
+      "cityNameEn": "guiping"
+    },
+    {
+      "cityId": 1201,
+      "cityNameCn": "杭州",
+      "cityNameEn": "hangzhou"
+    },
+    {
+      "cityId": 1001,
+      "cityNameCn": "哈尔滨",
+      "cityNameEn": "harbin"
+    },
+    {
+      "cityId": 1301,
+      "cityNameCn": "合肥",
+      "cityNameEn": "hefei"
+    },
+    {
+      "cityId": 2010,
+      "cityNameCn": "惠州",
+      "cityNameEn": "huizhou"
+    },
+    {
+      "cityId": 1302,
+      "cityNameCn": "黄山",
+      "cityNameEn": "huangshan"
+    },
+    {
+      "cityId": 2202,
+      "cityNameCn": "海口",
+      "cityNameEn": "haikou"
+    },
+    {
+      "cityId": 701,
+      "cityNameCn": "呼和浩特",
+      "cityNameEn": "hohhot"
+    },
+    {
+      "cityId": 712,
+      "cityNameCn": "呼伦贝尔",
+      "cityNameEn": "hulunbeier"
+    },
+    {
+      "cityId": 1288,
+      "cityNameCn": "横店影视城",
+      "cityNameEn": "hengdian"
+    },
+    {
+      "cityId": 1918,
+      "cityNameCn": "衡阳",
+      "cityNameEn": "hengyang"
+    },
+    {
+      "cityId": 1123,
+      "cityNameCn": "淮安",
+      "cityNameEn": "huaian"
+    },
+    {
+      "cityId": 515,
+      "cityNameCn": "邯郸",
+      "cityNameEn": "handan"
+    },
+    {
+      "cityId": 820,
+      "cityNameCn": "葫芦岛",
+      "cityNameEn": "huludao"
+    },
+    {
+      "cityId": 2707,
+      "cityNameCn": "汉中",
+      "cityNameEn": "hanzhong"
+    },
+    {
+      "cityId": 2710,
+      "cityNameCn": "华山",
+      "cityNameEn": "huashan"
+    },
+    {
+      "cityId": 2119,
+      "cityNameCn": "河池",
+      "cityNameEn": "hechi"
+    },
+    {
+      "cityId": 2026,
+      "cityNameCn": "河源",
+      "cityNameEn": "heyuan"
+    },
+    {
+      "cityId": 1239,
+      "cityNameCn": "湖州",
+      "cityNameEn": "huzhou"
+    },
+    {
+      "cityId": 2107,
+      "cityNameCn": "贺州",
+      "cityNameEn": "hezhou"
+    },
+    {
+      "cityId": 16040012,
+      "cityNameCn": "海阳",
+      "cityNameEn": "haiyang"
+    },
+    {
+      "cityId": 1306,
+      "cityNameCn": "淮南",
+      "cityNameEn": "huainan"
+    },
+    {
+      "cityId": 1616,
+      "cityNameCn": "菏泽",
+      "cityNameEn": "heze"
+    },
+    {
+      "cityId": 1340,
+      "cityNameCn": "宏村景区",
+      "cityNameEn": "hongcun"
+    },
+    {
+      "cityId": 1921,
+      "cityNameCn": "怀化",
+      "cityNameEn": "huaihua"
+    },
+    {
+      "cityId": 514,
+      "cityNameCn": "衡水",
+      "cityNameEn": "hengshui"
+    },
+    {
+      "cityId": 12090002,
+      "cityNameCn": "海宁",
+      "cityNameEn": "haining"
+    },
+    {
+      "cityId": 3012,
+      "cityNameCn": "海北藏族自治州",
+      "cityNameEn": "haibeizhou"
+    },
+    {
+      "cityId": 1814,
+      "cityNameCn": "黄石",
+      "cityNameEn": "huangshi"
+    },
+    {
+      "cityId": 14030007,
+      "cityNameCn": "惠安县",
+      "cityNameEn": "huian"
+    },
+    {
+      "cityId": 3113,
+      "cityNameCn": "哈密地区",
+      "cityNameEn": "hami"
+    },
+    {
+      "cityId": 11070014,
+      "cityNameCn": "海门",
+      "cityNameEn": "haimen"
+    },
+    {
+      "cityId": 1014,
+      "cityNameCn": "黑河",
+      "cityNameEn": "heihe"
+    },
+    {
+      "cityId": 1322,
+      "cityNameCn": "淮北",
+      "cityNameEn": "huaibei"
+    },
+    {
+      "cityId": 1830,
+      "cityNameCn": "黄冈",
+      "cityNameEn": "huanggang"
+    },
+    {
+      "cityId": 3014,
+      "cityNameCn": "海西蒙古族藏族自治州",
+      "cityNameEn": "haixizhou"
+    },
+    {
+      "cityId": 30120001,
+      "cityNameCn": "海晏县",
+      "cityNameEn": "haiyan"
+    },
+    {
+      "cityId": 11070012,
+      "cityNameCn": "海安县",
+      "cityNameEn": "haian"
+    },
+    {
+      "cityId": 1712,
+      "cityNameCn": "鹤壁",
+      "cityNameEn": "hebi"
+    },
+    {
+      "cityId": 23950008,
+      "cityNameCn": "红原县",
+      "cityNameEn": "hongyuan"
+    },
+    {
+      "cityId": 2328,
+      "cityNameCn": "海螺沟",
+      "cityNameEn": "hailuogou"
+    },
+    {
+      "cityId": 3016,
+      "cityNameCn": "海东",
+      "cityNameEn": "haidongshi"
+    },
+    {
+      "cityId": 17040009,
+      "cityNameCn": "辉县",
+      "cityNameEn": "huixian"
+    },
+    {
+      "cityId": 5160019,
+      "cityNameCn": "黄骅",
+      "cityNameEn": "huanghua"
+    },
+    {
+      "cityId": 20210006,
+      "cityNameCn": "鹤山",
+      "cityNameEn": "heshan"
+    },
+    {
+      "cityId": 5130002,
+      "cityNameCn": "怀来县",
+      "cityNameEn": "huailai"
+    },
+    {
+      "cityId": 12090007,
+      "cityNameCn": "海盐县",
+      "cityNameEn": "haiyan"
+    },
+    {
+      "cityId": 9050005,
+      "cityNameCn": "珲春",
+      "cityNameEn": "hunchun"
+    },
+    {
+      "cityId": 4010023,
+      "cityNameCn": "合川区",
+      "cityNameEn": "hechuan"
+    },
+    {
+      "cityId": 8030007,
+      "cityNameCn": "海城",
+      "cityNameEn": "haicheng"
+    },
+    {
+      "cityId": 28120003,
+      "cityNameCn": "合作",
+      "cityNameEn": "hezuo"
+    },
+    {
+      "cityId": 27080002,
+      "cityNameCn": "韩城",
+      "cityNameEn": "hancheng"
+    },
+    {
+      "cityId": 18220003,
+      "cityNameCn": "汉川",
+      "cityNameEn": "hanchuan"
+    },
+    {
+      "cityId": 18020008,
+      "cityNameCn": "洪湖",
+      "cityNameEn": "honghu"
+    },
+    {
+      "cityId": 10100010,
+      "cityNameCn": "海伦",
+      "cityNameEn": "hailun"
+    },
+    {
+      "cityId": 11230005,
+      "cityNameCn": "洪泽县",
+      "cityNameEn": "hongze"
+    },
+    {
+      "cityId": 18300007,
+      "cityNameCn": "黄梅县",
+      "cityNameEn": "huangmei"
+    },
+    {
+      "cityId": 1009,
+      "cityNameCn": "鹤岗",
+      "cityNameEn": "hegang"
+    },
+    {
+      "cityId": 3121,
+      "cityNameCn": "和田地区",
+      "cityNameEn": "hetian"
+    },
+    {
+      "cityId": 6030034,
+      "cityNameCn": "侯马",
+      "cityNameEn": "houma"
+    },
+    {
+      "cityId": 25170008,
+      "cityNameCn": "河口瑶族自治县",
+      "cityNameEn": "hekou"
+    },
+    {
+      "cityId": 23950006,
+      "cityNameCn": "黑水县",
+      "cityNameEn": "heishui"
+    },
+    {
+      "cityId": 17160011,
+      "cityNameCn": "滑县",
+      "cityNameEn": "huaxian"
+    },
+    {
+      "cityId": 17200011,
+      "cityNameCn": "潢川县",
+      "cityNameEn": "huangchuan"
+    },
+    {
+      "cityId": 25220006,
+      "cityNameCn": "会泽县",
+      "cityNameEn": "huize"
+    },
+    {
+      "cityId": 31030010,
+      "cityNameCn": "霍尔果斯",
+      "cityNameEn": "khorgas"
+    },
+    {
+      "cityId": 9030005,
+      "cityNameCn": "辉南县",
+      "cityNameEn": "huinan"
+    },
+    {
+      "cityId": 6180008,
+      "cityNameCn": "怀仁县",
+      "cityNameEn": "huairen"
+    },
+    {
+      "cityId": 19180003,
+      "cityNameCn": "衡山县",
+      "cityNameEn": "hengshan"
+    },
+    {
+      "cityId": 3010,
+      "cityNameCn": "黄南藏族自治州",
+      "cityNameEn": "huangnan"
+    },
+    {
+      "cityId": 31030004,
+      "cityNameCn": "霍城县",
+      "cityNameEn": "hocheng"
+    },
+    {
+      "cityId": 19210013,
+      "cityNameCn": "洪江",
+      "cityNameEn": "hongjiang"
+    },
+    {
+      "cityId": 30160002,
+      "cityNameCn": "互助土族自治县",
+      "cityNameEn": "huzhuxian"
+    },
+    {
+      "cityId": 16180007,
+      "cityNameCn": "惠民县",
+      "cityNameEn": "huimin"
+    },
+    {
+      "cityId": 18110007,
+      "cityNameCn": "鹤峰县",
+      "cityNameEn": "efeng"
+    },
+    {
+      "cityId": 5160005,
+      "cityNameCn": "河间",
+      "cityNameEn": "hejian"
+    },
+    {
+      "cityId": 17140003,
+      "cityNameCn": "淮阳县",
+      "cityNameEn": "huaiyang"
+    },
+    {
+      "cityId": 2517,
+      "cityNameCn": "红河哈尼族彝族自治州",
+      "cityNameEn": "honghezhou"
+    },
+    {
+      "cityId": 6030033,
+      "cityNameCn": "洪洞县",
+      "cityNameEn": "hongtongxian"
+    },
+    {
+      "cityId": 2384,
+      "cityNameCn": "黄龙溪古镇",
+      "cityNameEn": "huanglongxi"
+    },
+    {
+      "cityId": 31150007,
+      "cityNameCn": "呼图壁县",
+      "cityNameEn": "hutubi"
+    },
+    {
+      "cityId": 15160015,
+      "cityNameCn": "会昌县",
+      "cityNameEn": "huichang"
+    },
+    {
+      "cityId": 13110005,
+      "cityNameCn": "和县",
+      "cityNameEn": "hexian"
+    },
+    {
+      "cityId": 6030030,
+      "cityNameCn": "霍州",
+      "cityNameEn": "huozhou"
+    },
+    {
+      "cityId": 3015,
+      "cityNameCn": "海南藏族自治州",
+      "cityNameEn": "hainanzhou"
+    },
+    {
+      "cityId": 6020003,
+      "cityNameCn": "浑源县",
+      "cityNameEn": "hunyuan"
+    },
+    {
+      "cityId": 10020005,
+      "cityNameCn": "海林",
+      "cityNameEn": "hailin"
+    },
+    {
+      "cityId": 1338,
+      "cityNameCn": "霍山县",
+      "cityNameEn": "huoshan"
+    },
+    {
+      "cityId": 17040005,
+      "cityNameCn": "获嘉县",
+      "cityNameEn": "huojia"
+    },
+    {
+      "cityId": 13110006,
+      "cityNameCn": "含山县",
+      "cityNameEn": "hanshan"
+    },
+    {
+      "cityId": 19210007,
+      "cityNameCn": "会同县",
+      "cityNameEn": "huitongxian"
+    },
+    {
+      "cityId": 13050004,
+      "cityNameCn": "怀远县",
+      "cityNameEn": "huaiyuan"
+    },
+    {
+      "cityId": 30010006,
+      "cityNameCn": "湟中县",
+      "cityNameEn": "huangzhongxian"
+    },
+    {
+      "cityId": 31180006,
+      "cityNameCn": "哈巴河县",
+      "cityNameEn": "habahe"
+    },
+    {
+      "cityId": 19370002,
+      "cityNameCn": "花垣县",
+      "cityNameEn": "huayuanxian"
+    },
+    {
+      "cityId": 31310007,
+      "cityNameCn": "和硕县",
+      "cityNameEn": "heshuo"
+    },
+    {
+      "cityId": 6050015,
+      "cityNameCn": "河津",
+      "cityNameEn": "hejin"
+    },
+    {
+      "cityId": 9050007,
+      "cityNameCn": "和龙",
+      "cityNameEn": "helong"
+    },
+    {
+      "cityId": 5160012,
+      "cityNameCn": "海兴县",
+      "cityNameEn": "haixing"
+    },
+    {
+      "cityId": 31310006,
+      "cityNameCn": "和静县",
+      "cityNameEn": "hejing"
+    },
+    {
+      "cityId": 6070020,
+      "cityNameCn": "和顺县",
+      "cityNameEn": "heshun"
+    },
+    {
+      "cityId": 19040010,
+      "cityNameCn": "华容县",
+      "cityNameEn": "huarong"
+    },
+    {
+      "cityId": 5130016,
+      "cityNameCn": "怀安县",
+      "cityNameEn": "huaian"
+    },
+    {
+      "cityId": 27080007,
+      "cityNameCn": "合阳县",
+      "cityNameEn": "heyangxian"
+    },
+    {
+      "cityId": 7100008,
+      "cityNameCn": "杭锦后旗",
+      "cityNameEn": "hangjinhouqi"
+    },
+    {
+      "cityId": 7010009,
+      "cityNameCn": "和林格尔县",
+      "cityNameEn": "helingeer"
+    },
+    {
+      "cityId": 6060025,
+      "cityNameCn": "河曲县",
+      "cityNameEn": "hequ"
+    },
+    {
+      "cityId": 29010006,
+      "cityNameCn": "贺兰县",
+      "cityNameEn": "helanxian"
+    },
+    {
+      "cityId": 27090006,
+      "cityNameCn": "横山县",
+      "cityNameEn": "yulinhengshanxian"
+    },
+    {
+      "cityId": 6170017,
+      "cityNameCn": "壶关县",
+      "cityNameEn": "huguan"
+    },
+    {
+      "cityId": 1602,
+      "cityNameCn": "济南",
+      "cityNameEn": "jinan"
+    },
+    {
+      "cityId": 23950010,
+      "cityNameCn": "九寨沟县",
+      "cityNameEn": "jiuzhaigou"
+    },
+    {
+      "cityId": 2802,
+      "cityNameCn": "嘉峪关",
+      "cityNameEn": "jiayuguan"
+    },
+    {
+      "cityId": 1502,
+      "cityNameCn": "九江",
+      "cityNameEn": "jiujiang"
+    },
+    {
+      "cityId": 1209,
+      "cityNameCn": "嘉兴",
+      "cityNameEn": "jiaxing"
+    },
+    {
+      "cityId": 902,
+      "cityNameCn": "吉林",
+      "cityNameEn": "jilin"
+    },
+    {
+      "cityId": 810,
+      "cityNameCn": "锦州",
+      "cityNameEn": "jinzhou"
+    },
+    {
+      "cityId": 2021,
+      "cityNameCn": "江门",
+      "cityNameEn": "jiangmen"
+    },
+    {
+      "cityId": 1204,
+      "cityNameCn": "金华",
+      "cityNameEn": "jinhua"
+    },
+    {
+      "cityId": 1802,
+      "cityNameCn": "荆州",
+      "cityNameEn": "jingzhou"
+    },
+    {
+      "cityId": 1619,
+      "cityNameCn": "济宁",
+      "cityNameEn": "jining"
+    },
+    {
+      "cityId": 1507,
+      "cityNameCn": "景德镇",
+      "cityNameEn": "jingdezhen"
+    },
+    {
+      "cityId": 1503,
+      "cityNameCn": "吉安",
+      "cityNameEn": "jian"
+    },
+    {
+      "cityId": 2806,
+      "cityNameCn": "酒泉",
+      "cityNameEn": "jiuquan"
+    },
+    {
+      "cityId": 11050017,
+      "cityNameCn": "江阴",
+      "cityNameEn": "jiangyin"
+    },
+    {
+      "cityId": 2006,
+      "cityNameCn": "揭阳",
+      "cityNameEn": "jieyang"
+    },
+    {
+      "cityId": 1012,
+      "cityNameCn": "佳木斯",
+      "cityNameEn": "jiamusi"
+    },
+    {
+      "cityId": 1710,
+      "cityNameCn": "焦作",
+      "cityNameEn": "jiaozuo"
+    },
+    {
+      "cityId": 16010014,
+      "cityNameCn": "即墨",
+      "cityNameEn": "jimo"
+    },
+    {
+      "cityId": 1810,
+      "cityNameCn": "荆门",
+      "cityNameEn": "jingmen"
+    },
+    {
+      "cityId": 14030011,
+      "cityNameCn": "晋江",
+      "cityNameEn": "jinjiang"
+    },
+    {
+      "cityId": 1309,
+      "cityNameCn": "九华山",
+      "cityNameEn": "jiuhuashan"
+    },
+    {
+      "cityId": 609,
+      "cityNameCn": "晋城",
+      "cityNameEn": "jincheng"
+    },
+    {
+      "cityId": 607,
+      "cityNameCn": "晋中",
+      "cityNameEn": "jinzhong"
+    },
+    {
+      "cityId": 12090006,
+      "cityNameCn": "嘉善县",
+      "cityNameEn": "jiashan"
+    },
+    {
+      "cityId": 19370007,
+      "cityNameCn": "吉首",
+      "cityNameEn": "jishou"
+    },
+    {
+      "cityId": 12010012,
+      "cityNameCn": "建德",
+      "cityNameEn": "jiande"
+    },
+    {
+      "cityId": 16010016,
+      "cityNameCn": "胶州",
+      "cityNameEn": "jiaozhou"
+    },
+    {
+      "cityId": 15030014,
+      "cityNameCn": "井冈山",
+      "cityNameEn": "jinggangshan"
+    },
+    {
+      "cityId": 6030042,
+      "cityNameCn": "吉县",
+      "cityNameEn": "jixian"
+    },
+    {
+      "cityId": 1015,
+      "cityNameCn": "鸡西",
+      "cityNameEn": "jixi"
+    },
+    {
+      "cityId": 23020010,
+      "cityNameCn": "江油",
+      "cityNameEn": "jiangyou"
+    },
+    {
+      "cityId": 1031,
+      "cityNameCn": "镜泊湖",
+      "cityNameEn": "jingpohu"
+    },
+    {
+      "cityId": 11150007,
+      "cityNameCn": "靖江",
+      "cityNameEn": "jingjiang"
+    },
+    {
+      "cityId": 4010015,
+      "cityNameCn": "江津区",
+      "cityNameEn": "jiangjin"
+    },
+    {
+      "cityId": 2810,
+      "cityNameCn": "金昌",
+      "cityNameEn": "jinchang"
+    },
+    {
+      "cityId": 6070014,
+      "cityNameCn": "介休",
+      "cityNameEn": "jiexiu"
+    },
+    {
+      "cityId": 12350005,
+      "cityNameCn": "江山",
+      "cityNameEn": "jiangshan"
+    },
+    {
+      "cityId": 13280002,
+      "cityNameCn": "泾县",
+      "cityNameEn": "jingxian"
+    },
+    {
+      "cityId": 11080011,
+      "cityNameCn": "句容",
+      "cityNameEn": "jurong"
+    },
+    {
+      "cityId": 11230008,
+      "cityNameCn": "金湖县",
+      "cityNameEn": "jinhu"
+    },
+    {
+      "cityId": 25170004,
+      "cityNameCn": "建水县",
+      "cityNameEn": "jianshuicity"
+    },
+    {
+      "cityId": 11150006,
+      "cityNameCn": "姜堰",
+      "cityNameEn": "jiangyan"
+    },
+    {
+      "cityId": 11030007,
+      "cityNameCn": "金坛",
+      "cityNameEn": "jintan"
+    },
+    {
+      "cityId": 16160012,
+      "cityNameCn": "巨野县",
+      "cityNameEn": "jvye"
+    },
+    {
+      "cityId": 18100011,
+      "cityNameCn": "京山县",
+      "cityNameEn": "jingshan"
+    },
+    {
+      "cityId": 23010025,
+      "cityNameCn": "简阳",
+      "cityNameEn": "jianyang"
+    },
+    {
+      "cityId": 12300008,
+      "cityNameCn": "缙云县",
+      "cityNameEn": "jinyun"
+    },
+    {
+      "cityId": 9030008,
+      "cityNameCn": "集安",
+      "cityNameEn": "ji"
+    },
+    {
+      "cityId": 16110010,
+      "cityNameCn": "莒南",
+      "cityNameEn": "junan"
+    },
+    {
+      "cityId": 31150006,
+      "cityNameCn": "吉木萨尔县",
+      "cityNameEn": "jimusaer"
+    },
+    {
+      "cityId": 13280003,
+      "cityNameCn": "绩溪县",
+      "cityNameEn": "jixi"
+    },
+    {
+      "cityId": 14110009,
+      "cityNameCn": "建阳",
+      "cityNameEn": "jianyang"
+    },
+    {
+      "cityId": 25230003,
+      "cityNameCn": "江川县",
+      "cityNameEn": "jiangchuan"
+    },
+    {
+      "cityId": 5010039,
+      "cityNameCn": "晋州",
+      "cityNameEn": "jinzhou"
+    },
+    {
+      "cityId": 14110007,
+      "cityNameCn": "建瓯",
+      "cityNameEn": "jianou"
+    },
+    {
+      "cityId": 16190016,
+      "cityNameCn": "金乡县",
+      "cityNameEn": "jinxiang"
+    },
+    {
+      "cityId": 16020013,
+      "cityNameCn": "济阳县",
+      "cityNameEn": "jiyangxian"
+    },
+    {
+      "cityId": 11160009,
+      "cityNameCn": "建湖县",
+      "cityNameEn": "jianhu"
+    },
+    {
+      "cityId": 14100008,
+      "cityNameCn": "将乐县",
+      "cityNameEn": "jiangle"
+    },
+    {
+      "cityId": 14100007,
+      "cityNameCn": "建宁县",
+      "cityNameEn": "jianning"
+    },
+    {
+      "cityId": 18110004,
+      "cityNameCn": "建始县",
+      "cityNameEn": "jianshi"
+    },
+    {
+      "cityId": 12300010,
+      "cityNameCn": "景宁畲族自治县",
+      "cityNameEn": "jingning"
+    },
+    {
+      "cityId": 13070007,
+      "cityNameCn": "界首",
+      "cityNameEn": "jieshou"
+    },
+    {
+      "cityId": 5140002,
+      "cityNameCn": "冀州",
+      "cityNameEn": "jizhou"
+    },
+    {
+      "cityId": 9010017,
+      "cityNameCn": "九台",
+      "cityNameEn": "jiutai"
+    },
+    {
+      "cityId": 5050037,
+      "cityNameCn": "巨鹿县",
+      "cityNameEn": "julu"
+    },
+    {
+      "cityId": 13280006,
+      "cityNameCn": "旌德县",
+      "cityNameEn": "jingde"
+    },
+    {
+      "cityId": 5140011,
+      "cityNameCn": "景县",
+      "cityNameEn": "jingxian"
+    },
+    {
+      "cityId": 25010019,
+      "cityNameCn": "晋宁县",
+      "cityNameEn": "jinning"
+    },
+    {
+      "cityId": 17050007,
+      "cityNameCn": "郏县",
+      "cityNameEn": "jiaxian"
+    },
+    {
+      "cityId": 18200002,
+      "cityNameCn": "嘉鱼县",
+      "cityNameEn": "jiayu"
+    },
+    {
+      "cityId": 9020008,
+      "cityNameCn": "蛟河",
+      "cityNameEn": "jiaohe"
+    },
+    {
+      "cityId": 19210011,
+      "cityNameCn": "靖州苗族侗族自治县",
+      "cityNameEn": "jingzhouxian"
+    },
+    {
+      "cityId": 6060024,
+      "cityNameCn": "静乐县",
+      "cityNameEn": "jingle"
+    },
+    {
+      "cityId": 6050010,
+      "cityNameCn": "绛县",
+      "cityNameEn": "jiangxian"
+    },
+    {
+      "cityId": 5010019,
+      "cityNameCn": "井陉县",
+      "cityNameEn": "jingjing"
+    },
+    {
+      "cityId": 5150016,
+      "cityNameCn": "鸡泽县",
+      "cityNameEn": "jize"
+    },
+    {
+      "cityId": 6190003,
+      "cityNameCn": "交城县",
+      "cityNameEn": "jiaocheng"
+    },
+    {
+      "cityId": 27090003,
+      "cityNameCn": "靖边县",
+      "cityNameEn": "yulinjingbianxian"
+    },
+    {
+      "cityId": 31180002,
+      "cityNameCn": "吉木乃县",
+      "cityNameEn": "jimunaixian"
+    },
+    {
+      "cityId": 6050008,
+      "cityNameCn": "稷山县",
+      "cityNameEn": "jishan"
+    },
+    {
+      "cityId": 27090009,
+      "cityNameCn": "佳县",
+      "cityNameEn": "yulinjiaxian"
+    },
+    {
+      "cityId": 18020004,
+      "cityNameCn": "监利县",
+      "cityNameEn": "jianli"
+    },
+    {
+      "cityId": 18020005,
+      "cityNameCn": "江陵县",
+      "cityNameEn": "jiangling"
+    },
+    {
+      "cityId": 6190020,
+      "cityNameCn": "交口县",
+      "cityNameEn": "jiaokou"
+    },
+    {
+      "cityId": 2501,
+      "cityNameCn": "昆明",
+      "cityNameEn": "kunming"
+    },
+    {
+      "cityId": 1703,
+      "cityNameCn": "开封",
+      "cityNameEn": "kaifeng"
+    },
+    {
+      "cityId": 11020017,
+      "cityNameCn": "昆山",
+      "cityNameEn": "kunshan"
+    },
+    {
+      "cityId": 24320013,
+      "cityNameCn": "凯里",
+      "cityNameEn": "kaili"
+    },
+    {
+      "cityId": 23920001,
+      "cityNameCn": "康定县",
+      "cityNameEn": "kangding"
+    },
+    {
+      "cityId": 2361,
+      "cityNameCn": "康定新都桥",
+      "cityNameEn": "xinduqiao"
+    },
+    {
+      "cityId": 31310009,
+      "cityNameCn": "库尔勒",
+      "cityNameEn": "kuerle"
+    },
+    {
+      "cityId": 3102,
+      "cityNameCn": "克拉玛依",
+      "cityNameEn": "kelamayi"
+    },
+    {
+      "cityId": 20210007,
+      "cityNameCn": "开平",
+      "cityNameEn": "kaiping"
+    },
+    {
+      "cityId": 3111,
+      "cityNameCn": "喀什地区",
+      "cityNameEn": "kashi"
+    },
+    {
+      "cityId": 31030012,
+      "cityNameCn": "奎屯",
+      "cityNameEn": "kuitun"
+    },
+    {
+      "cityId": 3110,
+      "cityNameCn": "喀纳斯",
+      "cityNameEn": "kanasi"
+    },
+    {
+      "cityId": 31090002,
+      "cityNameCn": "库车县",
+      "cityNameEn": "kuchexian"
+    },
+    {
+      "cityId": 12350001,
+      "cityNameCn": "开化县",
+      "cityNameEn": "kaihua"
+    },
+    {
+      "cityId": 25170009,
+      "cityNameCn": "开远",
+      "cityNameEn": "kaiyuan"
+    },
+    {
+      "cityId": 4010044,
+      "cityNameCn": "开县",
+      "cityNameEn": "kaixian"
+    },
+    {
+      "cityId": 8130009,
+      "cityNameCn": "开原",
+      "cityNameEn": "kaiyuan"
+    },
+    {
+      "cityId": 16070005,
+      "cityNameCn": "垦利县",
+      "cityNameEn": "kenli"
+    },
+    {
+      "cityId": 5020016,
+      "cityNameCn": "宽城满族自治县",
+      "cityNameEn": "kuancheng"
+    },
+    {
+      "cityId": 5130013,
+      "cityNameCn": "康保县",
+      "cityNameEn": "kangbaoxian"
+    },
+    {
+      "cityId": 3132,
+      "cityNameCn": "克孜勒苏柯尔克孜自治州",
+      "cityNameEn": "kizilsu"
+    },
+    {
+      "cityId": 28190009,
+      "cityNameCn": "康乐县",
+      "cityNameEn": "kanglexian"
+    },
+    {
+      "cityId": 6060028,
+      "cityNameCn": "岢岚县",
+      "cityNameEn": "kelan"
+    },
+    {
+      "cityId": 2801,
+      "cityNameCn": "兰州",
+      "cityNameEn": "lanzhou"
+    },
+    {
+      "cityId": 2503,
+      "cityNameCn": "丽江",
+      "cityNameEn": "lijiang"
+    },
+    {
+      "cityId": 2601,
+      "cityNameCn": "拉萨",
+      "cityNameEn": "lhasa"
+    },
+    {
+      "cityId": 1702,
+      "cityNameCn": "洛阳",
+      "cityNameEn": "luoyang"
+    },
+    {
+      "cityId": 2105,
+      "cityNameCn": "柳州",
+      "cityNameEn": "liuzhou"
+    },
+    {
+      "cityId": 1110,
+      "cityNameCn": "连云港",
+      "cityNameEn": "lianyungang"
+    },
+    {
+      "cityId": 1611,
+      "cityNameCn": "临沂",
+      "cityNameEn": "linyi"
+    },
+    {
+      "cityId": 2303,
+      "cityNameCn": "乐山",
+      "cityNameEn": "leshan"
+    },
+    {
+      "cityId": 24300009,
+      "cityNameCn": "荔波县",
+      "cityNameEn": "libo"
+    },
+    {
+      "cityId": 511,
+      "cityNameCn": "廊坊",
+      "cityNameEn": "langfang"
+    },
+    {
+      "cityId": 2603,
+      "cityNameCn": "林芝地区",
+      "cityNameEn": "linzhi"
+    },
+    {
+      "cityId": 1319,
+      "cityNameCn": "六安",
+      "cityNameEn": "luan"
+    },
+    {
+      "cityId": 1622,
+      "cityNameCn": "聊城",
+      "cityNameEn": "liaocheng"
+    },
+    {
+      "cityId": 1230,
+      "cityNameCn": "丽水",
+      "cityNameEn": "lishui"
+    },
+    {
+      "cityId": 2314,
+      "cityNameCn": "泸州",
+      "cityNameEn": "luzhou"
+    },
+    {
+      "cityId": 1409,
+      "cityNameCn": "龙岩",
+      "cityNameEn": "longyan"
+    },
+    {
+      "cityId": 12010014,
+      "cityNameCn": "临安",
+      "cityNameEn": "linan"
+    },
+    {
+      "cityId": 23090004,
+      "cityNameCn": "阆中",
+      "cityNameEn": "langzhong"
+    },
+    {
+      "cityId": 603,
+      "cityNameCn": "临汾",
+      "cityNameEn": "linfen"
+    },
+    {
+      "cityId": 2118,
+      "cityNameCn": "来宾",
+      "cityNameEn": "laibin"
+    },
+    {
+      "cityId": 818,
+      "cityNameCn": "辽阳",
+      "cityNameEn": "liaoyang"
+    },
+    {
+      "cityId": 1717,
+      "cityNameCn": "漯河",
+      "cityNameEn": "luohe"
+    },
+    {
+      "cityId": 2819,
+      "cityNameCn": "临夏回族自治州",
+      "cityNameEn": "linxia"
+    },
+    {
+      "cityId": 2412,
+      "cityNameCn": "六盘水",
+      "cityNameEn": "liupanshui"
+    },
+    {
+      "cityId": 17020018,
+      "cityNameCn": "栾川县",
+      "cityNameEn": "luanchuan"
+    },
+    {
+      "cityId": 16040013,
+      "cityNameCn": "莱州",
+      "cityNameEn": "laizhou"
+    },
+    {
+      "cityId": 1634,
+      "cityNameCn": "莱芜",
+      "cityNameEn": "laiwu"
+    },
+    {
+      "cityId": 21010005,
+      "cityNameCn": "龙胜各族自治县",
+      "cityNameEn": "longsheng"
+    },
+    {
+      "cityId": 16040011,
+      "cityNameCn": "龙口",
+      "cityNameEn": "longkou"
+    },
+    {
+      "cityId": 1928,
+      "cityNameCn": "娄底",
+      "cityNameEn": "loudi"
+    },
+    {
+      "cityId": 12240004,
+      "cityNameCn": "临海",
+      "cityNameEn": "linhai"
+    },
+    {
+      "cityId": 2817,
+      "cityNameCn": "陇南",
+      "cityNameEn": "longnanshi"
+    },
+    {
+      "cityId": 12030010,
+      "cityNameCn": "乐清",
+      "cityNameEn": "yueqing"
+    },
+    {
+      "cityId": 22070001,
+      "cityNameCn": "陵水黎族自治县",
+      "cityNameEn": "lingshui"
+    },
+    {
+      "cityId": 5060026,
+      "cityNameCn": "乐亭县",
+      "cityNameEn": "laoting"
+    },
+    {
+      "cityId": 16040010,
+      "cityNameCn": "莱阳",
+      "cityNameEn": "laiyang"
+    },
+    {
+      "cityId": 5120040,
+      "cityNameCn": "涞源县",
+      "cityNameEn": "laiyuan"
+    },
+    {
+      "cityId": 18110008,
+      "cityNameCn": "利川",
+      "cityNameEn": "lichuan"
+    },
+    {
+      "cityId": 619,
+      "cityNameCn": "吕梁",
+      "cityNameEn": "lvliang"
+    },
+    {
+      "cityId": 14020006,
+      "cityNameCn": "连江县",
+      "cityNameEn": "lianjiang"
+    },
+    {
+      "cityId": 913,
+      "cityNameCn": "辽源",
+      "cityNameEn": "liaoyuan"
+    },
+    {
+      "cityId": 17160010,
+      "cityNameCn": "林州",
+      "cityNameEn": "linzhou"
+    },
+    {
+      "cityId": 16010015,
+      "cityNameCn": "莱西",
+      "cityNameEn": "laixi"
+    },
+    {
+      "cityId": 2341,
+      "cityNameCn": "凉山彝族自治州",
+      "cityNameEn": "liangshanzhou"
+    },
+    {
+      "cityId": 16110012,
+      "cityNameCn": "临沭县",
+      "cityNameEn": "linshu"
+    },
+    {
+      "cityId": 12040008,
+      "cityNameCn": "兰溪",
+      "cityNameEn": "lanxi"
+    },
+    {
+      "cityId": 23950014,
+      "cityNameCn": "理县",
+      "cityNameEn": "lixian"
+    },
+    {
+      "cityId": 19010014,
+      "cityNameCn": "浏阳",
+      "cityNameEn": "liuyang"
+    },
+    {
+      "cityId": 23920004,
+      "cityNameCn": "泸定县",
+      "cityNameEn": "luding"
+    },
+    {
+      "cityId": 12350007,
+      "cityNameCn": "龙游县",
+      "cityNameEn": "longyou"
+    },
+    {
+      "cityId": 9180007,
+      "cityNameCn": "临江",
+      "cityNameEn": "linjiang"
+    },
+    {
+      "cityId": 5010037,
+      "cityNameCn": "鹿泉",
+      "cityNameEn": "luquan"
+    },
+    {
+      "cityId": 19180014,
+      "cityNameCn": "耒阳",
+      "cityNameEn": "leiyang"
+    },
+    {
+      "cityId": 18300003,
+      "cityNameCn": "罗田县",
+      "cityNameEn": "luotian"
+    },
+    {
+      "cityId": 15070005,
+      "cityNameCn": "乐平",
+      "cityNameEn": "leping"
+    },
+    {
+      "cityId": 5060028,
+      "cityNameCn": "滦县",
+      "cityNameEn": "luanxian"
+    },
+    {
+      "cityId": 17050006,
+      "cityNameCn": "鲁山县",
+      "cityNameEn": "lushan"
+    },
+    {
+      "cityId": 25220003,
+      "cityNameCn": "罗平县",
+      "cityNameEn": "luoping"
+    },
+    {
+      "cityId": 11230010,
+      "cityNameCn": "涟水县",
+      "cityNameEn": "lianshui"
+    },
+    {
+      "cityId": 1533,
+      "cityNameCn": "龙虎山",
+      "cityNameEn": "longhushan"
+    },
+    {
+      "cityId": 14020009,
+      "cityNameCn": "罗源县",
+      "cityNameEn": "luoyuan"
+    },
+    {
+      "cityId": 6070013,
+      "cityNameCn": "灵石县",
+      "cityNameEn": "lingshi"
+    },
+    {
+      "cityId": 22270002,
+      "cityNameCn": "临高县",
+      "cityNameEn": "lingao"
+    },
+    {
+      "cityId": 16220005,
+      "cityNameCn": "临清",
+      "cityNameEn": "linqing"
+    },
+    {
+      "cityId": 2511,
+      "cityNameCn": "临沧",
+      "cityNameEn": "lincang"
+    },
+    {
+      "cityId": 17080007,
+      "cityNameCn": "灵宝",
+      "cityNameEn": "lingbao"
+    },
+    {
+      "cityId": 16190019,
+      "cityNameCn": "梁山县",
+      "cityNameEn": "liangshan"
+    },
+    {
+      "cityId": 12300002,
+      "cityNameCn": "龙泉",
+      "cityNameEn": "longquan"
+    },
+    {
+      "cityId": 14080009,
+      "cityNameCn": "龙海",
+      "cityNameEn": "longhai"
+    },
+    {
+      "cityId": 29010004,
+      "cityNameCn": "灵武",
+      "cityNameEn": "lingwu"
+    },
+    {
+      "cityId": 13280004,
+      "cityNameCn": "郎溪县",
+      "cityNameEn": "langxi"
+    },
+    {
+      "cityId": 13070008,
+      "cityNameCn": "临泉县",
+      "cityNameEn": "linquan"
+    },
+    {
+      "cityId": 22190006,
+      "cityNameCn": "乐东黎族自治县",
+      "cityNameEn": "ledong"
+    },
+    {
+      "cityId": 4010046,
+      "cityNameCn": "梁平县",
+      "cityNameEn": "liangping"
+    },
+    {
+      "cityId": 17140004,
+      "cityNameCn": "鹿邑县",
+      "cityNameEn": "luyi"
+    },
+    {
+      "cityId": 5010044,
+      "cityNameCn": "栾城县",
+      "cityNameEn": "luancheng"
+    },
+    {
+      "cityId": 14090003,
+      "cityNameCn": "连城县",
+      "cityNameEn": "liancheng"
+    },
+    {
+      "cityId": 17170006,
+      "cityNameCn": "临颍县",
+      "cityNameEn": "linying"
+    },
+    {
+      "cityId": 5010046,
+      "cityNameCn": "灵寿县",
+      "cityNameEn": "lingshou"
+    },
+    {
+      "cityId": 16120006,
+      "cityNameCn": "临邑县",
+      "cityNameEn": "linyii"
+    },
+    {
+      "cityId": 5020023,
+      "cityNameCn": "隆化县",
+      "cityNameEn": "longhua"
+    },
+    {
+      "cityId": 17080006,
+      "cityNameCn": "卢氏县",
+      "cityNameEn": "lushixian"
+    },
+    {
+      "cityId": 16120009,
+      "cityNameCn": "乐陵",
+      "cityNameEn": "leling"
+    },
+    {
+      "cityId": 19280005,
+      "cityNameCn": "冷水江",
+      "cityNameEn": "lengshui"
+    },
+    {
+      "cityId": 5120035,
+      "cityNameCn": "涞水县",
+      "cityNameEn": "laishui"
+    },
+    {
+      "cityId": 25170010,
+      "cityNameCn": "泸西县",
+      "cityNameEn": "luxi"
+    },
+    {
+      "cityId": 13180007,
+      "cityNameCn": "来安县",
+      "cityNameEn": "laian"
+    },
+    {
+      "cityId": 16070004,
+      "cityNameCn": "利津县",
+      "cityNameEn": "lijinxian"
+    },
+    {
+      "cityId": 6170023,
+      "cityNameCn": "潞城",
+      "cityNameEn": "lucheng"
+    },
+    {
+      "cityId": 5020021,
+      "cityNameCn": "滦平县",
+      "cityNameEn": "luanping"
+    },
+    {
+      "cityId": 17020009,
+      "cityNameCn": "洛宁县",
+      "cityNameEn": "luoning"
+    },
+    {
+      "cityId": 5050027,
+      "cityNameCn": "隆尧县",
+      "cityNameEn": "longyao"
+    },
+    {
+      "cityId": 18340007,
+      "cityNameCn": "老河口",
+      "cityNameEn": "laohekou"
+    },
+    {
+      "cityId": 19280006,
+      "cityNameCn": "涟源",
+      "cityNameEn": "lianyuan"
+    },
+    {
+      "cityId": 5050033,
+      "cityNameCn": "临城县",
+      "cityNameEn": "lincheng"
+    },
+    {
+      "cityId": 31310001,
+      "cityNameCn": "轮台县",
+      "cityNameEn": "luntaixian"
+    },
+    {
+      "cityId": 15160001,
+      "cityNameCn": "龙南县",
+      "cityNameEn": "longnanxian"
+    },
+    {
+      "cityId": 5050034,
+      "cityNameCn": "临西县",
+      "cityNameEn": "linxi"
+    },
+    {
+      "cityId": 19040007,
+      "cityNameCn": "临湘",
+      "cityNameEn": "linxiang"
+    },
+    {
+      "cityId": 5150011,
+      "cityNameCn": "临漳县",
+      "cityNameEn": "linzhang"
+    },
+    {
+      "cityId": 9030007,
+      "cityNameCn": "柳河县",
+      "cityNameEn": "liuhe"
+    },
+    {
+      "cityId": 19370006,
+      "cityNameCn": "龙山县",
+      "cityNameEn": "longshanxian"
+    },
+    {
+      "cityId": 19240008,
+      "cityNameCn": "隆回县",
+      "cityNameEn": "longhui"
+    },
+    {
+      "cityId": 17200006,
+      "cityNameCn": "罗山县",
+      "cityNameEn": "luoshan"
+    },
+    {
+      "cityId": 25220002,
+      "cityNameCn": "陆良县",
+      "cityNameEn": "luliang"
+    },
+    {
+      "cityId": 5060030,
+      "cityNameCn": "滦南县",
+      "cityNameEn": "luannan"
+    },
+    {
+      "cityId": 19020006,
+      "cityNameCn": "醴陵",
+      "cityNameEn": "lilingxian"
+    },
+    {
+      "cityId": 6190006,
+      "cityNameCn": "柳林县",
+      "cityNameEn": "liulin"
+    },
+    {
+      "cityId": 25010016,
+      "cityNameCn": "禄劝彝族苗族自治县",
+      "cityNameEn": "luquan"
+    },
+    {
+      "cityId": 24320015,
+      "cityNameCn": "黎平县",
+      "cityNameEn": "liping"
+    },
+    {
+      "cityId": 5120057,
+      "cityNameCn": "蠡县",
+      "cityNameEn": "lixian"
+    },
+    {
+      "cityId": 6050006,
+      "cityNameCn": "临猗县",
+      "cityNameEn": "linyi"
+    },
+    {
+      "cityId": 9050006,
+      "cityNameCn": "龙井",
+      "cityNameEn": "longjing"
+    },
+    {
+      "cityId": 6190019,
+      "cityNameCn": "岚县",
+      "cityNameEn": "lanxian"
+    },
+    {
+      "cityId": 6170018,
+      "cityNameCn": "黎城县",
+      "cityNameEn": "licheng"
+    },
+    {
+      "cityId": 6190005,
+      "cityNameCn": "临县",
+      "cityNameEn": "linxian"
+    },
+    {
+      "cityId": 6090013,
+      "cityNameCn": "陵川县",
+      "cityNameEn": "lingchuan"
+    },
+    {
+      "cityId": 27050010,
+      "cityNameCn": "洛川县",
+      "cityNameEn": "yananluochuan"
+    },
+    {
+      "cityId": 27120006,
+      "cityNameCn": "洛南县",
+      "cityNameEn": "luonan"
+    },
+    {
+      "cityId": 2302,
+      "cityNameCn": "绵阳",
+      "cityNameEn": "mianyang"
+    },
+    {
+      "cityId": 2009,
+      "cityNameCn": "茂名",
+      "cityNameEn": "maoming"
+    },
+    {
+      "cityId": 7120013,
+      "cityNameCn": "满洲里",
+      "cityNameEn": "manzhouli"
+    },
+    {
+      "cityId": 2028,
+      "cityNameCn": "梅州",
+      "cityNameEn": "meizhou"
+    },
+    {
+      "cityId": 1002,
+      "cityNameCn": "牡丹江",
+      "cityNameEn": "mudanjiang"
+    },
+    {
+      "cityId": 2304,
+      "cityNameCn": "眉山",
+      "cityNameEn": "meishan"
+    },
+    {
+      "cityId": 1311,
+      "cityNameCn": "马鞍山",
+      "cityNameEn": "maanshan"
+    },
+    {
+      "cityId": 25170013,
+      "cityNameCn": "弥勒县",
+      "cityNameEn": "mile"
+    },
+    {
+      "cityId": 10280001,
+      "cityNameCn": "漠河县",
+      "cityNameEn": "mohe"
+    },
+    {
+      "cityId": 16110008,
+      "cityNameCn": "蒙阴县",
+      "cityNameEn": "mengyin"
+    },
+    {
+      "cityId": 23950013,
+      "cityNameCn": "茂县",
+      "cityNameEn": "maoxian"
+    },
+    {
+      "cityId": 14020007,
+      "cityNameCn": "闽侯县",
+      "cityNameEn": "minhou"
+    },
+    {
+      "cityId": 18300001,
+      "cityNameCn": "麻城",
+      "cityNameEn": "macheng"
+    },
+    {
+      "cityId": 25170001,
+      "cityNameCn": "蒙自",
+      "cityNameEn": "mengzi"
+    },
+    {
+      "cityId": 25160001,
+      "cityNameCn": "芒市",
+      "cityNameEn": "mangshi"
+    },
+    {
+      "cityId": 13180009,
+      "cityNameCn": "明光",
+      "cityNameEn": "mingguang"
+    },
+    {
+      "cityId": 23950011,
+      "cityNameCn": "马尔康县",
+      "cityNameEn": "maerkang"
+    },
+    {
+      "cityId": 9030009,
+      "cityNameCn": "梅河口",
+      "cityNameEn": "meihekou"
+    },
+    {
+      "cityId": 10150009,
+      "cityNameCn": "密山",
+      "cityNameEn": "mishan"
+    },
+    {
+      "cityId": 17100012,
+      "cityNameCn": "孟州",
+      "cityNameEn": "mengzhou"
+    },
+    {
+      "cityId": 5120046,
+      "cityNameCn": "满城县",
+      "cityNameEn": "mancheng"
+    },
+    {
+      "cityId": 17080003,
+      "cityNameCn": "渑池县",
+      "cityNameEn": "mianchi"
+    },
+    {
+      "cityId": 17210004,
+      "cityNameCn": "民权县",
+      "cityNameEn": "minquan"
+    },
+    {
+      "cityId": 17020015,
+      "cityNameCn": "孟津县",
+      "cityNameEn": "mengjin"
+    },
+    {
+      "cityId": 14100006,
+      "cityNameCn": "明溪县",
+      "cityNameEn": "mingxi"
+    },
+    {
+      "cityId": 19040006,
+      "cityNameCn": "汨罗",
+      "cityNameEn": "miluo"
+    },
+    {
+      "cityId": 31150004,
+      "cityNameCn": "玛纳斯县",
+      "cityNameEn": "manasi"
+    },
+    {
+      "cityId": 14020010,
+      "cityNameCn": "闽清县",
+      "cityNameEn": "minqing"
+    },
+    {
+      "cityId": 31110009,
+      "cityNameCn": "麦盖提县",
+      "cityNameEn": "maigaiti"
+    },
+    {
+      "cityId": 17180008,
+      "cityNameCn": "泌阳县",
+      "cityNameEn": "biyang"
+    },
+    {
+      "cityId": 5160015,
+      "cityNameCn": "孟村回族自治县",
+      "cityNameEn": "mengcun"
+    },
+    {
+      "cityId": 31150008,
+      "cityNameCn": "木垒哈萨克自治县",
+      "cityNameEn": "muleixian"
+    },
+    {
+      "cityId": 19210008,
+      "cityNameCn": "麻阳苗族自治县",
+      "cityNameEn": "mayangxian"
+    },
+    {
+      "cityId": 26060009,
+      "cityNameCn": "芒康县",
+      "cityNameEn": "mangkang"
+    },
+    {
+      "cityId": 24320016,
+      "cityNameCn": "麻江县",
+      "cityNameEn": "majiang"
+    },
+    {
+      "cityId": 25220004,
+      "cityNameCn": "马龙县",
+      "cityNameEn": "malong"
+    },
+    {
+      "cityId": 27090002,
+      "cityNameCn": "米脂县",
+      "cityNameEn": "yulinmizhixian"
+    },
+    {
+      "cityId": 1101,
+      "cityNameCn": "南京",
+      "cityNameEn": "nanjing"
+    },
+    {
+      "cityId": 2102,
+      "cityNameCn": "南宁",
+      "cityNameEn": "nanning"
+    },
+    {
+      "cityId": 1202,
+      "cityNameCn": "宁波",
+      "cityNameEn": "ningbo"
+    },
+    {
+      "cityId": 1501,
+      "cityNameCn": "南昌",
+      "cityNameEn": "nanchang"
+    },
+    {
+      "cityId": 1107,
+      "cityNameCn": "南通",
+      "cityNameEn": "nantong"
+    },
+    {
+      "cityId": 504,
+      "cityNameCn": "南戴河",
+      "cityNameEn": "nandaihe"
+    },
+    {
+      "cityId": 1707,
+      "cityNameCn": "南阳",
+      "cityNameEn": "nanyang"
+    },
+    {
+      "cityId": 2309,
+      "cityNameCn": "南充",
+      "cityNameEn": "nanchong"
+    },
+    {
+      "cityId": 2319,
+      "cityNameCn": "内江",
+      "cityNameEn": "neijiang"
+    },
+    {
+      "cityId": 1414,
+      "cityNameCn": "宁德",
+      "cityNameEn": "ningde"
+    },
+    {
+      "cityId": 12020019,
+      "cityNameCn": "宁海县",
+      "cityNameEn": "ninghai"
+    },
+    {
+      "cityId": 12390001,
+      "cityNameCn": "南浔区",
+      "cityNameEn": "nanxun"
+    },
+    {
+      "cityId": 2609,
+      "cityNameCn": "那曲地区",
+      "cityNameEn": "naqu"
+    },
+    {
+      "cityId": 1411,
+      "cityNameCn": "南平",
+      "cityNameEn": "nanping"
+    },
+    {
+      "cityId": 4010016,
+      "cityNameCn": "南川区",
+      "cityNameEn": "nanchuan"
+    },
+    {
+      "cityId": 14030014,
+      "cityNameCn": "南安",
+      "cityNameEn": "nanan"
+    },
+    {
+      "cityId": 14080006,
+      "cityNameCn": "南靖县",
+      "cityNameEn": "nanjing"
+    },
+    {
+      "cityId": 17070004,
+      "cityNameCn": "内乡县",
+      "cityNameEn": "neixiang"
+    },
+    {
+      "cityId": 13280008,
+      "cityNameCn": "宁国",
+      "cityNameEn": "ningguo"
+    },
+    {
+      "cityId": 16140011,
+      "cityNameCn": "宁阳县",
+      "cityNameEn": "ningyang"
+    },
+    {
+      "cityId": 15160019,
+      "cityNameCn": "南康",
+      "cityNameEn": "nankang"
+    },
+    {
+      "cityId": 13040001,
+      "cityNameCn": "南陵县",
+      "cityNameEn": "nanling"
+    },
+    {
+      "cityId": 19010008,
+      "cityNameCn": "宁乡县",
+      "cityNameEn": "ningxiang"
+    },
+    {
+      "cityId": 1261,
+      "cityNameCn": "楠溪江",
+      "cityNameEn": "nanxijiang"
+    },
+    {
+      "cityId": 16120011,
+      "cityNameCn": "宁津县",
+      "cityNameEn": "ningjin"
+    },
+    {
+      "cityId": 17070013,
+      "cityNameCn": "南召县",
+      "cityNameEn": "nanzhao"
+    },
+    {
+      "cityId": 31030009,
+      "cityNameCn": "尼勒克县",
+      "cityNameEn": "nilekexian"
+    },
+    {
+      "cityId": 2527,
+      "cityNameCn": "怒江傈僳族自治州",
+      "cityNameEn": "nujiang"
+    },
+    {
+      "cityId": 6060023,
+      "cityNameCn": "宁武县",
+      "cityNameEn": "ningwu"
+    },
+    {
+      "cityId": 18340009,
+      "cityNameCn": "南漳县",
+      "cityNameEn": "nanzhang"
+    },
+    {
+      "cityId": 5050030,
+      "cityNameCn": "南宫",
+      "cityNameEn": "nangong"
+    },
+    {
+      "cityId": 17060006,
+      "cityNameCn": "南乐县",
+      "cityNameEn": "nanle"
+    },
+    {
+      "cityId": 14100010,
+      "cityNameCn": "宁化县",
+      "cityNameEn": "ninghua"
+    },
+    {
+      "cityId": 15160014,
+      "cityNameCn": "宁都县",
+      "cityNameEn": "ningdu"
+    },
+    {
+      "cityId": 15150012,
+      "cityNameCn": "南城县",
+      "cityNameEn": "nancheng"
+    },
+    {
+      "cityId": 5160013,
+      "cityNameCn": "南皮县",
+      "cityNameEn": "nanpi"
+    },
+    {
+      "cityId": 17160009,
+      "cityNameCn": "内黄县",
+      "cityNameEn": "neihuang"
+    },
+    {
+      "cityId": 5050035,
+      "cityNameCn": "内丘县",
+      "cityNameEn": "neiqiu"
+    },
+    {
+      "cityId": 5050028,
+      "cityNameCn": "宁晋县",
+      "cityNameEn": "ningjinxian"
+    },
+    {
+      "cityId": 17210006,
+      "cityNameCn": "宁陵县",
+      "cityNameEn": "ningling"
+    },
+    {
+      "cityId": 7070004,
+      "cityNameCn": "宁城县",
+      "cityNameEn": "ningcheng"
+    },
+    {
+      "cityId": 9010015,
+      "cityNameCn": "农安县",
+      "cityNameEn": "nongan"
+    },
+    {
+      "cityId": 5050038,
+      "cityNameCn": "南和县",
+      "cityNameEn": "nanhe"
+    },
+    {
+      "cityId": 16040009,
+      "cityNameCn": "蓬莱",
+      "cityNameEn": "penglai"
+    },
+    {
+      "cityId": 6070012,
+      "cityNameCn": "平遥县",
+      "cityNameEn": "pingyao"
+    },
+    {
+      "cityId": 1406,
+      "cityNameCn": "莆田",
+      "cityNameEn": "putian"
+    },
+    {
+      "cityId": 2809,
+      "cityNameCn": "平凉",
+      "cityNameEn": "pingliang"
+    },
+    {
+      "cityId": 2321,
+      "cityNameCn": "攀枝花",
+      "cityNameEn": "panzhihua"
+    },
+    {
+      "cityId": 14020014,
+      "cityNameCn": "平潭县",
+      "cityNameEn": "pingtan"
+    },
+    {
+      "cityId": 809,
+      "cityNameCn": "盘锦",
+      "cityNameEn": "panjin"
+    },
+    {
+      "cityId": 1512,
+      "cityNameCn": "萍乡",
+      "cityNameEn": "pingxiang"
+    },
+    {
+      "cityId": 1705,
+      "cityNameCn": "平顶山",
+      "cityNameEn": "pingdingshan"
+    },
+    {
+      "cityId": 1706,
+      "cityNameCn": "濮阳",
+      "cityNameEn": "puyang"
+    },
+    {
+      "cityId": 12090003,
+      "cityNameCn": "平湖",
+      "cityNameEn": "pinghu"
+    },
+    {
+      "cityId": 2582,
+      "cityNameCn": "普者黑景区",
+      "cityNameEn": "puzhehei"
+    },
+    {
+      "cityId": 2529,
+      "cityNameCn": "普洱",
+      "cityNameEn": "puer"
+    },
+    {
+      "cityId": 23010019,
+      "cityNameCn": "彭州",
+      "cityNameEn": "pengzhou"
+    },
+    {
+      "cityId": 16010017,
+      "cityNameCn": "平度",
+      "cityNameEn": "pingdu"
+    },
+    {
+      "cityId": 5010036,
+      "cityNameCn": "平山县",
+      "cityNameEn": "pingshan"
+    },
+    {
+      "cityId": 12040010,
+      "cityNameCn": "浦江县",
+      "cityNameEn": "pujiang"
+    },
+    {
+      "cityId": 12040011,
+      "cityNameCn": "磐安县",
+      "cityNameEn": "panan"
+    },
+    {
+      "cityId": 12030005,
+      "cityNameCn": "平阳县",
+      "cityNameEn": "pingyang"
+    },
+    {
+      "cityId": 14140009,
+      "cityNameCn": "屏南县",
+      "cityNameEn": "pingnan"
+    },
+    {
+      "cityId": 19040009,
+      "cityNameCn": "平江县",
+      "cityNameEn": "pingjiang"
+    },
+    {
+      "cityId": 11060019,
+      "cityNameCn": "邳州",
+      "cityNameEn": "pizhou"
+    },
+    {
+      "cityId": 4010030,
+      "cityNameCn": "彭水苗族土家族自治县",
+      "cityNameEn": "pengshui"
+    },
+    {
+      "cityId": 15080010,
+      "cityNameCn": "鄱阳县",
+      "cityNameEn": "poyang"
+    },
+    {
+      "cityId": 16110004,
+      "cityNameCn": "平邑县",
+      "cityNameEn": "pingyi"
+    },
+    {
+      "cityId": 5020020,
+      "cityNameCn": "平泉县",
+      "cityNameEn": "pingquan"
+    },
+    {
+      "cityId": 11060018,
+      "cityNameCn": "沛县",
+      "cityNameEn": "peixian"
+    },
+    {
+      "cityId": 16120008,
+      "cityNameCn": "平原县",
+      "cityNameEn": "pingyuanxian"
+    },
+    {
+      "cityId": 14080012,
+      "cityNameCn": "平和县",
+      "cityNameEn": "pinghe"
+    },
+    {
+      "cityId": 9020009,
+      "cityNameCn": "磐石",
+      "cityNameEn": "panshi"
+    },
+    {
+      "cityId": 20060002,
+      "cityNameCn": "普宁",
+      "cityNameEn": "puning"
+    },
+    {
+      "cityId": 14110002,
+      "cityNameCn": "浦城县",
+      "cityNameEn": "pucheng"
+    },
+    {
+      "cityId": 5050036,
+      "cityNameCn": "平乡县",
+      "cityNameEn": "pingxiangxian"
+    },
+    {
+      "cityId": 17180002,
+      "cityNameCn": "平舆县",
+      "cityNameEn": "pingyu"
+    },
+    {
+      "cityId": 6170019,
+      "cityNameCn": "平顺县",
+      "cityNameEn": "pingshun"
+    },
+    {
+      "cityId": 25170014,
+      "cityNameCn": "屏边苗族自治县",
+      "cityNameEn": "pingbian"
+    },
+    {
+      "cityId": 6060022,
+      "cityNameCn": "偏关县",
+      "cityNameEn": "pianguan"
+    },
+    {
+      "cityId": 30160001,
+      "cityNameCn": "平安县",
+      "cityNameEn": "pinganxian"
+    },
+    {
+      "cityId": 6050013,
+      "cityNameCn": "平陆县",
+      "cityNameEn": "pinglu"
+    },
+    {
+      "cityId": 21300002,
+      "cityNameCn": "凭祥",
+      "cityNameEn": "pinxiangxian"
+    },
+    {
+      "cityId": 27080009,
+      "cityNameCn": "蒲城县",
+      "cityNameEn": "puchengxian"
+    },
+    {
+      "cityId": 23010010,
+      "cityNameCn": "蒲江县",
+      "cityNameEn": "pujiang"
+    },
+    {
+      "cityId": 6030036,
+      "cityNameCn": "蒲县",
+      "cityNameEn": "puxian"
+    },
+    {
+      "cityId": 1601,
+      "cityNameCn": "青岛",
+      "cityNameEn": "qingdao"
+    },
+    {
+      "cityId": 503,
+      "cityNameCn": "秦皇岛",
+      "cityNameEn": "qinhuangdao"
+    },
+    {
+      "cityId": 3002,
+      "cityNameCn": "青海湖",
+      "cityNameEn": "qinghaihu"
+    },
+    {
+      "cityId": 1233,
+      "cityNameCn": "千岛湖风景区",
+      "cityNameEn": "qiandaohu"
+    },
+    {
+      "cityId": 2027,
+      "cityNameCn": "清远",
+      "cityNameEn": "qingyuan"
+    },
+    {
+      "cityId": 1403,
+      "cityNameCn": "泉州",
+      "cityNameEn": "quanzhou"
+    },
+    {
+      "cityId": 30120002,
+      "cityNameCn": "祁连县",
+      "cityNameEn": "qilianxian"
+    },
+    {
+      "cityId": 1005,
+      "cityNameCn": "齐齐哈尔",
+      "cityNameEn": "qiqihaer"
+    },
+    {
+      "cityId": 16190013,
+      "cityNameCn": "曲阜",
+      "cityNameEn": "qufu"
+    },
+    {
+      "cityId": 2109,
+      "cityNameCn": "钦州",
+      "cityNameEn": "qinzhou"
+    },
+    {
+      "cityId": 22060005,
+      "cityNameCn": "琼海",
+      "cityNameEn": "qionghai"
+    },
+    {
+      "cityId": 2431,
+      "cityNameCn": "黔西南布依族苗族自治州",
+      "cityNameEn": "qianxinan"
+    },
+    {
+      "cityId": 1235,
+      "cityNameCn": "衢州",
+      "cityNameEn": "quzhou"
+    },
+    {
+      "cityId": 2430,
+      "cityNameCn": "黔南布依族苗族自治州",
+      "cityNameEn": "qiannanzhou"
+    },
+    {
+      "cityId": 2432,
+      "cityNameCn": "黔东南苗族侗族自治州",
+      "cityNameEn": "qiandongnan"
+    },
+    {
+      "cityId": 2522,
+      "cityNameCn": "曲靖",
+      "cityNameEn": "qujing"
+    },
+    {
+      "cityId": 11070010,
+      "cityNameCn": "启东",
+      "cityNameEn": "qidong"
+    },
+    {
+      "cityId": 16030010,
+      "cityNameCn": "青州",
+      "cityNameEn": "qingzhou"
+    },
+    {
+      "cityId": 18290001,
+      "cityNameCn": "潜江",
+      "cityNameEn": "qianjiang"
+    },
+    {
+      "cityId": 2813,
+      "cityNameCn": "庆阳",
+      "cityNameEn": "qingyang"
+    },
+    {
+      "cityId": 31150005,
+      "cityNameCn": "奇台县",
+      "cityNameEn": "qitaixian"
+    },
+    {
+      "cityId": 2222,
+      "cityNameCn": "七仙岭",
+      "cityNameEn": "qixianling"
+    },
+    {
+      "cityId": 5060023,
+      "cityNameCn": "迁安",
+      "cityNameEn": "qianan"
+    },
+    {
+      "cityId": 13180006,
+      "cityNameCn": "全椒县",
+      "cityNameEn": "quanjiao"
+    },
+    {
+      "cityId": 16040006,
+      "cityNameCn": "栖霞",
+      "cityNameEn": "qixia"
+    },
+    {
+      "cityId": 4010029,
+      "cityNameCn": "綦江区",
+      "cityNameEn": "qijiang"
+    },
+    {
+      "cityId": 4010031,
+      "cityNameCn": "黔江区",
+      "cityNameEn": "qianjiang"
+    },
+    {
+      "cityId": 16120002,
+      "cityNameCn": "齐河县",
+      "cityNameEn": "qihexian"
+    },
+    {
+      "cityId": 1025,
+      "cityNameCn": "七台河",
+      "cityNameEn": "qitaihe"
+    },
+    {
+      "cityId": 12300001,
+      "cityNameCn": "青田县",
+      "cityNameEn": "qintian"
+    },
+    {
+      "cityId": 18300005,
+      "cityNameCn": "蕲春县",
+      "cityNameEn": "qichun"
+    },
+    {
+      "cityId": 16120003,
+      "cityNameCn": "庆云县",
+      "cityNameEn": "qingyun"
+    },
+    {
+      "cityId": 5160007,
+      "cityNameCn": "青县",
+      "cityNameEn": "qingxian"
+    },
+    {
+      "cityId": 5050026,
+      "cityNameCn": "清河县",
+      "cityNameEn": "qinghe"
+    },
+    {
+      "cityId": 13030006,
+      "cityNameCn": "潜山县",
+      "cityNameEn": "qianshan"
+    },
+    {
+      "cityId": 17100010,
+      "cityNameCn": "沁阳",
+      "cityNameEn": "qinyang"
+    },
+    {
+      "cityId": 6070015,
+      "cityNameCn": "祁县",
+      "cityNameEn": "qixian"
+    },
+    {
+      "cityId": 5150023,
+      "cityNameCn": "曲周县",
+      "cityNameEn": "quzhouxian"
+    },
+    {
+      "cityId": 22230002,
+      "cityNameCn": "琼中黎族苗族自治县",
+      "cityNameEn": "qiongzhong"
+    },
+    {
+      "cityId": 25130007,
+      "cityNameCn": "丘北县",
+      "cityNameEn": "qiubei"
+    },
+    {
+      "cityId": 5120048,
+      "cityNameCn": "曲阳县",
+      "cityNameEn": "quyang"
+    },
+    {
+      "cityId": 13020010,
+      "cityNameCn": "祁门县",
+      "cityNameEn": "qimen"
+    },
+    {
+      "cityId": 5120050,
+      "cityNameCn": "清苑县",
+      "cityNameEn": "qingyuanxian"
+    },
+    {
+      "cityId": 6010013,
+      "cityNameCn": "清徐县",
+      "cityNameEn": "qingxu"
+    },
+    {
+      "cityId": 17120006,
+      "cityNameCn": "淇县",
+      "cityNameEn": "qixian"
+    },
+    {
+      "cityId": 17180007,
+      "cityNameCn": "确山县",
+      "cityNameEn": "queshan"
+    },
+    {
+      "cityId": 5030014,
+      "cityNameCn": "青龙满族自治县",
+      "cityNameEn": "qinglong"
+    },
+    {
+      "cityId": 5060027,
+      "cityNameCn": "迁西县",
+      "cityNameEn": "qianxi"
+    },
+    {
+      "cityId": 14100011,
+      "cityNameCn": "清流县",
+      "cityNameEn": "qingliu"
+    },
+    {
+      "cityId": 12300007,
+      "cityNameCn": "庆元县",
+      "cityNameEn": "qingyuan"
+    },
+    {
+      "cityId": 17060005,
+      "cityNameCn": "清丰县",
+      "cityNameEn": "qingfeng"
+    },
+    {
+      "cityId": 6030028,
+      "cityNameCn": "曲沃县",
+      "cityNameEn": "quwo"
+    },
+    {
+      "cityId": 9100007,
+      "cityNameCn": "乾安县",
+      "cityNameEn": "qian"
+    },
+    {
+      "cityId": 25300005,
+      "cityNameCn": "巧家县",
+      "cityNameEn": "qiaojia"
+    },
+    {
+      "cityId": 6170022,
+      "cityNameCn": "沁源县",
+      "cityNameEn": "qinyuan"
+    },
+    {
+      "cityId": 5150015,
+      "cityNameCn": "邱县",
+      "cityNameEn": "qiuxian"
+    },
+    {
+      "cityId": 31310004,
+      "cityNameCn": "且末县",
+      "cityNameEn": "qiemo"
+    },
+    {
+      "cityId": 6170030,
+      "cityNameCn": "沁县",
+      "cityNameEn": "qinxian"
+    },
+    {
+      "cityId": 15160011,
+      "cityNameCn": "全南县",
+      "cityNameEn": "quannan"
+    },
+    {
+      "cityId": 31180007,
+      "cityNameCn": "青河县",
+      "cityNameEn": "qinghexian"
+    },
+    {
+      "cityId": 1615,
+      "cityNameCn": "日照",
+      "cityNameEn": "rizhao"
+    },
+    {
+      "cityId": 23950012,
+      "cityNameCn": "若尔盖县",
+      "cityNameEn": "ruoergai"
+    },
+    {
+      "cityId": 16050006,
+      "cityNameCn": "荣成",
+      "cityNameEn": "rongcheng"
+    },
+    {
+      "cityId": 16050004,
+      "cityNameCn": "乳山",
+      "cityNameEn": "rushan"
+    },
+    {
+      "cityId": 12030012,
+      "cityNameCn": "瑞安",
+      "cityNameEn": "ruian"
+    },
+    {
+      "cityId": 11070013,
+      "cityNameCn": "如皋",
+      "cityNameEn": "rugao"
+    },
+    {
+      "cityId": 2604,
+      "cityNameCn": "日喀则地区",
+      "cityNameEn": "rikaze"
+    },
+    {
+      "cityId": 25160005,
+      "cityNameCn": "瑞丽",
+      "cityNameEn": "ruili"
+    },
+    {
+      "cityId": 11070011,
+      "cityNameCn": "如东县",
+      "cityNameEn": "rudong"
+    },
+    {
+      "cityId": 5160018,
+      "cityNameCn": "任丘",
+      "cityNameEn": "renqiu"
+    },
+    {
+      "cityId": 24020003,
+      "cityNameCn": "仁怀",
+      "cityNameEn": "renhuai"
+    },
+    {
+      "cityId": 23040003,
+      "cityNameCn": "仁寿县",
+      "cityNameEn": "rensou"
+    },
+    {
+      "cityId": 15160018,
+      "cityNameCn": "瑞金",
+      "cityNameEn": "ruijin"
+    },
+    {
+      "cityId": 4010027,
+      "cityNameCn": "荣昌县",
+      "cityNameEn": "rongchang"
+    },
+    {
+      "cityId": 17050005,
+      "cityNameCn": "汝州",
+      "cityNameEn": "ruzhou"
+    },
+    {
+      "cityId": 5120053,
+      "cityNameCn": "容城县",
+      "cityNameEn": "rongcheng"
+    },
+    {
+      "cityId": 6050014,
+      "cityNameCn": "芮城县",
+      "cityNameEn": "ruicheng"
+    },
+    {
+      "cityId": 5140007,
+      "cityNameCn": "饶阳县",
+      "cityNameEn": "raoyang"
+    },
+    {
+      "cityId": 17020016,
+      "cityNameCn": "汝阳县",
+      "cityNameEn": "ruyang"
+    },
+    {
+      "cityId": 5050032,
+      "cityNameCn": "任县",
+      "cityNameEn": "renxian"
+    },
+    {
+      "cityId": 31310003,
+      "cityNameCn": "若羌县",
+      "cityNameEn": "ruoqiang"
+    },
+    {
+      "cityId": 17180009,
+      "cityNameCn": "汝南县",
+      "cityNameEn": "runan"
+    },
+    {
+      "cityId": 201,
+      "cityNameCn": "上海",
+      "cityNameEn": "shanghai"
+    },
+    {
+      "cityId": 2003,
+      "cityNameCn": "深圳",
+      "cityNameEn": "shenzhen"
+    },
+    {
+      "cityId": 1401,
+      "cityNameCn": "厦门",
+      "cityNameEn": "xiamen"
+    },
+    {
+      "cityId": 1102,
+      "cityNameCn": "苏州",
+      "cityNameEn": "soochow"
+    },
+    {
+      "cityId": 802,
+      "cityNameCn": "沈阳",
+      "cityNameEn": "shenyang"
+    },
+    {
+      "cityId": 2201,
+      "cityNameCn": "三亚",
+      "cityNameEn": "sanya"
+    },
+    {
+      "cityId": 501,
+      "cityNameCn": "石家庄",
+      "cityNameEn": "shijiazhuang"
+    },
+    {
+      "cityId": 2002,
+      "cityNameCn": "汕头",
+      "cityNameEn": "shantou"
+    },
+    {
+      "cityId": 1205,
+      "cityNameCn": "绍兴",
+      "cityNameEn": "shaoxing"
+    },
+    {
+      "cityId": 2574,
+      "cityNameCn": "双廊古镇",
+      "cityNameEn": "shuanglang"
+    },
+    {
+      "cityId": 2030,
+      "cityNameCn": "韶关",
+      "cityNameEn": "shaoguan"
+    },
+    {
+      "cityId": 1807,
+      "cityNameCn": "十堰",
+      "cityNameEn": "shiyan"
+    },
+    {
+      "cityId": 8200003,
+      "cityNameCn": "绥中县",
+      "cityNameEn": "suizhong"
+    },
+    {
+      "cityId": 1508,
+      "cityNameCn": "上饶",
+      "cityNameEn": "shangrao"
+    },
+    {
+      "cityId": 2040,
+      "cityNameCn": "汕尾",
+      "cityNameEn": "shanwei"
+    },
+    {
+      "cityId": 1813,
+      "cityNameCn": "神农架",
+      "cityNameEn": "shennongjia"
+    },
+    {
+      "cityId": 1721,
+      "cityNameCn": "商丘",
+      "cityNameEn": "shangqiu"
+    },
+    {
+      "cityId": 2315,
+      "cityNameCn": "遂宁",
+      "cityNameEn": "suining"
+    },
+    {
+      "cityId": 919,
+      "cityNameCn": "四平",
+      "cityNameEn": "siping"
+    },
+    {
+      "cityId": 1314,
+      "cityNameCn": "宿州",
+      "cityNameEn": "suzhou"
+    },
+    {
+      "cityId": 1131,
+      "cityNameCn": "宿迁",
+      "cityNameEn": "suqian"
+    },
+    {
+      "cityId": 1523,
+      "cityNameCn": "三清山",
+      "cityNameEn": "sanqingshan"
+    },
+    {
+      "cityId": 5110014,
+      "cityNameCn": "三河",
+      "cityNameEn": "sanhe"
+    },
+    {
+      "cityId": 1410,
+      "cityNameCn": "三明",
+      "cityNameEn": "sanming"
+    },
+    {
+      "cityId": 31070001,
+      "cityNameCn": "石河子",
+      "cityNameEn": "shihezi"
+    },
+    {
+      "cityId": 2712,
+      "cityNameCn": "商洛",
+      "cityNameEn": "shangluo"
+    },
+    {
+      "cityId": 1823,
+      "cityNameCn": "随州",
+      "cityNameEn": "suizhou"
+    },
+    {
+      "cityId": 1708,
+      "cityNameCn": "三门峡",
+      "cityNameEn": "sanmenxia"
+    },
+    {
+      "cityId": 910,
+      "cityNameCn": "松原",
+      "cityNameEn": "songyuan"
+    },
+    {
+      "cityId": 1924,
+      "cityNameCn": "邵阳",
+      "cityNameEn": "shaoyang"
+    },
+    {
+      "cityId": 16030009,
+      "cityNameCn": "寿光",
+      "cityNameEn": "shouguang"
+    },
+    {
+      "cityId": 618,
+      "cityNameCn": "朔州",
+      "cityNameEn": "shuozhou"
+    },
+    {
+      "cityId": 12050011,
+      "cityNameCn": "嵊州",
+      "cityNameEn": "shengzhou"
+    },
+    {
+      "cityId": 14030010,
+      "cityNameCn": "石狮",
+      "cityNameEn": "shishi"
+    },
+    {
+      "cityId": 11310006,
+      "cityNameCn": "沭阳县",
+      "cityNameEn": "shuyang"
+    },
+    {
+      "cityId": 1010,
+      "cityNameCn": "绥化",
+      "cityNameEn": "suihua"
+    },
+    {
+      "cityId": 4010040,
+      "cityNameCn": "石柱土家族自治县",
+      "cityNameEn": "shizhu"
+    },
+    {
+      "cityId": 14100004,
+      "cityNameCn": "沙县",
+      "cityNameEn": "shaxian"
+    },
+    {
+      "cityId": 19060009,
+      "cityNameCn": "韶山",
+      "cityNameEn": "shaoshan"
+    },
+    {
+      "cityId": 11310007,
+      "cityNameCn": "泗阳县",
+      "cityNameEn": "siyang"
+    },
+    {
+      "cityId": 2902,
+      "cityNameCn": "石嘴山",
+      "cityNameEn": "shizuishan"
+    },
+    {
+      "cityId": 12300006,
+      "cityNameCn": "遂昌县",
+      "cityNameEn": "suichang"
+    },
+    {
+      "cityId": 11060020,
+      "cityNameCn": "睢宁县",
+      "cityNameEn": "suining"
+    },
+    {
+      "cityId": 11310008,
+      "cityNameCn": "泗洪县",
+      "cityNameEn": "sihong"
+    },
+    {
+      "cityId": 25010012,
+      "cityNameCn": "石林彝族自治县",
+      "cityNameEn": "shilin"
+    },
+    {
+      "cityId": 13190009,
+      "cityNameCn": "舒城县",
+      "cityNameEn": "shucheng"
+    },
+    {
+      "cityId": 10020011,
+      "cityNameCn": "绥芬河",
+      "cityNameEn": "suifenhe"
+    },
+    {
+      "cityId": 11160010,
+      "cityNameCn": "射阳县",
+      "cityNameEn": "sheyang"
+    },
+    {
+      "cityId": 12240010,
+      "cityNameCn": "三门县",
+      "cityNameEn": "sanmeng"
+    },
+    {
+      "cityId": 17020012,
+      "cityNameCn": "嵩县",
+      "cityNameEn": "songxian"
+    },
+    {
+      "cityId": 5050025,
+      "cityNameCn": "沙河",
+      "cityNameEn": "shaheshi"
+    },
+    {
+      "cityId": 19280003,
+      "cityNameCn": "双峰县",
+      "cityNameEn": "shuangfeng"
+    },
+    {
+      "cityId": 5150021,
+      "cityNameCn": "涉县",
+      "cityNameEn": "shexian"
+    },
+    {
+      "cityId": 14090006,
+      "cityNameCn": "上杭县",
+      "cityNameEn": "shanghang"
+    },
+    {
+      "cityId": 14110006,
+      "cityNameCn": "邵武",
+      "cityNameEn": "shaowu"
+    },
+    {
+      "cityId": 1020,
+      "cityNameCn": "双鸭山",
+      "cityNameEn": "shuangyashan"
+    },
+    {
+      "cityId": 17200009,
+      "cityNameCn": "商城县",
+      "cityNameEn": "shangcheng"
+    },
+    {
+      "cityId": 19240005,
+      "cityNameCn": "邵东县",
+      "cityNameEn": "shaodong"
+    },
+    {
+      "cityId": 5160004,
+      "cityNameCn": "肃宁县",
+      "cityNameEn": "suning"
+    },
+    {
+      "cityId": 31080004,
+      "cityNameCn": "鄯善县",
+      "cityNameEn": "shanshanxian"
+    },
+    {
+      "cityId": 2607,
+      "cityNameCn": "山南地区",
+      "cityNameEn": "shannan"
+    },
+    {
+      "cityId": 17210005,
+      "cityNameCn": "睢县",
+      "cityNameEn": "suixian"
+    },
+    {
+      "cityId": 14110010,
+      "cityNameCn": "顺昌县",
+      "cityNameEn": "shunchang"
+    },
+    {
+      "cityId": 25300001,
+      "cityNameCn": "水富县",
+      "cityNameEn": "shuifu"
+    },
+    {
+      "cityId": 16190015,
+      "cityNameCn": "泗水县",
+      "cityNameEn": "sishui"
+    },
+    {
+      "cityId": 17140007,
+      "cityNameCn": "沈丘县",
+      "cityNameEn": "shenqiu"
+    },
+    {
+      "cityId": 17080002,
+      "cityNameCn": "陕县",
+      "cityNameEn": "shanxian"
+    },
+    {
+      "cityId": 17180010,
+      "cityNameCn": "遂平县",
+      "cityNameEn": "suiping"
+    },
+    {
+      "cityId": 12300009,
+      "cityNameCn": "松阳县",
+      "cityNameEn": "sonyang"
+    },
+    {
+      "cityId": 15160010,
+      "cityNameCn": "石城县",
+      "cityNameEn": "shicheng"
+    },
+    {
+      "cityId": 14140005,
+      "cityNameCn": "寿宁县",
+      "cityNameEn": "shouning"
+    },
+    {
+      "cityId": 18100008,
+      "cityNameCn": "沙洋县",
+      "cityNameEn": "shayang"
+    },
+    {
+      "cityId": 6180004,
+      "cityNameCn": "山阴县",
+      "cityNameEn": "shanyin"
+    },
+    {
+      "cityId": 5140008,
+      "cityNameCn": "深州",
+      "cityNameEn": "shenzhou"
+    },
+    {
+      "cityId": 25220008,
+      "cityNameCn": "师宗县",
+      "cityNameEn": "shizong"
+    },
+    {
+      "cityId": 19240010,
+      "cityNameCn": "绥宁县",
+      "cityNameEn": "suinin"
+    },
+    {
+      "cityId": 15160006,
+      "cityNameCn": "上犹县",
+      "cityNameEn": "shangyou"
+    },
+    {
+      "cityId": 5130019,
+      "cityNameCn": "尚义县",
+      "cityNameEn": "shangyi"
+    },
+    {
+      "cityId": 17070009,
+      "cityNameCn": "社旗县",
+      "cityNameEn": "sheqi"
+    },
+    {
+      "cityId": 25170005,
+      "cityNameCn": "石屏县",
+      "cityNameEn": "shiping"
+    },
+    {
+      "cityId": 25010011,
+      "cityNameCn": "嵩明县",
+      "cityNameEn": "songming"
+    },
+    {
+      "cityId": 31280004,
+      "cityNameCn": "沙湾县",
+      "cityNameEn": "shawanxian"
+    },
+    {
+      "cityId": 19240007,
+      "cityNameCn": "邵阳县",
+      "cityNameEn": "shaoyangxian"
+    },
+    {
+      "cityId": 14110008,
+      "cityNameCn": "松溪县",
+      "cityNameEn": "songxi"
+    },
+    {
+      "cityId": 13140005,
+      "cityNameCn": "泗县",
+      "cityNameEn": "sixian"
+    },
+    {
+      "cityId": 23150003,
+      "cityNameCn": "射洪县",
+      "cityNameEn": "shehong"
+    },
+    {
+      "cityId": 6070019,
+      "cityNameCn": "寿阳县",
+      "cityNameEn": "shouyang"
+    },
+    {
+      "cityId": 23010008,
+      "cityNameCn": "双流县",
+      "cityNameEn": "shuangliu"
+    },
+    {
+      "cityId": 31110007,
+      "cityNameCn": "莎车县",
+      "cityNameEn": "shache"
+    },
+    {
+      "cityId": 17180006,
+      "cityNameCn": "上蔡县",
+      "cityNameEn": "shangcai"
+    },
+    {
+      "cityId": 10010018,
+      "cityNameCn": "尚志",
+      "cityNameEn": "shangzhi"
+    },
+    {
+      "cityId": 5010049,
+      "cityNameCn": "深泽县",
+      "cityNameEn": "shenze"
+    },
+    {
+      "cityId": 5120056,
+      "cityNameCn": "顺平县",
+      "cityNameEn": "shunping"
+    },
+    {
+      "cityId": 23120001,
+      "cityNameCn": "什邡",
+      "cityNameEn": "shifang"
+    },
+    {
+      "cityId": 6060020,
+      "cityNameCn": "神池县",
+      "cityNameEn": "shenchi"
+    },
+    {
+      "cityId": 9190007,
+      "cityNameCn": "双辽",
+      "cityNameEn": "shuangliao"
+    },
+    {
+      "cityId": 10090008,
+      "cityNameCn": "绥滨县",
+      "cityNameEn": "suibin"
+    },
+    {
+      "cityId": 2229,
+      "cityNameCn": "三沙",
+      "cityNameEn": "sansha"
+    },
+    {
+      "cityId": 17140006,
+      "cityNameCn": "商水县",
+      "cityNameEn": "shangshui"
+    },
+    {
+      "cityId": 12050008,
+      "cityNameCn": "上虞",
+      "cityNameEn": "shangyu"
+    },
+    {
+      "cityId": 27090004,
+      "cityNameCn": "神木县",
+      "cityNameEn": "yulinshenmu"
+    },
+    {
+      "cityId": 6190018,
+      "cityNameCn": "石楼县",
+      "cityNameEn": "shilou"
+    },
+    {
+      "cityId": 18020007,
+      "cityNameCn": "松滋",
+      "cityNameEn": "songzi"
+    },
+    {
+      "cityId": 27090008,
+      "cityNameCn": "绥德县",
+      "cityNameEn": "yulinsuidexian"
+    },
+    {
+      "cityId": 301,
+      "cityNameCn": "天津",
+      "cityNameEn": "tianjin"
+    },
+    {
+      "cityId": 601,
+      "cityNameCn": "太原",
+      "cityNameEn": "taiyuan"
+    },
+    {
+      "cityId": 1614,
+      "cityNameCn": "泰安",
+      "cityNameEn": "taian"
+    },
+    {
+      "cityId": 1224,
+      "cityNameCn": "台州",
+      "cityNameEn": "taizhou"
+    },
+    {
+      "cityId": 2805,
+      "cityNameCn": "天水",
+      "cityNameEn": "tianshui"
+    },
+    {
+      "cityId": 506,
+      "cityNameCn": "唐山",
+      "cityNameEn": "tangshan"
+    },
+    {
+      "cityId": 706,
+      "cityNameCn": "通辽",
+      "cityNameEn": "tongliao"
+    },
+    {
+      "cityId": 20210005,
+      "cityNameCn": "台山",
+      "cityNameEn": "taishan"
+    },
+    {
+      "cityId": 1122,
+      "cityNameCn": "溧阳",
+      "cityNameEn": "liyang"
+    },
+    {
+      "cityId": 1115,
+      "cityNameCn": "泰州",
+      "cityNameEn": "taizhou"
+    },
+    {
+      "cityId": 12010013,
+      "cityNameCn": "桐庐县",
+      "cityNameEn": "tonglu"
+    },
+    {
+      "cityId": 2413,
+      "cityNameCn": "铜仁",
+      "cityNameEn": "tongren"
+    },
+    {
+      "cityId": 25100006,
+      "cityNameCn": "腾冲县",
+      "cityNameEn": "tengchong"
+    },
+    {
+      "cityId": 1315,
+      "cityNameCn": "铜陵",
+      "cityNameEn": "tongling"
+    },
+    {
+      "cityId": 1121,
+      "cityNameCn": "同里",
+      "cityNameEn": "tongli"
+    },
+    {
+      "cityId": 11020014,
+      "cityNameCn": "太仓",
+      "cityNameEn": "taicang"
+    },
+    {
+      "cityId": 12090005,
+      "cityNameCn": "桐乡",
+      "cityNameEn": "tongxiang"
+    },
+    {
+      "cityId": 3108,
+      "cityNameCn": "吐鲁番地区",
+      "cityNameEn": "turpan"
+    },
+    {
+      "cityId": 903,
+      "cityNameCn": "通化",
+      "cityNameEn": "tonghua"
+    },
+    {
+      "cityId": 16080008,
+      "cityNameCn": "滕州",
+      "cityNameEn": "tengzhou"
+    },
+    {
+      "cityId": 813,
+      "cityNameCn": "铁岭",
+      "cityNameEn": "tieling"
+    },
+    {
+      "cityId": 1362,
+      "cityNameCn": "天堂寨镇",
+      "cityNameEn": "tiantangzhai"
+    },
+    {
+      "cityId": 2713,
+      "cityNameCn": "铜川",
+      "cityNameEn": "tongchuan"
+    },
+    {
+      "cityId": 11150008,
+      "cityNameCn": "泰兴",
+      "cityNameEn": "taixing"
+    },
+    {
+      "cityId": 14100003,
+      "cityNameCn": "泰宁县",
+      "cityNameEn": "taining"
+    },
+    {
+      "cityId": 18400001,
+      "cityNameCn": "天门",
+      "cityNameEn": "tianmen"
+    },
+    {
+      "cityId": 31030008,
+      "cityNameCn": "特克斯县",
+      "cityNameEn": "tekesixian"
+    },
+    {
+      "cityId": 12240003,
+      "cityNameCn": "天台县",
+      "cityNameEn": "tiantai"
+    },
+    {
+      "cityId": 13180003,
+      "cityNameCn": "天长",
+      "cityNameEn": "tianchang"
+    },
+    {
+      "cityId": 1313,
+      "cityNameCn": "天柱山景区",
+      "cityNameEn": "tianzhushan"
+    },
+    {
+      "cityId": 13030013,
+      "cityNameCn": "桐城",
+      "cityNameEn": "tongcheng"
+    },
+    {
+      "cityId": 4010026,
+      "cityNameCn": "铜梁县",
+      "cityNameEn": "tongliang"
+    },
+    {
+      "cityId": 12030013,
+      "cityNameCn": "泰顺县",
+      "cityNameEn": "taishun"
+    },
+    {
+      "cityId": 16110011,
+      "cityNameCn": "郯城县",
+      "cityNameEn": "tancheng"
+    },
+    {
+      "cityId": 5120043,
+      "cityNameCn": "唐县",
+      "cityNameEn": "tangxian"
+    },
+    {
+      "cityId": 18200004,
+      "cityNameCn": "通山县",
+      "cityNameEn": "tongshan"
+    },
+    {
+      "cityId": 4010039,
+      "cityNameCn": "潼南县",
+      "cityNameEn": "tongnan"
+    },
+    {
+      "cityId": 22260002,
+      "cityNameCn": "屯昌县",
+      "cityNameEn": "tunchang"
+    },
+    {
+      "cityId": 13070004,
+      "cityNameCn": "太和县",
+      "cityNameEn": "taihe"
+    },
+    {
+      "cityId": 17070012,
+      "cityNameCn": "唐河县",
+      "cityNameEn": "tanghe"
+    },
+    {
+      "cityId": 17070010,
+      "cityNameCn": "桐柏县",
+      "cityNameEn": "tongbai"
+    },
+    {
+      "cityId": 9050004,
+      "cityNameCn": "图们",
+      "cityNameEn": "tumen"
+    },
+    {
+      "cityId": 6070018,
+      "cityNameCn": "太谷县",
+      "cityNameEn": "taigu"
+    },
+    {
+      "cityId": 3128,
+      "cityNameCn": "塔城地区",
+      "cityNameEn": "tacheng"
+    },
+    {
+      "cityId": 25230004,
+      "cityNameCn": "通海县",
+      "cityNameEn": "tonghai"
+    },
+    {
+      "cityId": 31110013,
+      "cityNameCn": "塔什库尔干塔吉克自治县",
+      "cityNameEn": "tashikuergan"
+    },
+    {
+      "cityId": 17160005,
+      "cityNameCn": "汤阴县",
+      "cityNameEn": "tangyin"
+    },
+    {
+      "cityId": 17060004,
+      "cityNameCn": "台前县",
+      "cityNameEn": "taiqian"
+    },
+    {
+      "cityId": 19210012,
+      "cityNameCn": "通道侗族自治县",
+      "cityNameEn": "tongdaoxian"
+    },
+    {
+      "cityId": 17140009,
+      "cityNameCn": "太康县",
+      "cityNameEn": "taikang"
+    },
+    {
+      "cityId": 31080003,
+      "cityNameCn": "托克逊县",
+      "cityNameEn": "tuokexun"
+    },
+    {
+      "cityId": 53940001,
+      "cityNameCn": "图木舒克",
+      "cityNameEn": "tumushuke"
+    },
+    {
+      "cityId": 18300008,
+      "cityNameCn": "团风县",
+      "cityNameEn": "tuanfeng"
+    },
+    {
+      "cityId": 6170025,
+      "cityNameCn": "屯留县",
+      "cityNameEn": "tunliu"
+    },
+    {
+      "cityId": 1801,
+      "cityNameCn": "武汉",
+      "cityNameEn": "wuhan"
+    },
+    {
+      "cityId": 3101,
+      "cityNameCn": "乌鲁木齐",
+      "cityNameEn": "wulumuqishi"
+    },
+    {
+      "cityId": 1105,
+      "cityNameCn": "无锡",
+      "cityNameEn": "wuxi"
+    },
+    {
+      "cityId": 1605,
+      "cityNameCn": "威海",
+      "cityNameEn": "weihai"
+    },
+    {
+      "cityId": 1203,
+      "cityNameCn": "温州",
+      "cityNameEn": "wenzhou"
+    },
+    {
+      "cityId": 1603,
+      "cityNameCn": "潍坊",
+      "cityNameEn": "weifang"
+    },
+    {
+      "cityId": 1293,
+      "cityNameCn": "乌镇",
+      "cityNameEn": "wuzhen"
+    },
+    {
+      "cityId": 1304,
+      "cityNameCn": "芜湖",
+      "cityNameEn": "wuhu"
+    },
+    {
+      "cityId": 14110005,
+      "cityNameCn": "武夷山",
+      "cityNameEn": "wuyishan"
+    },
+    {
+      "cityId": 2129,
+      "cityNameCn": "涠洲岛",
+      "cityNameEn": "weizhoudao"
+    },
+    {
+      "cityId": 4010020,
+      "cityNameCn": "武隆县",
+      "cityNameEn": "wulong"
+    },
+    {
+      "cityId": 604,
+      "cityNameCn": "五台山",
+      "cityNameEn": "wutaishan"
+    },
+    {
+      "cityId": 2108,
+      "cityNameCn": "梧州",
+      "cityNameEn": "wuzhou"
+    },
+    {
+      "cityId": 11020012,
+      "cityNameCn": "吴江区",
+      "cityNameEn": "wujiang"
+    },
+    {
+      "cityId": 2808,
+      "cityNameCn": "武威",
+      "cityNameEn": "wuwei"
+    },
+    {
+      "cityId": 713,
+      "cityNameCn": "乌兰察布",
+      "cityNameEn": "wulanchabu"
+    },
+    {
+      "cityId": 2708,
+      "cityNameCn": "渭南",
+      "cityNameEn": "weinan"
+    },
+    {
+      "cityId": 15080017,
+      "cityNameCn": "婺源县",
+      "cityNameEn": "wuyuan"
+    },
+    {
+      "cityId": 1831,
+      "cityNameCn": "武当山",
+      "cityNameEn": "wudangshan"
+    },
+    {
+      "cityId": 7320005,
+      "cityNameCn": "乌兰浩特",
+      "cityNameEn": "wulanhaote"
+    },
+    {
+      "cityId": 22120007,
+      "cityNameCn": "文昌",
+      "cityNameEn": "wenchang"
+    },
+    {
+      "cityId": 16050005,
+      "cityNameCn": "文登",
+      "cityNameEn": "wendeng"
+    },
+    {
+      "cityId": 22030011,
+      "cityNameCn": "万宁",
+      "cityNameEn": "wanning"
+    },
+    {
+      "cityId": 714,
+      "cityNameCn": "乌海",
+      "cityNameEn": "wuhai"
+    },
+    {
+      "cityId": 12240008,
+      "cityNameCn": "温岭",
+      "cityNameEn": "wenling"
+    },
+    {
+      "cityId": 5020017,
+      "cityNameCn": "围场满族蒙古族自治县",
+      "cityNameEn": "weichang"
+    },
+    {
+      "cityId": 4010009,
+      "cityNameCn": "万州区",
+      "cityNameEn": "wanzhou"
+    },
+    {
+      "cityId": 10140002,
+      "cityNameCn": "五大连池",
+      "cityNameEn": "wudalianchi"
+    },
+    {
+      "cityId": 2513,
+      "cityNameCn": "文山壮族苗族自治州",
+      "cityNameEn": "wenshan"
+    },
+    {
+      "cityId": 23950009,
+      "cityNameCn": "汶川县",
+      "cityNameEn": "wenchuan"
+    },
+    {
+      "cityId": 2903,
+      "cityNameCn": "吴忠",
+      "cityNameEn": "wuzhong"
+    },
+    {
+      "cityId": 22130001,
+      "cityNameCn": "五指山",
+      "cityNameEn": "wuzhishan"
+    },
+    {
+      "cityId": 12040009,
+      "cityNameCn": "武义县",
+      "cityNameEn": "wuyi"
+    },
+    {
+      "cityId": 16150007,
+      "cityNameCn": "五莲县",
+      "cityNameEn": "wulian"
+    },
+    {
+      "cityId": 16190018,
+      "cityNameCn": "汶上县",
+      "cityNameEn": "wenshang"
+    },
+    {
+      "cityId": 16190017,
+      "cityNameCn": "微山县",
+      "cityNameEn": "weishan"
+    },
+    {
+      "cityId": 13120004,
+      "cityNameCn": "涡阳县",
+      "cityNameEn": "guoyang"
+    },
+    {
+      "cityId": 5110022,
+      "cityNameCn": "文安县",
+      "cityNameEn": "wenan"
+    },
+    {
+      "cityId": 19240013,
+      "cityNameCn": "武冈",
+      "cityNameEn": "wugan"
+    },
+    {
+      "cityId": 13050007,
+      "cityNameCn": "五河县",
+      "cityNameEn": "wuhe"
+    },
+    {
+      "cityId": 18300004,
+      "cityNameCn": "武穴",
+      "cityNameEn": "wuxue"
+    },
+    {
+      "cityId": 13040005,
+      "cityNameCn": "芜湖县",
+      "cityNameEn": "wuhuxian"
+    },
+    {
+      "cityId": 5130017,
+      "cityNameCn": "万全县",
+      "cityNameEn": "wanquan"
+    },
+    {
+      "cityId": 12030009,
+      "cityNameCn": "文成县",
+      "cityNameEn": "wencheng"
+    },
+    {
+      "cityId": 5150024,
+      "cityNameCn": "武安",
+      "cityNameEn": "wuan"
+    },
+    {
+      "cityId": 8010014,
+      "cityNameCn": "瓦房店",
+      "cityNameEn": "wafangdian"
+    },
+    {
+      "cityId": 4010041,
+      "cityNameCn": "巫山县",
+      "cityNameEn": "wushan"
+    },
+    {
+      "cityId": 17100007,
+      "cityNameCn": "武陟县",
+      "cityNameEn": "wuzhi"
+    },
+    {
+      "cityId": 17100009,
+      "cityNameCn": "温县",
+      "cityNameEn": "wenxian"
+    },
+    {
+      "cityId": 6190002,
+      "cityNameCn": "文水县",
+      "cityNameEn": "wenshui"
+    },
+    {
+      "cityId": 17040012,
+      "cityNameCn": "卫辉",
+      "cityNameEn": "weihui"
+    },
+    {
+      "cityId": 31290001,
+      "cityNameCn": "五家渠",
+      "cityNameEn": "wujiaqu"
+    },
+    {
+      "cityId": 4010042,
+      "cityNameCn": "巫溪县",
+      "cityNameEn": "wuxi"
+    },
+    {
+      "cityId": 18030017,
+      "cityNameCn": "五峰土家族自治县",
+      "cityNameEn": "wufeng"
+    },
+    {
+      "cityId": 5050029,
+      "cityNameCn": "威县",
+      "cityNameEn": "weixian"
+    },
+    {
+      "cityId": 16180003,
+      "cityNameCn": "无棣县",
+      "cityNameEn": "wudi"
+    },
+    {
+      "cityId": 17050010,
+      "cityNameCn": "舞钢",
+      "cityNameEn": "wugang"
+    },
+    {
+      "cityId": 14090005,
+      "cityNameCn": "武平县",
+      "cityNameEn": "wuping"
+    },
+    {
+      "cityId": 5010042,
+      "cityNameCn": "无极县",
+      "cityNameEn": "wuji"
+    },
+    {
+      "cityId": 1536,
+      "cityNameCn": "武功山风景区",
+      "cityNameEn": "wugongshan"
+    },
+    {
+      "cityId": 5140005,
+      "cityNameCn": "武邑县",
+      "cityNameEn": "wuyixian"
+    },
+    {
+      "cityId": 25180010,
+      "cityNameCn": "武定县",
+      "cityNameEn": "wuding"
+    },
+    {
+      "cityId": 5150019,
+      "cityNameCn": "魏县",
+      "cityNameEn": "weixian"
+    },
+    {
+      "cityId": 13040010,
+      "cityNameCn": "无为县",
+      "cityNameEn": "wuwei"
+    },
+    {
+      "cityId": 5120054,
+      "cityNameCn": "望都县",
+      "cityNameEn": "wangdu"
+    },
+    {
+      "cityId": 31280002,
+      "cityNameCn": "乌苏",
+      "cityNameEn": "wusushi"
+    },
+    {
+      "cityId": 17170004,
+      "cityNameCn": "舞阳县",
+      "cityNameEn": "wuyang"
+    },
+    {
+      "cityId": 31090003,
+      "cityNameCn": "温宿县",
+      "cityNameEn": "wensu"
+    },
+    {
+      "cityId": 6050016,
+      "cityNameCn": "闻喜县",
+      "cityNameEn": "wenxi"
+    },
+    {
+      "cityId": 5160014,
+      "cityNameCn": "吴桥县",
+      "cityNameEn": "wuqiao"
+    },
+    {
+      "cityId": 25600002,
+      "cityNameCn": "维西傈僳族自治县",
+      "cityNameEn": "weixi"
+    },
+    {
+      "cityId": 5140006,
+      "cityNameCn": "武强县",
+      "cityNameEn": "wuqiang"
+    },
+    {
+      "cityId": 6060021,
+      "cityNameCn": "五寨县",
+      "cityNameEn": "wuzhai"
+    },
+    {
+      "cityId": 6050007,
+      "cityNameCn": "万荣县",
+      "cityNameEn": "wanrong"
+    },
+    {
+      "cityId": 2323,
+      "cityNameCn": "卧龙景区",
+      "cityNameEn": "wolong"
+    },
+    {
+      "cityId": 27050002,
+      "cityNameCn": "吴起县",
+      "cityNameEn": "yananwuqi"
+    },
+    {
+      "cityId": 10010017,
+      "cityNameCn": "五常",
+      "cityNameEn": "wuchang"
+    },
+    {
+      "cityId": 6170021,
+      "cityNameCn": "武乡县",
+      "cityNameEn": "wuxiang"
+    },
+    {
+      "cityId": 2701,
+      "cityNameCn": "西安",
+      "cityNameEn": "xian"
+    },
+    {
+      "cityId": 3001,
+      "cityNameCn": "西宁",
+      "cityNameEn": "xining"
+    },
+    {
+      "cityId": 1106,
+      "cityNameCn": "徐州",
+      "cityNameEn": "xuzhou"
+    },
+    {
+      "cityId": 23410017,
+      "cityNameCn": "西昌",
+      "cityNameEn": "xichang"
+    },
+    {
+      "cityId": 1270,
+      "cityNameCn": "西塘古镇",
+      "cityNameEn": "xitang"
+    },
+    {
+      "cityId": 1834,
+      "cityNameCn": "襄阳",
+      "cityNameEn": "xiangyang"
+    },
+    {
+      "cityId": 1720,
+      "cityNameCn": "信阳",
+      "cityNameEn": "xinyang"
+    },
+    {
+      "cityId": 1704,
+      "cityNameCn": "新乡",
+      "cityNameEn": "xinxiang"
+    },
+    {
+      "cityId": 2427,
+      "cityNameCn": "西江苗寨",
+      "cityNameEn": "xijiang"
+    },
+    {
+      "cityId": 2507,
+      "cityNameCn": "西双版纳傣族自治州",
+      "cityNameEn": "xishuangbanna"
+    },
+    {
+      "cityId": 25600001,
+      "cityNameCn": "香格里拉县",
+      "cityNameEn": "xianggelila"
+    },
+    {
+      "cityId": 7330002,
+      "cityNameCn": "锡林浩特",
+      "cityNameEn": "xilinhaote"
+    },
+    {
+      "cityId": 8200006,
+      "cityNameCn": "兴城",
+      "cityNameEn": "xingcheng"
+    },
+    {
+      "cityId": 2703,
+      "cityNameCn": "咸阳",
+      "cityNameEn": "xianyang"
+    },
+    {
+      "cityId": 12020018,
+      "cityNameCn": "象山县",
+      "cityNameEn": "xiangshan"
+    },
+    {
+      "cityId": 505,
+      "cityNameCn": "邢台",
+      "cityNameEn": "xingtai"
+    },
+    {
+      "cityId": 733,
+      "cityNameCn": "锡林郭勒盟",
+      "cityNameEn": "xilingol"
+    },
+    {
+      "cityId": 1713,
+      "cityNameCn": "许昌",
+      "cityNameEn": "xuchang"
+    },
+    {
+      "cityId": 1822,
+      "cityNameCn": "孝感",
+      "cityNameEn": "xiaogan"
+    },
+    {
+      "cityId": 1906,
+      "cityNameCn": "湘潭",
+      "cityNameEn": "xiangtan"
+    },
+    {
+      "cityId": 16140012,
+      "cityNameCn": "新泰",
+      "cityNameEn": "xintai"
+    },
+    {
+      "cityId": 1328,
+      "cityNameCn": "宣城",
+      "cityNameEn": "xuancheng"
+    },
+    {
+      "cityId": 1820,
+      "cityNameCn": "咸宁",
+      "cityNameEn": "xianning"
+    },
+    {
+      "cityId": 28120008,
+      "cityNameCn": "夏河县",
+      "cityNameEn": "xiahe"
+    },
+    {
+      "cityId": 1514,
+      "cityNameCn": "新余",
+      "cityNameEn": "xinyu"
+    },
+    {
+      "cityId": 18150001,
+      "cityNameCn": "仙桃",
+      "cityNameEn": "xiantao"
+    },
+    {
+      "cityId": 606,
+      "cityNameCn": "忻州",
+      "cityNameEn": "xinzhou"
+    },
+    {
+      "cityId": 14140003,
+      "cityNameCn": "霞浦县",
+      "cityNameEn": "xiapu"
+    },
+    {
+      "cityId": 12240009,
+      "cityNameCn": "仙居县",
+      "cityNameEn": "xianju"
+    },
+    {
+      "cityId": 11230006,
+      "cityNameCn": "盱眙县",
+      "cityNameEn": "xuyi"
+    },
+    {
+      "cityId": 11060021,
+      "cityNameCn": "新沂",
+      "cityNameEn": "xinyi"
+    },
+    {
+      "cityId": 5110018,
+      "cityNameCn": "香河县",
+      "cityNameEn": "xianghe"
+    },
+    {
+      "cityId": 12050010,
+      "cityNameCn": "新昌县",
+      "cityNameEn": "xinchang"
+    },
+    {
+      "cityId": 5010038,
+      "cityNameCn": "辛集",
+      "cityNameEn": "xinji"
+    },
+    {
+      "cityId": 31030006,
+      "cityNameCn": "新源县",
+      "cityNameEn": "xinyuan"
+    },
+    {
+      "cityId": 14060005,
+      "cityNameCn": "仙游县",
+      "cityNameEn": "xianyou"
+    },
+    {
+      "cityId": 11150009,
+      "cityNameCn": "兴化",
+      "cityNameEn": "xinghua"
+    },
+    {
+      "cityId": 17070003,
+      "cityNameCn": "西峡县",
+      "cityNameEn": "xixia"
+    },
+    {
+      "cityId": 13020007,
+      "cityNameCn": "歙县",
+      "cityNameEn": "shexian"
+    },
+    {
+      "cityId": 23950007,
+      "cityNameCn": "小金县",
+      "cityNameEn": "xiaojin"
+    },
+    {
+      "cityId": 5120049,
+      "cityNameCn": "雄县",
+      "cityNameEn": "xiongxian"
+    },
+    {
+      "cityId": 6190012,
+      "cityNameCn": "孝义",
+      "cityNameEn": "xiaoyi"
+    },
+    {
+      "cityId": 17010011,
+      "cityNameCn": "新郑",
+      "cityNameEn": "xingzheng"
+    },
+    {
+      "cityId": 732,
+      "cityNameCn": "兴安盟",
+      "cityNameEn": "xinganmeng"
+    },
+    {
+      "cityId": 1332,
+      "cityNameCn": "西递",
+      "cityNameEn": "xidi"
+    },
+    {
+      "cityId": 19280004,
+      "cityNameCn": "新化县",
+      "cityNameEn": "xinhua"
+    },
+    {
+      "cityId": 17020019,
+      "cityNameCn": "新安县",
+      "cityNameEn": "xinan"
+    },
+    {
+      "cityId": 4010032,
+      "cityNameCn": "秀山土家族苗族自治县",
+      "cityNameEn": "xiushan"
+    },
+    {
+      "cityId": 5120045,
+      "cityNameCn": "徐水县",
+      "cityNameEn": "xushui"
+    },
+    {
+      "cityId": 5010040,
+      "cityNameCn": "新乐",
+      "cityNameEn": "xinle"
+    },
+    {
+      "cityId": 11160006,
+      "cityNameCn": "响水县",
+      "cityNameEn": "xiangshui"
+    },
+    {
+      "cityId": 17210008,
+      "cityNameCn": "夏邑县",
+      "cityNameEn": "xiayi"
+    },
+    {
+      "cityId": 16120010,
+      "cityNameCn": "夏津县",
+      "cityNameEn": "xiajin"
+    },
+    {
+      "cityId": 17140010,
+      "cityNameCn": "项城",
+      "cityNameEn": "xiangchengxian"
+    },
+    {
+      "cityId": 18300006,
+      "cityNameCn": "浠水县",
+      "cityNameEn": "xishui"
+    },
+    {
+      "cityId": 1937,
+      "cityNameCn": "湘西土家族苗族自治州",
+      "cityNameEn": "xiangxi"
+    },
+    {
+      "cityId": 17070006,
+      "cityNameCn": "新野县",
+      "cityNameEn": "xinye"
+    },
+    {
+      "cityId": 15160016,
+      "cityNameCn": "信丰县",
+      "cityNameEn": "xinfeng"
+    },
+    {
+      "cityId": 17010020,
+      "cityNameCn": "新密",
+      "cityNameEn": "xinmi"
+    },
+    {
+      "cityId": 19210006,
+      "cityNameCn": "溆浦县",
+      "cityNameEn": "xupuxian"
+    },
+    {
+      "cityId": 19240011,
+      "cityNameCn": "新宁县",
+      "cityNameEn": "xinning"
+    },
+    {
+      "cityId": 17200003,
+      "cityNameCn": "新县",
+      "cityNameEn": "xinxian"
+    },
+    {
+      "cityId": 17070008,
+      "cityNameCn": "淅川县",
+      "cityNameEn": "xichuan"
+    },
+    {
+      "cityId": 19040011,
+      "cityNameCn": "湘阴县",
+      "cityNameEn": "xiangyin"
+    },
+    {
+      "cityId": 17140002,
+      "cityNameCn": "西华县",
+      "cityNameEn": "xihua"
+    },
+    {
+      "cityId": 17180005,
+      "cityNameCn": "西平县",
+      "cityNameEn": "xiping"
+    },
+    {
+      "cityId": 17130007,
+      "cityNameCn": "襄城县",
+      "cityNameEn": "xiangcheng"
+    },
+    {
+      "cityId": 17180004,
+      "cityNameCn": "新蔡县",
+      "cityNameEn": "xincai"
+    },
+    {
+      "cityId": 25220005,
+      "cityNameCn": "宣威",
+      "cityNameEn": "xuanwei"
+    },
+    {
+      "cityId": 25230008,
+      "cityNameCn": "新平彝族傣族自治县",
+      "cityNameEn": "xinping"
+    },
+    {
+      "cityId": 18110006,
+      "cityNameCn": "宣恩县",
+      "cityNameEn": "xuanen"
+    },
+    {
+      "cityId": 19060007,
+      "cityNameCn": "湘乡",
+      "cityNameEn": "xiangxiangshi"
+    },
+    {
+      "cityId": 18030011,
+      "cityNameCn": "兴山县",
+      "cityNameEn": "xingshanxian"
+    },
+    {
+      "cityId": 27030003,
+      "cityNameCn": "兴平",
+      "cityNameEn": "xingping"
+    },
+    {
+      "cityId": 6070017,
+      "cityNameCn": "昔阳县",
+      "cityNameEn": "xiyang"
+    },
+    {
+      "cityId": 6170024,
+      "cityNameCn": "襄垣县",
+      "cityNameEn": "xiangyuanxian"
+    },
+    {
+      "cityId": 15160008,
+      "cityNameCn": "寻乌县",
+      "cityNameEn": "xunwu"
+    },
+    {
+      "cityId": 17200013,
+      "cityNameCn": "息县",
+      "cityNameEn": "xixian"
+    },
+    {
+      "cityId": 5160006,
+      "cityNameCn": "献县",
+      "cityNameEn": "xianxian"
+    },
+    {
+      "cityId": 25010013,
+      "cityNameCn": "寻甸回族彝族自治县",
+      "cityNameEn": "xundian"
+    },
+    {
+      "cityId": 19210009,
+      "cityNameCn": "新晃侗族自治县",
+      "cityNameEn": "xinhuangxian"
+    },
+    {
+      "cityId": 19240006,
+      "cityNameCn": "新邵县",
+      "cityNameEn": "xinshao"
+    },
+    {
+      "cityId": 6190004,
+      "cityNameCn": "兴县",
+      "cityNameEn": "xingxian"
+    },
+    {
+      "cityId": 31090006,
+      "cityNameCn": "新和县",
+      "cityNameEn": "xinhe"
+    },
+    {
+      "cityId": 6050009,
+      "cityNameCn": "新绛县",
+      "cityNameEn": "xinjiang"
+    },
+    {
+      "cityId": 6030037,
+      "cityNameCn": "隰县",
+      "cityNameEn": "xixian"
+    },
+    {
+      "cityId": 6050012,
+      "cityNameCn": "夏县",
+      "cityNameEn": "xiaxian"
+    },
+    {
+      "cityId": 6030027,
+      "cityNameCn": "乡宁县",
+      "cityNameEn": "xiangning"
+    },
+    {
+      "cityId": 6030023,
+      "cityNameCn": "襄汾县",
+      "cityNameEn": "xiangfen"
+    },
+    {
+      "cityId": 18220006,
+      "cityNameCn": "孝昌县",
+      "cityNameEn": "xiaochang"
+    },
+    {
+      "cityId": 5050040,
+      "cityNameCn": "新河县",
+      "cityNameEn": "xinhexian"
+    },
+    {
+      "cityId": 21010003,
+      "cityNameCn": "兴安县",
+      "cityNameEn": "xingan"
+    },
+    {
+      "cityId": 5010045,
+      "cityNameCn": "行唐县",
+      "cityNameEn": "xingtangxian"
+    },
+    {
+      "cityId": 17120005,
+      "cityNameCn": "浚县",
+      "cityNameEn": "xunxian"
+    },
+    {
+      "cityId": 16220007,
+      "cityNameCn": "莘县",
+      "cityNameEn": "xinxian"
+    },
+    {
+      "cityId": 1604,
+      "cityNameCn": "烟台",
+      "cityNameEn": "yantai"
+    },
+    {
+      "cityId": 21010024,
+      "cityNameCn": "阳朔县",
+      "cityNameEn": "yangshuo"
+    },
+    {
+      "cityId": 2901,
+      "cityNameCn": "银川",
+      "cityNameEn": "yinchuan"
+    },
+    {
+      "cityId": 1104,
+      "cityNameCn": "扬州",
+      "cityNameEn": "yangzhou"
+    },
+    {
+      "cityId": 2020,
+      "cityNameCn": "阳江",
+      "cityNameEn": "yangjiang"
+    },
+    {
+      "cityId": 1803,
+      "cityNameCn": "宜昌",
+      "cityNameEn": "yichang"
+    },
+    {
+      "cityId": 815,
+      "cityNameCn": "营口",
+      "cityNameEn": "yingkou"
+    },
+    {
+      "cityId": 2705,
+      "cityNameCn": "延安",
+      "cityNameEn": "yanan"
+    },
+    {
+      "cityId": 12040006,
+      "cityNameCn": "义乌",
+      "cityNameEn": "yiwu"
+    },
+    {
+      "cityId": 2306,
+      "cityNameCn": "雅安",
+      "cityNameEn": "yaan"
+    },
+    {
+      "cityId": 1904,
+      "cityNameCn": "岳阳",
+      "cityNameEn": "yueyang"
+    },
+    {
+      "cityId": 2709,
+      "cityNameCn": "榆林",
+      "cityNameEn": "yulin"
+    },
+    {
+      "cityId": 2308,
+      "cityNameCn": "宜宾",
+      "cityNameEn": "yibin"
+    },
+    {
+      "cityId": 2104,
+      "cityNameCn": "玉林",
+      "cityNameEn": "yulin"
+    },
+    {
+      "cityId": 9050001,
+      "cityNameCn": "延吉",
+      "cityNameEn": "yanji"
+    },
+    {
+      "cityId": 1116,
+      "cityNameCn": "盐城",
+      "cityNameEn": "yancheng"
+    },
+    {
+      "cityId": 31030011,
+      "cityNameCn": "伊宁",
+      "cityNameEn": "yining"
+    },
+    {
+      "cityId": 1509,
+      "cityNameCn": "宜春",
+      "cityNameEn": "yichun"
+    },
+    {
+      "cityId": 11050018,
+      "cityNameCn": "宜兴",
+      "cityNameEn": "yixing"
+    },
+    {
+      "cityId": 12020015,
+      "cityNameCn": "余姚",
+      "cityNameEn": "yuyao"
+    },
+    {
+      "cityId": 1923,
+      "cityNameCn": "永州",
+      "cityNameEn": "yongzhou"
+    },
+    {
+      "cityId": 1517,
+      "cityNameCn": "鹰潭",
+      "cityNameEn": "yingtan"
+    },
+    {
+      "cityId": 2041,
+      "cityNameCn": "云浮",
+      "cityNameEn": "yunfu"
+    },
+    {
+      "cityId": 1791,
+      "cityNameCn": "云台山",
+      "cityNameEn": "yuntaishan"
+    },
+    {
+      "cityId": 1019,
+      "cityNameCn": "伊春",
+      "cityNameEn": "yichun"
+    },
+    {
+      "cityId": 605,
+      "cityNameCn": "运城",
+      "cityNameEn": "yuncheng"
+    },
+    {
+      "cityId": 2523,
+      "cityNameCn": "玉溪",
+      "cityNameEn": "yuxi"
+    },
+    {
+      "cityId": 16110006,
+      "cityNameCn": "沂水县",
+      "cityNameEn": "yishui"
+    },
+    {
+      "cityId": 1920,
+      "cityNameCn": "益阳",
+      "cityNameEn": "yiyang"
+    },
+    {
+      "cityId": 611,
+      "cityNameCn": "阳泉",
+      "cityNameEn": "yangquan"
+    },
+    {
+      "cityId": 16110007,
+      "cityNameCn": "沂南县",
+      "cityNameEn": "yinan"
+    },
+    {
+      "cityId": 3103,
+      "cityNameCn": "伊犁哈萨克自治州",
+      "cityNameEn": "yili"
+    },
+    {
+      "cityId": 4010019,
+      "cityNameCn": "永川区",
+      "cityNameEn": "yongchuan"
+    },
+    {
+      "cityId": 12040005,
+      "cityNameCn": "永康",
+      "cityNameEn": "yongkang"
+    },
+    {
+      "cityId": 1266,
+      "cityNameCn": "雁荡山",
+      "cityNameEn": "yandangshan"
+    },
+    {
+      "cityId": 535,
+      "cityNameCn": "野三坡",
+      "cityNameEn": "yesanpo"
+    },
+    {
+      "cityId": 12240007,
+      "cityNameCn": "玉环县",
+      "cityNameEn": "yuhuan"
+    },
+    {
+      "cityId": 15080011,
+      "cityNameCn": "玉山县",
+      "cityNameEn": "yushan"
+    },
+    {
+      "cityId": 7120004,
+      "cityNameCn": "牙克石",
+      "cityNameEn": "yakeshi"
+    },
+    {
+      "cityId": 17010019,
+      "cityNameCn": "荥阳",
+      "cityNameEn": "xingyang"
+    },
+    {
+      "cityId": 11040008,
+      "cityNameCn": "仪征",
+      "cityNameEn": "yizheng"
+    },
+    {
+      "cityId": 16190007,
+      "cityNameCn": "兖州",
+      "cityNameEn": "yanzhou"
+    },
+    {
+      "cityId": 17210009,
+      "cityNameCn": "永城",
+      "cityNameEn": "yongcheng"
+    },
+    {
+      "cityId": 28060003,
+      "cityNameCn": "玉门",
+      "cityNameEn": "yumenshi"
+    },
+    {
+      "cityId": 4010035,
+      "cityNameCn": "酉阳土家族苗族自治县",
+      "cityNameEn": "youyang"
+    },
+    {
+      "cityId": 14100001,
+      "cityNameCn": "永安",
+      "cityNameEn": "yongan"
+    },
+    {
+      "cityId": 12030008,
+      "cityNameCn": "永嘉县",
+      "cityNameEn": "yongjia"
+    },
+    {
+      "cityId": 14090004,
+      "cityNameCn": "永定县",
+      "cityNameEn": "yongding"
+    },
+    {
+      "cityId": 14020013,
+      "cityNameCn": "永泰县",
+      "cityNameEn": "yongtai"
+    },
+    {
+      "cityId": 4010034,
+      "cityNameCn": "云阳县",
+      "cityNameEn": "yunyang"
+    },
+    {
+      "cityId": 16060008,
+      "cityNameCn": "沂源县",
+      "cityNameEn": "yiyuanxian"
+    },
+    {
+      "cityId": 16120007,
+      "cityNameCn": "禹城",
+      "cityNameEn": "yucheng"
+    },
+    {
+      "cityId": 16220008,
+      "cityNameCn": "阳谷县",
+      "cityNameEn": "yanggu"
+    },
+    {
+      "cityId": 16160003,
+      "cityNameCn": "郓城县",
+      "cityNameEn": "huicheng"
+    },
+    {
+      "cityId": 6090012,
+      "cityNameCn": "阳城县",
+      "cityNameEn": "yangcheng"
+    },
+    {
+      "cityId": 18340004,
+      "cityNameCn": "宜城",
+      "cityNameEn": "yicheng"
+    },
+    {
+      "cityId": 19370005,
+      "cityNameCn": "永顺县",
+      "cityNameEn": "yongshunxian"
+    },
+    {
+      "cityId": 12300005,
+      "cityNameCn": "云和县",
+      "cityNameEn": "yunhe"
+    },
+    {
+      "cityId": 11080012,
+      "cityNameCn": "扬中",
+      "cityNameEn": "yangzhong"
+    },
+    {
+      "cityId": 3005,
+      "cityNameCn": "玉树藏族自治州",
+      "cityNameEn": "yushu"
+    },
+    {
+      "cityId": 25230009,
+      "cityNameCn": "元江哈尼族彝族傣族自治县",
+      "cityNameEn": "yuanjiang"
+    },
+    {
+      "cityId": 14080004,
+      "cityNameCn": "云霄县",
+      "cityNameEn": "yunxiao"
+    },
+    {
+      "cityId": 5120051,
+      "cityNameCn": "易县",
+      "cityNameEn": "yixian"
+    },
+    {
+      "cityId": 17080004,
+      "cityNameCn": "义马",
+      "cityNameEn": "yima"
+    },
+    {
+      "cityId": 17130004,
+      "cityNameCn": "禹州",
+      "cityNameEn": "yuzhou"
+    },
+    {
+      "cityId": 18140003,
+      "cityNameCn": "阳新县",
+      "cityNameEn": "yangxin"
+    },
+    {
+      "cityId": 17130005,
+      "cityNameCn": "鄢陵县",
+      "cityNameEn": "yanling"
+    },
+    {
+      "cityId": 18030015,
+      "cityNameCn": "宜都",
+      "cityNameEn": "yidu"
+    },
+    {
+      "cityId": 6050017,
+      "cityNameCn": "永济",
+      "cityNameEn": "yongji"
+    },
+    {
+      "cityId": 13020006,
+      "cityNameCn": "黟县",
+      "cityNameEn": "yixian"
+    },
+    {
+      "cityId": 27050011,
+      "cityNameCn": "宜川县",
+      "cityNameEn": "yananyichuan"
+    },
+    {
+      "cityId": 14100009,
+      "cityNameCn": "尤溪县",
+      "cityNameEn": "youxi"
+    },
+    {
+      "cityId": 17020008,
+      "cityNameCn": "偃师",
+      "cityNameEn": "yanshi"
+    },
+    {
+      "cityId": 6060018,
+      "cityNameCn": "原平",
+      "cityNameEn": "yuanping"
+    },
+    {
+      "cityId": 5150022,
+      "cityNameCn": "永年县",
+      "cityNameEn": "yongnian"
+    },
+    {
+      "cityId": 5060029,
+      "cityNameCn": "玉田县",
+      "cityNameEn": "yutian"
+    },
+    {
+      "cityId": 17020011,
+      "cityNameCn": "伊川县",
+      "cityNameEn": "yichuanxian"
+    },
+    {
+      "cityId": 25010005,
+      "cityNameCn": "宜良县",
+      "cityNameEn": "yiliang"
+    },
+    {
+      "cityId": 17020014,
+      "cityNameCn": "宜阳县",
+      "cityNameEn": "yiyang"
+    },
+    {
+      "cityId": 18220002,
+      "cityNameCn": "应城",
+      "cityNameEn": "yingcheng"
+    },
+    {
+      "cityId": 15020004,
+      "cityNameCn": "永修县",
+      "cityNameEn": "yongxiu"
+    },
+    {
+      "cityId": 13070006,
+      "cityNameCn": "颍上县",
+      "cityNameEn": "yingshang"
+    },
+    {
+      "cityId": 14030013,
+      "cityNameCn": "永春县",
+      "cityNameEn": "yongchun"
+    },
+    {
+      "cityId": 25170003,
+      "cityNameCn": "元阳县",
+      "cityNameEn": "yuanyang"
+    },
+    {
+      "cityId": 18300010,
+      "cityNameCn": "英山县",
+      "cityNameEn": "yingshan"
+    },
+    {
+      "cityId": 15160009,
+      "cityNameCn": "于都县",
+      "cityNameEn": "yudu"
+    },
+    {
+      "cityId": 6180005,
+      "cityNameCn": "应县",
+      "cityNameEn": "yingxian"
+    },
+    {
+      "cityId": 5160016,
+      "cityNameCn": "盐山县",
+      "cityNameEn": "yanshan"
+    },
+    {
+      "cityId": 9010018,
+      "cityNameCn": "榆树",
+      "cityNameEn": "yushu"
+    },
+    {
+      "cityId": 16180004,
+      "cityNameCn": "阳信县",
+      "cityNameEn": "yangxin"
+    },
+    {
+      "cityId": 5130015,
+      "cityNameCn": "阳原县",
+      "cityNameEn": "yangyuan"
+    },
+    {
+      "cityId": 17210003,
+      "cityNameCn": "虞城县",
+      "cityNameEn": "yuchengxian"
+    },
+    {
+      "cityId": 5010043,
+      "cityNameCn": "元氏县",
+      "cityNameEn": "yuanshi"
+    },
+    {
+      "cityId": 18220007,
+      "cityNameCn": "云梦县",
+      "cityNameEn": "yunmeng"
+    },
+    {
+      "cityId": 27030006,
+      "cityNameCn": "杨凌区",
+      "cityNameEn": "yangling"
+    },
+    {
+      "cityId": 17040011,
+      "cityNameCn": "延津县",
+      "cityNameEn": "yanjin"
+    },
+    {
+      "cityId": 17050009,
+      "cityNameCn": "叶县",
+      "cityNameEn": "yexian"
+    },
+    {
+      "cityId": 19020010,
+      "cityNameCn": "炎陵县",
+      "cityNameEn": "yanlingxian"
+    },
+    {
+      "cityId": 19070008,
+      "cityNameCn": "宜章县",
+      "cityNameEn": "yizhangxian"
+    },
+    {
+      "cityId": 5110019,
+      "cityNameCn": "永清县",
+      "cityNameEn": "yongqing"
+    },
+    {
+      "cityId": 19020008,
+      "cityNameCn": "攸县",
+      "cityNameEn": "youxian"
+    },
+    {
+      "cityId": 17040008,
+      "cityNameCn": "原阳县",
+      "cityNameEn": "yuanyang"
+    },
+    {
+      "cityId": 18030018,
+      "cityNameCn": "远安县",
+      "cityNameEn": "yuanan"
+    },
+    {
+      "cityId": 6050011,
+      "cityNameCn": "垣曲县",
+      "cityNameEn": "yuanqu"
+    },
+    {
+      "cityId": 1003,
+      "cityNameCn": "亚布力",
+      "cityNameEn": "yabulee"
+    },
+    {
+      "cityId": 905,
+      "cityNameCn": "延边朝鲜族自治州",
+      "cityNameEn": "yanbian"
+    },
+    {
+      "cityId": 31130004,
+      "cityNameCn": "伊吾县",
+      "cityNameEn": "yiwuxian"
+    },
+    {
+      "cityId": 19210004,
+      "cityNameCn": "沅陵县",
+      "cityNameEn": "yuanlingxian"
+    },
+    {
+      "cityId": 31310005,
+      "cityNameCn": "焉耆回族自治县",
+      "cityNameEn": "yanqi"
+    },
+    {
+      "cityId": 25300008,
+      "cityNameCn": "永善县",
+      "cityNameEn": "yongshan"
+    },
+    {
+      "cityId": 15080012,
+      "cityNameCn": "余干县",
+      "cityNameEn": "yuganxian"
+    },
+    {
+      "cityId": 31110008,
+      "cityNameCn": "叶城县",
+      "cityNameEn": "yecheng"
+    },
+    {
+      "cityId": 19070006,
+      "cityNameCn": "永兴县",
+      "cityNameEn": "yongxingxian"
+    },
+    {
+      "cityId": 6180009,
+      "cityNameCn": "右玉县",
+      "cityNameEn": "youyu"
+    },
+    {
+      "cityId": 21190004,
+      "cityNameCn": "宜州",
+      "cityNameEn": "yizhou"
+    },
+    {
+      "cityId": 6030022,
+      "cityNameCn": "翼城县",
+      "cityNameEn": "yichengxian"
+    },
+    {
+      "cityId": 6030025,
+      "cityNameCn": "永和县",
+      "cityNameEn": "yonghe"
+    },
+    {
+      "cityId": 537,
+      "cityNameCn": "玉泉山",
+      "cityNameEn": "yuquanshan"
+    },
+    {
+      "cityId": 5130020,
+      "cityNameCn": "蔚县",
+      "cityNameEn": "yuxian"
+    },
+    {
+      "cityId": 1701,
+      "cityNameCn": "郑州",
+      "cityNameEn": "zhengzhou"
+    },
+    {
+      "cityId": 2004,
+      "cityNameCn": "珠海",
+      "cityNameEn": "zhuhai"
+    },
+    {
+      "cityId": 1245,
+      "cityNameCn": "舟山",
+      "cityNameEn": "zhoushan"
+    },
+    {
+      "cityId": 1903,
+      "cityNameCn": "张家界",
+      "cityNameEn": "zhangjiajie"
+    },
+    {
+      "cityId": 2804,
+      "cityNameCn": "张掖",
+      "cityNameEn": "zhangye"
+    },
+    {
+      "cityId": 2011,
+      "cityNameCn": "中山",
+      "cityNameEn": "zhongshan"
+    },
+    {
+      "cityId": 2014,
+      "cityNameCn": "湛江",
+      "cityNameEn": "zhanjiang"
+    },
+    {
+      "cityId": 2013,
+      "cityNameCn": "肇庆",
+      "cityNameEn": "zhaoqing"
+    },
+    {
+      "cityId": 1606,
+      "cityNameCn": "淄博",
+      "cityNameEn": "zibo"
+    },
+    {
+      "cityId": 2904,
+      "cityNameCn": "中卫",
+      "cityNameEn": "zhongwei"
+    },
+    {
+      "cityId": 513,
+      "cityNameCn": "张家口",
+      "cityNameEn": "zhangjiakou"
+    },
+    {
+      "cityId": 2402,
+      "cityNameCn": "遵义",
+      "cityNameEn": "zunyi"
+    },
+    {
+      "cityId": 24320014,
+      "cityNameCn": "镇远县",
+      "cityNameEn": "zhengyuan"
+    },
+    {
+      "cityId": 1108,
+      "cityNameCn": "镇江",
+      "cityNameEn": "zhenjiang"
+    },
+    {
+      "cityId": 1902,
+      "cityNameCn": "株洲",
+      "cityNameEn": "zhuzhou"
+    },
+    {
+      "cityId": 1608,
+      "cityNameCn": "枣庄",
+      "cityNameEn": "zaozhuang"
+    },
+    {
+      "cityId": 11020015,
+      "cityNameCn": "张家港",
+      "cityNameEn": "zhangjiagang"
+    },
+    {
+      "cityId": 1408,
+      "cityNameCn": "漳州",
+      "cityNameEn": "zhangzhou"
+    },
+    {
+      "cityId": 5130022,
+      "cityNameCn": "张北县",
+      "cityNameEn": "zhangbei"
+    },
+    {
+      "cityId": 1126,
+      "cityNameCn": "周庄",
+      "cityNameEn": "zhouzhuang"
+    },
+    {
+      "cityId": 1718,
+      "cityNameCn": "驻马店",
+      "cityNameEn": "zhumadian"
+    },
+    {
+      "cityId": 2305,
+      "cityNameCn": "自贡",
+      "cityNameEn": "zigong"
+    },
+    {
+      "cityId": 1714,
+      "cityNameCn": "周口",
+      "cityNameEn": "zhoukou"
+    },
+    {
+      "cityId": 12050012,
+      "cityNameCn": "诸暨",
+      "cityNameEn": "zhuji"
+    },
+    {
+      "cityId": 16030012,
+      "cityNameCn": "诸城",
+      "cityNameEn": "zhucheng"
+    },
+    {
+      "cityId": 5010034,
+      "cityNameCn": "正定县",
+      "cityNameEn": "zhengding"
+    },
+    {
+      "cityId": 2382,
+      "cityNameCn": "资阳",
+      "cityNameEn": "ziyang"
+    },
+    {
+      "cityId": 16020010,
+      "cityNameCn": "章丘",
+      "cityNameEn": "zhangqiu"
+    },
+    {
+      "cityId": 2530,
+      "cityNameCn": "昭通",
+      "cityNameEn": "zhaotong"
+    },
+    {
+      "cityId": 5120036,
+      "cityNameCn": "涿州",
+      "cityNameEn": "zhuozhou"
+    },
+    {
+      "cityId": 16190008,
+      "cityNameCn": "邹城",
+      "cityNameEn": "zoucheng"
+    },
+    {
+      "cityId": 16040008,
+      "cityNameCn": "招远",
+      "cityNameEn": "zhaoyuan"
+    },
+    {
+      "cityId": 16180006,
+      "cityNameCn": "邹平县",
+      "cityNameEn": "zoupingxian"
+    },
+    {
+      "cityId": 14080010,
+      "cityNameCn": "漳浦县",
+      "cityNameEn": "zhangpu"
+    },
+    {
+      "cityId": 8010016,
+      "cityNameCn": "庄河",
+      "cityNameEn": "zhuanghe"
+    },
+    {
+      "cityId": 31030007,
+      "cityNameCn": "昭苏县",
+      "cityNameEn": "zhaosu"
+    },
+    {
+      "cityId": 18100010,
+      "cityNameCn": "钟祥",
+      "cityNameEn": "zhongxiang"
+    },
+    {
+      "cityId": 7120012,
+      "cityNameCn": "扎兰屯",
+      "cityNameEn": "zhalantunshi"
+    },
+    {
+      "cityId": 5010041,
+      "cityNameCn": "赵县",
+      "cityNameEn": "zhaoxian"
+    },
+    {
+      "cityId": 5060025,
+      "cityNameCn": "遵化",
+      "cityNameEn": "zunhua"
+    },
+    {
+      "cityId": 17010015,
+      "cityNameCn": "中牟县",
+      "cityNameEn": "zhongmou"
+    },
+    {
+      "cityId": 5130006,
+      "cityNameCn": "涿鹿县",
+      "cityNameEn": "zhuolu"
+    },
+    {
+      "cityId": 29040003,
+      "cityNameCn": "中宁县",
+      "cityNameEn": "zhongningxian"
+    },
+    {
+      "cityId": 19210010,
+      "cityNameCn": "芷江侗族自治县",
+      "cityNameEn": "zhijiangxian"
+    },
+    {
+      "cityId": 18340005,
+      "cityNameCn": "枣阳",
+      "cityNameEn": "zaoyang"
+    },
+    {
+      "cityId": 17070007,
+      "cityNameCn": "镇平县",
+      "cityNameEn": "zhenping"
+    },
+    {
+      "cityId": 5140004,
+      "cityNameCn": "枣强县",
+      "cityNameEn": "zaoqiang"
+    },
+    {
+      "cityId": 19070003,
+      "cityNameCn": "资兴",
+      "cityNameEn": "zixing"
+    },
+    {
+      "cityId": 14080011,
+      "cityNameCn": "诏安县",
+      "cityNameEn": "zhaoan"
+    },
+    {
+      "cityId": 18030009,
+      "cityNameCn": "枝江",
+      "cityNameEn": "zhijiang"
+    },
+    {
+      "cityId": 6070016,
+      "cityNameCn": "左权县",
+      "cityNameEn": "zuoquan"
+    },
+    {
+      "cityId": 15090004,
+      "cityNameCn": "樟树",
+      "cityNameEn": "zhangshu"
+    },
+    {
+      "cityId": 10100011,
+      "cityNameCn": "肇东",
+      "cityNameEn": "zhaodong"
+    },
+    {
+      "cityId": 18030016,
+      "cityNameCn": "秭归县",
+      "cityNameEn": "zigui"
+    },
+    {
+      "cityId": 14090007,
+      "cityNameCn": "漳平",
+      "cityNameEn": "zhangping"
+    },
+    {
+      "cityId": 14140006,
+      "cityNameCn": "周宁县",
+      "cityNameEn": "zhouning"
+    },
+    {
+      "cityId": 17180003,
+      "cityNameCn": "正阳县",
+      "cityNameEn": "zhengyang"
+    },
+    {
+      "cityId": 4010037,
+      "cityNameCn": "忠县",
+      "cityNameEn": "zhongxian"
+    },
+    {
+      "cityId": 14140007,
+      "cityNameCn": "柘荣县",
+      "cityNameEn": "zherong"
+    },
+    {
+      "cityId": 17210007,
+      "cityNameCn": "柘城县",
+      "cityNameEn": "zhecheng"
+    },
+    {
+      "cityId": 5010048,
+      "cityNameCn": "赞皇县",
+      "cityNameEn": "zanhuang"
+    },
+    {
+      "cityId": 14110004,
+      "cityNameCn": "政和县",
+      "cityNameEn": "zhenghe"
+    },
+    {
+      "cityId": 23120005,
+      "cityNameCn": "中江县",
+      "cityNameEn": "zhongjiangxian"
+    },
+    {
+      "cityId": 7060002,
+      "cityNameCn": "扎鲁特旗",
+      "cityNameEn": "zhaluteqi"
+    },
+    {
+      "cityId": 19210003,
+      "cityNameCn": "中方县",
+      "cityNameEn": "zhongfangxian"
+    },
+    {
+      "cityId": 25220007,
+      "cityNameCn": "沾益县",
+      "cityNameEn": "zhanyi"
+    },
+    {
+      "cityId": 21010008,
+      "cityNameCn": "资源县",
+      "cityNameEn": "ziyuan"
+    },
+    {
+      "cityId": 27090012,
+      "cityNameCn": "子洲县",
+      "cityNameEn": "yulinzizhouxian"
+    },
+    {
+      "cityId": 1331,
+      "cityNameCn": "查济",
+      "cityNameEn": "zhaji"
+    },
+    {
+      "cityId": 3420,
+      "cityNameCn": "马祖",
+      "cityNameEn": "matsu"
+    },
+    {
+      "cityId": 3419,
+      "cityNameCn": "金门",
+      "cityNameEn": "kinmen"
+    },
+    {
+      "cityId": 3418,
+      "cityNameCn": "澎湖",
+      "cityNameEn": "penghu"
+    },
+    {
+      "cityId": 3417,
+      "cityNameCn": "台东",
+      "cityNameEn": "taitung"
+    },
+    {
+      "cityId": 3416,
+      "cityNameCn": "花莲",
+      "cityNameEn": "hualien"
+    },
+    {
+      "cityId": 3415,
+      "cityNameCn": "宜兰",
+      "cityNameEn": "yilan"
+    },
+    {
+      "cityId": 3414,
+      "cityNameCn": "台南",
+      "cityNameEn": "tainan"
+    },
+    {
+      "cityId": 3413,
+      "cityNameCn": "嘉义",
+      "cityNameEn": "chiayi"
+    },
+    {
+      "cityId": 3412,
+      "cityNameCn": "云林",
+      "cityNameEn": "yunlin"
+    },
+    {
+      "cityId": 3411,
+      "cityNameCn": "南投",
+      "cityNameEn": "nantou"
+    },
+    {
+      "cityId": 3410,
+      "cityNameCn": "彰化",
+      "cityNameEn": "changhua"
+    },
+    {
+      "cityId": 3409,
+      "cityNameCn": "苗栗",
+      "cityNameEn": "miaoli"
+    },
+    {
+      "cityId": 3408,
+      "cityNameCn": "新竹",
+      "cityNameEn": "hsinchu"
+    },
+    {
+      "cityId": 3407,
+      "cityNameCn": "桃园",
+      "cityNameEn": "taoyuan"
+    },
+    {
+      "cityId": 3406,
+      "cityNameCn": "基隆",
+      "cityNameEn": "keelung"
+    },
+    {
+      "cityId": 3401,
+      "cityNameCn": "台北",
+      "cityNameEn": "taipei"
+    },
+    {
+      "cityId": 3402,
+      "cityNameCn": "高雄",
+      "cityNameEn": "kaohsiung"
+    },
+    {
+      "cityId": 3403,
+      "cityNameCn": "台中",
+      "cityNameEn": "taichung"
+    },
+    {
+      "cityId": 3404,
+      "cityNameCn": "屏东",
+      "cityNameEn": "pingtung"
+    },
+    {
+      "cityId": 3201,
+      "cityNameCn": "香港",
+      "cityNameEn": "hongkong"
+    },
+    {
+      "cityId": 3301,
+      "cityNameCn": "澳门",
+      "cityNameEn": "macau"
+    },
+    {
+      "cityId": 23010014,
+      "cityNameCn": "都江堰",
+      "cityNameEn": "dujiangyanqingchengshan"
+    },
+    {
+      "cityId": 23010016,
+      "cityNameCn": "邛崃市",
+      "cityNameEn": "qionglai"
+    },
+    {
+      "cityId": 31010011,
+      "cityNameCn": "米泉",
+      "cityNameEn": "miquan"
+    },
+    {
+      "cityId": 1709,
+      "cityNameCn": "济源",
+      "cityNameEn": "jiyuan"
+    },
+    {
+      "cityId": 19010013,
+      "cityNameCn": "长沙县",
+      "cityNameEn": "changshaxian"
+    },
+    {
+      "cityId": 23060003,
+      "cityNameCn": "天全县",
+      "cityNameEn": "tianquanxian"
+    }
+  ]
+}
