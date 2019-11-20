@@ -2,9 +2,7 @@ package com.example.javacrawler.controller;
 
 import com.example.javacrawler.entity.Area;
 import com.example.javacrawler.entity.BookInfo;
-import com.example.javacrawler.entity.ElongArea;
 import com.example.javacrawler.service.AreaService;
-import com.example.javacrawler.service.ElongAreaService;
 import com.example.javacrawler.service.HotelService;
 import com.example.javacrawler.service.InternationalAreaService;
 import com.example.javacrawler.task.CrawlHotelXC;
@@ -21,8 +19,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import us.codecraft.webmagic.Spider;
-import us.codecraft.webmagic.downloader.selenium.SeleniumDownloader;
 
 import java.io.IOException;
 import java.util.ArrayList;
