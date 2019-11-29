@@ -22,12 +22,7 @@
     </insert>
 
     <select id="getElongByCity_nameOrPinyin" resultType="com.example.javacrawler.entity.ElongArea">
-        select * from elong_hotel_city WHERE city_name=#{param1} or pinyin=#{param1};
+        select * from elong_hotel_city WHERE cityNameCn=#{param1} or cityNameEn=#{param1};
     </select>
-
-    <update id="updateAllElong">
-        update ctrip_hotel_city
-        set resource=#{param1}
-    </update>
 
 </mapper>

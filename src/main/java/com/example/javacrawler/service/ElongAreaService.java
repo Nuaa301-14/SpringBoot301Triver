@@ -15,7 +15,5 @@ public interface ElongAreaService {
 
     ElongArea getByCity_nameOrPinyin(String City_nameOrPinyin);
 
-    int updateAll(String resource);
-
     int getTotal();
 }

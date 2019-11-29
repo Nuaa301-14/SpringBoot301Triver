@@ -49,12 +49,6 @@ public interface ElongAreaMapper {
      */
     ElongArea getElongByCity_nameOrPinyin(String City_nameOrPinyin);
 
-    /**
-     * 更新来源
-     * @param resource
-     * @return
-     */
-    int updateAllElong(String resource);
 
     /**
      * 获得总数

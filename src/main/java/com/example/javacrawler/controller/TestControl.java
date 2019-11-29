@@ -2,9 +2,7 @@ package com.example.javacrawler.controller;
 
 import com.example.javacrawler.entity.Area;
 import com.example.javacrawler.entity.BookInfo;
-import com.example.javacrawler.entity.ElongArea;
 import com.example.javacrawler.service.AreaService;
-import com.example.javacrawler.service.ElongAreaService;
 import com.example.javacrawler.service.HotelService;
 import com.example.javacrawler.service.InternationalAreaService;
 import com.example.javacrawler.task.CrawlHotelXC;
@@ -21,8 +19,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import us.codecraft.webmagic.Spider;
-import us.codecraft.webmagic.downloader.selenium.SeleniumDownloader;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -113,14 +109,12 @@ public class TestControl {
         if (a==null){
             return "请输入完整的地区名称或者字母";
         }
-        String s = a.toString();
-        System.out.println(s);
 //        String url="https://vacations.ctrip.com/list/scenichotel/sc.html/?";
 //        url= new StringBuilder().append(url).append("sv=").append(a.getCity_name()).append("&st=").append(a.getCity_name()).append("&p=3").toString();
 //        return Jsoup.connect(url).get().toString();
 
         CrawlHotelXC crawlHotelXC=new CrawlHotelXC(a.getUrl());
-        crawlHotelXC.crawl(new CrawlHotelXCPipeline(hotelService));
+        crawlHotelXC.crawl(new CrawlHotelXCPipeline(hotelService),3);
 
 //        String url="https://hotel.qunar.com/city/"+a.getPinyin();
 //        if (name.equals("北京")||name.equals("上海")||name.equals("重庆")||name.equals("天津")
