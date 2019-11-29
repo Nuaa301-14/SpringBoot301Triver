@@ -2,7 +2,9 @@ package com.example.javacrawler.controller;
 
 import com.example.javacrawler.entity.Area;
 import com.example.javacrawler.entity.BookInfo;
+import com.example.javacrawler.entity.ElongArea;
 import com.example.javacrawler.service.AreaService;
+import com.example.javacrawler.service.ElongAreaService;
 import com.example.javacrawler.service.HotelService;
 import com.example.javacrawler.service.InternationalAreaService;
 import com.example.javacrawler.task.CrawlHotelXC;
@@ -38,6 +40,7 @@ public class TestControl {
 
     @Autowired
     private AreaService areaService;
+
 
     /**
      * @RequestMapping("/login.html") 就可以直接访问login.html了

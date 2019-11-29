@@ -20,7 +20,7 @@ import java.util.List;
 
 
 /**
- * 爬取携程 城市名称 分类 酒店数据
+ * 爬取 ‘携程 ’ 城市名称 分类 酒店数据
  */
 @Component
 public class CrawlArea implements PageProcessor {
@@ -91,7 +91,6 @@ public class CrawlArea implements PageProcessor {
 
 //    @Scheduled(initialDelay = 1000, fixedDelay = 1000 * 60 * 10)
     public void crawlArea() {
-        System.setProperty("selenuim_config", "C:\\Users\\Administrator\\IdeaProjects\\javacrawler\\src\\main\\resources\\config.ini");
         Spider.create(new CrawlArea())
                 .addUrl("https://hotels.ctrip.com/domestic-city-hotel.html")
 //                .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(1000))

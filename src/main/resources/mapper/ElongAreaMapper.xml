@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.javacrawler.mapper.ElongAreaMapper">
+    <select id="getTotal" resultType="int">
+        select count(*) from elong_hotel_city;
+    </select>
+
+    <select id="getArea" resultType="com.example.javacrawler.entity.ElongArea">
+        select * from elong_hotel_city
+        where cityId=#{param1}
+    </select>
+
+    <select id="getElongAreaByName" resultType="com.example.javacrawler.entity.ElongArea">
+        select * from elong_hotel_city
+        where cityNameCn=#{param1}
+    </select>
+
+    <insert id="insertElongArea" parameterType="com.example.javacrawler.entity.ElongArea">
+        insert into elong_hotel_city
+            (cityId,cityNameCn,cityNameEn)
+        values (#{cityId},#{cityNameCn},#{cityNameEn})
+    </insert>
+
+    <select id="getElongByCity_nameOrPinyin" resultType="com.example.javacrawler.entity.ElongArea">
+        select * from elong_hotel_city WHERE city_name=#{param1} or pinyin=#{param1};
+    </select>
+
+    <update id="updateAllElong">
+        update ctrip_hotel_city
+        set resource=#{param1}
+    </update>
+
+</mapper>

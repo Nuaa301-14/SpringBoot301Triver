@@ -16,9 +16,6 @@ public class HotelControl {
     @Autowired
     private AreaService areaService;
 
-
-
-
     @RequestMapping(value = "/hello")
     public String hello(){
         Hotel hotel = hotelService.getHotel("123456");
@@ -31,5 +28,8 @@ public class HotelControl {
     public String hello1(){
         return "ddd";
     }
+
+    // 处理酒店 search 框
+
 
 }

@@ -24,6 +24,7 @@ public class MybatisPipeline implements Pipeline {
         //判断数据不为空
         if (areaList != null) {
             //将数据保存到数据库中
+
             for (Area area :
                     areaList) {
                 if (areaService.getArea(area.getCity_id())==null){
