@@ -109,14 +109,12 @@ public class TestControl {
         if (a==null){
             return "请输入完整的地区名称或者字母";
         }
-        String s = a.toString();
-        System.out.println(s);
 //        String url="https://vacations.ctrip.com/list/scenichotel/sc.html/?";
 //        url= new StringBuilder().append(url).append("sv=").append(a.getCity_name()).append("&st=").append(a.getCity_name()).append("&p=3").toString();
 //        return Jsoup.connect(url).get().toString();
 
         CrawlHotelXC crawlHotelXC=new CrawlHotelXC(a.getUrl());
-        crawlHotelXC.crawl(new CrawlHotelXCPipeline(hotelService));
+        crawlHotelXC.crawl(new CrawlHotelXCPipeline(hotelService),3);
 
 //        String url="https://hotel.qunar.com/city/"+a.getPinyin();
 //        if (name.equals("北京")||name.equals("上海")||name.equals("重庆")||name.equals("天津")

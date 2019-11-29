@@ -21,7 +21,7 @@ public class CrawlHotelXC implements PageProcessor {
 
     private String url;
 
-    private int maxNumber = 4;
+    private int maxNumber = 3;
 
     public CrawlHotelXC(String url) {
         this.url = url;
@@ -185,11 +185,11 @@ public class CrawlHotelXC implements PageProcessor {
             .setRetrySleepTime(3000)
             .setRetryTimes(3);
 
-    public void crawl(CrawlHotelXCPipeline crawlHotelXCPipeline) {
+    public void crawl(CrawlHotelXCPipeline crawlHotelXCPipeline,int pageNum) {
         Spider.create(new CrawlHotelXC())
                 .addUrl(url)
                 .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(2000))
-                .thread(5)
+                .thread(1)
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))
                 .addPipeline(crawlHotelXCPipeline)
                 .run();

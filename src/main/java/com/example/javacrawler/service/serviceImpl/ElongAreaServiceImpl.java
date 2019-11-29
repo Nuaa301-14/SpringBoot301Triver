@@ -43,11 +43,6 @@ public class ElongAreaServiceImpl implements ElongAreaService {
     }
 
     @Override
-    public int updateAll(String resource) {
-        return elongAreaMapper.updateAllElong(resource);
-    }
-
-    @Override
     public int getTotal() {
         return elongAreaMapper.getTotal();
     }

@@ -11,9 +11,10 @@ import java.util.List;
 
 public class CrawlHotelELong implements PageProcessor {
 
-    private String url;
-
-    private int maxNumber=5;
+    /**
+     * 默认为两个
+     */
+    private int maxNumber=2;
 
     @Override
     public void process(Page page) {
@@ -62,11 +63,13 @@ public class CrawlHotelELong implements PageProcessor {
             .setRetrySleepTime(3000)
             .setRetryTimes(3);
 
-    public void crawl(){
-        Spider.create(new CrawlHotelXC())
+    public boolean crawl(String url,int pageNum){
+        maxNumber=pageNum;
+        Spider.create(new CrawlHotelELong())
                 .addUrl(url)
                 .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(1000))
                 .thread(1)
                 .run();
+        return true;
     }
 }
