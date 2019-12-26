@@ -3,7 +3,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <title>欢迎访问旅游比价系统</title>
+    <title>欢迎注册</title>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     <style>
         * {
@@ -107,22 +107,20 @@
 
 <body>
 <form  class="login-form">
-    <h1>欢迎访问旅游比价系统</h1>
+    <h1>欢迎注册</h1>
     <div class="txtb">
         <input type="text" id="username">
         <span data-placeholder="Username"></span>
     </div>
 
     <div class="txtb">
-        <input type="password" id="password" >
-        <span data-placeholder="Password" ></span>
+        <input type="password" id="password">
+        <span data-placeholder="Password"></span>
     </div>
 
-    <input type="submit" class="logbtn" value="登录" onclick="myClick()">
+    <input type="submit" class="logbtn" value="注册" onclick="myClick()">
 
-    <div class=" bottom-text" onclick="zhuce()">
-        没有账户? <a href="#">点我注册</a>
-    </div>
+
 </form>
 <script type="text/javascript">
     $(".txtb input").on("focus", function () {
@@ -149,7 +147,7 @@
 
         $.ajax({
             //访问后台的路径
-            url: "/onclick_login",
+            url: "/onclick_register",
             //将数据通过函数转换
             data: JSON.stringify(userList),
             dataType:"json",//指定数据类型为JSON
@@ -157,11 +155,12 @@
             contentType: "application/json;charset=utf-8",
             type: 'post',//指定提交方式为post
             success: function(data) {
-                if(data == "0"){
-                    alert("用户名或密码错误！");
+                if(data == 0){
+                    alert("用户名已被注册！");
                 }
                 else{
-                    window.location.href="/login.html";
+                    alert("注册成功！");
+                    window.location.href="/loginin";
                 }
 
             }
@@ -169,9 +168,7 @@
 
     }
 
-    function zhuce() {
-        window.location.href="/register";
-    }
+
 
 </script>
 </body>

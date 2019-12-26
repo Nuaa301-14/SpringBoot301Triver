@@ -2,4 +2,30 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.javacrawler.mapper.ScenicHotelMapper">
 
+    <select id="select" parameterType="java.util.Map" resultType="com.example.javacrawler.entity.SpotAndHotel">
+        SELECT * FROM spot_and_hotel
+        <where>
+            <if test="param.shotelId!=null">
+                and productId=#{param.shotelId}
+            </if>
+        </where>
+    </select>
+
+    <update id="updateSHotel" parameterType="com.example.javacrawler.entity.SpotAndHotel">
+        update spot_and_hotel
+        set productName=#{productName},
+            source=#{source},
+            price=#{price},
+            score=#{score},
+            recommend=#{recommend},
+            supply=#{supply}
+        where productId=#{productId}
+    </update>
+
+    <insert id="insertSHotel" parameterType="com.example.javacrawler.entity.SpotAndHotel">
+        insert into spot_and_hotel
+            (productId,productName,source,price,score,recommend,supply)
+        values (#{productId},#{productName},#{source},#{price},
+        #{score},#{recommend},#{supply})
+    </insert>
 </mapper>

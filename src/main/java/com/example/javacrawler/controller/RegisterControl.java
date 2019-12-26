@@ -1,36 +1,25 @@
 package com.example.javacrawler.controller;
 
 
-import com.alibaba.fastjson.JSONException;
-
-import com.alibaba.fastjson.JSONObject;
-import com.example.javacrawler.entity.BookInfo;
 import com.example.javacrawler.entity.User;
 import com.example.javacrawler.service.AreaService;
-import com.example.javacrawler.service.HotelService;
 import com.example.javacrawler.service.InternationalAreaService;
-
 import com.example.javacrawler.service.UserService;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.subject.Subject;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 
 @Controller
-public class LogininControl {
+public class RegisterControl {
 
     @Autowired
     private InternationalAreaService internationalAreaService;
@@ -45,16 +34,16 @@ public class LogininControl {
      * @RequestMapping("/login.html")
      * Model ： 将传入下一个页面
      */
-    @RequestMapping("/loginin")
+    @RequestMapping("/register")
     public String loginHtml(Model model) {
 
         model.addAttribute("result", "登陆页面");
-        return "loginin";
+        return "register";
     }
 
-    @RequestMapping("/onclick_login")
+    @RequestMapping("/onclick_register")
     @ResponseBody
-    public String  onclick_login(@RequestBody List<Map<String,Object>> userList,HttpSession httpSession) {
+    public int  onclick_login(@RequestBody List<Map<String,Object>> userList,HttpSession httpSession) {
         String xm = "";
         String psd = "";
         Map<String,Object> userinfo = userList.get(0);
@@ -62,14 +51,17 @@ public class LogininControl {
         psd =(String) userinfo.get("password");
         User user = userservice.getUserByName(xm);
         if(user !=null){
-            if(user.getPassword().equalsIgnoreCase(psd)){
-                httpSession.setAttribute("userId",user.getId());
-                httpSession.setAttribute("username",user.getName());
-                httpSession.setAttribute("password",user.getPassword());
-                return String.valueOf(user.getId());
-            }
+            return 0;
         }
-        return "0";
+       else{
+            User newuser = new User();
+            Random r = new Random();
+            newuser.setId(r.nextInt());
+            newuser.setName(xm);
+            newuser.setPassword(psd);
+            int id = userservice.insertUser(newuser);
+            return id;
+        }
     }
 
 

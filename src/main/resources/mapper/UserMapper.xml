@@ -4,4 +4,10 @@
     <select id="getUserByName" parameterType="String" resultType="User">
         select * from user where username=#{param1}
     </select>
+
+    <insert id="InsertUser" parameterType="com.example.javacrawler.entity.User">
+        insert into user
+            (id,username,password)
+        values (#{id},#{name},#{password})
+    </insert>
 </mapper>
