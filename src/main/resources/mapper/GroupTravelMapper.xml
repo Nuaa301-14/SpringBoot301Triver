@@ -2,4 +2,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.javacrawler.mapper.GroupTravelMapper">
 
+    <select id="select" parameterType="java.util.Map" resultType="com.example.javacrawler.entity.GroupTravel">
+        SELECT * FROM group_travel
+        <where>
+            <if test="param.groupId!=null">
+                and group_id=#{param.groupId}
+            </if>
+        </where>
+    </select>
+
+    <update id="updateGroupTravel" parameterType="com.example.javacrawler.entity.GroupTravel">
+        update group_travel
+        set group_name=#{GroupName},
+            group_score=#{GroupScore},
+            comment_number=#{CommentNumber},
+            sold_number=#{SoldNumber},
+            group_price=#{GroupPrice},
+            introduce=#{Introduce},
+            url=#{GroupUrl},
+            setoff_time=#{Time},
+            supply=#{Supply}
+        where group_id=#{GroupId}
+    </update>
+
+    <insert id="insetGroupTravel" parameterType="com.example.javacrawler.entity.GroupTravel">
+        insert into group_travel
+            (group_name,group_id,group_score,comment_number,sold_number,group_price,introduce,url,setoff_time,supply)
+        values (#{GroupName},#{GroupId},#{GroupScore},#{CommentNumber},
+        #{SoldNumber},#{GroupPrice},#{Introduce},#{GroupUrl},#{Time},#{Supply})
+    </insert>
 </mapper>
