@@ -1,9 +1,11 @@
 package com.example.javacrawler.entity;
 
 public class Spot {
+    private int id;
+
     private String SpotName;
 
-    private String SpotId;
+    private String SpotId;      //没法拿到
 
     private String SpotCountry;
 
@@ -21,9 +23,17 @@ public class Spot {
 
     private int SoldNumber;
 
-    private int SpotPrice;
+    private float SpotPrice;
 
     private String Introduce;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getIntroduce() {
         return Introduce;
@@ -97,11 +107,11 @@ public class Spot {
         SoldNumber = soldNumber;
     }
 
-    public int getSpotPrice() {
+    public float getSpotPrice() {
         return SpotPrice;
     }
 
-    public void setSpotPrice(int spotPrice) {
+    public void setSpotPrice(float spotPrice) {
         SpotPrice = spotPrice;
     }
 

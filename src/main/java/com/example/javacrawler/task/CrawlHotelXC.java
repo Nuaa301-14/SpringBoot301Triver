@@ -2,9 +2,12 @@ package com.example.javacrawler.task;
 
 
 import com.example.javacrawler.entity.Hotel;
+import com.example.javacrawler.service.HotelService;
 import com.example.javacrawler.task.pipeline.CrawlHotelXCPipeline;
 import org.jsoup.Jsoup;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Spider;
@@ -17,11 +20,17 @@ import us.codecraft.webmagic.selector.Selectable;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class CrawlHotelXC implements PageProcessor {
 
     private String url;
 
-    private int maxNumber = 3;
+    private int maxNumber = 1;
+
+    private String hotelName=null;
+
+    @Autowired
+    private HotelService hotelService;
 
     public CrawlHotelXC(String url) {
         this.url = url;
@@ -47,20 +56,40 @@ public class CrawlHotelXC implements PageProcessor {
 //                page.addTargetRequest(s);
 //            }
             // 获取下一页的url
-            String text = page.getHtml().css("div.c_page_list a.current", "text").toString();
-            int current = Integer.parseInt(text);
-            List<Selectable> nodes = page.getHtml().css("div.c_page_list a[data-dopost]").nodes();
-            for (Selectable selectable :
-                    nodes) {
-                //获取url地址
-                int num = Integer.parseInt(selectable.css("a[data-value]", "text").toString());
-                if (num > current && num <= maxNumber) {
-                    String s = selectable.links().toString();
-                    page.addTargetRequest(selectable.links().toString());
-                    System.out.println("添加 ： " + selectable.links().toString());
+            if (this.hotelName!=null){
+                // 爬取单个酒店信息
+                List<Hotel> hotelList = saveHotelInfo(page, selectableList, area);
+                for (int i=0;i<hotelList.size();i++){
+                    // 找到目标的酒店
+                    if (hotelList.get(i).getHotelName().equals(hotelName)){
+                        System.out.println(hotelList.get(i).toString());
+                        // 写入数据库
+                        //TODO
+//                        hotelService.insertHotel(hotelList.get(i));
+                        System.out.println(1111);
+                        break;
+                    }
                 }
+            }else {
+                /**
+                 * 爬取页面的酒店信息
+                 */
+                String text = page.getHtml().css("div.c_page_list a.current", "text").toString();
+                int current = Integer.parseInt(text);
+                List<Selectable> nodes = page.getHtml().css("div.c_page_list a[data-dopost]").nodes();
+                for (Selectable selectable :
+                        nodes) {
+                    //获取url地址
+                    int num = Integer.parseInt(selectable.css("a[data-value]", "text").toString());
+                    if (num > current && num <= maxNumber) {
+                        String s = selectable.links().toString();
+                        page.addTargetRequest(selectable.links().toString());
+                        System.out.println("添加 ： " + selectable.links().toString());
+                    }
+                }
+                page.putField("hotelList", this.saveHotelInfo(page, selectableList, area));
             }
-            page.putField("hotelList", this.saveHotelInfo(page, selectableList, area));
+
         }
     }
 
@@ -79,7 +108,7 @@ public class CrawlHotelXC implements PageProcessor {
             String html = selectable.toString();
             String hotelId = Jsoup.parse(html).select("div.hotel_new_list")
                     .first().attr("id");
-            hotel.setHotelId(hotelId);
+            hotel.setHotelId("XC"+hotelId);
 
 
             String text1 = Jsoup.parse(html).select("li.hotel_item_name h2.hotel_name")
@@ -136,7 +165,6 @@ public class CrawlHotelXC implements PageProcessor {
             String priceStr = Jsoup.parse(html).select("li.hotel_price_icon div.hotel_price span").text();
             int price = Integer.parseInt(priceStr);
             hotel.setPrice(price);
-            System.out.println("price:" + price);
             //获得酒店的详情url
             String url = "";
             url = Jsoup.parse(html).select("li.hotel_item_name a").attr("href");
@@ -144,7 +172,6 @@ public class CrawlHotelXC implements PageProcessor {
                 url = new StringBuilder().append("https://hotels.ctrip.com").append(url).toString();
             }
             hotel.setTargetUrl(url);
-            System.out.println(hotel.toString());
             hotel.setSource("携程");
             hotel.setArea(area);
             hotelList.add(hotel);
@@ -185,13 +212,33 @@ public class CrawlHotelXC implements PageProcessor {
             .setRetrySleepTime(3000)
             .setRetryTimes(3);
 
+    /**
+     * 按页爬取携程酒店信息
+     * @param crawlHotelXCPipeline
+     * @param pageNum
+     */
     public void crawl(CrawlHotelXCPipeline crawlHotelXCPipeline,int pageNum) {
-        Spider.create(new CrawlHotelXC())
+        this.maxNumber=pageNum;
+        Spider.create(this)
                 .addUrl(url)
                 .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(2000))
                 .thread(1)
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))
                 .addPipeline(crawlHotelXCPipeline)
+                .run();
+    }
+
+    /**
+     * 爬取单个酒店信息
+     * @param hotelName
+     */
+    public void crawlSpeHotel(String hotelName){
+        this.hotelName=hotelName;
+        Spider.create(this)
+                .addUrl(url)
+                .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(2000))
+                .thread(1)
+                .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))
                 .run();
     }
 }

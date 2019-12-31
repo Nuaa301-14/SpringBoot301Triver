@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.javacrawler.mapper.RoleMapper">
+    <select id="findRolesByUserId" parameterType="int" resultType="com.example.javacrawler.entity.Role">
+        SELECT
+          r.role_id AS roleId,
+          r.name,
+          r.code,
+          r.description,
+          r.created,
+          r.updated
+        FROM
+          `user_role` ur
+        INNER JOIN `role` r ON ur.role_id = r.role_id AND ur.user_id = #{userId}
+  </select>
+</mapper>

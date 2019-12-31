@@ -6,6 +6,8 @@ import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
 import us.codecraft.webmagic.pipeline.Pipeline;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class CrawlHotelXCPipeline implements Pipeline {
@@ -20,10 +22,13 @@ public class CrawlHotelXCPipeline implements Pipeline {
     public void process(ResultItems resultItems, Task task) {
         List<Hotel> hotelList = resultItems.get("hotelList");
         System.out.println(hotelList.size());
+        SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd");
         for (Hotel hotel :
                 hotelList) {
             Hotel hotel1=hotelService.getHotel(hotel.getHotelId());
             if (hotel1!=null){
+
+//                hotel.setUpdated(new Date());
                 hotelService.updateHotel(hotel);
             }else {
                 hotelService.insertHotel(hotel);

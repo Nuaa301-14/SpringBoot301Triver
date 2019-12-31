@@ -19,10 +19,14 @@ public class SpotAndHotel {
      */
     private List<String> includeHotel;
 
+    private String hotelsId;
+
     /**
      * 关联的景区
      */
     private List<String> associateSpot;
+
+    private String spotsId;
 
     /**
      * 来源
@@ -105,13 +109,47 @@ public class SpotAndHotel {
         this.supply = supply;
     }
 
+    public String getHotelsId() {
+        return hotelsId;
+    }
+
+    public void setHotelsId(String hotelsId) {
+        this.hotelsId = hotelsId;
+    }
+
+    public String getSpotsId() {
+        return spotsId;
+    }
+
+    public void setSpotsId(String spotsId) {
+        this.spotsId = spotsId;
+    }
+
+    public List<String> getIncludeHotel() {
+        return includeHotel;
+    }
+
+    public void setIncludeHotel(List<String> includeHotel) {
+        this.includeHotel = includeHotel;
+    }
+
+    public List<String> getAssociateSpot() {
+        return associateSpot;
+    }
+
+    public void setAssociateSpot(List<String> associateSpot) {
+        this.associateSpot = associateSpot;
+    }
+
     @Override
     public String toString() {
         return "SpotAndHotel{" +
                 "productId='" + productId + '\'' +
                 ", productName='" + productName + '\'' +
                 ", includeHotel=" + includeHotel +
+                ", hotelsId='" + hotelsId + '\'' +
                 ", associateSpot=" + associateSpot +
+                ", spotsId='" + spotsId + '\'' +
                 ", source='" + source + '\'' +
                 ", price=" + price +
                 ", score=" + score +

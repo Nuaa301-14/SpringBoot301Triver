@@ -12,9 +12,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/crawl")
@@ -55,12 +59,15 @@ public class CrawlController {
     }
 
     @RequestMapping(value = "/hotelCrawl", method = RequestMethod.POST)
-    public String crawlelonghotel(Model model,
-                                  @RequestParam("input") String input,
-                                  @RequestParam("pageNum") int pageNum,
-                                  @RequestParam("source") String source) {
+    @ResponseBody
+    public Map<String, Object> crawlelonghotel(Model model,
+                                               @RequestParam("input") String input,
+                                               @RequestParam("pageNum") int pageNum,
+                                               @RequestParam("source") String source) {
         // 分析需要爬取那个地方的支援
-        //TODO
+
+        List<String> str=new ArrayList<>();
+
         if (source.equals("携程")) {
             Area a = areaService.getByCity_nameOrPinyin(input);
             if (a != null) {
@@ -68,8 +75,8 @@ public class CrawlController {
                 crawlHotelXC.crawl(new CrawlHotelXCPipeline(hotelService), pageNum);
             } else {
                 model.addAttribute("inputUnreasonable", "输入的地区不合理(请输入准确的中文或者拼音！)");
+                str.add("输入的地区不合理(请输入准确的中文或者拼音！)");
             }
-            return "craw";
         } else if (source.equals("艺龙")) {
             /**
              * 1.分析处理input信息，判断是否合理
@@ -85,14 +92,16 @@ public class CrawlController {
                 // 进行url拼接
                 String url = "http://hotel.elong.com/search/list_cn_" + String.valueOf(elongArea.getCityId()) + ".html";
                 boolean crawl = new CrawlHotelELong().crawl(url, pageNum);
-                return "craw";
             } else {
                 // 返回信息不合理
                 model.addAttribute("inputUnreasonable", "输入的地区不合理(请输入准确的中文或者拼音！)");
-                return "craw";
+                str.add("输入的地区不合理(请输入准确的中文或者拼音！)");
             }
         }
-        return "craw";
+        str.add("Success");
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("reply",str);
+        return map;
     }
 
 
@@ -174,7 +183,7 @@ public class CrawlController {
             new CrawlScenicHotelXC().craw(url,pageNum,new CrawlScenicHotelXCPipeline(scenicHotelService));
 
         }else if(source.equals("同程")){
-            String url="http://so.ly.com/zby-zizhu?q=";
+            String url="http://so.ly.com/zby-zizhu?q="+input;
             new CrawlScenicHotelTC().craw(url,pageNum,new CrawlScenicHotelTCPipeline(scenicHotelService));
         }
         return "craw";

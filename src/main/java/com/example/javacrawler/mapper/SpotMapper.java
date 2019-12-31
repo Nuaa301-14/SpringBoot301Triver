@@ -4,6 +4,7 @@ import com.example.javacrawler.entity.Spot;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Map;
 
 @Repository
@@ -27,4 +28,8 @@ public interface SpotMapper {
      * @return
      */
     int insertSpot(Spot spot);
+
+    Spot getSpotByNameAndSource(Map<String, String> param);
+
+    List<Spot> selectList(@Param("param")Map map);
 }

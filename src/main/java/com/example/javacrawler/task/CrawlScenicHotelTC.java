@@ -16,6 +16,7 @@ public class CrawlScenicHotelTC implements PageProcessor {
     @Override
     public void process(Page page) {
         //TODO
+
     }
 
     @Override

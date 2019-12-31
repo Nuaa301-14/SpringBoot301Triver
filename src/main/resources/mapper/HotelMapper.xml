@@ -30,14 +30,92 @@
             recommend=#{Recommend},
             source=#{Source},
             url=#{TargetUrl},
-            area=#{area}
+            area=#{area},
+            updated=now()
         where hotelId=#{HotelId}
     </update>
 
     <insert id="insetHotel" parameterType="com.example.javacrawler.entity.Hotel">
         insert into hotel
-            (hotelName,hotelId,hotelcountry,hotelLocation,comprehensive,commentNumber,price,recommend,source,url,area)
+            (hotelName,hotelId,hotelcountry,hotelLocation,comprehensive,commentNumber,price,recommend,source,url,area,updated)
         values (#{HotelName},#{HotelId},#{HotelCountry},#{HotelLocation},
-        #{Comprehensive},#{CommentNumber},#{Price},#{Recommend},#{Source},#{TargetUrl},#{area})
+        #{Comprehensive},#{CommentNumber},#{Price},#{Recommend},#{Source},#{TargetUrl},#{area},now())
     </insert>
+
+    <select id="selectByNameAndSource" resultType="com.example.javacrawler.entity.Hotel">
+        SELECT * FROM hotel
+        <where>
+            <if test="#{param1}!=null">
+                and hotelName=#{param1} and source=#{param2}
+            </if>
+        </where>
+    </select>
+
+
+    <resultMap id="hotel" type="com.example.javacrawler.entity.Hotel">
+        <id column="hotelId" property="HotelId"/>
+        <result column="hotelName" property="HotelName"/>
+        <result column="hotelcountry" property="HotelCountry"/>
+        <result column="hotelLocation" property="HotelLocation"/>
+        <result column="comprehensive" property="Comprehensive"/>
+        <result column="commentNumber" property="CommentNumber"/>
+        <result column="price" property="Price"/>
+        <result column="recommend" property="Recommend"/>
+        <result column="source" property="Source"/>
+        <result column="url" property="TargetUrl"/>
+        <result column="area" property="area"/>
+    </resultMap>
+
+    <select id="list" resultMap="hotel">
+        SELECT *
+        from hotel
+        <where>
+            <if test="param.area!='' and param.area != null">
+                and area=#{param.area}
+            </if>
+            <if test="param.source!='' and param.source != null">
+                and source=#{param.source}
+            </if>
+        </where>
+        <choose>
+            <when test="param.order=='desc'">
+                order by updated desc
+            </when>
+            <otherwise>
+                <if test="param.order=='seq'">
+                    order by updated
+                </if>
+                <if test="param.order=='' ">
+                    order by hotelId desc
+                </if>
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="searchHotel" parameterType="java.util.Map" resultMap="hotel">
+        select * from hotel
+        <if test="param!=null">
+            <where>
+                <if test="param.size!='' and param.size!=null">
+                    <choose>
+                        <when test='param2=="2"'>
+                            and source = #{param.input}
+                        </when>
+                        <when test='param2=="1"'>
+                            and area = #{param.input}
+                            <if test="param.source!='' and param.source!=null">
+                                and source = #{param.source}
+                            </if>
+                        </when>
+                        <otherwise>
+                            and (hotelName like CONCAT(CONCAT('%', #{param.input, jdbcType=VARCHAR}),'%')
+                            or hotelLocation like CONCAT(CONCAT('%', #{param.input, jdbcType=VARCHAR}),'%'))
+                        </otherwise>
+                    </choose>
+                </if>
+            </where>
+        </if>
+        order by hotelId desc
+    </select>
+
 </mapper>

@@ -11,14 +11,14 @@
     <p th:text="'' + ${result}"/>
 </div>
 <!-- @{/login} 会直接访问 项目下的login接口-->
-<h4 style="color: red" th:text=" ${msg}"></h4>
+<h4 style="color: red" th:text=" ${loginMsg}"></h4>
 <form th:action="@{login.html}" method="post">
     <div>
-        <input id="user_name" name="userName" type="text" placeholder="用户名" aria-describedby="basic-addon1"/>
+        <input id="user_name" name="username" type="text" placeholder="用户名" aria-describedby="basic-addon1"/>
     </div>
     <br/>
     <div>
-        <input id="password" name="password" type="password" placeholder="密码" aria-describedby="basic-addon2"/>
+        <input id="pass_word" name="password" type="password" placeholder="密码" aria-describedby="basic-addon2"/>
     </div>
     <br/>
     <button type="submit" style="width:190px;">登 录</button>
@@ -44,7 +44,7 @@
     </div>
     <br/>
     <button type="submit" style="width:190px;">登 录</button>
-    <a href="/login">shiro</a>
+    <a href="#">shiro</a>
 </form>
 </body>
 </html>
