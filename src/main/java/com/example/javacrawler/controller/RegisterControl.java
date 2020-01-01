@@ -59,7 +59,7 @@ public class RegisterControl {
             newuser.setId(r.nextInt());
             newuser.setName(xm);
             newuser.setPassword(psd);
-            int id = userservice.insertUser(newuser);
+            int id = userservice.insert(newuser);
             return id;
         }
     }
