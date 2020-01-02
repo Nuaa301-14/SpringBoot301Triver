@@ -15,16 +15,18 @@ layui.config({
             for (var i = 0; i < currData.length; i++) {
                 dataHtml += '<tr>'
                     + '<td><input type="checkbox" name="checked" lay-skin="primary" lay-filter="choose"></td>'
-                    + '<td>' + currData[i].hotelName + '</td>'
-                    + '<td>' + currData[i].hotelLocation + '</td>'
-                    + '<td>' + currData[i].price + '</td>'
-                    + '<td>' + currData[i].commentNumber + '</td>'
+                    + '<td>' + currData[i].spotLocation + '</td>'
+                    + '<td>' + currData[i].spotName + '</td>'
+                    + '<td>' + currData[i].spotPrice + '</td>'
+                    + '<td>' + currData[i].soldNumber + '</td>'
                     + '<td>' + currData[i].source + '</td>'
-                    + '<td>' + currData[i].updated + '</td>'
+                    + '<td>' + currData[i].spotScore + '</td>'
+                    + '<td>' + currData[i].spotArea + '</td>'
+                    + '<td>' + currData[i].introduce + '</td>'
                     + '<td>'
-                    + '<a class="layui-btn layui-btn-mini hotel_edit" data-id="' + currData[i].hotelId + '"><i class="iconfont icon-edit"></i> 详情</a>'
-                    + '<a class="layui-btn layui-btn-normal layui-btn-mini hotel_detail" data-id="' + currData[i].hotelId + '"><i class="layui-icon">&#xe64c;</i> 目标页面</a>'
-                    + '<a class="layui-btn layui-btn-danger layui-btn-mini hotel_del" data-id="' + currData[i].hotelId + '"><i class="layui-icon">&#xe640;</i> 删除</a>'
+                    + '<a class="layui-btn layui-btn-mini spot_edit" data-id="' + currData[i].spotId + '"><i class="iconfont icon-edit"></i> 详情</a>'
+                    + '<a class="layui-btn layui-btn-normal layui-btn-mini spot_detail" data-id="' + currData[i].spotId + '"><i class="layui-icon">&#xe64c;</i> 目标页面</a>'
+                    + '<a class="layui-btn layui-btn-danger layui-btn-mini spot_del" data-id="' + currData[i].spotId + '"><i class="layui-icon">&#xe640;</i> 删除</a>'
                     + '</td>'
                     + '</tr>';
             }
@@ -41,16 +43,16 @@ layui.config({
     var source = "";
     var pageNum = "";
     $.ajax({
-        url: "/data/hotel",
+        url: "/data/spot",
         data: $("#pageCondition").serialize(),
         dataType: 'json',
         type: 'post',
         async: true,
-        success: usersList
+        success: spotsList
     });
 
 
-    function hotelsList(pageInfo, input, source, size) {
+    function spotList(pageInfo, input, source, size) {
         //渲染数据
         console.log("condition=" + condition);
         var total = pageInfo.total;//页总数
@@ -69,7 +71,7 @@ layui.config({
                     var text = "";
                     text = "input=" + input + "&source=" + source + "&size=" + size;
                     $.ajax({
-                        url: "/data/hotelSearch?page=" + curr + "&pageSize=13&" + text,
+                        url: "/data/spotSearch?page=" + curr + "&pageSize=13&" + text,
                         dataType: 'json',
                         type: 'post',
                         async: true,
@@ -91,16 +93,16 @@ layui.config({
     }
 
     //爬取
-    $(".crawlHotel").click(function () {
+    $(".crawlSpot").click(function () {
 
         function update(area, source) {
             $.ajax({
-                url: "/data/hotel",
+                url: "/data/spot",
                 data: "area=" + area + "&source=" + source + "&order=desc",
                 dataType: 'json',
                 type: 'post',
                 async: true,
-                success: usersList
+                success: spotsList
             });
         }
 
@@ -111,7 +113,7 @@ layui.config({
             pageNum = $(".input3").val();
             setTimeout(function () {
                 $.ajax({
-                    url: "/crawl/hotelCrawl",
+                    url: "/crawl/crawlSpot",
                     data: "input=" + area + "&source=" + source + "&pageNum=" + pageNum,
                     type: "post",
                     dataType: "json",
@@ -142,13 +144,13 @@ layui.config({
             var index = layer.msg('查询中，请稍候', {icon: 16, time: false, shade: 0.8});
             setTimeout(function () {
                 $.ajax({
-                    url: "/data/hotelSearch",
+                    url: "/data/spotSearch",
                     data: "input=" + input + "&source=" + "&size=1",
                     type: "post",
                     dataType: "json",
                     success: function (data) {
                         condition = false;
-                        hotelsList(data, input, "", 1);
+                        spotList(data, input, "", 1);
                     }
                 })
                 layer.close(index);
@@ -166,13 +168,13 @@ layui.config({
             var index = layer.msg('查询中，请稍候', {icon: 16, time: false, shade: 0.8});
             setTimeout(function () {
                 $.ajax({
-                    url: "/data/hotelSearch",
+                    url: "/data/spotSearch",
                     data: "input=" + input + "&source=" + input + "&size=2",
                     type: "post",
                     dataType: "json",
                     success: function (data) {
                         condition = false;
-                        hotelsList(data, input, "", 2);
+                        spotList(data, input, "", 2);
                     }
                 })
                 layer.close(index);
@@ -189,14 +191,14 @@ layui.config({
             var index = layer.msg('查询中，请稍候', {icon: 16, time: false, shade: 0.8});
             setTimeout(function () {
                 $.ajax({
-                    url: "/data/hotelSearch",
+                    url: "/data/spotSearch",
                     data: "input=" + input + "&source=" + "&size=3",
                     type: "post",
                     dataType: "json",
                     success: function (data) {
                         condition = false;
                         console.log(data);
-                        hotelsList(data, input, "", 3);
+                        spotList(data, input, "", 3);
                     }
                 })
                 layer.close(index);
@@ -280,35 +282,34 @@ layui.config({
         });
     }
     //操作
-    $("body").on("click", ".hotel_edit", function () {  //编辑
+    $("body").on("click", ".spot_edit", function () {  //编辑
         var _this = $(this);
         for (var i = 0; i < usersData.length; i++) {
-            if (usersData[i].hotelId == _this.attr("data-id")) {
+            if (usersData[i].spotId == _this.attr("data-id")) {
                 console.log("i=" + i);
                 console.log(usersData[i]);
-                var id=usersData[i].hotelId;
-                x_admin_show1("酒店详细","/hotel/admin/detail?hotelId="+id);
+                var id=usersData[i].spotId;
+                x_admin_show1("酒店详细","/spot/admin/detail?hotelId="+id);
                 break;
             }
         }
     })
 
-    $("body").on("click", ".hotel_del", function () {  //删除
+    $("body").on("click", ".spot_del", function () {  //删除
         var _this = $(this);
-        layer.confirm('确定删除此用户？', {icon: 3, title: '提示信息'}, function (index) {
+        layer.confirm('确定删除？', {icon: 3, title: '提示信息'}, function (index) {
             var index = layer.msg('删除中，请稍候', {icon: 16, time: false, shade: 0.8});
             _this.parents("tr").remove();
             for (var i = 0; i < usersData.length; i++) {
-                if (usersData[i].hotelId == _this.attr("data-id")) {
-                    var hotelId=usersData[i].hotelId;
+                if (usersData[i].spotId == _this.attr("data-id")) {
+                    var spotId=usersData[i].spotId;
                     setTimeout(function () {
                         $.ajax({
-                            url: "/hotel/admin/delete",
-                            data: "hotelId=" + usersData[i].hotelId,
+                            url: "/spot/admin/delete",
+                            data: "spotId=" + spotId,
                             type: "post",
                             dataType: "json",
                             success: function (data) {
-                                console.log(data);
                                 var reply=data.reply;
                                 console.log(reply);
                                 if (reply[0] === "Success") {
@@ -329,20 +330,20 @@ layui.config({
         });
     })
 
-    $("body").on("click", ".hotel_detail", function () { //酒店详情
+    $("body").on("click", ".spot_detail", function () { //酒店详情
         var _this = $(this);
         for (var i = 0; i < usersData.length; i++) {
-            if (usersData[i].hotelId == _this.attr("data-id")) {
+            if (usersData[i].spotId == _this.attr("data-id")) {
                 console.log("i=" + i);
                 console.log(usersData[i]);
-                var url = usersData[i].targetUrl;
+                var url = usersData[i].spotUrl;
                 window.open(url);
             }
         }
     })
 
 
-    function usersList(pageInfo) {
+    function spotsList(pageInfo) {
         //渲染数据
         console.log("condition=" + condition);
 
@@ -375,7 +376,7 @@ layui.config({
             text = "area=" + area + "&source=" + source + "&order=desc";
         }
         $.ajax({
-            url: "/data/hotel?page=" + curr + "&pageSize=13&" + text,
+            url: "/data/spot?page=" + curr + "&pageSize=13&" + text,
             dataType: 'json',
             type: 'post',
             async: true,

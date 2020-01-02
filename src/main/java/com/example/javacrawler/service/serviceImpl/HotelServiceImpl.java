@@ -62,5 +62,10 @@ public class HotelServiceImpl implements HotelService {
         return new PageInfo<>(hotelList);
     }
 
+    @Override
+    public int delete(Map map) {
+        return hotelMapper.delete(map);
+    }
+
 
 }

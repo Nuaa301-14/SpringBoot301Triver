@@ -16,4 +16,6 @@ public interface ElongAreaService {
     ElongArea getByCity_nameOrPinyin(String City_nameOrPinyin);
 
     int getTotal();
+
+    ElongArea getTcArea(String input);
 }

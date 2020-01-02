@@ -19,4 +19,8 @@ public interface SpotService {
     Spot getSpotByNameAndSource(String spotName,String source);
 
     PageInfo<Spot> selectSpotList(Map map);
+
+    int delete(Map map);
+
+    PageInfo<Spot> searchSpot(Map map);
 }

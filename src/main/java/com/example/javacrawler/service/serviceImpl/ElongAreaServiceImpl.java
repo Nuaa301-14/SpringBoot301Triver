@@ -6,6 +6,9 @@ import com.example.javacrawler.service.ElongAreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Service
 public class ElongAreaServiceImpl implements ElongAreaService {
 
@@ -45,5 +48,12 @@ public class ElongAreaServiceImpl implements ElongAreaService {
     @Override
     public int getTotal() {
         return elongAreaMapper.getTotal();
+    }
+
+    @Override
+    public ElongArea getTcArea(String input) {
+        Map map=new HashMap();
+        map.put("input",input);
+        return elongAreaMapper.getTcArea(map);
     }
 }

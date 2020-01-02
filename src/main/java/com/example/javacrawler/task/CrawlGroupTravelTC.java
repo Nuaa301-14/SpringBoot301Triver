@@ -32,7 +32,7 @@ public class CrawlGroupTravelTC implements PageProcessor {
 
     public void craw(String url, int pageNum, CrawlGroupTravelTCPipeline crawlGroupTravelTCPipeline) {
         max=pageNum;
-        Spider.create(new CrawlScenicHotelTC()).addUrl(url)
+        Spider.create(this).addUrl(url)
                 .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(2000))
                 .thread(1)
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))

@@ -4,6 +4,37 @@
 	"href" : "/static/page/main.html",
 	"spread" : false
 },{
+	"title" : "爬虫管理",
+	"icon" : "&#xe630;",
+	"href" : "",
+	"spread" : false,
+	"children" : [
+		{
+			"title" : "酒店爬虫管理",
+			"icon" : "&#xe61c;",
+			"href" : "/admin/crawlHotelReg",
+			"spread" : false
+		},
+		{
+			"title" : "景区爬虫管理",
+			"icon" : "&#xe609;",
+			"href" : "/admin/crawlSpotReg",
+			"spread" : false
+		},
+		{
+			"title" : "酒店+景区",
+			"icon" : "&#xe609;",
+			"href" : "/admin/crawlScenicHotelReg",
+			"spread" : false
+		},
+		{
+			"title" : "跟团游爬虫管理",
+			"icon" : "&#xe609;",
+			"href" : "/admin/crawlGroupTrvReg",
+			"spread" : false
+		}
+	]
+},{
 	"title" : "用户管理",
 	"icon" : "icon-text",
 	"href" : "/static/page/user/allUsers.html",
@@ -41,37 +72,6 @@
 			"href" : "/static/page/login/login.html",
 			"spread" : false,
 			"target" : "_blank"
-		}
-	]
-},{
-	"title" : "爬虫管理",
-	"icon" : "&#xe630;",
-	"href" : "",
-	"spread" : false,
-	"children" : [
-		{
-			"title" : "酒店爬虫管理",
-			"icon" : "&#xe61c;",
-			"href" : "/admin/crawlHotelReg",
-			"spread" : false
-		},
-		{
-			"title" : "景区爬虫管理",
-			"icon" : "&#xe609;",
-			"href" : "/admin/crawlSpotReg",
-			"spread" : false
-		},
-		{
-			"title" : "酒店+景区",
-			"icon" : "&#xe609;",
-			"href" : "/admin/crawlScenicHotelReg",
-			"spread" : false
-		},
-		{
-			"title" : "跟团游爬虫管理",
-			"icon" : "&#xe609;",
-			"href" : "/admin/crawlGroupTrvReg",
-			"spread" : false
 		}
 	]
 }]

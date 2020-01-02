@@ -1,7 +1,10 @@
 package com.example.javacrawler.mapper;
 
 import com.example.javacrawler.entity.ElongArea;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.Map;
 
 @Repository
 public interface ElongAreaMapper {
@@ -55,4 +58,7 @@ public interface ElongAreaMapper {
      * @return
      */
     int getTotal();
+
+
+    ElongArea getTcArea(@Param("param")Map map);
 }

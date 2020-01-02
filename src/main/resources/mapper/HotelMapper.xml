@@ -118,4 +118,14 @@
         order by hotelId desc
     </select>
 
+
+    <delete id="delete" parameterType="java.util.Map">
+        delete from hotel
+        <where>
+            <if test="param.hotelId!='' and param.hotelId!= null">
+                and hotelId=#{param.hotelId}
+            </if>
+        </where>
+    </delete>
+
 </mapper>

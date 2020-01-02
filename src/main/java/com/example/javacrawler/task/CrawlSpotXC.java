@@ -46,19 +46,19 @@ public class CrawlSpotXC implements PageProcessor {
             Spot spot = new Spot();
             spot.setSpotArea(split[1]);
             Elements select = Jsoup.parse(selectable.toString()).select("div.spot-info h4");
-            String SpotName = select.select("em").text();   //景点名称
+            String SpotName = select.select("em").text().trim();   //景点名称
 
-            String SpotLocation = select.select("span").text(); //景点地点
+            String SpotLocation = select.select("span").get(0).text(); //景点地点
             String area=SpotLocation.substring(1,SpotLocation.length()-1).split("·")[0];
             spot.setSpotArea(area);
             Connection connect;
             connect = Jsoup.connect("https://you.ctrip.com/searchsite/?query=" + SpotName);
             try {
                 Document document = connect.get();
-                System.out.println(document.select("div.result").size());
+//                System.out.println(document.select("div.result").size());
                 Element element = document.select("div.result").get(0);
                 Elements select1 = element.select("ul li");
-                System.out.println(select1.size());
+//                System.out.println(select1.size());
                 int i;
                 for (i=0;i<select1.size();i++){
                     String href = select1.get(i).select("a.pic").attr("href");
@@ -114,7 +114,6 @@ public class CrawlSpotXC implements PageProcessor {
 
 
             Elements select2 = Jsoup.parse(selectable.toString()).select("div.price-box div.price-num");
-//            System.out.println(select2);
             float price;
             if (select2.select("span").size()==0){
                 price=-1;
@@ -147,9 +146,10 @@ public class CrawlSpotXC implements PageProcessor {
             spot.setSoldNumber(saleNum);
             spot.setSource("携程");
             System.out.println(spot.toString());
-            if (spot.getSpotUrl()!=null){
+            if (spot.getSpotUrl()==null)
+                continue;
+            else
                 spotList.add(spot);
-            }
             if (spotName!=null){
                 if (spot.getSpotName().equals(spotName.trim())){
                     spotList1.add(spot);
@@ -180,7 +180,7 @@ public class CrawlSpotXC implements PageProcessor {
 
     public void craw(String url, int pageNum, CrawlSpotXCPipeline crawlSpotXCPipeline) {
         max = pageNum;
-        Spider.create(new CrawlSpotXC()).addUrl(url)
+        Spider.create(this).addUrl(url)
                 .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(2000))
                 .thread(1)
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))
@@ -194,7 +194,7 @@ public class CrawlSpotXC implements PageProcessor {
                 .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(2000))
                 .thread(1)
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))
-//                .addPipeline(crawlHotelXCPipeline)
+                .addPipeline(crawlHotelXCPipeline)
                 .run();
     }
 

@@ -3,13 +3,18 @@
 <mapper namespace="com.example.javacrawler.mapper.SpotMapper">
 
     <resultMap id="spot" type="com.example.javacrawler.entity.Spot">
-        <id column="" property=""></id>
-        <result column="" property=""/>
-        <result column="" property=""/>
-        <result column="" property=""/>
-        <result column="" property=""/>
-        <result column="" property=""/>
-        <result column="" property=""/>
+        <id column="spotId" property="SpotId"></id>
+        <result column="spotName" property="SpotName"/>
+        <result column="spotCountry" property="SpotCountry"/>
+        <result column="spotScore" property="SpotScore"/>
+        <result column="soldNumber" property="SoldNumber"/>
+        <result column="spotLocation" property="SpotLocation"/>
+        <result column="recommend" property="Recommend"/>
+        <result column="source" property="Source"/>
+        <result column="url" property="SpotUrl"/>
+        <result column="area" property="SpotArea"/>
+        <result column="spotPrice" property="SpotPrice"/>
+        <result column="introduce" property="Introduce"/>
     </resultMap>
 
     <select id="select" parameterType="java.util.Map" resultType="com.example.javacrawler.entity.Spot">
@@ -56,12 +61,70 @@
 
 
     <select id="selectList" resultMap="spot">
-        select * from spot
+<!--        select * from spot-->
+<!--        <where>-->
+<!--            <if test="param.area != null">-->
+<!--                and area like #{param.area}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--        order by spotId desc-->
+        SELECT *
+        from spot
         <where>
-            <if test="param.area != null">
-                and area like #{param.area}
+            <if test="param.area!='' and param.area != null">
+                and area=#{param.area}
+            </if>
+            <if test="param.source!='' and param.source != null">
+                and source=#{param.source}
             </if>
         </where>
+        <choose>
+            <when test="param.order=='desc'">
+                order by spotId desc
+            </when>
+            <otherwise>
+                <if test="param.order=='seq'">
+                    order by spotId
+                </if>
+                <if test="param.order=='' ">
+                    order by spotId desc
+                </if>
+            </otherwise>
+        </choose>
+    </select>
+
+    <delete id="delete" parameterType="java.util.Map">
+        delete from spot
+        <where>
+            <if test="param.spotId !='' and param.spotId!=null">
+                and spotId=#{param.spotId}
+            </if>
+        </where>
+    </delete>
+
+    <select id="searchSpot" parameterType="java.util.Map" resultMap="spot">
+        select * from spot
+        <if test="param!=null">
+            <where>
+                <if test="param.size!='' and param.size!=null">
+                    <choose>
+                        <when test='param2=="2"'>
+                            and source = #{param.input}
+                        </when>
+                        <when test='param2=="1"'>
+                            and area = #{param.input}
+                            <if test="param.source!='' and param.source!=null">
+                                and source = #{param.source}
+                            </if>
+                        </when>
+                        <otherwise>
+                            and (spotName like CONCAT(CONCAT('%', #{param.input, jdbcType=VARCHAR}),'%')
+                            or spotLocation like CONCAT(CONCAT('%', #{param.input, jdbcType=VARCHAR}),'%'))
+                        </otherwise>
+                    </choose>
+                </if>
+            </where>
+        </if>
         order by spotId desc
     </select>
     

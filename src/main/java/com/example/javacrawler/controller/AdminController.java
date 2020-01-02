@@ -30,4 +30,19 @@ public class AdminController {
         return "Admin/hotelRegulation";
     }
 
+    @RequestMapping(value = {"/crawlSpotReg"})
+    public String crawlSpotReg(){
+        return "Admin/spotRegulation";
+    }
+    @RequestMapping(value = {"/crawlScenicHotelReg"})
+    public String crwalScenicHotelReg(){
+        return "Admin/sceHotelRegulation";
+    }
+    @RequestMapping(value = {"/crawlGroupTrvReg"})
+    public String crwalGroupReg(){
+        return "Admin/groupTrvRegulation";
+    }
+
+
+
 }

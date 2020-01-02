@@ -143,7 +143,7 @@ public class CrawlScenicHotelXC implements PageProcessor {
 
     public void craw(String url, int pageNum, CrawlScenicHotelXCPipeline crawlScenicHotelXCPipeline) {
         max = pageNum;
-        Spider.create(new CrawlScenicHotelXC()).addUrl(url)
+        Spider.create(this).addUrl(url)
                 .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(2000))
                 .thread(1)
                 .setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(100000)))

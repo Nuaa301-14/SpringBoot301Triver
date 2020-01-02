@@ -25,4 +25,13 @@
         select * from elong_hotel_city WHERE cityNameCn=#{param1} or cityNameEn=#{param1};
     </select>
 
+    <select id="getTcArea" parameterType="java.util.Map" resultType="com.example.javacrawler.entity.ElongArea">
+        select * from tcarea
+        <where>
+            <if test="param.input != '' and param.input!=null">
+                and (cityNameCn=#{param.input} or cityNameEn=#{param.input})
+            </if>
+        </where>
+    </select>
+
 </mapper>

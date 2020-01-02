@@ -91,22 +91,47 @@ public class DataController {
                                    @RequestParam(defaultValue = "13", required = false) int pageSize,
                                    @RequestParam(defaultValue = "", required = false) String area,
                                    @RequestParam(defaultValue = "", required = false) String source,
+                                   @RequestParam(defaultValue = "", required = false) String order,
                                    Model model) {
 
         Map map = new HashMap();
         map.put("page", page);
         map.put("pageSize", pageSize);
-        if (area == null || area.equals("")) {
-            area = null;
-        }
         map.put("area", area);
-        if (source == null || source.equals("")) {
-            source = null;
-        }
         map.put("source", source);
+        map.put("order",order);
         PageInfo<Spot> spotPageInfo = spotService.selectSpotList(map);
+        System.out.println("当前页码：" + spotPageInfo.getPageNum());
+        System.out.println("每页记录条数：" + spotPageInfo.getPageSize());
+        System.out.println("总记录数：" + spotPageInfo.getTotal());
+        System.out.println("总页数：" + spotPageInfo.getPages());
         return spotPageInfo;
     }
+
+    @RequestMapping("/spotSearch")
+    @ResponseBody
+    public PageInfo<Spot> spotSerarch(
+            @RequestParam(defaultValue = "1", required = false) int page,
+            @RequestParam(defaultValue = "13", required = false) int pageSize,
+            @RequestParam(defaultValue = "", required = false) String input,
+            @RequestParam(defaultValue = "", required = false) String source,
+            @RequestParam(defaultValue = "1", required = false) int size) {
+        Map map = new HashMap();
+        map.put("page", page);
+        map.put("pageSize", pageSize);
+        map.put("input", input);
+        map.put("source", source);
+        String s= String.valueOf(size);
+        map.put("size", s);
+        PageInfo<Spot> spotPageInfo = spotService.searchSpot(map);
+        System.out.println("当前页码：" + spotPageInfo.getPageNum());
+        System.out.println("每页记录条数：" + spotPageInfo.getPageSize());
+        System.out.println("总记录数：" + spotPageInfo.getTotal());
+        System.out.println("总页数：" + spotPageInfo.getPages());
+        System.out.println();
+        return spotPageInfo;
+    }
+
 
     @RequestMapping("/scenicHotel")
     @ResponseBody
@@ -127,6 +152,12 @@ public class DataController {
         }
         map.put("source", source);
         PageInfo<SpotAndHotel> spotAndHotelPageInfo = scenicHotelService.selectScenicHotelList(map);
+        System.out.println("当前页码：" + spotAndHotelPageInfo.getPageNum());
+        System.out.println("每页记录条数：" + spotAndHotelPageInfo.getPageSize());
+        System.out.println("总记录数：" + spotAndHotelPageInfo.getTotal());
+        System.out.println("总页数：" + spotAndHotelPageInfo.getPages());
         return spotAndHotelPageInfo;
     }
+
+
 }

@@ -29,33 +29,33 @@
     </div>
 </blockquote>
 <blockquote class="layui-elem-quote news_search1">
-        <div class="layui-inline">
-            <label class="layui-form-label" style="font-size: medium">区域</label>
-            <div class="layui-input-inline">
-                <input type="text" value="" placeholder="请输入关键字" class="layui-input input1">
-            </div>
+    <div class="layui-inline">
+        <label class="layui-form-label" style="font-size: medium">区域</label>
+        <div class="layui-input-inline">
+            <input type="text" value="" placeholder="请输入关键字" class="layui-input input1">
         </div>
-        <div class="layui-inline">
-            <label class="layui-form-label" style="font-size: medium">来源</label>
-            <div class="layui-input-inline">
-                <div class="layui-form component">
-                    <select class="input2" name="modules" lay-verify="required" lay-search="">
-                        <option value="">直接选择或搜索选择</option>
-                        <option>携程</option>
-                        <option>同程</option>
-                        <option>艺龙</option>
-                    </select>
-                </div>
-<!--                <input type="text" value="" placeholder="请输入关键字" class="layui-input">-->
+    </div>
+    <div class="layui-inline">
+        <label class="layui-form-label" style="font-size: medium">来源</label>
+        <div class="layui-input-inline">
+            <div class="layui-form component">
+                <select class="input2" name="modules" lay-verify="required" lay-search="">
+                    <option value="">直接选择或搜索选择</option>
+                    <option>携程</option>
+                    <option>同程</option>
+<!--                    <option>艺龙</option>-->
+                </select>
             </div>
+            <!--                <input type="text" value="" placeholder="请输入关键字" class="layui-input">-->
         </div>
-        <div class="layui-inline">
-            <label class="layui-form-label" style="font-size: medium">爬取页数</label>
-            <div class="layui-input-inline">
-                <input type="text" value="" placeholder="请输入关键字" class="layui-input input3">
-            </div>
+    </div>
+    <div class="layui-inline">
+        <label class="layui-form-label" style="font-size: medium">爬取页数</label>
+        <div class="layui-input-inline">
+            <input type="text" value="" placeholder="请输入关键字" class="layui-input input3">
         </div>
-        <a class="layui-btn layui-btn-normal crawlHotel">爬取</a>
+    </div>
+    <a class="layui-btn layui-btn-normal crawlSpot">爬取</a>
 </blockquote>
 <form id="pageCondition">
     <input type="hidden" value="1" name="page">
@@ -65,23 +65,27 @@
     <table class="layui-table">
         <colgroup>
             <col width="50">
-            <col>
+            <col width="18%">
             <col width="18%">
             <col width="8%">
-            <col width="12%">
-            <col width="12%">
-            <col width="18%">
+            <col width="8%">
+            <col width="8%">
+            <col width="8%">
+            <col width="8%">
+            <col width="20%">
             <col width="15%">
         </colgroup>
         <thead>
         <tr>
             <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose" id="allChoose"></th>
-            <th>酒店名称</th>
             <th>地址</th>
+            <th>景区名称</th>
             <th>价格</th>
-            <th>评论数</th>
+            <th>销售数</th>
             <th>来源</th>
-            <th>爬取时间</th>
+            <th>评分</th>
+            <th>地区</th>
+            <th>介绍</th>
             <th>操作</th>
         </tr>
         </thead>
@@ -90,7 +94,7 @@
 </div>
 <div id="page"></div>
 <script type="text/javascript" src="/static/layui/layui.js"></script>
-<script type="text/javascript" src="/static/page/user/allUsers.js"></script>
+<script type="text/javascript" src="/static/js/spotReg.js"></script>
 <!--<script type="text/javascript" src="/static/js/windowShow.js"></script>-->
 </body>
 </html>

@@ -32,4 +32,8 @@ public interface SpotMapper {
     Spot getSpotByNameAndSource(Map<String, String> param);
 
     List<Spot> selectList(@Param("param")Map map);
+
+    int delete(@Param("param") Map map);
+
+    List<Spot> searchSpot(@Param("param") Map map, String size);
 }
