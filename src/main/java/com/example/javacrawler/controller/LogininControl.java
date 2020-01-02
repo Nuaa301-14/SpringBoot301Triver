@@ -45,11 +45,11 @@ public class LogininControl {
      * @RequestMapping("/login.html")
      * Model ： 将传入下一个页面
      */
-    @RequestMapping("/loginin")
+    @RequestMapping("/io/index.html")
     public String loginHtml(Model model) {
 
         model.addAttribute("result", "登陆页面");
-        return "loginin";
+        return "io/index.html";
     }
 
     @RequestMapping("/onclick_login")
