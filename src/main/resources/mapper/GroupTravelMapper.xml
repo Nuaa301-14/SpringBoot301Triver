@@ -2,33 +2,122 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.javacrawler.mapper.GroupTravelMapper">
 
+    <resultMap id="group_travel" type="com.example.javacrawler.entity.GroupTravel">
+        <id column="GroupId" property="GroupId"/>
+        <result column="GroupName" property="GroupName"/>
+        <result column="GroupScore" property="GroupScore"/>
+        <result column="CommentNumber" property="CommentNumber"/>
+        <result column="SoldNumber" property="SoldNumber"/>
+        <result column="GroupPrice" property="GroupPrice"/>
+        <result column="GroupUrl" property="GroupUrl"/>
+        <result column="Supply" property="Supply"/>
+        <result column="Destination" property="Destination"/>
+        <result column="Departure" property="Departure"/>
+        <result column="Updated" property="Time"/>
+        <result column="Source" property="Source"/>
+    </resultMap>
+
+
     <select id="select" parameterType="java.util.Map" resultType="com.example.javacrawler.entity.GroupTravel">
-        SELECT * FROM group_travel
+        SELECT * FROM grouptravel
         <where>
             <if test="param.groupId!=null">
-                and group_id=#{param.groupId}
+                and groupId=#{param.groupId}
             </if>
         </where>
     </select>
 
     <update id="updateGroupTravel" parameterType="com.example.javacrawler.entity.GroupTravel">
-        update group_travel
-        set group_name=#{GroupName},
-            group_score=#{GroupScore},
-            comment_number=#{CommentNumber},
-            sold_number=#{SoldNumber},
-            group_price=#{GroupPrice},
-            introduce=#{Introduce},
-            url=#{GroupUrl},
-            setoff_time=#{Time},
-            supply=#{Supply}
-        where group_id=#{GroupId}
+        update grouptravel
+        set GroupName=#{GroupName},
+            GroupScore=#{GroupScore},
+            CommentNumber=#{CommentNumber},
+            SoldNumber=#{SoldNumber},
+            GroupPrice=#{GroupPrice},
+            GroupUrl=#{GroupUrl},
+            Departure=#{Departure},
+            Destination=#{Destination},
+            Updated=#{Time,jdbcType=DATE},
+            Supply=#{Supply},
+            Source=#{Source}
+        where GroupId=#{GroupId}
     </update>
 
     <insert id="insetGroupTravel" parameterType="com.example.javacrawler.entity.GroupTravel">
-        insert into group_travel
-            (group_name,group_id,group_score,comment_number,sold_number,group_price,introduce,url,setoff_time,supply)
+        insert into grouptravel
+            (GroupName,GroupId,GroupScore,CommentNumber,SoldNumber,GroupPrice,GroupUrl,Updated,Supply,Departure,Destination,Source)
         values (#{GroupName},#{GroupId},#{GroupScore},#{CommentNumber},
-        #{SoldNumber},#{GroupPrice},#{Introduce},#{GroupUrl},#{Time},#{Supply})
+        #{SoldNumber},#{GroupPrice},#{GroupUrl},#{Time,jdbcType=DATE},#{Supply},#{Departure},#{Destination},#{Source})
+        on DUPLICATE KEY UPDATE
+        GroupName=#{GroupName},
+        GroupScore=#{GroupScore},
+        CommentNumber=#{CommentNumber},
+        SoldNumber=#{SoldNumber},
+        GroupPrice=#{GroupPrice},
+        GroupUrl=#{GroupUrl},
+        Departure=#{Departure},
+        Destination=#{Destination},
+        Updated=#{Time,jdbcType=DATE},
+        Supply=#{Supply},
+        Source=#{Source}
     </insert>
+    <select id="selectList" parameterType="java.util.Map" resultMap="group_travel">
+        select * from grouptravel
+        <where>
+            <if test="param.area!='' and param.area != null">
+                and GroupName like CONCAT(CONCAT('%', #{param.area, jdbcType=VARCHAR}),'%')
+            </if>
+            <if test="param.source!='' and param.source != null">
+                and Source=#{param.source}
+            </if>
+        </where>
+        <choose>
+            <when test="param2=='desc'">
+                order by GroupId desc
+            </when>
+            <otherwise>
+                <if test="param2=='seq'">
+                    order by GroupId
+                </if>
+                <if test="param2=='' ">
+                    order by GroupId desc
+                </if>
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="searchGroup" parameterType="java.util.Map" resultMap="group_travel">
+        select * from grouptravel
+        <if test="param!=null">
+            <where>
+                <if test="param.size!='' and param.size!=null">
+                    <choose>
+                        <when test='param2=="2"'>
+                            and Source = #{param.input}
+                        </when>
+<!--                        <when test='param2=="1"'>-->
+<!--                            and area = #{param.input}-->
+<!--                            <if test="param.source!='' and param.source!=null">-->
+<!--                                and source = #{param.source}-->
+<!--                            </if>-->
+<!--                        </when>-->
+                        <otherwise>
+                            and GroupName like CONCAT(CONCAT('%', #{param.input, jdbcType=VARCHAR}),'%')
+                        </otherwise>
+                    </choose>
+                </if>
+            </where>
+        </if>
+        order by groupId desc
+    </select>
+
+    <delete id="delete" parameterType="java.util.Map">
+        delete from grouptravel
+        <where>
+            <if test="param.groupId!='' and param.groupId!=null">
+                and GroupId=#{param.groupId}
+            </if>
+        </where>
+    </delete>
+
 </mapper>

@@ -42,6 +42,9 @@ public class CrawlController {
     @Autowired
     private GroupTravelService groupTravelService;
 
+    @Autowired
+    private GroupTravelPriceService groupTravelPriceService;
+
     @RequestMapping(value = "/elongArea")
     public String just() throws IOException {
 //        new CrawlElongArea().crawl();
@@ -67,7 +70,7 @@ public class CrawlController {
                                                @RequestParam("source") String source) {
         // 分析需要爬取那个地方的支援
 
-        List<String> str=new ArrayList<>();
+        List<String> str = new ArrayList<>();
 
         if (source.equals("携程")) {
             Area a = areaService.getByCity_nameOrPinyin(input);
@@ -92,26 +95,27 @@ public class CrawlController {
             if (elongArea != null) {
                 // 进行url拼接
                 String url = "http://hotel.elong.com/search/list_cn_" + String.valueOf(elongArea.getCityId()) + ".html";
-                boolean crawl = new CrawlHotelELong().crawl(url, new CrawlHotelXCPipeline(hotelService),pageNum,null);
+                boolean crawl = new CrawlHotelELong().crawl(url, new CrawlHotelXCPipeline(hotelService), pageNum, null);
             } else {
                 // 返回信息不合理
                 model.addAttribute("inputUnreasonable", "输入的地区不合理(请输入准确的中文或者拼音！)");
                 str.add("输入的地区不合理(请输入准确的中文或者拼音！)");
             }
-        }else if (source.equals("同程")){
-            ElongArea elongArea=elongAreaService.getTcArea(input);
-            String url="https://www.ly.com/searchlist.html?cityid="+elongArea.getCityId();
-            new CrawlHotelTC().crawl(url,new CrawlHotelXCPipeline(hotelService),pageNum,"");
+        } else if (source.equals("同程")) {
+            ElongArea elongArea = elongAreaService.getTcArea(input);
+            String url = "https://www.ly.com/searchlist.html?cityid=" + elongArea.getCityId();
+            new CrawlHotelTC().crawl(url, new CrawlHotelXCPipeline(hotelService), pageNum, "");
         }
         str.add("Success");
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("reply",str);
+        map.put("reply", str);
         return map;
     }
 
 
     /**
      * 管理员进行 景点的爬取
+     *
      * @param model
      * @param input
      * @param pageNum
@@ -121,10 +125,10 @@ public class CrawlController {
     @RequestMapping(value = "/crawlSpot", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> crawSpot(Model model,
-                           @RequestParam("input") String input,
-                           @RequestParam("pageNum") int pageNum,
-                           @RequestParam("source") String source) {
-        List<String> str=new ArrayList<>();
+                                        @RequestParam("input") String input,
+                                        @RequestParam("pageNum") int pageNum,
+                                        @RequestParam("source") String source) {
+        List<String> str = new ArrayList<>();
         if (source.equals("携程")) {
             Area a = areaService.getByCity_nameOrPinyin(input);
             String url = "";
@@ -147,14 +151,14 @@ public class CrawlController {
              */
             // 说明input合理
 
-        }else if (source.equals("同程")){
-            String url="";
-            url="https://so.ly.com/scenery?q="+input;
-            new CrawlSpotTC().craw(url,pageNum,new CrawlSpotTCPipeline(spotService),null);
+        } else if (source.equals("同程")) {
+            String url = "";
+            url = "https://so.ly.com/scenery?q=" + input;
+            new CrawlSpotTC().craw(url, pageNum, new CrawlSpotTCPipeline(spotService), null);
             str.add("Success");
         }
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("reply",str);
+        map.put("reply", str);
         return map;
     }
 
@@ -162,66 +166,72 @@ public class CrawlController {
      * 进行酒店和景区的组合爬取
      *
      * @param model
-     * @param input
-     * input 可以是地区
-     * 也可以是主题等。。。
+     * @param input   input 可以是地区
+     *                也可以是主题等。。。
      * @param pageNum
      * @param source
      * @return
      */
-    @RequestMapping(value = "/crawlSpotAndHotel",method = RequestMethod.POST)
+    @RequestMapping(value = "/crawlSpotAndHotel", method = RequestMethod.POST)
     public String crawlSpotAndHotel(Model model,
                                     @RequestParam("input") String input,
                                     @RequestParam("pageNum") int pageNum,
-                                    @RequestParam("source") String source){
+                                    @RequestParam("source") String source) {
         if (source.equals("携程")) {
-            String url="https://vacations.ctrip.com/list/scenichotel/";
+            String url = "https://vacations.ctrip.com/list/scenichotel/";
             Area area = areaService.getByCity_nameOrPinyin(input);
-            if (area!=null){
+            if (area != null) {
                 // 不为空 说明输入的是地区
-                url= new StringBuilder().append(url).append("d-").append(area.getPinyin()).append(area.getCity_id()).append(".html").append("?st=").append(area.getCity_name()).append("&sv=").append(area.getCity_name()).toString();
+                url = new StringBuilder().append(url).append("d-").append(area.getPinyin()).append(area.getCity_id()).append(".html").append("?st=").append(area.getCity_name()).append("&sv=").append(area.getCity_name()).toString();
 
-            }else{
+            } else {
                 // 为空说明输入的是其他 ，比如 主题等 之后在爬取时
                 // 需要验证是否有内容，
                 // 没有就直接结束
-                url= new StringBuilder().append(url).append("sc1.html?st=").append(input).append("&sv=").append(input).toString();
+                url = new StringBuilder().append(url).append("sc1.html?st=").append(input).append("&sv=").append(input).toString();
             }
             // 进行爬取
-            new CrawlScenicHotelXC().craw(url,pageNum,new CrawlScenicHotelXCPipeline(scenicHotelService));
+            new CrawlScenicHotelXC().craw(url, pageNum, new CrawlScenicHotelXCPipeline(scenicHotelService));
 
-        }else if(source.equals("同程")){
-            String url="http://so.ly.com/zby-zizhu?q="+input;
-            new CrawlScenicHotelTC().craw(url,pageNum,new CrawlScenicHotelTCPipeline(scenicHotelService));
+        } else if (source.equals("同程")) {
+            String url = "http://so.ly.com/zby-zizhu?q=" + input;
+            new CrawlScenicHotelTC().craw(url, pageNum, new CrawlScenicHotelTCPipeline(scenicHotelService));
         }
         return "craw";
     }
 
     @RequestMapping(value = "/crawlGroupTravel")
-    public String CrawlGroupTravel(Model model,
-                                   @RequestParam("input") String input,
-                                   @RequestParam("pageNum") int pageNum,
-                                   @RequestParam("source") String source){
+    @ResponseBody
+    public Map<String, Object> CrawlGroupTravel(Model model,
+                                                @RequestParam("input") String input,
+                                                @RequestParam("pageNum") int pageNum,
+                                                @RequestParam("source") String source) {
+        List<String> str = new ArrayList<>();
         if (source.equals("携程")) {
-            String url="https://vacations.ctrip.com/list/grouptravel/";
+            String url = "https://vacations.ctrip.com/list/grouptravel/";
             Area area = areaService.getByCity_nameOrPinyin(input);
-            if (area!=null){
+            if (area != null) {
                 // 不为空 说明输入的是地区
-                url= new StringBuilder().append(url).append("d-").append(area.getPinyin()).append(area.getCity_id()).append(".html").toString();
+                url = new StringBuilder().append(url).append("d-").append(area.getPinyin()).append("-").append(area.getCity_id()).append(".html").toString();
 
-            }else{
+            } else {
                 // 为空说明输入的是其他 ，比如 主题等 之后在爬取时
                 // 需要验证是否有内容，
                 // 没有就直接结束
-                url= new StringBuilder().append(url).append("sc1.html?st=").append(input).append("&sv=").append(input).toString();
+                url = new StringBuilder().append(url).append("sc1.html?st=").append(input).append("&sv=").append(input).toString();
             }
             // 进行爬取
-            new CrawlGroupTravelXC().craw(url,pageNum,new CrawlGroupTravelXCPipeline(groupTravelService),null);
-        }else if(source.equals("同程")){
-            String url="https://so.ly.com/zby-gentuan?q="+input+"&c=224";
-            new CrawlGroupTravelTC().craw(url,pageNum,new CrawlGroupTravelTCPipeline(groupTravelService));
+            new CrawlGroupTravelXC().craw(url, pageNum, new CrawlGroupTravelXCPipeline(groupTravelService, groupTravelPriceService), null);
+            str.add("Success");
+        } else if (source.equals("同程")) {
+            String url = "https://so.ly.com/gny-gentuan?q=" + input + "&sopage=sogny&prop=1";
+            new CrawlGroupTravelTC().craw(url, pageNum, new CrawlGroupTravelTCPipeline(groupTravelService),null);
+            str.add("Success");
         }
-        return "craw";
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("reply", str);
+        return map;
+
     }
 
 }

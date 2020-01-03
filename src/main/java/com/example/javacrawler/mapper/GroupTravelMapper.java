@@ -4,6 +4,7 @@ import com.example.javacrawler.entity.GroupTravel;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Map;
 
 @Repository
@@ -27,4 +28,10 @@ public interface GroupTravelMapper {
      * @return
      */
     int insetGroupTravel(GroupTravel grouptravel);
+
+    List<GroupTravel> selectList(@Param("param") Map map,String order);
+
+    List<GroupTravel> searchGroup(@Param("param") Map map, String size);
+
+    int delete(@Param("param") Map map);
 }
