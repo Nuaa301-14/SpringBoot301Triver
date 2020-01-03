@@ -7,6 +7,10 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.junit.Test;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class test1 {
     @Test
     public void test1() {
@@ -467,13 +471,111 @@ public class test1 {
 
     @Test
     public void GroupTest() {
-        String html = "<div class=\"list_product_box js_product_item\" data-track-product-id=\"10424264\" data-track-is-recommend=\"false\" data-track-inner-pos=\"13\"><div class=\"list_product_item_border\"><div class=\"list_product_item\"><div class=\"list_product_left\"><img class=\"list_product_pic\" src=\"//dimg04.c-ctrip.com/images/300u0m000000dxl2x35F8_C_200_150.jpg\" alt=\"上海+迪士尼（Disney）3日2晚半自助游(5钻)·2晚毗邻迪士尼5钻酒店 『迪士尼优选 7大园区畅游』酒店班车接送迪士尼  可升级【东方明珠+360景观自助餐】多交通可选\" style=\"width: 200px; height: 150px; opacity: 1;\"><p class=\"list_product_tip\"><span class=\"list_product_name\">半自助游</span><i class=\"list_product_heng\"></i><span class=\"list_product_place\">南京出发</span></p></div><div class=\"list_product_right\"><p class=\"list_product_title\" title=\"上海+迪士尼（Disney）3日2晚半自助游·2晚毗邻迪士尼5钻酒店 『迪士尼优选 7大园区畅游』酒店班车接送迪士尼  可升级【东方明珠+360景观自助餐】多交通可选\"><span>上海+迪士尼（Disney）3日2晚半自助游·2晚毗邻迪士尼5钻酒店 『迪士尼优选 7大园区畅游』酒店班车接送迪士尼  可升级【东方明珠+360景观自助餐】多交通可选</span></p><div class=\"list_product_content basefix\"><div class=\"list_content_right\"><div class=\"list_change_box basefix list_change_box_one\"><div class=\"list_change_left\"></div><div class=\"list_change_right\"><div class=\"list_change_one\"></div><div class=\"list_change_two\">累计3人出游</div></div></div><div class=\"list_sr_price_box basefix\"><span class=\"list_sr_price\"><dfn>￥</dfn><strong>1035</strong>起</span></div></div><div class=\"list_content_left\"><div class=\"list_label_box\"><div style=\"display: inline-block;\"><span class=\"list_label_jewel\">5钻</span></div><span class=\"list_label_blue\" title=\"\">无购物</span><span class=\"list_label_blue\" title=\"\">无自费</span><span class=\"list_label_blue\" title=\"订单一经携程旅行网以书面形式确认后均默认发团（不可抗力除外）\">成团保障</span><span class=\"list_label_blue\" title=\"\">游乐园</span><span class=\"list_label_blue\" title=\"\">迪士尼乐园</span></div><div><div class=\"list_explan_text_box\" style=\"position: relative;\"><p class=\"list_explan_text\">一条龙服务：24小时电话管家，为您保驾护航，安心出行！</p></div></div><div class=\"list_product_schedule\"><p>班期：1/4,1/5,1/6等可订<a href=\"javascript:void(0);\" class=\"list_sea_schedule\">查看班期<b class=\"list_down\"></b></a></p></div><p class=\"list_product_retail\" title=\"南京万达国际旅行社有限公司\">供应商：万达旅业</p></div></div></div></div></div></div>";
-        System.out.println(Jsoup.parse(html).getElementsByTag("div").attr("data-track-product-id"));
-        html="<div class=\"list_paging_box basefix\"><span class=\"list_paging_left \"><i></i></span><span class=\"list_paging_text\"><em>43</em>/<!-- -->43</span><span class=\"list_paging_right gray_cur\"><i></i></span></div>";
-        Document parse = Jsoup.parse(html);
-        Element span = parse.select("span.list_paging_text").get(0);
-        System.out.println(span.select("em").text());
-        System.out.println(span.text());
+//        String html = "<div class=\"list_product_box js_product_item\" data-track-product-id=\"10424264\" data-track-is-recommend=\"false\" data-track-inner-pos=\"13\"><div class=\"list_product_item_border\"><div class=\"list_product_item\"><div class=\"list_product_left\"><img class=\"list_product_pic\" src=\"//dimg04.c-ctrip.com/images/300u0m000000dxl2x35F8_C_200_150.jpg\" alt=\"上海+迪士尼（Disney）3日2晚半自助游(5钻)·2晚毗邻迪士尼5钻酒店 『迪士尼优选 7大园区畅游』酒店班车接送迪士尼  可升级【东方明珠+360景观自助餐】多交通可选\" style=\"width: 200px; height: 150px; opacity: 1;\"><p class=\"list_product_tip\"><span class=\"list_product_name\">半自助游</span><i class=\"list_product_heng\"></i><span class=\"list_product_place\">南京出发</span></p></div><div class=\"list_product_right\"><p class=\"list_product_title\" title=\"上海+迪士尼（Disney）3日2晚半自助游·2晚毗邻迪士尼5钻酒店 『迪士尼优选 7大园区畅游』酒店班车接送迪士尼  可升级【东方明珠+360景观自助餐】多交通可选\"><span>上海+迪士尼（Disney）3日2晚半自助游·2晚毗邻迪士尼5钻酒店 『迪士尼优选 7大园区畅游』酒店班车接送迪士尼  可升级【东方明珠+360景观自助餐】多交通可选</span></p><div class=\"list_product_content basefix\"><div class=\"list_content_right\"><div class=\"list_change_box basefix list_change_box_one\"><div class=\"list_change_left\"></div><div class=\"list_change_right\"><div class=\"list_change_one\"></div><div class=\"list_change_two\">累计3人出游</div></div></div><div class=\"list_sr_price_box basefix\"><span class=\"list_sr_price\"><dfn>￥</dfn><strong>1035</strong>起</span></div></div><div class=\"list_content_left\"><div class=\"list_label_box\"><div style=\"display: inline-block;\"><span class=\"list_label_jewel\">5钻</span></div><span class=\"list_label_blue\" title=\"\">无购物</span><span class=\"list_label_blue\" title=\"\">无自费</span><span class=\"list_label_blue\" title=\"订单一经携程旅行网以书面形式确认后均默认发团（不可抗力除外）\">成团保障</span><span class=\"list_label_blue\" title=\"\">游乐园</span><span class=\"list_label_blue\" title=\"\">迪士尼乐园</span></div><div><div class=\"list_explan_text_box\" style=\"position: relative;\"><p class=\"list_explan_text\">一条龙服务：24小时电话管家，为您保驾护航，安心出行！</p></div></div><div class=\"list_product_schedule\"><p>班期：1/4,1/5,1/6等可订<a href=\"javascript:void(0);\" class=\"list_sea_schedule\">查看班期<b class=\"list_down\"></b></a></p></div><p class=\"list_product_retail\" title=\"南京万达国际旅行社有限公司\">供应商：万达旅业</p></div></div></div></div></div></div>";
+//        System.out.println(Jsoup.parse(html).getElementsByTag("div").attr("data-track-product-id"));
+//        html="<div class=\"list_paging_box basefix\"><span class=\"list_paging_left \"><i></i></span><span class=\"list_paging_text\"><em>43</em>/<!-- -->43</span><span class=\"list_paging_right gray_cur\"><i></i></span></div>";
+//        Document parse = Jsoup.parse(html);
+//        Element span = parse.select("span.list_paging_text").get(0);
+//        System.out.println(span.select("em").text());
+//        System.out.println(span.text());
+        SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd");
+        Date nowDate= new Date();
+        String dateString= s.format(nowDate);
+        System.out.println(dateString);
+        String str="累计1.02万人出游";
+        float price= Float.parseFloat(str.substring(2,str.indexOf("万")));
+        int p= (int) (price*10000);
+        System.out.println(p);
+    }
 
+    @Test
+    public void testDate(){
+        Calendar calendar=Calendar.getInstance();
+        calendar.setTime(new Date());
+        String year=calendar.get(Calendar.YEAR)+"";
+        int month=calendar.get(Calendar.MONTH)+1;
+        System.out.println(year);
+        System.out.println(month);
+
+        String html="<table class=\"d_calendar_table\">\n" +
+                " <tbody>\n" +
+                "  <tr>\n" +
+                "   <td class=\"\"></td>\n" +
+                "   <td class=\"\"></td>\n" +
+                "   <td class=\"\"></td>\n" +
+                "   <td class=\"holiday_date\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"festival_name\">元旦</span><span class=\"date basefix\">01</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">今天</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">03</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">04</span></a></td>\n" +
+                "  </tr>\n" +
+                "  <tr>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">05</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">06</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">07</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">08</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">09</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">10</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">11</span></a></td>\n" +
+                "  </tr>\n" +
+                "  <tr>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">12</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">13</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">14</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">15</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">16</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">17</span></a></td>\n" +
+                "   <td class=\"\">\n" +
+                "    <div>\n" +
+                "     <a class=\"\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">18</span><span class=\"calendar_price01 red_color\"><dfn>¥</dfn>1299<em>起</em></span></a>\n" +
+                "    </div></td>\n" +
+                "  </tr>\n" +
+                "  <tr>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\">班</span><span class=\"date basefix\">19</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">20</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">21</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">22</span></a></td>\n" +
+                "   <td class=\"\"><a class=\" no_data\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">23</span></a></td>\n" +
+                "   <td class=\"holiday_date\">\n" +
+                "    <div>\n" +
+                "     <a class=\"\" href=\"javascript:void(0);\"><span class=\"festival_name\">除夕</span><span class=\"date basefix\">24</span><span class=\"calendar_price01\"><dfn>¥</dfn>1560<em>起</em></span></a>\n" +
+                "    </div></td>\n" +
+                "   <td class=\"holiday_date\">\n" +
+                "    <div>\n" +
+                "     <a class=\"\" href=\"javascript:void(0);\"><span class=\"festival_name\">春节</span><span class=\"date basefix\">25</span><span class=\"calendar_price01\"><dfn>¥</dfn>1560<em>起</em></span><span class=\"green_color\">充足</span></a>\n" +
+                "    </div></td>\n" +
+                "  </tr>\n" +
+                "  <tr>\n" +
+                "   <td class=\"\">\n" +
+                "    <div>\n" +
+                "     <a class=\"\" href=\"javascript:void(0);\"><span class=\"work_day\">初二</span><span class=\"date basefix\">26</span><span class=\"calendar_price01\"><dfn>¥</dfn>1560<em>起</em></span><span class=\"green_color\">充足</span></a>\n" +
+                "    </div></td>\n" +
+                "   <td class=\"\">\n" +
+                "    <div>\n" +
+                "     <a class=\"\" href=\"javascript:void(0);\"><span class=\"work_day\">初三</span><span class=\"date basefix\">27</span><span class=\"calendar_price01\"><dfn>¥</dfn>1560<em>起</em></span></a>\n" +
+                "    </div></td>\n" +
+                "   <td class=\"holiday_date\">\n" +
+                "    <div>\n" +
+                "     <a class=\"\" href=\"javascript:void(0);\"><span class=\"festival_name\">休</span><span class=\"date basefix\">28</span><span class=\"calendar_price01 red_color\"><dfn>¥</dfn>1299<em>起</em></span></a>\n" +
+                "    </div></td>\n" +
+                "   <td class=\"holiday_date\">\n" +
+                "    <div>\n" +
+                "     <a class=\"\" href=\"javascript:void(0);\"><span class=\"festival_name\">休</span><span class=\"date basefix\">29</span><span class=\"calendar_price01 red_color\"><dfn>¥</dfn>1299<em>起</em></span></a>\n" +
+                "    </div></td>\n" +
+                "   <td class=\"holiday_date\">\n" +
+                "    <div>\n" +
+                "     <a class=\"\" href=\"javascript:void(0);\"><span class=\"festival_name\">休</span><span class=\"date basefix\">30</span><span class=\"calendar_price01 red_color\"><dfn>¥</dfn>1299<em>起</em></span></a>\n" +
+                "    </div></td>\n" +
+                "   <td class=\"\">\n" +
+                "    <div>\n" +
+                "     <a class=\"\" href=\"javascript:void(0);\"><span class=\"work_day\"></span><span class=\"date basefix\">31</span><span class=\"calendar_price01 red_color\"><dfn>¥</dfn>1299<em>起</em></span></a>\n" +
+                "    </div></td>\n" +
+                "   <td class=\"\"></td>\n" +
+                "  </tr>\n" +
+                " </tbody>\n" +
+                "</table>";
+        Elements select = Jsoup.parse(html).select("tbody tr");
+        for (int i=0;i<select.size();i++){
+            System.out.println(select.get(i));
+        }
     }
 }

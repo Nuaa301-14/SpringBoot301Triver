@@ -1,5 +1,7 @@
 package com.example.javacrawler.entity;
 
+import java.util.Date;
+
 /**
  * 跟团游
  */
@@ -14,15 +16,46 @@ public class GroupTravel {
 
     private int SoldNumber;
 
+    private String Source;
+
+    public String getSource() {
+        return Source;
+    }
+
+    public void setSource(String source) {
+        Source = source;
+    }
+
+    @Override
+    public String toString() {
+        return "GroupTravel{" +
+                "GroupName='" + GroupName + '\'' +
+                ", GroupId='" + GroupId + '\'' +
+                ", GroupScore=" + GroupScore +
+                ", CommentNumber=" + CommentNumber +
+                ", SoldNumber=" + SoldNumber +
+                ", Source='" + Source + '\'' +
+                ", GroupPrice=" + GroupPrice +
+                ", GroupUrl='" + GroupUrl + '\'' +
+                ", Departure='" + Departure + '\'' +
+                ", Time=" + Time +
+                ", Introduce='" + Introduce + '\'' +
+                ", Supply='" + Supply + '\'' +
+                '}';
+    }
+
     private int GroupPrice;
 
     private String GroupUrl;
 
     private String Departure;
+
+    private String Destination;
+
     /**
      * 班期
      */
-    private String Time;
+    private Date Time;
 
     private String Introduce;
 
@@ -68,6 +101,14 @@ public class GroupTravel {
         SoldNumber = soldNumber;
     }
 
+    public String getDestination() {
+        return Destination;
+    }
+
+    public void setDestination(String destination) {
+        Destination = destination;
+    }
+
     public int getGroupPrice() {
         return GroupPrice;
     }
@@ -84,11 +125,11 @@ public class GroupTravel {
         GroupUrl = groupUrl;
     }
 
-    public String getTime() {
+    public Date getTime() {
         return Time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Date time) {
         Time = time;
     }
 
@@ -114,22 +155,6 @@ public class GroupTravel {
 
     public void setSupply(String supply) {
         Supply = supply;
-    }
-
-    @Override
-    public String toString() {
-        return "GroupTravel{" +
-                "GroupId='" + GroupId + '\'' +
-                ", GroupName='" + GroupName + '\'' +
-                ", GroupScore=" + GroupScore +
-                ", CommentNumber=" + CommentNumber +
-                ", SoldNumber='" + SoldNumber +
-                ", GroupPrice=" + GroupPrice +
-                ", GroupUrl=" + GroupUrl + '\'' +
-                ", Time='" + Time + '\'' +
-                ", Introduce='" + Introduce + '\'' +
-                ", Supply='" + Supply + '\'' +
-                '}';
     }
 
 }

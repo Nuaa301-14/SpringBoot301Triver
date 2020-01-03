@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.javacrawler.mapper.GroupTravelPriceMapper">
+
+
+    <resultMap id="group_price" type="com.example.javacrawler.entity.GroupTravelPrice">
+        <id column="id" property="id"/>
+        <result column="GroupId" property="GroupId"/>
+        <result column="Price" property="Price"/>
+        <result column="Time" property="Time"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.example.javacrawler.entity.GroupTravelPrice">
+        insert into groupprice
+        (GroupId,Price,Time) value (#{GroupId},#{Price},#{Time,jdbcType=DATE})
+    </insert>
+
+    <select id="exist" parameterType="com.example.javacrawler.entity.GroupTravelPrice"
+            resultType="com.example.javacrawler.entity.GroupTravelPrice">
+        select * from groupprice
+        where GroupId=#{GroupId} and Time=#{Time,jdbcType=DATE};
+    </select>
+
+    <select id="seletListById" parameterType="java.util.Map" resultMap="group_price">
+        select * from groupprice
+        <where>
+            <if test="param.groupId!='' and param.groupId!=null">
+                and GroupId = #{param.groupId} and Time >= #{param.date,jdbcType=DATE}
+            </if>
+        </where>
+        ;
+    </select>
+
+    <delete id="deleteByGroupId" parameterType="java.util.Map">
+        delete from groupprice
+        <where>
+            <if test="param.groupId!='' and param.groupId!=null">
+                and groupId=#{param.groupId}
+            </if>
+        </where>
+    </delete>
+
+</mapper>
