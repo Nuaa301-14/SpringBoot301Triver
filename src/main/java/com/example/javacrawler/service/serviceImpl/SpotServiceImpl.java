@@ -57,5 +57,18 @@ public class SpotServiceImpl implements SpotService {
         List<Spot> spotList = spotMapper.selectList(map);
         return new PageInfo<>(spotList);
     }
+
+    @Override
+    public int delete(Map map) {
+        return spotMapper.delete(map);
+    }
+
+    @Override
+    public PageInfo<Spot> searchSpot(Map map) {
+        PageHelper.startPage((int)map.get("page"),(int)map.get("pageSize"));
+        List<Spot> spotList=spotMapper.searchSpot(map,(String)map.get("size"));
+        return new PageInfo<>(spotList);
+    }
+
 }
 

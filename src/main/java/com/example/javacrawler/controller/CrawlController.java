@@ -58,6 +58,7 @@ public class CrawlController {
         return "index";
     }
 
+
     @RequestMapping(value = "/hotelCrawl", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> crawlelonghotel(Model model,
@@ -91,12 +92,16 @@ public class CrawlController {
             if (elongArea != null) {
                 // 进行url拼接
                 String url = "http://hotel.elong.com/search/list_cn_" + String.valueOf(elongArea.getCityId()) + ".html";
-                boolean crawl = new CrawlHotelELong().crawl(url, pageNum);
+                boolean crawl = new CrawlHotelELong().crawl(url, new CrawlHotelXCPipeline(hotelService),pageNum,null);
             } else {
                 // 返回信息不合理
                 model.addAttribute("inputUnreasonable", "输入的地区不合理(请输入准确的中文或者拼音！)");
                 str.add("输入的地区不合理(请输入准确的中文或者拼音！)");
             }
+        }else if (source.equals("同程")){
+            ElongArea elongArea=elongAreaService.getTcArea(input);
+            String url="https://www.ly.com/searchlist.html?cityid="+elongArea.getCityId();
+            new CrawlHotelTC().crawl(url,new CrawlHotelXCPipeline(hotelService),pageNum,"");
         }
         str.add("Success");
         Map<String, Object> map = new HashMap<String, Object>();
@@ -114,10 +119,12 @@ public class CrawlController {
      * @return
      */
     @RequestMapping(value = "/crawlSpot", method = RequestMethod.POST)
-    public String crawSpot(Model model,
+    @ResponseBody
+    public Map<String, Object> crawSpot(Model model,
                            @RequestParam("input") String input,
                            @RequestParam("pageNum") int pageNum,
                            @RequestParam("source") String source) {
+        List<String> str=new ArrayList<>();
         if (source.equals("携程")) {
             Area a = areaService.getByCity_nameOrPinyin(input);
             String url = "";
@@ -127,14 +134,13 @@ public class CrawlController {
                 url = "https://piao.ctrip.com/dest/" + "u-" + input + "/s-tickets/" + "#ctm_ref=vat_hp_sb_lst";
             }
             new CrawlSpotXC().craw(url, pageNum, new CrawlSpotXCPipeline(spotService));
-            return "craw";
+            str.add("Success");
         } else if (source.equals("艺龙")) {
             /**
              * 1.分析处理input信息，判断是否合理
              * 2.当前只能输入中文城市名称或者拼音
              */
-
-
+            // elong景点门票
             /**
              * 3.进行url的组合
              * 4.调用接口进行爬取
@@ -144,10 +150,12 @@ public class CrawlController {
         }else if (source.equals("同程")){
             String url="";
             url="https://so.ly.com/scenery?q="+input;
-            new CrawlSpotTC().craw(url,pageNum,new CrawlSpotTCPipeline(spotService));
-            return "craw";
+            new CrawlSpotTC().craw(url,pageNum,new CrawlSpotTCPipeline(spotService),null);
+            str.add("Success");
         }
-        return "craw";
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("reply",str);
+        return map;
     }
 
     /**
@@ -208,7 +216,7 @@ public class CrawlController {
                 url= new StringBuilder().append(url).append("sc1.html?st=").append(input).append("&sv=").append(input).toString();
             }
             // 进行爬取
-            new CrawlGroupTravelXC().craw(url,pageNum,new CrawlGroupTravelXCPipeline(groupTravelService));
+            new CrawlGroupTravelXC().craw(url,pageNum,new CrawlGroupTravelXCPipeline(groupTravelService),null);
         }else if(source.equals("同程")){
             String url="https://so.ly.com/zby-gentuan?q="+input+"&c=224";
             new CrawlGroupTravelTC().craw(url,pageNum,new CrawlGroupTravelTCPipeline(groupTravelService));

@@ -41,8 +41,44 @@
 </ul>
 
 </div>
-
-   <figure class="tour">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+<script>
+    function loaddata()
+    {
+        $.ajax({
+            //访问后台的路径
+            url: "/load_data",
+            dataType:"json",
+            contentType: "application/json;charset=utf-8",
+            type: 'post',//指定提交方式为post
+            success: function(data) {
+                var jsonData = JSON.stringify(data);
+                var spotlist = {};
+                jQuery.each(JSON.parse(jsonData),function(i,item){
+                    spotlist[i] = item;
+                });
+                dataHtml='';
+                for (var i=0;i<9;i++){
+                    dataHtml+='<figure>'
+                        +'<img src="../../static/io/img/tour1.jpg" alt="">'
+                        + '<figcaption>'
+                        + '<strong class="title" > &lt;'+ spotlist[i].spotName +'&gt;</strong>'
+                        + spotlist[i].introduce
+                        +'<div class="info">'
+                        +'<em class="sat">'+ '满意度'+spotlist[i].spotScore +'</em>'
+                        +'<span class="price">'+ '￥'+spotlist[i].spotPrice +'</span>'
+                        +'</div>'
+                        +'<div>'+spotlist[i].spotLocation +'         '+spotlist[i].recommend+'人推荐'+'</div>'
+                        +'</figcaption>'
+                        +'</figure>'
+                }
+                $(".spotShow").html(dataHtml);
+            }
+        });
+    }
+    window.onload = loaddata;
+</script>
+    <figure class="tour">
      <img src="../../static/io/img/tour1.jpg" alt="">
        <figcation class="description">
          <h3>曼谷-芭提雅6日游</h3>
@@ -236,7 +272,7 @@
     </figcation>
 </figure>
 <figure class="tour">
-    <img src="img/tour9.jpg" alt="大阪-京都-箱根双飞6日游">
+    <img src="../../static/io/img/tour9.jpg" alt="大阪-京都-箱根双飞6日游">
     <figcation class="description">
         <h3>大阪-京都-箱根双飞6日游</h3>
         <p>盐城直飞，不走回头路，境外无自费，超值之旅 </p>

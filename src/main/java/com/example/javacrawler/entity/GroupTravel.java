@@ -17,6 +17,8 @@ public class GroupTravel {
     private int GroupPrice;
 
     private String GroupUrl;
+
+    private String Departure;
     /**
      * 班期
      */
@@ -88,6 +90,14 @@ public class GroupTravel {
 
     public void setTime(String time) {
         Time = time;
+    }
+
+    public String getDeparture() {
+        return Departure;
+    }
+
+    public void setDeparture(String departure) {
+        Departure = departure;
     }
 
     public String getIntroduce() {

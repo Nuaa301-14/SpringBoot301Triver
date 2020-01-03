@@ -101,7 +101,16 @@ public class UserController {
     public String changePwd(HttpServletRequest request, Model model) {
         User loginUser = (User) request.getSession().getAttribute("loginUser");
         System.out.println(loginUser.getId());
+
         return "changePwd";
+    }
+
+    @RequestMapping(value = "/user/logout")
+    @ResponseBody
+    public String logout(){
+        SecurityUtils.getSubject().logout();
+        System.out.println("用户 退出");
+        return "success";
     }
 
     @RequestMapping("/user/checkUserExist")
@@ -137,4 +146,11 @@ public class UserController {
             return "redirect:/user/register";
         }
     }
+
+    @RequestMapping("/user/userInfo")
+    public String userInfo(){
+        return "userInfo";
+    }
+
+
 }

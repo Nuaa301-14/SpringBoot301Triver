@@ -129,6 +129,14 @@ layui.config({
 		window.sessionStorage.removeItem("menu");
 		menu = [];
 		window.sessionStorage.removeItem("curmenu");
+		$.ajax({
+			url: "/user/logout",
+			type: "post",
+			async: false,
+			success: function (msg) {
+				window.location.href="/";
+			}
+		});
 	})
 
 	//隐藏左侧导航
@@ -257,16 +265,6 @@ function addTab(_this){
 
 //捐赠弹窗
 function goFront(){
-	// layer.tab({
-	// 	// 	area : ['260px', '367px'],
-	// 	// 	tab : [{
-	// 	// 		title : "微信",
-	// 	// 		content : "<div style='padding:30px;overflow:hidden;background:#d2d0d0;'><img src='../images/wechat.jpg'></div>"
-	// 	// 	},{
-	// 	// 		title : "支付宝",
-	// 	// 		content : "<div style='padding:30px;overflow:hidden;background:#d2d0d0;'><img src='../images/alipay.jpg'></div>"
-	// 	// 	}]
-	// 	// })
 	window.open("/admin")
 }
 

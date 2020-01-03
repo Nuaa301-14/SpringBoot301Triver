@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>首页--旅游网站</title>
@@ -21,130 +21,233 @@
 </header>
 <div class="search">
     <div class="center"></div>
-    <input class="input" type="text" placeholder="请输入旅游景点或城市">
-    <div class="button">搜索</div>
-    </div>
+    <input class="input" type="text" placeholder="请输入旅游景点或城市" id="searchtext">
+    <div class="button" onclick="search()">
+            <select type="text" id="searchtype">
+                <option value="spot">景区搜索</option>
+                <option value="hotel">酒店搜索</option>
+                <option value="grouptravel">跟团游搜索</option>
+            </select>
+        搜索
+	</div>
+</div>
 <div class="tour">
 	<section class="news">
 	<h2>热门旅游</h2>
 	<p>国内旅游、国外旅游、自助旅游、自驾旅游、油轮签证、主题旅游等各种最新热门旅游推荐</p>
 	</section>
-
-	<script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+	<script >
         function loaddata()
         {
-            alert("123");
+            $.ajax({
+                //访问后台的路径
+                url: "/load_data",
+                dataType:"json",
+                contentType: "application/json;charset=utf-8",
+                type: 'post',//指定提交方式为post
+                success: function(data) {
+                    var jsonData = JSON.stringify(data);
+                    var spotlist = {};
+                    jQuery.each(JSON.parse(jsonData),function(i,item){
+                        spotlist[i] = item;
+                    });
+                    dataHtml='';
+                    for (var i=0;i<9;i++){
+                        dataHtml+='<figure>'
+                            +'<img src="../../static/io/img/tour1.jpg" alt="">'
+                            + '<figcaption>'
+                            + '<strong class="title" > &lt;'+ spotlist[i].spotName +'&gt;</strong>'
+                                + spotlist[i].introduce
+                                +'<div class="info">'
+                                +'<em class="sat">'+ '满意度'+spotlist[i].spotScore +'</em>'
+                                +'<span class="price">'+ '￥'+spotlist[i].spotPrice +'</span>'
+                                +'</div>'
+                                +'<div>'+spotlist[i].spotLocation +'         '+spotlist[i].recommend+'人推荐'+'</div>'
+                            +'</figcaption>'
+                            +'</figure>'
+                    }
+                    $(".spotShow").html(dataHtml);
+                }
+            });
         }
         window.onload = loaddata;
+        function spotList(pageInfo, input, source, size) {
+            //渲染数据
+            console.log("condition=" + condition);
+            var total = pageInfo.total;//页总数
+            var pageSize = pageInfo.pageSize;//页大小
+            var HotelsData = pageInfo.list;
+            console.log(HotelsData);
+            //分页
+            var nums = pageSize; //每页出现的数据量
+            laypage({
+                cont: "page",
+                pages: Math.ceil(total / nums),
+                jump: function (obj, first) {
+                    console.log(obj.curr);
+
+                    function Searchpaging(curr) {
+                        var text = "";
+                        text = "input=" + input + "&source=" + source + "&size=" + size;
+                        $.ajax({
+                            url: "/data/spotSearch?page=" + curr + "&pageSize=13&" + text,
+                            dataType: 'json',
+                            type: 'post',
+                            async: true,
+                            success: pageChange
+                        });
+                    }
+
+                    // paging(obj.curr);
+                    if (!first) {
+                        Searchpaging(obj.curr);
+                    } else {
+                        $(".users_content").html(renderDate(HotelsData));
+                    }
+                    // $('.users_list thead input[type="checkbox"]').prop("checked", false);
+                    form.render();
+                }
+            })
+
+        }
+        function search() {
+            var textstr = document.getElementById("searchtext").value;
+            var typestr = document.getElementById("searchtype").value;
+            if(textstr==""||textstr==null){
+                return;
+            }
+            var searchList=new Array();
+            searchList.push({text:textstr,type:typestr});
+
+            $.ajax({
+                //访问后台的路径
+                url: "/onclick_search",
+                //将数据通过函数转换
+                data: JSON.stringify(searchList),
+                dataType:"json",//指定数据类型为JSON
+                // 指定类型，不然会报错，无法解析提交类型
+                contentType: "application/json;charset=utf-8",
+                type: 'post',//指定提交方式为post
+                success: function (data) {
+                    spotList(data);
+                }
+            });
+
+        }
+
 	</script>
-	<figure>
-	<img src="../../static/io/img/tour1.jpg" alt="">
-	<figcaption>
-	<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券
-	<div class="info">
-	    <em class="sat">满意度 77%</em>
-		<span class="price">￥ <strong>2864</strong> 起</span>
-	</div>
-	<div class="type">国内长线</div>
+    <div class = "spotShow"></div>
 
-	</figcaption>
-	</figure>
-	<figure>
-	<img src="../../static/io/img/tour1.jpg" alt="">
-	<figcaption>
-	<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券
-	<div class="info">
-	    <em class="sat">满意度 77%</em>
-		<span class="price">￥ <strong>2864</strong> 起</span>
-	</div>
-	<div class="type">国内长线</div>
 
-	</figcaption>
-	</figure>
-	<figure>
-	<img src="../../static/io/img/tour1.jpg" alt="">
-	<figcaption>
-	<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券
-	<div class="info">
-	    <em class="sat">满意度 77%</em>
-		<span class="price">￥ <strong>2864</strong> 起</span>
-	</div>
-	<div class="type">国内长线</div>
+	<!--<figure>-->
+	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
+	<!--<figcaption>-->
+	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
+	<!--<div class="info">-->
+	    <!--<em class="sat">满意度 77%</em>-->
+		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
+	<!--</div>-->
+	<!--<div class="type">国内长线</div>-->
 
-	</figcaption>
-	</figure>
-	<figure>
-	<img src="../../static/io/img/tour1.jpg" alt="">
-	<figcaption>
-	<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券
-	<div class="info">
-	    <em class="sat">满意度 77%</em>
-		<span class="price">￥ <strong>2864</strong> 起</span>
-	</div>
-	<div class="type">国内长线</div>
+	<!--</figcaption>-->
+	<!--</figure>-->
+	<!--<figure>-->
+	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
+	<!--<figcaption>-->
+	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
+	<!--<div class="info">-->
+	    <!--<em class="sat">满意度 77%</em>-->
+		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
+	<!--</div>-->
+	<!--<div class="type">国内长线</div>-->
 
-	</figcaption>
-	</figure>
-	<figure>
-	<img src="../../static/io/img/tour1.jpg" alt="">
-	<figcaption>
-	<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券
-	<div class="info">
-	    <em class="sat">满意度 77%</em>
-		<span class="price">￥ <strong>2864</strong> 起</span>
-	</div>
-	<div class="type">国内长线</div>
+	<!--</figcaption>-->
+	<!--</figure>-->
+	<!--<figure>-->
+	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
+	<!--<figcaption>-->
+	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
+	<!--<div class="info">-->
+	    <!--<em class="sat">满意度 77%</em>-->
+		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
+	<!--</div>-->
+	<!--<div class="type">国内长线</div>-->
 
-	</figcaption>
-	</figure>
-	<figure>
-	<img src="../../static/io/img/tour1.jpg" alt="">
-	<figcaption>
-	<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券
-	<div class="info">
-	    <em class="sat">满意度 77%</em>
-		<span class="price">￥ <strong>2864</strong> 起</span>
-	</div>
-	<div class="type">国内长线</div>
+	<!--</figcaption>-->
+	<!--</figure>-->
+	<!--<figure>-->
+	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
+	<!--<figcaption>-->
+	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
+	<!--<div class="info">-->
+	    <!--<em class="sat">满意度 77%</em>-->
+		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
+	<!--</div>-->
+	<!--<div class="type">国内长线</div>-->
 
-	</figcaption>
-	</figure>
-	<figure>
-	<img src="../../static/io/img/tour1.jpg" alt="">
-	<figcaption>
-	<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券
-	<div class="info">
-	    <em class="sat">满意度 77%</em>
-		<span class="price">￥ <strong>2864</strong> 起</span>
-	</div>
-	<div class="type">国内长线</div>
+	<!--</figcaption>-->
+	<!--</figure>-->
+	<!--<figure>-->
+	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
+	<!--<figcaption>-->
+	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
+	<!--<div class="info">-->
+	    <!--<em class="sat">满意度 77%</em>-->
+		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
+	<!--</div>-->
+	<!--<div class="type">国内长线</div>-->
 
-	</figcaption>
-	</figure>
-	<figure>
-	<img src="../../static/io/img/tour1.jpg" alt="">
-	<figcaption>
-	<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券
-	<div class="info">
-	    <em class="sat">满意度 77%</em>
-		<span class="price">￥ <strong>2864</strong> 起</span>
-	</div>
-	<div class="type">国内长线</div>
+	<!--</figcaption>-->
+	<!--</figure>-->
+	<!--<figure>-->
+	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
+	<!--<figcaption>-->
+	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
+	<!--<div class="info">-->
+	    <!--<em class="sat">满意度 77%</em>-->
+		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
+	<!--</div>-->
+	<!--<div class="type">国内长线</div>-->
 
-	</figcaption>
-	</figure>
-	<figure>
-	<img src="../../static/io/img/tour1.jpg" alt="">
-	<figcaption>
-	<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券
-	<div class="info">
-	    <em class="sat">满意度 77%</em>
-		<span class="price">￥ <strong>2864</strong> 起</span>
-	</div>
-	<div class="type">国内长线</div>
+	<!--</figcaption>-->
+	<!--</figure>-->
+	<!--<figure>-->
+	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
+	<!--<figcaption>-->
+	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
+	<!--<div class="info">-->
+	    <!--<em class="sat">满意度 77%</em>-->
+		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
+	<!--</div>-->
+	<!--<div class="type">国内长线</div>-->
 
-	</figcaption>
-	</figure>
+	<!--</figcaption>-->
+	<!--</figure>-->
+	<!--<figure>-->
+	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
+	<!--<figcaption>-->
+	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
+	<!--<div class="info">-->
+	    <!--<em class="sat">满意度 77%</em>-->
+		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
+	<!--</div>-->
+	<!--<div class="type">国内长线</div>-->
+
+	<!--</figcaption>-->
+	<!--</figure>-->
+	<!--<figure>-->
+	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
+	<!--<figcaption>-->
+	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
+	<!--<div class="info">-->
+	    <!--<em class="sat">满意度 77%</em>-->
+		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
+	<!--</div>-->
+	<!--<div class="type">国内长线</div>-->
+
+	<!--</figcaption>-->
+	<!--</figure>-->
 	</div>
 	<footer id="footer">
 	<div class="top">
