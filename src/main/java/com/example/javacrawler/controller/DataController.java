@@ -1,6 +1,7 @@
 package com.example.javacrawler.controller;
 
 import com.example.javacrawler.entity.*;
+import com.example.javacrawler.mapper.RoleMapper;
 import com.example.javacrawler.service.*;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,6 +36,10 @@ public class DataController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private RoleMapper roleMapper;
+
+
     @RequestMapping(value = "/userInfo")
     @ResponseBody
     public Map<String,Object> userInfo(@RequestParam("id") String id){
@@ -51,6 +57,12 @@ public class DataController {
         map.put("page", page);
         map.put("pageSize", pageSize);
         List<User> userList= userService.seleteList(map);
+        List<Role> roleList=new ArrayList<>();
+
+        for (int i=0;i<userList.size();i++){
+            List<Role> rolesByUserId = roleMapper.findRolesByUserId(userList.get(i).getId());
+            roleList.add(rolesByUserId.get(0));
+        }
         PageInfo<User> pageInfo=new PageInfo<>(userList);
 
     }
