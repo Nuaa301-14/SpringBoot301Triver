@@ -69,5 +69,6 @@ public class SpotServiceImpl implements SpotService {
         List<Spot> spotList=spotMapper.searchSpot(map,(String)map.get("size"));
         return new PageInfo<>(spotList);
     }
+
 }
 

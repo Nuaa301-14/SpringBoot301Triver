@@ -120,5 +120,4 @@
         </if>
         order by spotId desc
     </select>
-    
 </mapper>

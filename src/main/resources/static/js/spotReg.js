@@ -31,7 +31,7 @@ layui.config({
                     + '</tr>';
             }
         } else {
-            dataHtml = '<tr><td colspan="8">暂无数据</td></tr>';
+            dataHtml = '<tr><td colspan="10">暂无数据</td></tr>';
         }
         return dataHtml;
     }

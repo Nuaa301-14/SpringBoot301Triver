@@ -36,4 +36,5 @@ public interface SpotMapper {
     int delete(@Param("param") Map map);
 
     List<Spot> searchSpot(@Param("param") Map map, String size);
+
 }

@@ -23,4 +23,5 @@ public interface SpotService {
     int delete(Map map);
 
     PageInfo<Spot> searchSpot(Map map);
+
 }
