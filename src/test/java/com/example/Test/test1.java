@@ -578,4 +578,33 @@ public class test1 {
             System.out.println(select.get(i));
         }
     }
+
+    @Test
+    public void testStr(){
+        String str="https://so.ly.com/gny-gentuan?q=%E4%B8%BD%E6%B1%9F&sopage=sogny&prop=1&start=21";
+        System.out.println(str.substring(0, str.indexOf("&start=")));
+        System.out.println(StringUtils.getDigits(str.substring(str.indexOf("&start="), str.length())));
+        String html="<td class=\"invalid-day festival\" data-date=\"2020-01-01\"><span class=\"date\">元旦</span>\n" +
+                "            <input type=\"hidden\" class=\"version_list\" value=\"undefined\">\n" +
+                "            <div class=\"info J-Info\" data-version=\"\">\n" +
+                "                <span class=\"dataprace \"><span>&nbsp;</span></span>\n" +
+                "                <span class=\"dataprice\"></span>\n" +
+                "            </div>\n" +
+                "\n" +
+                "<div class=\"warnInfo\" hidden=\"\">\n" +
+                "    <div>\n" +
+                "        \n" +
+                "        <dl class=\"warn\">\n" +
+                "            <dt class=\"desc\">.</dt>\n" +
+                "            <dd>本起价对应的交通为实时交通，预订过程中可能会发生价格或位置的变更，请以占位价格为准；</dd>\n" +
+                "        </dl>\n" +
+                "        \n" +
+                "        \n" +
+                "    </div>\n" +
+                "</div>\n" +
+                "</td>";
+        int i1 = html.indexOf("data-date");
+        String time=html.substring(i1+11,i1+21);
+        System.out.println(time);
+    }
 }

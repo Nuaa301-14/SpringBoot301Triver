@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.javacrawler.mapper.UserMapper">
+
+    <resultMap id="user" type="com.example.javacrawler.entity.User">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="password" property="password"/>
+        <result column="userName" property="userName"/>
+        <result column="realName" property="realName"/>
+        <result column="gender" property="gender"/>
+        <result column="phoneNumber" property="phoneNumber"/>
+        <result column="birth" property="birth"/>
+        <result column="location" property="location"/>
+        <result column="email" property="email"/>
+    </resultMap>
+
     <select id="getUserByName" parameterType="String" resultType="User">
         select * from user where name=#{param1}
     </select>
 
     <insert id="insert" parameterType="com.example.javacrawler.entity.User">
         insert into user
-            (name,password)
-        values (#{name},#{password})
+            (name,password,userName,realName,gender,phoneNumber,birth,location,email,created,updated)
+        values (#{name},#{password},#{userName},#{realName},#{gender},
+        #{phoneNumber},#{birth,jdbcType=DATE},#{location},
+        #{email},#{created,jdbcType=TIMESTAMP},#{updated,jdbcType=TIMESTAMP})
     </insert>
 
+    <select id="selectById" parameterType="java.util.Map" resultType="User">
+        select * from user
+        <where>
+            <if test="param.userId!=null and param.userId!=''">
+                and id = #{param.userId}
+            </if>
+        </where>
+    </select>
+
+    <update id="update" parameterType="User">
+        update user
+        set
+            name=#{name},
+            password=#{password},
+            userName=#{userName},
+            realName=#{realName},
+            gender=#{gender},
+            phoneNumber=#{phoneNumber},
+            birth=#{birth,jdbcType=DATE},
+            email=#{email},
+            updated=#{updated,jdbcType=TIMESTAMP}
+        where id=#{id}
+    </update>
+
+    <select id="seleteList" parameterType="java.util.Map" resultMap="user">
+        select * from user;
+    </select>
 </mapper>

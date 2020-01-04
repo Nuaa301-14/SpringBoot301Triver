@@ -17,7 +17,13 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class UserController {
@@ -62,7 +68,8 @@ public class UserController {
                 userSubject.login(token);
                 // 获取用户
                 User user = (User) userSubject.getPrincipal();
-                request.getSession().setAttribute("loginUser", user);
+                HttpSession session = request.getSession(true);
+                session.setAttribute("loginUser", user);
                 // 获取用户权限信息
                 List<Role> roles = roleMapper.findRolesByUserId(user.getId());
                 for (Role role : roles) {
@@ -98,11 +105,31 @@ public class UserController {
     }
 
     @RequestMapping(value = "/user/changePwd")
-    public String changePwd(HttpServletRequest request, Model model) {
-        User loginUser = (User) request.getSession().getAttribute("loginUser");
+    public String changePwd(HttpSession session, Model model) {
+        User loginUser = (User) session.getAttribute("loginUser");
         System.out.println(loginUser.getId());
-
+        model.addAttribute("userId",loginUser.getId());
         return "changePwd";
+    }
+    @RequestMapping(value = "/user/PwdChange")
+    @ResponseBody
+    public Map<String,Object> PwdChange(@RequestBody List<Map<String,Object>> change,HttpSession session){
+        Map<String, Object> userInfoMap = change.get(0);
+        Map<String,Object> map=new HashMap<>();
+        int id = (int) userInfoMap.get("id");
+        String oldPwd= (String) userInfoMap.get("oldPwd");
+        String newPwd= (String) userInfoMap.get("newPwd");
+        String confirmPwd= (String) userInfoMap.get("confirmPwd");
+        boolean suc=userService.compareAndChange(id,oldPwd,newPwd);
+        if (suc==true){
+            User loginUser = (User) session.getAttribute("loginUser");
+            loginUser.setPassword(newPwd);
+            session.setAttribute("loginUser",loginUser);
+            map.put("reply","success");
+        }else {
+            map.put("reply","fail");
+        }
+        return map;
     }
 
     @RequestMapping(value = "/user/logout")
@@ -148,8 +175,42 @@ public class UserController {
     }
 
     @RequestMapping("/user/userInfo")
-    public String userInfo(){
+    public String userInfo(HttpSession session, Model model){
+        User loginUser = (User) session.getAttribute("loginUser");
+        model.addAttribute("userId",loginUser.getId());
         return "userInfo";
+    }
+
+    @RequestMapping(value = "/user/changeInfo")
+    @ResponseBody
+    public Map<String, Object> changeInfo(@RequestBody List<Map<String,Object>> edit,HttpSession session){
+        Map<String ,Object> map=new HashMap<>();
+        Map<String, Object> userInfoMap = edit.get(0);
+        String userName= (String) userInfoMap.get("userName");
+        String realName= (String) userInfoMap.get("realName");
+        String gender= (String) userInfoMap.get("gender");
+        String  phoneNumber= (String) userInfoMap.get("phoneNumber");
+        String birth= (String) userInfoMap.get("birth");
+        String userEmail= (String) userInfoMap.get("email");
+        User loginUser = (User) session.getAttribute("loginUser");
+        loginUser.setUserName(userName);
+        loginUser.setRealName(realName);
+        loginUser.setGender(gender);
+        loginUser.setPhoneNumber(phoneNumber);
+        loginUser.setBirth(strToDate(birth));
+        loginUser.setEmail(userEmail);
+        loginUser.setUpdated(new Date());
+        userService.update(loginUser);
+        session.setAttribute("loginUser",loginUser);
+        map.put("user",loginUser);
+        return map;
+    }
+
+    public Date strToDate(String strDate) {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        ParsePosition pos = new ParsePosition(0);
+        Date strtodate = formatter.parse(strDate, pos);
+        return strtodate;
     }
 
 

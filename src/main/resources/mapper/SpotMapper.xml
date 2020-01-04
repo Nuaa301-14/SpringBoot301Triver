@@ -61,13 +61,6 @@
 
 
     <select id="selectList" resultMap="spot">
-<!--        select * from spot-->
-<!--        <where>-->
-<!--            <if test="param.area != null">-->
-<!--                and area like #{param.area}-->
-<!--            </if>-->
-<!--        </where>-->
-<!--        order by spotId desc-->
         SELECT *
         from spot
         <where>

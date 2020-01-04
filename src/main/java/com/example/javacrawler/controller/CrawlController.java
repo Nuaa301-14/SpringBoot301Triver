@@ -224,8 +224,8 @@ public class CrawlController {
             new CrawlGroupTravelXC().craw(url, pageNum, new CrawlGroupTravelXCPipeline(groupTravelService, groupTravelPriceService), null);
             str.add("Success");
         } else if (source.equals("同程")) {
-            String url = "https://so.ly.com/gny-gentuan?q=" + input + "&sopage=sogny&prop=1";
-            new CrawlGroupTravelTC().craw(url, pageNum, new CrawlGroupTravelTCPipeline(groupTravelService),null);
+            String url = "https://so.ly.com/gny-gentuan?q=" + input + "&sopage=sogny&prop=1&start=1";
+            new CrawlGroupTravelTC().craw(url, pageNum, new CrawlGroupTravelTCPipeline(groupTravelService,groupTravelPriceService),null,input);
             str.add("Success");
         }
         Map<String, Object> map = new HashMap<String, Object>();

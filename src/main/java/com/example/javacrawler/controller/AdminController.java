@@ -42,6 +42,11 @@ public class AdminController {
     public String crwalGroupReg(){
         return "Admin/groupTrvRegulation";
     }
+    @RequestMapping(value = {"/allUsers.html"})
+    public String allUser(){
+        return "Admin/allUsers";
+    }
+
 
 
 

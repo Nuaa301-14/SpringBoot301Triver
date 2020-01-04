@@ -1,13 +1,7 @@
 package com.example.javacrawler.controller;
 
-import com.example.javacrawler.entity.GroupTravel;
-import com.example.javacrawler.entity.Hotel;
-import com.example.javacrawler.entity.Spot;
-import com.example.javacrawler.entity.SpotAndHotel;
-import com.example.javacrawler.service.GroupTravelService;
-import com.example.javacrawler.service.HotelService;
-import com.example.javacrawler.service.ScenicHotelService;
-import com.example.javacrawler.service.SpotService;
+import com.example.javacrawler.entity.*;
+import com.example.javacrawler.service.*;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +30,30 @@ public class DataController {
 
     @Autowired
     private GroupTravelService groupTravelService;
+
+    @Autowired
+    private UserService userService;
+
+    @RequestMapping(value = "/userInfo")
+    @ResponseBody
+    public Map<String,Object> userInfo(@RequestParam("id") String id){
+        Map<String ,Object> map=new HashMap<>();
+        User user=userService.seletebyId(Integer.parseInt(id));
+        map.put("userInfo",user);
+        return map;
+    }
+
+    @RequestMapping("/user")
+    @ResponseBody
+    public void userAll(@RequestParam(defaultValue = "1", required = false) int page,
+                        @RequestParam(defaultValue = "13", required = false) int pageSize){
+        Map map = new HashMap();
+        map.put("page", page);
+        map.put("pageSize", pageSize);
+        List<User> userList= userService.seleteList(map);
+        PageInfo<User> pageInfo=new PageInfo<>(userList);
+
+    }
 
 
     @RequestMapping("/hotelSearch")

@@ -1,77 +1,52 @@
-[{
-	"title" : "后台首页",
-	"icon" : "icon-computer",
-	"href" : "/static/page/main.html",
-	"spread" : false
-},{
-	"title" : "爬虫管理",
-	"icon" : "&#xe630;",
-	"href" : "",
-	"spread" : false,
-	"children" : [
-		{
-			"title" : "酒店爬虫管理",
-			"icon" : "&#xe61c;",
-			"href" : "/admin/crawlHotelReg",
-			"spread" : false
-		},
-		{
-			"title" : "景区爬虫管理",
-			"icon" : "&#xe609;",
-			"href" : "/admin/crawlSpotReg",
-			"spread" : false
-		},
-		{
-			"title" : "酒店+景区",
-			"icon" : "&#xe609;",
-			"href" : "/admin/crawlScenicHotelReg",
-			"spread" : false
-		},
-		{
-			"title" : "跟团游爬虫管理",
-			"icon" : "&#xe609;",
-			"href" : "/admin/crawlGroupTrvReg",
-			"spread" : false
-		}
-	]
-},{
-	"title" : "用户管理",
-	"icon" : "icon-text",
-	"href" : "/static/page/user/allUsers.html",
-	"spread" : false
-},{
-	"title" : "管理员管理",
-	"icon" : "icon-text",
-	"href" : "#",
-	"spread" : false
-},{
-	"title" : "添加友情链接",
-	"icon" : "&#xe64c;",
-	"href" : "/admin/links",
-	"spread" : false
-},{
-	"title" : "系统基本参数",
-	"icon" : "&#xe631;",
-	"href" : "/static/page/systemParameter/systemParameter.html",
-	"spread" : false
-},{
-	"title" : "其他页面",
-	"icon" : "&#xe630;",
-	"href" : "",
-	"spread" : false,
-	"children" : [
-		{
-			"title" : "404页面",
-			"icon" : "&#xe61c;",
-			"href" : "/static/page/404.html",
-			"spread" : false
-		},
-		{
-			"title" : "登录",
-			"icon" : "&#xe609;",
-			"href" : "/static/page/login/login.html",
-			"spread" : false,
-			"target" : "_blank"
-		}
-	]
-}]
+[
+  {
+    "title": "后台首页",
+    "icon": "icon-computer",
+    "href": "/static/page/main.html",
+    "spread": false
+  },
+  {
+    "title": "爬虫管理",
+    "icon": "&#xe630;",
+    "href": "",
+    "spread": false,
+    "children": [
+      {
+        "title": "酒店爬虫管理",
+        "icon": "&#xe61c;",
+        "href": "/admin/crawlHotelReg",
+        "spread": false
+      },
+      {
+        "title": "景区爬虫管理",
+        "icon": "&#xe609;",
+        "href": "/admin/crawlSpotReg",
+        "spread": false
+      },
+      {
+        "title": "跟团游爬虫管理",
+        "icon": "&#xe609;",
+        "href": "/admin/crawlGroupTrvReg",
+        "spread": false
+      }
+    ]
+  },
+  {
+    "title": "用户管理",
+    "icon": "icon-text",
+    "href": "/admin/allUsers.html",
+    "spread": false
+  },
+  {
+    "title": "添加友情链接",
+    "icon": "&#xe64c;",
+    "href": "/admin/links",
+    "spread": false
+  },
+  {
+    "title": "系统基本参数",
+    "icon": "&#xe631;",
+    "href": "/static/page/systemParameter/systemParameter.html",
+    "spread": false
+  }
+]
