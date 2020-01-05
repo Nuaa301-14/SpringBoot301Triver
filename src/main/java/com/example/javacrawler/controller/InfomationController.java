@@ -1,6 +1,7 @@
 package com.example.javacrawler.controller;
 
 import com.example.javacrawler.entity.GroupTravel;
+import com.example.javacrawler.entity.Hotel;
 import com.example.javacrawler.entity.Spot;
 import com.example.javacrawler.service.GroupTravelService;
 import com.example.javacrawler.service.SpotService;
@@ -54,10 +55,14 @@ public class InfomationController {
         String text = "";
 //        String type = "";
         int yehao = 1;
+        int flag = 0;
         Map<String, Object> searchifo = searchList.get(0);
         text = (String) searchifo.get("text");
 //        type = (String) searchifo.get("type");
         yehao = (int) searchifo.get("yehao");
+        if(searchifo.get("flag") !=null){
+            flag = (int) searchifo.get("flag");
+        }
         Map map = new HashMap();
         map.put("page", yehao);
         map.put("pageSize", 9);
@@ -66,6 +71,14 @@ public class InfomationController {
 
 //        if (type.equals("spot")) {
         PageInfo<GroupTravel> groupTravelPageInfo = grouptravelservice.selectGroupList(map);
+        if(flag == 1){
+            Collections.sort(groupTravelPageInfo.getList(),new Comparator<GroupTravel>(){
+                @Override
+                public int compare(GroupTravel g1, GroupTravel g2){
+                    return  g1.getGroupPrice()-g2.getGroupPrice();
+                }
+            });
+        }
         System.out.println("当前页码：" + groupTravelPageInfo.getPageNum());
         System.out.println("每页记录条数：" + groupTravelPageInfo.getPageSize());
         System.out.println("总记录数：" + groupTravelPageInfo.getTotal());

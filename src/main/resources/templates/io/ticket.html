@@ -31,12 +31,9 @@
         <div class="infos">
             <ul class="infos_left">
                 <li><a href="">为您推荐</a></li>
-                <li><a href="">价格优先</a></li>
             </ul>
             <ul class="infos_right">
-                <li><a href="" class="selected">推荐</a></li>
-                <li><a href="">折扣</a></li>
-                <li><a href="">价格</a></li>
+                <li><a class="price" id="pricefirst">价格优先</a></li>
             </ul>
 
         </div>
@@ -84,7 +81,7 @@
             window.onload = loaddata;
 
             $(".searchBtn").click(function () {
-                tosubmit(1);
+                tosubmit(1,0);
                 toPage();
             });
 
@@ -92,15 +89,16 @@
             var pageSize = 9;
             var currentPageIndex = 1;
             var recordCount = 0;
+            var spotlist = new Array();
 
-            function tosubmit(cur){
+            function tosubmit(cur,flag){
                 var textstr = document.getElementById("searchtext").value;
                 // var typestr = document.getElementById("searchtype").value;
                 if (textstr == "" || textstr == null) {
                     return;
                 }
                 var searchList = new Array();
-                searchList.push({text: textstr, yehao: cur});
+                searchList.push({text: textstr, yehao: cur,flag: flag});
                 $.ajax({
                     //访问后台的路径
                     url: "/onclick_searchhotel",
@@ -122,7 +120,7 @@
 
             function getListInfo(data){
                 var jsonData = JSON.stringify(data);
-                var spotlist = {};
+
                 jQuery.each(JSON.parse(jsonData), function (i, item) {
                     spotlist[i] = item;
                 });
@@ -161,12 +159,28 @@
                             console.log(obj);
                             pageIndex = obj.curr;
                             if(!first){ //一定要加此判断，否则初始时会无限刷新
-                                tosubmit(obj.curr);//一定要把翻页的ajax请求放到这里，不然会请求两次。
+                                if(document.getElementById("pricefirst").className == 'selected'){
+                                    tosubmit(obj.curr,1);//一定要把翻页的ajax请求放到这里，不然会请求两次。
+                                }
+                                else{
+                                    tosubmit(obj.curr,0);
+                                }
                             }
                         }
                     });
                 })
             }
+
+            $(function () {
+                $(".price").click(function () {
+                    $(this).removeClass("price");
+                    $(this).addClass("selected");
+                     tosubmit(1,1);
+                     toPage();
+                });
+
+            });
+
         </script>
         <div class = "spotShow"></div>
         <div id="page"></div>
