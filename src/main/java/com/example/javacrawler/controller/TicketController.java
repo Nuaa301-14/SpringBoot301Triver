@@ -52,18 +52,31 @@ public class TicketController {
         String text = "";
 //        String type = "";
         int yehao = 1;
+        int flag = 0;
         Map<String, Object> searchifo = searchList.get(0);
         text = (String) searchifo.get("text");
 //        type = (String) searchifo.get("type");
         yehao = (int) searchifo.get("yehao");
+        if(searchifo.get("flag") !=null){
+            flag = (int) searchifo.get("flag");
+        }
         Map map = new HashMap();
         map.put("page", yehao);
         map.put("pageSize", 9);
         map.put("input", text);
         map.put("size", "3");
 
+
 //        if (type.equals("spot")) {
         PageInfo<Hotel> hotelPageInfo = hotelService.selectHotelList(map);
+        if(flag == 1){
+            Collections.sort(hotelPageInfo.getList(),new Comparator<Hotel>(){
+                @Override
+                public int compare(Hotel h1,Hotel h2){
+                    return  h1.getPrice()-h2.getPrice();
+                }
+            });
+        }
         System.out.println("当前页码：" + hotelPageInfo.getPageNum());
         System.out.println("每页记录条数：" + hotelPageInfo.getPageSize());
         System.out.println("总记录数：" + hotelPageInfo.getTotal());

@@ -30,13 +30,10 @@
     <article class="list information">
         <div class="infos">
             <ul class="infos_left">
-                <li><a href="">限时特价</a></li>
-                <li><a href="">热门折扣</a></li>
+                <li><a href="">为您推荐</a></li>
             </ul>
             <ul class="infos_right">
-                <li><a href="" class="selected">推荐</a></li>
-                <li><a href="">折扣</a></li>
-                <li><a href="">价格</a></li>
+                <li><a class="price" id="pricefirst">价格优先</a></li>
             </ul>
 
         </div>
@@ -64,7 +61,7 @@
                                 + '<figcation class="description">'
                                 + '<div class="content"> ' + spotlist[i].groupName + '</div>'
                                 + '<ol><li><mark>' + '推荐' + '</mark>' + spotlist[i].commentNumber + '人推荐' + '</li>'
-                                + '<li><mark>' + '已售' + '</mark>' + spotlist[i].soldNumber + '人已买' + '</li>'
+                                + '<li><mark>' + '已售' + '</mark>' + spotlist[i].soldNumber + '人已出游' + '</li>'
                                 + '</ol>'
                                 + '<div class="buy">' + '<div class="price">' + '￥' + '<strong>' + spotlist[i].groupPrice + '</strong>' + '</div>'
                                 + '<div class="reserve">' + '<a href="' + spotlist[i].groupUrl + '">' + '立即抢购' + '</a>' + '</div>'
@@ -82,7 +79,7 @@
             window.onload = loaddata;
 
             $(".searchBtn").click(function () {
-                tosubmit(1);
+                tosubmit(1,0);
                 toPage();
             });
 
@@ -91,14 +88,14 @@
             var currentPageIndex = 1;
             var recordCount = 0;
 
-            function tosubmit(cur){
+            function tosubmit(cur,flag){
                 var textstr = document.getElementById("searchtext").value;
                 // var typestr = document.getElementById("searchtype").value;
                 if (textstr == "" || textstr == null) {
                     return;
                 }
                 var searchList = new Array();
-                searchList.push({text: textstr, yehao: cur});
+                searchList.push({text: textstr,flag: flag, yehao: cur});
                 $.ajax({
                     //访问后台的路径
                     url: "/onclick_searchgroup",
@@ -158,12 +155,27 @@
                             console.log(obj);
                             pageIndex = obj.curr;
                             if(!first){ //一定要加此判断，否则初始时会无限刷新
-                                tosubmit(obj.curr);//一定要把翻页的ajax请求放到这里，不然会请求两次。
+                                if(document.getElementById("pricefirst").className == 'selected'){
+                                    tosubmit(obj.curr,1);//一定要把翻页的ajax请求放到这里，不然会请求两次。
+                                }
+                                else{
+                                    tosubmit(obj.curr,0);
+                                }
                             }
                         }
                     });
                 })
             }
+
+            $(function () {
+                $(".price").click(function () {
+                    $(this).removeClass("price");
+                    $(this).addClass("selected");
+                    tosubmit(1,1);
+                    toPage();
+                });
+
+            });
         </script>
         <div class="spotShow"></div>
         <div id="page"></div>
