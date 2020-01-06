@@ -27,6 +27,26 @@ public class User {
 
     private Date updated;
 
+    private String code;
+
+    private String codeName;
+
+    public String getCodeName() {
+        return codeName;
+    }
+
+    public void setCodeName(String codeName) {
+        this.codeName = codeName;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     public int getId() {
         return id;
     }

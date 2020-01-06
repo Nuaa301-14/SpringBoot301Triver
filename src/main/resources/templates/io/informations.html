@@ -1,21 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
     <meta charset="UTF-8">
     <title>旅游资讯--旅游网站</title>
     <link rel="stylesheet" href="../../static/io/css/column.css">
     <link rel="stylesheet" href="../../static/io/css/basic.css">
+<!--    <link href="/static/css/main1.css" rel="stylesheet" type="text/css"/>-->
+<!--    <script type="text/javascript" src="/static/js/jquery.js"></script>-->
+<!--    <script type="text/javascript" src="/static/js/hhDrop.js"></script>-->
+<!--    <script>-->
+<!--        $(function () {-->
+<!--            $('#hhDrop00').hhDrop({});-->
+<!--            $('#hhDrop01').hhDrop({});-->
+<!--        })-->
+<!--    </script>-->
 </head>
 <body>
 <header>
     <nav id="nav">
         <div id="logo"><img src="../../static/io/img/logo.png" alt=""></div>
         <ul>
-            <li><a href="index.html">首页</a></li>
+            <!--            <li><a href="index.html">首页</a></li>-->
+            <!--            <li class="active"><a href="informations.html">旅游资讯</a></li>-->
+            <!--            <li><a href="ticket.html">酒店订购</a></li>-->
+            <!--            <li><a href="scenery.html">风景欣赏</a></li>-->
+            <!--            <li><a href="about.html">公司简介</a></li>-->
+            <li><a href="scenery.html">首页</a></li>
             <li class="active"><a href="informations.html">旅游资讯</a></li>
             <li><a href="ticket.html">酒店订购</a></li>
-            <li><a href="scenery.html">风景欣赏</a></li>
-            <li><a href="about.html">公司简介</a></li>
+            <li><a href="index.html">景点资讯</a></li>
+            <li class="layui-nav-item">
+                <a href="/" th:if="${session.loginUser}==null">
+                    <cite th:text="请登录"></cite>
+                    <!--                    ${session.loginUser.userName}-->
+                </a>
+                <a href="/user/userInfo" th:if="${session.loginUser}!=null">
+                    <cite th:if="${session.loginUser.userName}!=null"
+                          th:text="你好+' '+${session.loginUser.userName}"></cite>
+                    <cite th:if="${session.loginUser.userName}==null" th:text="你好+' '+${session.loginUser.name}"></cite>
+                    <!--                    ${session.loginUser.userName}-->
+                </a>
+            </li>
+
         </ul>
     </nav>
 </header>
@@ -27,6 +53,220 @@
     </div>
 </div>
 <div id="container">
+<!--    <div class="lineSearch">-->
+<!--        <ul>-->
+<!--            <li class="thRelative" id="hhDrop00">-->
+<!--                <div class="boxSearch">-->
+<!--          <span class="key_word">-->
+<!--            <b class="size_14">北京</b>-->
+<!--            出发城市-->
+<!--          </span>-->
+<!--                    <em class="ico thLeft ico_shBlue"></em>-->
+<!--                    <a class="thRight ico btn_search" href="javascript:void(0)"></a>-->
+<!--                </div>-->
+<!--                <div class="search_form_suggest" style="display:none;">-->
+<!--                    <h3><a class="ico btn_close thRight" item="close">关闭</a>热门出发城市</h3>-->
+<!--                    <dl class="search_hotList">-->
+<!--                        <dd class="clr_after">-->
+<!--                            <a href="#">北京</a>-->
+<!--                            <a href="#">上海</a>-->
+<!--                            <a href="#">广州</a>-->
+<!--                            <a href="#">成都</a>-->
+<!--                            <a href="#">杭州</a>-->
+<!--                            <a href="#">南京</a>-->
+<!--                            <a href="#">深圳</a>-->
+<!--                            <a href="#">济南</a>-->
+<!--                            <a href="#">石家庄</a>-->
+<!--                            <a href="#">武汉</a>-->
+<!--                            <a href="#">郑州</a>-->
+<!--                            <a href="#">重庆</a>-->
+<!--                            <a href="#">福州</a>-->
+<!--                            <a href="#">西安</a>-->
+<!--                            <a href="#">长沙</a>-->
+<!--                            <a href="#">沈阳</a>-->
+<!--                            <a href="#">天津</a>-->
+<!--                            <a href="#">哈尔滨</a>-->
+<!--                            <a href="#">苏州</a>-->
+<!--                            <a href="#">南宁</a>-->
+<!--                        </dd>-->
+<!--                    </dl>-->
+
+<!--                    <div class="clear"></div>-->
+<!--                    <div class="select_city_box" item="dep-search">-->
+<!--                        <span>输入出发城市</span>-->
+<!--                        <input type="text" class="input_city" item="key">-->
+<!--                        <button class="btn" type="button" item="commit"></button>-->
+<!--                        <div class="search_city_result" item="result">-->
+<!--                            <a href="javascript:void();">广州</a> 没有匹配城市-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="thLeft thPadT5 tab_select">-->
+<!--                        <dl class="clrfix">-->
+<!--                            <dt>A-G</dt>-->
+<!--                            <dd class="clr_after">-->
+<!--                                <a href="#">北京</a>-->
+<!--                                <a href="#">长沙</a>-->
+<!--                                <a href="#">成都</a>-->
+<!--                                <a href="#">重庆</a>-->
+<!--                                <a href="#">福州</a>-->
+<!--                                <a href="#">广州</a>-->
+<!--                                <a href="#">贵阳</a>-->
+<!--                            </dd>-->
+<!--                        </dl>-->
+<!--                        <dl class="clrfix">-->
+<!--                            <dt>H-L</dt>-->
+<!--                            <dd class="clr_after">-->
+<!--                                <a href="#">哈尔滨</a>-->
+<!--                                <a href="#">杭州</a>-->
+<!--                                <a href="#">合肥</a>-->
+<!--                                <a href="#">济南</a>-->
+<!--                                <a href="#">昆明</a>-->
+<!--                            </dd>-->
+<!--                        </dl>-->
+<!--                        <dl class="clrfix">-->
+<!--                            <dt>M-T</dt>-->
+<!--                            <dd class="clr_after">-->
+<!--                                <a href="#">南昌</a>-->
+<!--                                <a href="#">南京</a>-->
+<!--                                <a href="#">南宁</a>-->
+<!--                                <a href="#">宁波</a>-->
+<!--                                <a href="#">青岛</a>-->
+<!--                                <a href="#">三亚</a>-->
+<!--                                <a href="#">上海</a>-->
+<!--                                <a href="#">沈阳</a>-->
+<!--                                <a href="#">深圳</a>-->
+<!--                                <a href="#">石家庄</a>-->
+<!--                                <a href="#">苏州</a>-->
+<!--                                <a href="#">太原</a>-->
+<!--                                <a href="#">天津</a>-->
+<!--                            </dd>-->
+<!--                        </dl>-->
+<!--                        <dl class="clrfix">-->
+<!--                            <dt>W-Z</dt>-->
+<!--                            <dd class="clr_after">-->
+<!--                                <a href="#">武汉</a>-->
+<!--                                <a href="#">厦门</a>-->
+<!--                                <a href="#">西安</a>-->
+<!--                                <a href="#">郑州</a>-->
+<!--                                <a href="#">中山</a>-->
+<!--                            </dd>-->
+<!--                        </dl>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </li>-->
+
+<!--            <li class="thRelative" id="hhDrop01">-->
+<!--                <div class="boxSearch">-->
+<!--          <span class="key_word">-->
+<!--            <b class="size_14">广州</b>-->
+<!--            到达城市-->
+<!--          </span>-->
+<!--                    <em class="ico thLeft ico_shBlue"></em>-->
+<!--                    <a class="thRight ico btn_search" href="javascript:void(0)"></a>-->
+<!--                </div>-->
+<!--                <div class="search_form_suggest" style="display:none;">-->
+<!--                    <h3><a class="ico btn_close thRight" item="close">关闭</a>热门出发城市</h3>-->
+<!--                    <dl class="search_hotList">-->
+<!--                        <dd class="clr_after">-->
+<!--                            <a href="#">北京</a>-->
+<!--                            <a href="#">上海</a>-->
+<!--                            <a href="#">广州</a>-->
+<!--                            <a href="#">成都</a>-->
+<!--                            <a href="#">杭州</a>-->
+<!--                            <a href="#">南京</a>-->
+<!--                            <a href="#">深圳</a>-->
+<!--                            <a href="#">济南</a>-->
+<!--                            <a href="#">石家庄</a>-->
+<!--                            <a href="#">武汉</a>-->
+<!--                            <a href="#">郑州</a>-->
+<!--                            <a href="#">重庆</a>-->
+<!--                            <a href="#">福州</a>-->
+<!--                            <a href="#">西安</a>-->
+<!--                            <a href="#">长沙</a>-->
+<!--                            <a href="#">沈阳</a>-->
+<!--                            <a href="#">天津</a>-->
+<!--                            <a href="#">哈尔滨</a>-->
+<!--                            <a href="#">苏州</a>-->
+<!--                            <a href="#">南宁</a>-->
+<!--                        </dd>-->
+<!--                    </dl>-->
+
+<!--                    <div class="clear"></div>-->
+<!--                    <div class="select_city_box" item="dep-search">-->
+<!--                        <span>输入出发城市</span>-->
+<!--                        <input type="text" class="input_city" item="key">-->
+<!--                        <button class="btn" type="button" item="commit"></button>-->
+<!--                        <div class="search_city_result" item="result" style="display:;"><a-->
+<!--                                href="javascript:void(0);">北京</a> 没有匹配城市-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="thLeft thPadT5 tab_select">-->
+<!--                        <dl class="clrfix">-->
+<!--                            <dt>A-G</dt>-->
+<!--                            <dd class="clr_after">-->
+<!--                                <a href="#">北京</a>-->
+<!--                                <a href="#">长沙</a>-->
+<!--                                <a href="#">成都</a>-->
+<!--                                <a href="#">重庆</a>-->
+<!--                                <a href="#">福州</a>-->
+<!--                                <a href="#">广州</a>-->
+<!--                                <a href="#">贵阳</a>-->
+<!--                            </dd>-->
+<!--                        </dl>-->
+<!--                        <dl class="clrfix">-->
+<!--                            <dt>H-L</dt>-->
+<!--                            <dd class="clr_after">-->
+<!--                                <a href="#">哈尔滨</a>-->
+<!--                                <a href="#">杭州</a>-->
+<!--                                <a href="#">合肥</a>-->
+<!--                                <a href="#">济南</a>-->
+<!--                                <a href="#">昆明</a>-->
+<!--                            </dd>-->
+<!--                        </dl>-->
+<!--                        <dl class="clrfix">-->
+<!--                            <dt>M-T</dt>-->
+<!--                            <dd class="clr_after">-->
+<!--                                <a href="#">南昌</a>-->
+<!--                                <a href="#">南京</a>-->
+<!--                                <a href="#">南宁</a>-->
+<!--                                <a href="#">宁波</a>-->
+<!--                                <a href="#">青岛</a>-->
+<!--                                <a href="#">三亚</a>-->
+<!--                                <a href="#">上海</a>-->
+<!--                                <a href="#">沈阳</a>-->
+<!--                                <a href="#">深圳</a>-->
+<!--                                <a href="#">石家庄</a>-->
+<!--                                <a href="#">苏州</a>-->
+<!--                                <a href="#">太原</a>-->
+<!--                                <a href="#">天津</a>-->
+<!--                            </dd>-->
+<!--                        </dl>-->
+<!--                        <dl class="clrfix">-->
+<!--                            <dt>W-Z</dt>-->
+<!--                            <dd class="clr_after">-->
+<!--                                <a href="#">武汉</a>-->
+<!--                                <a href="#">厦门</a>-->
+<!--                                <a href="#">西安</a>-->
+<!--                                <a href="#">郑州</a>-->
+<!--                                <a href="#">中山</a>-->
+<!--                            </dd>-->
+<!--                        </dl>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </li>-->
+
+<!--            <li>-->
+<!--                <div class="thRelative lineSearchbg">-->
+<!--                    <em class="thLeft ico ico_serGray"></em>-->
+<!--                    <input class="thLeft" name="textfield2" type="text" id="arriveSearchText" value="请输入目的地、主题或关键词"/>-->
+<!--                    <a class="ico btn_close thLeft" item="close" style="margin:8px 8px 0 0;" id="btn_delete">删除</a>-->
+<!--                    <a class="ico btn_search" item="commit" href="javascript:void(0)">搜&nbsp;&nbsp;索</a>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
     <article class="list information">
         <div class="infos">
             <ul class="infos_left">
@@ -64,11 +304,11 @@
                                 + '<li><mark>' + '已售' + '</mark>' + spotlist[i].soldNumber + '人已出游' + '</li>'
                                 + '</ol>'
                                 + '<div class="buy">' + '<div class="price">' + '￥' + '<strong>' + spotlist[i].groupPrice + '</strong>' + '</div>'
-                                + '<div class="reserve">' + '<a href="' + spotlist[i].groupUrl + '">' + '立即抢购' + '</a>' + '</div>'
+                                + '<div class="reserve">' + '<a href="' + spotlist[i].groupUrl + '" target="_blank">' + '立即抢购' + '</a>' + '</div>'
                                 + '</div>'
                                 + '<div class="disc">' + '<span>' + spotlist[i].groupScore + '分' + '</span></div>'
-                                + '<div class="footer">' + '本跟团游由' + spotlist[i].supply + '赞助提供，更新于' + '<time>' + spotlist[i].time
-                                + '</time></div>'
+                                + '<div class="footer">' + '本跟团游由' + spotlist[i].supply + '赞助提供'
+                                + '</div>'
                                 + '</figcaption>'
                                 + '</figure>'
                         }
@@ -76,11 +316,17 @@
                     }
                 });
             }
+
             window.onload = loaddata;
 
             $(".searchBtn").click(function () {
-                tosubmit(1,0);
-                toPage();
+                var index = layer.msg('查询中，请稍候', {icon: 16, time: false, shade: 0.8});
+                setTimeout(function () {
+                    tosubmit(1, 0);
+                    toPage();
+                    layer.close(index);
+                }, 4000);
+
             });
 
             var pageIndex = 1;
@@ -88,14 +334,14 @@
             var currentPageIndex = 1;
             var recordCount = 0;
 
-            function tosubmit(cur,flag){
+            function tosubmit(cur, flag) {
                 var textstr = document.getElementById("searchtext").value;
                 // var typestr = document.getElementById("searchtype").value;
                 if (textstr == "" || textstr == null) {
                     return;
                 }
                 var searchList = new Array();
-                searchList.push({text: textstr,flag: flag, yehao: cur});
+                searchList.push({text: textstr, flag: flag, yehao: cur});
                 $.ajax({
                     //访问后台的路径
                     url: "/onclick_searchgroup",
@@ -115,7 +361,7 @@
                 });
             }
 
-            function getListInfo(data){
+            function getListInfo(data) {
                 var jsonData = JSON.stringify(data);
                 var spotlist = {};
                 jQuery.each(JSON.parse(jsonData), function (i, item) {
@@ -131,7 +377,7 @@
                         + '<li><mark>' + '已售' + '</mark>' + spotlist[i].soldNumber + '人已买' + '</li>'
                         + '</ol>'
                         + '<div class="buy">' + '<div class="price">' + '￥' + '<strong>' + spotlist[i].groupPrice + '</strong>' + '</div>'
-                        + '<div class="reserve">' + '<a href="' + spotlist[i].groupUrl + '">' + '立即抢购' + '</a>' + '</div>'
+                        + '<div class="reserve">' + '<a href="' + spotlist[i].groupUrl + '" target="_blank">' + '立即抢购' + '</a>' + '</div>'
                         + '</div>'
                         + '<div class="disc">' + '<span>' + spotlist[i].groupScore + '分' + '</span></div>'
                         + '<div class="footer">' + '本跟团游由' + spotlist[i].supply + '赞助提供，更新于' + '<time>' + spotlist[i].time
@@ -143,23 +389,22 @@
             }
 
             function toPage() {
-                layui.use(['laypage', 'layer'], function(){
+                layui.use(['laypage', 'layer'], function () {
                     var laypage = layui.laypage
-                        ,layer = layui.layer;
+                        , layer = layui.layer;
                     //总页数大于页码总数
                     laypage.render({
                         elem: 'page'
-                        ,layout: ['count', 'prev', 'page', 'next' ]
-                        ,count: recordCount //数据总数
-                        ,jump: function(obj,first){
+                        , layout: ['count', 'prev', 'page', 'next']
+                        , count: recordCount //数据总数
+                        , jump: function (obj, first) {
                             console.log(obj);
                             pageIndex = obj.curr;
-                            if(!first){ //一定要加此判断，否则初始时会无限刷新
-                                if(document.getElementById("pricefirst").className == 'selected'){
-                                    tosubmit(obj.curr,1);//一定要把翻页的ajax请求放到这里，不然会请求两次。
-                                }
-                                else{
-                                    tosubmit(obj.curr,0);
+                            if (!first) { //一定要加此判断，否则初始时会无限刷新
+                                if (document.getElementById("pricefirst").className == 'selected') {
+                                    tosubmit(obj.curr, 1);//一定要把翻页的ajax请求放到这里，不然会请求两次。
+                                } else {
+                                    tosubmit(obj.curr, 0);
                                 }
                             }
                         }
@@ -171,7 +416,7 @@
                 $(".price").click(function () {
                     $(this).removeClass("price");
                     $(this).addClass("selected");
-                    tosubmit(1,1);
+                    tosubmit(1, 1);
                     toPage();
                 });
 
@@ -179,224 +424,7 @@
         </script>
         <div class="spotShow"></div>
         <div id="page"></div>
-        <!--<figure class="tour">-->
-        <!--<img src="../../static/io/img/tour1.jpg" alt="">-->
-        <!--<figcation class="description">-->
-        <!--<h3>曼谷-芭提雅6日游</h3>-->
-        <!--<p>包团特惠，超丰富景点，升级1 晚国五，无自费，赠送600元成人券...</p>-->
-        <!--<ol>-->
-        <!--<li><mark>交通</mark>：春秋航空,杭州出发,无需转机</li>-->
-        <!--<li><mark>团期</mark>：11/01、11/03、11/08...</li>-->
-        <!--</ol>-->
-        <!--<div class="buy">-->
-        <!--<div class="price">￥<strong>2864</strong> <s>¥3980</s></div>-->
-        <!--<div class="reserve"><a href="">立即抢购</a></div>-->
-        <!--</div>-->
-        <!--<div class="type">国内长线</div>-->
-        <!--<div class="disc"><span>4.7折</span></div>-->
-        <!--<div class="footer">本团游由雪花旅行社赞助提供，截止于<time>2015-10-10</time></div>-->
-        <!--</figcation>-->
-        <!--</figure>-->
-        <!--<figure class="tour">-->
-        <!--<img src="../../static/io/img/tour2.jpg" alt="马尔代夫6日自助游">-->
-        <!--<figcation class="description">-->
-        <!--<h3>马尔代夫6日自助游</h3>-->
-        <!--<p>双鱼岛Olhuveli4晚，上海出发，机+酒 包含:早晚餐+快艇 </p>-->
-        <!--<ol>-->
-        <!--<li>-->
-        <!--<mark>交通</mark>春秋航空,杭州出发,无需转机</li>-->
-        <!--<li>-->
-        <!--<mark>团期</mark>11/01、11/03、11/08...</li>-->
-        <!--</ol>-->
-        <!--<div class="buy">-->
-        <!--<div class="price">¥<strong>8039</strong>  <s>¥9980</s>-->
-        <!--</div>-->
-        <!--<div class="reserve"><a href="###">立即抢购</a>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="type">出境长线</div>-->
-        <!--<div class="disc"><span>7.7折</span>-->
-        <!--</div>-->
-        <!--<div class="footer">本团游由雪花旅行社赞助提供，截止于-->
-        <!--<time>2015-10-10</time>-->
-        <!--</div>-->
-        <!--</figcation>-->
-        <!--</figure>-->
-        <!--<figure class="tour">-->
-        <!--<img src="../../static/io/img/tour3.jpg" alt="海南双飞5日游">-->
-        <!--<figcation class="description">-->
-        <!--<h3>海南双飞5日游</h3>-->
-        <!--<p>含盐城接送，全程挂牌四星酒店，一价全含，零自费“自费项目”免费送 </p>-->
-        <!--<ol>-->
-        <!--<li>-->
-        <!--<mark>交通</mark>春秋航空,杭州出发,无需转机</li>-->
-        <!--<li>-->
-        <!--<mark>团期</mark>11/01、11/03、11/08...</li>-->
-        <!--</ol>-->
-        <!--<div class="buy">-->
-        <!--<div class="price">¥<strong>2709</strong>  <s>¥3280</s>-->
-        <!--</div>-->
-        <!--<div class="reserve"><a href="###">立即抢购</a>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="type">自助旅游</div>-->
-        <!--<div class="disc"><span>6.5折</span>-->
-        <!--</div>-->
-        <!--<div class="footer">本团游由雪花旅行社赞助提供，截止于-->
-        <!--<time>2015-10-10</time>-->
-        <!--</div>-->
-        <!--</figcation>-->
-        <!--</figure>-->
-        <!--<figure class="tour">-->
-        <!--<img src="../../static/io/img/tour4.jpg" alt="富山-大阪-东京8日游">-->
-        <!--<figcation class="description">-->
-        <!--<h3>富山-大阪-东京8日游</h3>-->
-        <!--<p>暑期亲子，2天自由，无导游安排自费项目，全程不强迫购物 </p>-->
-        <!--<ol>-->
-        <!--<li>-->
-        <!--<mark>交通</mark>春秋航空,杭州出发,无需转机</li>-->
-        <!--<li>-->
-        <!--<mark>团期</mark>11/01、11/03、11/08...</li>-->
-        <!--</ol>-->
-        <!--<div class="buy">-->
-        <!--<div class="price">¥<strong>9499</strong>  <s>¥9999</s>-->
-        <!--</div>-->
-        <!--<div class="reserve"><a href="###">立即抢购</a>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="type">自助旅游</div>-->
-        <!--<div class="disc"><span>8.8折</span>-->
-        <!--</div>-->
-        <!--<div class="footer">本团游由雪花旅行社赞助提供，截止于-->
-        <!--<time>2015-10-10</time>-->
-        <!--</div>-->
-        <!--</figcation>-->
-        <!--</figure>-->
-        <!--<figure class="tour">-->
-        <!--<img src="../../static/io/img/tour5.jpg" alt="法瑞意德12日游">-->
-        <!--<figcation class="description">-->
-        <!--<h3>法瑞意德12日游</h3>-->
-        <!--<p>4至5星，金色列车，少女峰，部分THE MALL </p>-->
-        <!--<ol>-->
-        <!--<li>-->
-        <!--<mark>交通</mark>春秋航空,杭州出发,无需转机</li>-->
-        <!--<li>-->
-        <!--<mark>团期</mark>11/01、11/03、11/08...</li>-->
-        <!--</ol>-->
-        <!--<div class="buy">-->
-        <!--<div class="price">¥<strong>9199</strong>  <s>¥9999</s>-->
-        <!--</div>-->
-        <!--<div class="reserve"><a href="###">立即抢购</a>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="type">国内短线</div>-->
-        <!--<div class="disc"><span>9.2折</span>-->
-        <!--</div>-->
-        <!--<div class="footer">本团游由雪花旅行社赞助提供，截止于-->
-        <!--<time>2015-10-10</time>-->
-        <!--</div>-->
-        <!--</figcation>-->
-        <!--</figure>-->
-        <!--<figure class="tour">-->
-        <!--<img src="../../static/io/img/tour6.jpg" alt="巴厘岛6日半自助游">-->
-        <!--<figcation class="description">-->
-        <!--<h3>巴厘岛6日半自助游</h3>-->
-        <!--<p>蓝梦出海，独栋别墅，悦榕庄下午茶，纯玩 </p>-->
-        <!--<ol>-->
-        <!--<li>-->
-        <!--<mark>交通</mark>春秋航空,杭州出发,无需转机</li>-->
-        <!--<li>-->
-        <!--<mark>团期</mark>11/01、11/03、11/08...</li>-->
-        <!--</ol>-->
-        <!--<div class="buy">-->
-        <!--<div class="price">¥<strong>6488</strong>  <s>¥8460</s>-->
-        <!--</div>-->
-        <!--<div class="reserve"><a href="###">立即抢购</a>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="type">国内短线</div>-->
-        <!--<div class="disc"><span>7.6折</span>-->
-        <!--</div>-->
-        <!--<div class="footer">本团游由雪花旅行社赞助提供，截止于-->
-        <!--<time>2015-10-10</time>-->
-        <!--</div>-->
-        <!--</figcation>-->
-        <!--</figure>-->
-        <!--<figure class="tour">-->
-        <!--<img src="../../static/io/img/tour7.jpg" alt="塞舌尔迪拜9日自助游">-->
-        <!--<figcation class="description">-->
-        <!--<h3>塞舌尔迪拜9日自助游</h3>-->
-        <!--<p>一游两国，4晚塞舌尔，2晚迪拜，香港EK往返 </p>-->
-        <!--<ol>-->
-        <!--<li>-->
-        <!--<mark>交通</mark>春秋航空,杭州出发,无需转机</li>-->
-        <!--<li>-->
-        <!--<mark>团期</mark>11/01、11/03、11/08...</li>-->
-        <!--</ol>-->
-        <!--<div class="buy">-->
-        <!--<div class="price">¥<strong>9669</strong>  <s>¥9999</s>-->
-        <!--</div>-->
-        <!--<div class="reserve"><a href="###">立即抢购</a>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="type">游轮观光</div>-->
-        <!--<div class="disc"><span>9.6折</span>-->
-        <!--</div>-->
-        <!--<div class="footer">本团游由雪花旅行社赞助提供，截止于-->
-        <!--<time>2015-10-10</time>-->
-        <!--</div>-->
-        <!--</figcation>-->
-        <!--</figure>-->
-        <!--<figure class="tour">-->
-        <!--<img src="../../static/io/img/tour8.jpg" alt="花样姐姐土耳其9日游">-->
-        <!--<figcation class="description">-->
-        <!--<h3>花样姐姐土耳其9日游</h3>-->
-        <!--<p>最高立减3000！中餐六菜一汤+土耳其当地美食满足您挑剔味蕾 </p>-->
-        <!--<ol>-->
-        <!--<li>-->
-        <!--<mark>交通</mark>春秋航空,杭州出发,无需转机</li>-->
-        <!--<li>-->
-        <!--<mark>团期</mark>11/01、11/03、11/08...</li>-->
-        <!--</ol>-->
-        <!--<div class="buy">-->
-        <!--<div class="price">¥<strong>9999</strong>  <s>¥9999</s>-->
-        <!--</div>-->
-        <!--<div class="reserve"><a href="###">立即抢购</a>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="type">出境长线</div>-->
-        <!--<div class="disc"><span>10折</span>-->
-        <!--</div>-->
-        <!--<div class="footer">本团游由雪花旅行社赞助提供，截止于-->
-        <!--<time>2015-10-10</time>-->
-        <!--</div>-->
-        <!--</figcation>-->
-        <!--</figure>-->
-        <!--<figure class="tour">-->
-        <!--<img src="../../static/io/img/tour9.jpg" alt="大阪-京都-箱根双飞6日游">-->
-        <!--<figcation class="description">-->
-        <!--<h3>大阪-京都-箱根双飞6日游</h3>-->
-        <!--<p>盐城直飞，不走回头路，境外无自费，超值之旅 </p>-->
-        <!--<ol>-->
-        <!--<li>-->
-        <!--<mark>交通</mark>春秋航空,杭州出发,无需转机</li>-->
-        <!--<li>-->
-        <!--<mark>团期</mark>11/01、11/03、11/08...</li>-->
-        <!--</ol>-->
-        <!--<div class="buy">-->
-        <!--<div class="price">¥<strong>5284</strong>  <s>¥8437</s>-->
-        <!--</div>-->
-        <!--<div class="reserve"><a href="###">立即抢购</a>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="type">国内短线</div>-->
-        <!--<div class="disc"><span>6.8折</span>-->
-        <!--</div>-->
-        <!--<div class="footer">本团游由雪花旅行社赞助提供，截止于-->
-        <!--<time>2015-10-10</time>-->
-        <!--</div>-->
-        <!--</figcation>-->
-        <!--</figure>-->
+
         <div class="more" onclick="loaddata()">换一换</div>
     </article>
     <aside class="sidebar">
@@ -446,6 +474,7 @@
                 <figure>
                     <img src="../../static/io/img/hot4.jpg" alt="富山大阪东京8日游">
                     <figcaption>富山大阪东京8日游</figcaption>
+                </figure>
             </div>
         </div>
         <div class="treasure sidebox">
@@ -462,40 +491,19 @@
 
 <footer id="footer">
     <div class="top">
-        <div class="block left">
+        <div class="block middle">
             <h3>合作伙伴</h3>
             <hr>
             <ul>
-                <li>途牛旅游网</li>
-                <li>驴妈妈旅游网</li>
-                <li>携程旅游</li>
-                <li>中国去青年旅行社</li>
+                <li><a target="_blank" href="https://www.ly.com/">同程旅游网</a></li>
+                <li><a target="_blank" href="https://www.elong.com/">艺龙旅游网</a></li>
+                <li><a target="_blank" href="https://www.ctrip.com/">携程旅游</a></li>
             </ul>
 
-        </div>
-        <div class="block middle">
-            <h3>旅游FAQ</h3>
-            <hr>
-            <ul>
-                <li>旅游合同签订方式？</li>
-                <li>儿童价是基于什么制定的？</li>
-                <li>旅游的线路品质怎么界定的？</li>
-                <li>单房差是什么？</li>
-                <li>旅游保险有那些种类？</li>
-            </ul>
-        </div>
-        <div class="block right">
-            <h3>联系方式</h3>
-            <hr>
-            <ul>
-                <li>微博：weibo.com/xuehua</li>
-                <li>邮件：xuehua@xuehua.com</li>
-                <li>地址：江苏盐城无名路123 号</li>
-            </ul>
-        </div>
 
+        </div>
+        <div class="bottom">Copyright © 1616301</div>
     </div>
-    <div class="bottom">Copyright © XUEHUA 雪花旅行社| 苏ICP 备120110119 号| 旅行社经营许可证：L-YC-BK12345</div>
 </footer>
 </body>
 </html>

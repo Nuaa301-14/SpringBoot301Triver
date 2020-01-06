@@ -1,21 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
 	<meta charset="UTF-8">
 	<title>首页--旅游网站</title>
 	<link rel="stylesheet" href="../../static/io/css/iostyle.css">
 	<link rel="stylesheet" href="../../static/io/css/basic.css">
+	<link rel="icon" href="../../static/favicon.ico">
+	<link rel="stylesheet" href="../../static/layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
 </head>
 <body>
 <header>
 	<nav id="nav">
 	<div id="logo"><img src="../../static/io/img/logo.png" alt=""></div>
 	<ul>
-		<li class="active"><a href="index.html">首页</a></li>
+		<li><a href="scenery.html">首页</a></li>
 		<li><a href="informations.html">旅游资讯</a></li>
 		<li><a href="ticket.html">酒店订购</a></li>
-		<li><a href="scenery.html">风景欣赏</a></li>
-		<li><a href="about.html">公司简介</a></li>
+		<li class="active"><a href="index.html">景点资讯</a></li>
+        <li class="layui-nav-item">
+            <a href="/" th:if="${session.loginUser}==null">
+                <cite th:text="请登录"></cite>
+                <!--                    ${session.loginUser.userName}-->
+            </a>
+            <a href="/user/userInfo" th:if="${session.loginUser}!=null">
+                <cite th:if="${session.loginUser.userName}!=null" th:text="你好+' '+${session.loginUser.userName}"></cite>
+                <cite th:if="${session.loginUser.userName}==null" th:text="你好+' '+${session.loginUser.name}"></cite>
+                <!--                    ${session.loginUser.userName}-->
+            </a>
+        </li>
+
+<!--		<a href="javascript:;" th:if="${session.loginUser.userName}!=null">-->
+<!--			<cite th:text="${session.loginUser.userName}"></cite>-->
+<!--		</a>-->
+<!--		<dl class="layui-nav-child">-->
+<!--			<dd><a href="javascript:;" data-url="/user/userInfo"><i class="iconfont icon-zhanghu" data-icon="icon-zhanghu"></i><cite>个人资料</cite></a></dd>-->
+<!--			<dd><a href="javascript:;" data-url="/user/changePwd"><i class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>修改密码</cite></a></dd>-->
+<!--			<dd><a href="javascript:;" class="changeSkin"><i class="iconfont icon-huanfu"></i><cite>更换皮肤</cite></a></dd>-->
+<!--			<dd><a href="javascript:;" class="signOut"><i class="iconfont icon-loginout"></i><cite>退出</cite></a></dd>-->
+<!--		</dl>-->
 	</ul>
 	</nav>
 </header>
@@ -53,7 +76,7 @@
                     dataHtml='';
                     for (var i=0;i<9;i++){
                         dataHtml+='<figure>'
-                            +'<a href="'+spotlist[i].spotUrl+'"><img src="../../static/io/img/tour'+(i+1)+'.jpg" alt=""></a>'
+                            +'<a href="'+spotlist[i].spotUrl+'" target="_blank"><img src="../../static/io/img/tour'+(i+1)+'.jpg" alt=""></a>'
                             + '<figcaption>'
                             + '<h3 class="content" > &lt;'+ spotlist[i].spotName +'&gt;</h3>'
                                 + spotlist[i].introduce
@@ -61,7 +84,7 @@
                                 +'<em class="sat">'+ '满意度'+spotlist[i].spotScore +'</em>'
                                 +'<span class="price">'+ '￥'+spotlist[i].spotPrice +'</span>'
                                 +'</div>'
-                                +'<div>'+spotlist[i].spotLocation +'———'+spotlist[i].recommend+'人推荐'+'</div>'
+                                +'<div>'+spotlist[i].spotLocation +'—'+spotlist[i].recommend+'人推荐'+'</div>'
                             +'</figcaption>'
                             +'</figure>'
                     }
@@ -73,8 +96,12 @@
 
 
         $(".searchBtn").click(function () {
-            tosubmit(1);
-            toPage();
+			var index = layer.msg('查询中，请稍候', {icon: 16, time: false, shade: 0.8});
+			tosubmit(1);
+			setTimeout(function () {
+				toPage();
+				layer.close(index);
+			},2000);
         });
 
         var pageIndex = 1;
@@ -119,7 +146,7 @@
             dataHtml = '';
             for (var i = 0; i < 9; i++) {
                 dataHtml += '<figure>'
-                    + '<a href="' + spotlist[i].spotUrl + '"><img src="../../static/io/img/tour' + (i + 1) + '.jpg" alt=""></a>'
+                    + '<a href="' + spotlist[i].spotUrl + '" target="_blank"><img src="../../static/io/img/tour' + (i + 1) + '.jpg" alt=""></a>'
                     + '<figcaption>'
                     + '<h3 class="content" > &lt;' + spotlist[i].spotName + '&gt;</h3>'
                     + spotlist[i].introduce
@@ -220,152 +247,22 @@
 	<div class = "spotShow"></div>
 	<div id="page"></div>
 
-	<!--<figure>-->
-	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
-	<!--<figcaption>-->
-	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
-	<!--<div class="info">-->
-	    <!--<em class="sat">满意度 77%</em>-->
-		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
-	<!--</div>-->
-	<!--<div class="type">国内长线</div>-->
-
-	<!--</figcaption>-->
-	<!--</figure>-->
-	<!--<figure>-->
-	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
-	<!--<figcaption>-->
-	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
-	<!--<div class="info">-->
-	    <!--<em class="sat">满意度 77%</em>-->
-		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
-	<!--</div>-->
-	<!--<div class="type">国内长线</div>-->
-
-	<!--</figcaption>-->
-	<!--</figure>-->
-	<!--<figure>-->
-	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
-	<!--<figcaption>-->
-	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
-	<!--<div class="info">-->
-	    <!--<em class="sat">满意度 77%</em>-->
-		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
-	<!--</div>-->
-	<!--<div class="type">国内长线</div>-->
-
-	<!--</figcaption>-->
-	<!--</figure>-->
-	<!--<figure>-->
-	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
-	<!--<figcaption>-->
-	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
-	<!--<div class="info">-->
-	    <!--<em class="sat">满意度 77%</em>-->
-		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
-	<!--</div>-->
-	<!--<div class="type">国内长线</div>-->
-
-	<!--</figcaption>-->
-	<!--</figure>-->
-	<!--<figure>-->
-	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
-	<!--<figcaption>-->
-	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
-	<!--<div class="info">-->
-	    <!--<em class="sat">满意度 77%</em>-->
-		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
-	<!--</div>-->
-	<!--<div class="type">国内长线</div>-->
-
-	<!--</figcaption>-->
-	<!--</figure>-->
-	<!--<figure>-->
-	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
-	<!--<figcaption>-->
-	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
-	<!--<div class="info">-->
-	    <!--<em class="sat">满意度 77%</em>-->
-		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
-	<!--</div>-->
-	<!--<div class="type">国内长线</div>-->
-
-	<!--</figcaption>-->
-	<!--</figure>-->
-	<!--<figure>-->
-	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
-	<!--<figcaption>-->
-	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
-	<!--<div class="info">-->
-	    <!--<em class="sat">满意度 77%</em>-->
-		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
-	<!--</div>-->
-	<!--<div class="type">国内长线</div>-->
-
-	<!--</figcaption>-->
-	<!--</figure>-->
-	<!--<figure>-->
-	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
-	<!--<figcaption>-->
-	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
-	<!--<div class="info">-->
-	    <!--<em class="sat">满意度 77%</em>-->
-		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
-	<!--</div>-->
-	<!--<div class="type">国内长线</div>-->
-
-	<!--</figcaption>-->
-	<!--</figure>-->
-	<!--<figure>-->
-	<!--<img src="../../static/io/img/tour1.jpg" alt="">-->
-	<!--<figcaption>-->
-	<!--<strong class="title"> &lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券-->
-	<!--<div class="info">-->
-	    <!--<em class="sat">满意度 77%</em>-->
-		<!--<span class="price">￥ <strong>2864</strong> 起</span>-->
-	<!--</div>-->
-	<!--<div class="type">国内长线</div>-->
-
-	<!--</figcaption>-->
-	<!--</figure>-->
 	</div>
-	<footer id="footer">
-	<div class="top">
-	<div class="block left">
-	<h3>合作伙伴</h3>
-	<hr>
-	<ul>
-		<li>途牛旅游网</li>
-		<li>驴妈妈旅游网</li>
-		<li>携程旅游</li>
-		<li>中国去青年旅行社</li>
-	</ul>
+<footer id="footer">
+    <div class="top">
+        <div class="block middle">
+            <h3>合作伙伴</h3>
+            <hr>
+            <ul>
+                <li><a target="_blank" href="https://www.ly.com/">同程旅游网</a></li>
+                <li><a target="_blank" href="https://www.elong.com/">艺龙旅游网</a></li>
+                <li><a target="_blank" href="https://www.ctrip.com/">携程旅游</a></li>
+            </ul>
 
-	</div>
-	<div class="block middle">
-	<h3>旅游FAQ</h3>
-	<hr>
-	<ul>
-		<li>旅游合同签订方式？</li>
-		<li>儿童价是基于什么制定的？</li>
-		<li>旅游的线路品质怎么界定的？</li>
-		<li>单房差是什么？</li>
-		<li>旅游保险有那些种类？</li>
-	</ul>
-	</div>
-	<div class="block right">
-	<h3>联系方式</h3>
-	<hr>
-	<ul>
-		<li>微博：weibo.com/xuehua</li>
-		<li>邮件：xuehua@xuehua.com</li>
-		<li>地址：江苏盐城无名路123 号</li>
 
-	</ul>
-	</div>
-	
-	</div>
-	<div class="bottom">Copyright © XUEHUA 雪花旅行社| 苏ICP 备120110119 号| 旅行社经营许可证：L-YC-BK12345</div>
-	</footer>
+        </div>
+        <div class="bottom">Copyright © 1616301</div>
+    </div>
+</footer>
 </body>
 </html>

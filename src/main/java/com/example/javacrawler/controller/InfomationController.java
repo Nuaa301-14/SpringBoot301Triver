@@ -70,7 +70,7 @@ public class InfomationController {
         map.put("size", "3");
 
 //        if (type.equals("spot")) {
-        PageInfo<GroupTravel> groupTravelPageInfo = grouptravelservice.selectGroupList(map);
+        PageInfo<GroupTravel> groupTravelPageInfo = grouptravelservice.searchGroup(map);
         if(flag == 1){
             Collections.sort(groupTravelPageInfo.getList(),new Comparator<GroupTravel>(){
                 @Override

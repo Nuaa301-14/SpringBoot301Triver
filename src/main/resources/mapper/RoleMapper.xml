@@ -13,4 +13,14 @@
           `user_role` ur
         INNER JOIN `role` r ON ur.role_id = r.role_id AND ur.user_id = #{userId}
   </select>
+
+    <insert id="insertRole" parameterType="com.example.javacrawler.entity.UserRole">
+        insert into user_role
+        set
+            user_id=#{userId},
+            role_id=#{roleId},
+            created=#{created,jdbcType=TIMESTAMP},
+            updated=#{updated,jdbcType=TIMESTAMP}
+    </insert>
+
 </mapper>

@@ -14,16 +14,15 @@ layui.config({
         if (currData.length != 0) {
             for (var i = 0; i < currData.length; i++) {
                 dataHtml += '<tr>'
-                    + '<td>' + currData[i].hotelName + '</td>'
-                    + '<td>' + currData[i].hotelLocation + '</td>'
-                    + '<td>' + currData[i].price + '</td>'
-                    + '<td>' + currData[i].commentNumber + '</td>'
-                    + '<td>' + currData[i].source + '</td>'
-                    + '<td>' + currData[i].updated + '</td>'
+                    + '<td>' + currData[i].userName + '</td>'
+                    + '<td>' + currData[i].name + '</td>'
+                    + '<td>' + currData[i].email + '</td>'
+                    + '<td>' + currData[i].phoneNumber + '</td>'
+                    + '<td>' + currData[i].codeName + '</td>'
                     + '<td>'
-                    + '<a class="layui-btn layui-btn-mini hotel_edit" data-id="' + currData[i].hotelId + '"><i class="iconfont icon-edit"></i> 详情</a>'
-                    + '<a class="layui-btn layui-btn-normal layui-btn-mini hotel_detail" data-id="' + currData[i].hotelId + '"><i class="layui-icon">&#xe64c;</i> 目标页面</a>'
-                    + '<a class="layui-btn layui-btn-danger layui-btn-mini hotel_del" data-id="' + currData[i].hotelId + '"><i class="layui-icon">&#xe640;</i> 删除</a>'
+                    // + '<a class="layui-btn layui-btn-mini user_edit" data-id="' + currData[i].id + '"><i class="iconfont icon-edit"></i> 详情</a>'
+                    + '<a class="layui-btn layui-btn-normal layui-btn-mini user_change" data-id="' + currData[i].id + '"><i class="layui-icon">&#xe64c;</i> 修改权限</a>'
+                    + '<a class="layui-btn layui-btn-danger layui-btn-mini user_del" data-id="' + currData[i].id + '"><i class="layui-icon">&#xe640;</i> 删除</a>'
                     + '</td>'
                     + '</tr>';
             }
@@ -74,48 +73,36 @@ layui.config({
             content: url,
         });
     }
-    //操作
-    $("body").on("click", ".hotel_edit", function () {  //编辑
-        var _this = $(this);
-        for (var i = 0; i < usersData.length; i++) {
-            if (usersData[i].hotelId == _this.attr("data-id")) {
-                console.log("i=" + i);
-                console.log(usersData[i]);
-                var id=usersData[i].hotelId;
-                x_admin_show1("酒店详细","/hotel/admin/detail?hotelId="+id);
-                break;
-            }
-        }
-    })
 
-    $("body").on("click", ".hotel_del", function () {  //删除
+
+    $("body").on("click", ".user_del", function () {  //删除
         var _this = $(this);
         layer.confirm('确定删除此用户？', {icon: 3, title: '提示信息'}, function (index) {
             var index = layer.msg('删除中，请稍候', {icon: 16, time: false, shade: 0.8});
             _this.parents("tr").remove();
             for (var i = 0; i < usersData.length; i++) {
-                if (usersData[i].hotelId == _this.attr("data-id")) {
-                    var hotelId=usersData[i].hotelId;
+                if (usersData[i].id == _this.attr("data-id")) {
+
                     setTimeout(function () {
-                        $.ajax({
-                            url: "/hotel/admin/delete",
-                            data: "hotelId=" + usersData[i].hotelId,
-                            type: "post",
-                            dataType: "json",
-                            success: function (data) {
-                                console.log(data);
-                                var reply=data.reply;
-                                console.log(reply);
-                                if (reply[0] === "Success") {
-                                    console.log("jjjeee");
-                                    usersData.splice(i, 1);
-                                    $(".users_content").html(renderDate(usersData));
-                                    layer.msg("删除成功");
-                                } else if (reply[0] === "Fail") {
-                                    layer.msg("出现了问题！");
-                                }
-                            }
-                        })
+                        // $.ajax({
+                        //     url: "/hotel/admin/delete",
+                        //     data: "hotelId=" + usersData[i].hotelId,
+                        //     type: "post",
+                        //     dataType: "json",
+                        //     success: function (data) {
+                        //         console.log(data);
+                        //         var reply=data.reply;
+                        //         console.log(reply);
+                        //         if (reply[0] === "Success") {
+                        //             console.log("jjjeee");
+                        //             usersData.splice(i, 1);
+                        //             $(".users_content").html(renderDate(usersData));
+                        //             layer.msg("删除成功");
+                        //         } else if (reply[0] === "Fail") {
+                        //             layer.msg("出现了问题！");
+                        //         }
+                        //     }
+                        // })
                         layer.close(index);
                     }, 2000);
                     break;
@@ -124,14 +111,12 @@ layui.config({
         });
     })
 
-    $("body").on("click", ".hotel_detail", function () { //酒店详情
+    $("body").on("click", ".user_change", function () { //酒店详情
         var _this = $(this);
         for (var i = 0; i < usersData.length; i++) {
-            if (usersData[i].hotelId == _this.attr("data-id")) {
+            if (usersData[i].id == _this.attr("data-id")) {
                 console.log("i=" + i);
                 console.log(usersData[i]);
-                var url = usersData[i].targetUrl;
-                window.open(url);
             }
         }
     })

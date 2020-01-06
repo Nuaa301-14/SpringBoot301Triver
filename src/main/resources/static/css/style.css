@@ -17,7 +17,7 @@ small{ font-size:10px;}
 b, strong{ font-weight:bold;}
 a{ text-decoration: none; }
 a:hover{ text-decoration: underline; }
-.left { float:left; }
+.left { float: left;; }
 .right { float:right; }
 .alignleft { float: left; margin-right: 15px; }
 .alignright { float: right; margin-left: 15px; }

@@ -36,11 +36,12 @@ public class LogininControl {
      * @RequestMapping("/login.html")
      * Model ： 将传入下一个页面
      */
-    @RequestMapping("/io/index.html")
+    @RequestMapping("/io/scenery.html")
     public String loginHtml(Model model) {
 
         model.addAttribute("result", "登陆页面");
-        return "io/index.html";
+//        return "io/index.html";
+        return "io/scenery.html";
     }
 
     @RequestMapping("/onclick_login")
@@ -102,7 +103,7 @@ public class LogininControl {
         map.put("size", "3");
 
 //        if (type.equals("spot")) {
-            PageInfo<Spot> spotPageInfo = spotservice.selectSpotList(map);
+            PageInfo<Spot> spotPageInfo = spotservice.searchSpot(map);
             System.out.println("当前页码：" + spotPageInfo.getPageNum());
             System.out.println("每页记录条数：" + spotPageInfo.getPageSize());
             System.out.println("总记录数：" + spotPageInfo.getTotal());

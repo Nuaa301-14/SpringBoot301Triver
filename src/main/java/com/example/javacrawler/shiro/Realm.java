@@ -37,10 +37,10 @@ public class Realm extends AuthorizingRealm {
         List<Role> roles = roleMapper.findRolesByUserId(user.getId());
         for (Role role : roles) {
             authorizationInfo.addRole(role.getCode());
-            List<Privilege> privileges = roleMapper.findPrivilegesByRoleId(role.getRoleId());
-            for (Privilege privilege : privileges) {
-                authorizationInfo.addStringPermission(privilege.getCode());
-            }
+//            List<Privilege> privileges = roleMapper.findPrivilegesByRoleId(role.getRoleId());
+//            for (Privilege privilege : privileges) {
+//                authorizationInfo.addStringPermission(privilege.getCode());
+//            }
         }
         return authorizationInfo;
     }

@@ -18,4 +18,9 @@ layui.config({
 	// 	window.location.href = "login.html";
 	// 	return false;
 	// })
+
+	$(".register_btn").click(function () {
+		console.log(":hrere");
+		window.location.href="/user/register";
+	});
 })

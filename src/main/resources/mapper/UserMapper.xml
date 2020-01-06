@@ -52,6 +52,6 @@
     </update>
 
     <select id="seleteList" parameterType="java.util.Map" resultMap="user">
-        select * from user;
+        select * from user
     </select>
 </mapper>

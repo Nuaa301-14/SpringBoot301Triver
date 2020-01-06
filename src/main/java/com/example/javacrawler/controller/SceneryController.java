@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class SceneryController {
 
 
-    @RequestMapping("/scenery.html")
+    @RequestMapping("/index.html")
     public String index(){
-        return "io/scenery.html";
+        return "io/index";
     }
 
 

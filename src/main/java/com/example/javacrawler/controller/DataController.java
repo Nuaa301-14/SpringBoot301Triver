@@ -51,20 +51,20 @@ public class DataController {
 
     @RequestMapping("/user")
     @ResponseBody
-    public void userAll(@RequestParam(defaultValue = "1", required = false) int page,
+    public PageInfo<User> userAll(@RequestParam(defaultValue = "1", required = false) int page,
                         @RequestParam(defaultValue = "13", required = false) int pageSize){
         Map map = new HashMap();
         map.put("page", page);
         map.put("pageSize", pageSize);
         List<User> userList= userService.seleteList(map);
-        List<Role> roleList=new ArrayList<>();
 
         for (int i=0;i<userList.size();i++){
             List<Role> rolesByUserId = roleMapper.findRolesByUserId(userList.get(i).getId());
-            roleList.add(rolesByUserId.get(0));
+            userList.get(i).setCode(rolesByUserId.get(0).getCode());
+            userList.get(i).setCodeName(rolesByUserId.get(0).getName());
         }
         PageInfo<User> pageInfo=new PageInfo<>(userList);
-
+        return pageInfo;
     }
 
 

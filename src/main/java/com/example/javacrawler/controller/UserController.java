@@ -2,6 +2,7 @@ package com.example.javacrawler.controller;
 
 import com.example.javacrawler.entity.Role;
 import com.example.javacrawler.entity.User;
+import com.example.javacrawler.entity.UserRole;
 import com.example.javacrawler.mapper.RoleMapper;
 import com.example.javacrawler.pojo.BSResult;
 import com.example.javacrawler.service.UserService;
@@ -83,7 +84,7 @@ public class UserController {
                         /**
                          * 普通用户或vip用户
                          */
-                        return "login";
+                        return "redirect:/io/scenery.html";
                     } else {
                         return "Admin/login";
                     }
@@ -164,8 +165,19 @@ public class UserController {
         if ((Boolean)isExist.getData()){
             User user=new User();
             user.setName(username);
-            user.setPassword(DigestUtils.md5DigestAsHex(password.getBytes()));
+//            user.setPassword(DigestUtils.md5DigestAsHex(password.getBytes()));
+            user.setPassword(password);
+            user.setUpdated(new Date());
+            user.setCreated(new Date());
             userService.insert(user);
+            user=userService.getUserByName(user.getName());
+            UserRole role=new UserRole();
+            role.setUserId(user.getId());
+            role.setRoleId(2);
+            role.setCreated(new Date());
+            role.setUpdated(new Date());
+            roleMapper.insertRole(role);
+
             request.getSession().setAttribute("registerUser",user);
             return "redirect:/registerSuccess";
         }else {
