@@ -200,7 +200,6 @@ public class CrawlSpotXC implements PageProcessor {
 
 
     public static void main(String[] args) {
-        System.setProperty("selenuim_config", "C:\\Users\\Administrator\\IdeaProjects\\javacrawler\\src\\main\\resources\\config.ini");
         Spider.create(new CrawlSpotXC()).addUrl("https://piao.ctrip.com/dest/dc-beijing-1/s-tickets/")
                 .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(2000))
                 .thread(1)

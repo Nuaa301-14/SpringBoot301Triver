@@ -82,7 +82,6 @@ public class CrawlInternationalArea implements PageProcessor {
 
 //    @Scheduled(initialDelay = 1000, fixedDelay = 1000 * 60 * 10)
     public void crawlArea(InternationalAreaPipeline internationalAreaPipeline) {
-        System.setProperty("selenuim_config", "C:\\Users\\Administrator\\IdeaProjects\\javacrawler\\src\\main\\resources\\config.ini");
         Spider.create(new CrawlInternationalArea())
                 .addUrl("https://hotels.ctrip.com/international/landmarks/")
 //                .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(1000))

@@ -152,8 +152,6 @@ public class CrawlScenicHotelXC implements PageProcessor {
     }
 
     public static void main(String[] args) {
-        System.setProperty("selenuim_config", "C:\\Users\\Administrator\\IdeaProjects\\javacrawler\\src\\main\\resources\\config.ini");
-
         Spider.create(new CrawlScenicHotelXC()).addUrl("https://vacations.ctrip.com/list/scenichotel/d-shanghai-2.html?st=%E4%B8%8A%E6%B5%B7&sv=%E4%B8%8A%E6%B5%B7")
                 .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(2000))
                 .thread(1)

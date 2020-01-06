@@ -24,4 +24,6 @@ public interface HotelMapper {
     List<Hotel> searchHotel(@Param("param") Map map, String size);
 
     int delete(@Param("param") Map map);
+
+    List<Hotel> detailSearch(@Param("param") Map map, String price_sort);
 }

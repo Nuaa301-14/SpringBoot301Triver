@@ -123,8 +123,7 @@ public class HotelProcessor implements PageProcessor {
 
 //    @Scheduled(initialDelay = 1000, fixedDelay = 10000)
     public void CrawlHotel() {
-        System.setProperty("selenuim_config", "C:\\Users\\Administrator\\IdeaProjects\\javacrawler\\src\\main\\resources\\config.ini");
-        Spider.create(new HotelProcessor())
+       Spider.create(new HotelProcessor())
                 .addUrl(url)
                 .setDownloader(new SeleniumDownloader("C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe").setSleepTime(1000))
                 .thread(3)

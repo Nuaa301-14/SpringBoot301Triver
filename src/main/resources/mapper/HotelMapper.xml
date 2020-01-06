@@ -128,4 +128,51 @@
         </where>
     </delete>
 
+
+    <select id="detailSearch" parameterType="java.util.Map" resultMap="hotel">
+        select * from hotel
+        <where>
+            and (
+            <if test="param.destination!=null and param.destination!=''">
+                area like CONCAT(CONCAT('%', #{param.destination, jdbcType=VARCHAR}),'%')
+            </if>
+            <if test="param.address!=null and param.address!=''">
+                or hotelLocation like CONCAT(CONCAT('%', #{param.address, jdbcType=VARCHAR}),'%')
+            </if>
+            <if test="param.name!=null and param.name!=''">
+                or hotelName like CONCAT(CONCAT('%', #{param.name, jdbcType=VARCHAR}),'%')
+            </if>
+            )
+            <if test="param.sources!=null">
+                and source in 
+                <foreach collection="param.sources" item="item"  separator="," open="(" close=")">
+                    #{item}
+                </foreach>
+            </if>
+
+            <if test="param.beginPrice!='' and param.beginPrice!=null">
+                and price>#{param.beginPrice}
+            </if>
+            <if test="param.maxPrice!='' and param.maxPrice!=null">
+                and #{param.maxPrice}>=price
+            </if>
+
+<!--            <if test="param.degrees!=null and param.degrees!=''">-->
+<!--                <if test="param.degrees=='高档'">-->
+<!--                    and-->
+<!--                </if>-->
+<!--                <if test="param.degrees=='舒适'">-->
+
+<!--                </if>-->
+<!--            </if>-->
+        </where>
+
+        <if test="param2=='1'">
+            order by price desc
+        </if>
+        <if test="param2=='2'">
+            order by price
+        </if>
+    </select>
+
 </mapper>

@@ -23,4 +23,6 @@ public interface HotelService {
     PageInfo<Hotel> searchHotel(Map map);
 
     int delete(Map map);
+
+    PageInfo<Hotel> detailSearch(Map map);
 }

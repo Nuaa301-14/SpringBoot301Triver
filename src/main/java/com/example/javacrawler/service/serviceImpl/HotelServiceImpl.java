@@ -67,5 +67,12 @@ public class HotelServiceImpl implements HotelService {
         return hotelMapper.delete(map);
     }
 
+    @Override
+    public PageInfo<Hotel> detailSearch(Map map) {
+        PageHelper.startPage((int)map.get("page"),(int)map.get("pageSize"));
+        List<Hotel> hotelList=hotelMapper.detailSearch(map,(String)map.get("price_sort"));
+        return new PageInfo<>(hotelList);
+    }
+
 
 }
