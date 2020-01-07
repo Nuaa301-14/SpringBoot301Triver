@@ -27,20 +27,6 @@
 			});
 		});
 	</script>
-	<!--    <script type="text/javascript">-->
-	<!--        $(function () {-->
-	<!--            $("input.mh_date").datejs({-->
-	<!--                Event: "click",//可选-->
-	<!--                Left: 0,//弹出时间停靠的左边位置-->
-	<!--                Top: -16,//弹出时间停靠的顶部边位置-->
-	<!--                fuhao: "-",//日期连接符默认为- -->
-	<!--                isTime: false,//是否开启时间值默认为false-->
-	<!--                beginY: 2010,//年份的开始默认为1949-->
-	<!--                endY: 2015//年份的结束默认为2049-->
-	<!--            });-->
-
-	<!--        });-->
-	<!--    </script>-->
 	<script type="text/javascript">
 		$(document).ready(function (e) {
 			$("#selectList").find(".more").toggle(function () {
@@ -66,9 +52,6 @@
 			);
 		});
 	</script>
-
-
-
 </head>
 <body>
 <header>
@@ -90,16 +73,6 @@
                 <!--                    ${session.loginUser.userName}-->
             </a>
         </li>
-
-<!--		<a href="javascript:;" th:if="${session.loginUser.userName}!=null">-->
-<!--			<cite th:text="${session.loginUser.userName}"></cite>-->
-<!--		</a>-->
-<!--		<dl class="layui-nav-child">-->
-<!--			<dd><a href="javascript:;" data-url="/user/userInfo"><i class="iconfont icon-zhanghu" data-icon="icon-zhanghu"></i><cite>个人资料</cite></a></dd>-->
-<!--			<dd><a href="javascript:;" data-url="/user/changePwd"><i class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>修改密码</cite></a></dd>-->
-<!--			<dd><a href="javascript:;" class="changeSkin"><i class="iconfont icon-huanfu"></i><cite>更换皮肤</cite></a></dd>-->
-<!--			<dd><a href="javascript:;" class="signOut"><i class="iconfont icon-loginout"></i><cite>退出</cite></a></dd>-->
-<!--		</dl>-->
 	</ul>
 	</nav>
 </header>
@@ -110,9 +83,6 @@
 <!--        搜索-->
 <!--	</div>-->
 <!--</div>-->
-
-
-
 <br>
 <div class="w1200">
 	<div class="list-screen">
@@ -120,43 +90,37 @@
             <span>目的地
                 <input id="txtadress" type="text"/>
             </span>
-			<!--            <span>入住-->
-			<!--                <input type="text" class="mh_date" readonly="true"/>-->
-			<!--            </span>-->
-			<!--            <span>退房-->
-			<!--                <input type="text" class="mh_date" readonly="true"/>-->
-			<!--            </span>-->
-			<span>酒店位置
-                <input type="text" class="ju-adress"/>
+			<span>景区位置
+                <input type="text" class="ju-adress" id="location"/>
             </span>
-			<span>酒店名称
-                <input type="text" class="ju-name"/>
+			<span>景区名称
+                <input type="text" class="ju-name" id="spot_Name"/>
             </span>
-			<a href="#" id="submit-btn"/>搜索</a>
+			<a class="layui-btn layui-btn-danger search_btn" style="margin-left: 30px">具体查询</a>
 		</div>
 		<div style="padding:10px 30px 10px 10px;">
 			<div class="screen-term">
 				<div class="selectNumberScreen">
 					<div id="selectList" class="screenBox screenBackground">
 						<dl class="listIndex" attr="价格范围">
-							<dt>酒店价格</dt>
+							<dt>门票价格</dt>
 							<dd>
 								<label><a href="javascript:;" values2="" values1="" attrval="不限">不限</a></label>
 								<label>
 									<input name="radio2" type="radio" value=""/>
-									<a href="javascript:;" values2="99" values1="1" attrval="1-99">100元以下</a></label>
+									<a href="javascript:;" values2="99" values1="1" attrval="1-99">10元以下</a></label>
 								<label>
 									<input name="radio2" type="radio" value=""/>
 									<a href="javascript:;" values2="300" values1="100"
-									   attrval="100-300">100-300元 </a></label>
+									   attrval="100-300">10-50元 </a></label>
 								<label>
 									<input name="radio2" type="radio" value=""/>
 									<a href="javascript:;" values2="600" values1="300"
-									   attrval="300-600">300-600元</a></label>
+									   attrval="300-600">50-100元</a></label>
 								<label>
 									<input name="radio2" type="radio" value=""/>
 									<a href="javascript:;" values2="1500" values1="600"
-									   attrval="5000以上">600-1500元</a></label>
+									   attrval="5000以上">100-200元</a></label>
 								<div class="custom"><span>自定义</span>&nbsp;
 									<input name="" type="text" id="custext1"/>
 									&nbsp;-&nbsp;
@@ -166,36 +130,33 @@
 							</dd>
 						</dl>
 						<dl class=" listIndex" attr="terminal_os_s">
-							<dt>酒店星级</dt>
+							<dt>景区特色</dt>
 							<dd>
 								<label><a href="javascript:;" values2="" values1="" attrval="不限">不限</a> </label>
 								<label>
 									<input name="checkbox2" type="checkbox" value="" autocomplete="off"/>
-									<a href="javascript:;" values2="" values1="" attrval="android"> 五星/豪华</a> </label>
+									<a href="javascript:;" values2="" values1="" attrval="android">风光</a> </label>
 								<label>
 									<input name="checkbox2" type="checkbox" value="" autocomplete="off"/>
-									<a href="javascript:;" values2="" values1="" attrval="symbian">四星/高档</a></label>
+									<a href="javascript:;" values2="" values1="" attrval="symbian">乐园</a></label>
 								<label>
 									<input name="checkbox2" type="checkbox" value="" autocomplete="off"/>
-									<a href="javascript:;" values2="" values1="" attrval="百度易平台">三星/舒适</a></label>
+									<a href="javascript:;" values2="" values1="" attrval="百度易平台">文化</a></label>
 							</dd>
 						</dl>
 						<dl class="listIndex" attr="terminal_brand_s">
-							<dt>主题风格</dt>
+							<dt>来源</dt>
 							<dd data-more=true>
 								<label><a href="javascript:;" values2="" values1="" attrval="不限">不限</a></label>
 								<label>
 									<input name="checkbox2" type="checkbox" value="" autocomplete="off"/>
-									<a href="javascript:;" values2="" values1="" attrval="小米">客栈</a></label>
+									<a href="javascript:;" values2="" values1="" attrval="小米">携程</a></label>
 								<label>
 									<input name="checkbox2" type="checkbox" value="" autocomplete="off"/>
-									<a href="javascript:;" values2="" values1="" attrval="华为">精品酒店</a> </label>
+									<a href="javascript:;" values2="" values1="" attrval="华为">同程</a> </label>
 								<label>
 									<input name="checkbox2" type="checkbox" value="" autocomplete="off"/>
-									<a href="javascript:;" values2="" values1="" attrval="lenovo">情侣酒店</a> </label>
-								<label>
-									<input name="checkbox2" type="checkbox" value="" autocomplete="off"/>
-									<a href="javascript:;" values2="" values1="" attrval="zte中兴">园林庭院</a></label>
+									<a href="javascript:;" values2="" values1="" attrval="lenovo">艺龙</a> </label>
 							</dd>
 						</dl>
 					</div>
@@ -204,7 +165,7 @@
 
 		</div>
 		<script type="text/javascript" src="/static/js/shaixuan.js"></script>
-		<div class="hasBeenSelected clearfix"><span id="time-num"><font>208</font>家酒店</span>
+		<div class="hasBeenSelected clearfix"><span id="time-num"><font>0</font>个景点</span>
 			<div style="float:right;" class="eliminateCriteria">【清空】</div>
 			<dl>
 				<dt>已选条件：</dt>
@@ -265,33 +226,44 @@
         window.onload = loaddata;
 
 
-        $(".searchBtn").click(function () {
-			var index = layer.msg('查询中，请稍候', {icon: 16, time: false, shade: 0.8});
-			tosubmit(1);
-			setTimeout(function () {
-				toPage();
-				layer.close(index);
-			},2000);
-        });
-
         var pageIndex = 1;
         var pageSize = 9;
         var currentPageIndex = 1;
         var recordCount = 0;
+        var result;
+        $(".search_btn").click(function () {
+            search(1);
+        });
 
-        function tosubmit(cur){
-            var textstr = document.getElementById("searchtext").value;
-            // var typestr = document.getElementById("searchtype").value;
-            if (textstr == "" || textstr == null) {
-                return;
-            }
-            var searchList = new Array();
-            searchList.push({text: textstr, yehao: cur});
+        function search(page){
+            result = searchSpot();
+            result.push({
+                page:page,
+                pageSize:9
+            });
+            var index = layer.msg('查询中，请稍候', {icon: 16, time: false, shade: 0.8});
+            setTimeout(function () {
+                tosubmit(result);
+                toPage();
+                layer.close(index);
+            }, 4000);
+        }
+
+        function loadnextpage(page){
+            result = searchSpot();
+            result.push({
+                page:page,
+                pageSize:9
+            });
+            tosubmit(result);
+        }
+
+        function tosubmit(condition){
             $.ajax({
                 //访问后台的路径
                 url: "/onclick_search",
                 //将数据通过函数转换
-                data: JSON.stringify(searchList),
+                data: JSON.stringify(condition),
                 dataType: "json",//指定数据类型为JSON
                 // 指定类型，不然会报错，无法解析提交类型
                 contentType: "application/json;charset=utf-8",
@@ -345,7 +317,7 @@
                         console.log(obj);
                         pageIndex = obj.curr;
                         if(!first){ //一定要加此判断，否则初始时会无限刷新
-                            tosubmit(obj.curr);//一定要把翻页的ajax请求放到这里，不然会请求两次。
+                            loadnextpage(obj.curr);//一定要把翻页的ajax请求放到这里，不然会请求两次。
                         }
                     }
                 });

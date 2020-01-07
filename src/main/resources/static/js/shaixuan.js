@@ -16,13 +16,14 @@ var conditions = new Array();
 
 
 function searchHotel() {
-    console.log("herre");
+
+    if(document.getElementById("txtadress").value == null||document.getElementById("txtadress").value == ""){
+        alert("请输入目的地！");
+        return;
+    }
     var destination = document.getElementById("txtadress").value;
     var address = document.getElementById("location").value;
     var name = document.getElementById("hotel_Name").value;
-    console.log(destination);
-    console.log(address);
-    console.log(name);
     var price_sort = 0;
     if (document.getElementById("pricefirst").className == 'selected') {
         price_sort = 1;
@@ -35,6 +36,51 @@ function searchHotel() {
         price:price,
         condition:conditions,
         price_sort:price_sort
+    });
+    console.log(result);
+    return result;
+}
+
+function searchGrouptravel() {
+    if(document.getElementById("txtadress").value == null||document.getElementById("txtadress").value == ""){
+        alert("请输入目的地！");
+        return;
+    }
+    var destination = document.getElementById("txtadress").value;
+    var departure = document.getElementById("departure").value;
+    var name = document.getElementById("grouptravel_Name").value;
+    var price_sort = 0;
+    if (document.getElementById("pricefirst").className == 'selected') {
+        price_sort = 1;
+    }
+    var result = new Array();
+    result.push({
+        destination:destination,
+        departure:departure,
+        name:name,
+        price:price,
+        condition:conditions,
+        price_sort:price_sort
+    });
+    console.log(result);
+    return result;
+}
+
+function searchSpot() {
+    if(document.getElementById("txtadress").value == null||document.getElementById("txtadress").value == ""){
+        alert("请输入目的地！");
+        return;
+    }
+    var destination = document.getElementById("txtadress").value;
+    var address = document.getElementById("location").value;
+    var name = document.getElementById("spot_Name").value;
+    var result = new Array();
+    result.push({
+        destination:destination,
+        address:address,
+        name:name,
+        price:price,
+        condition:conditions
     });
     console.log(result);
     return result;

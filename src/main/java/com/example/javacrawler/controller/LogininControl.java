@@ -11,6 +11,7 @@ import com.example.javacrawler.service.UserService;
 
 
 import com.github.pagehelper.PageInfo;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -89,27 +90,69 @@ public class LogininControl {
     @RequestMapping("/onclick_search")
     @ResponseBody
     public PageInfo<Spot> onclick_search(@RequestBody List<Map<String,Object>> searchList, HttpSession httpSession) {
-        String text = "";
-//        String type = "";
-        int yehao = 1;
-        Map<String, Object> searchifo = searchList.get(0);
-        text = (String) searchifo.get("text");
-//        type = (String) searchifo.get("type");
-        yehao = (int) searchifo.get("yehao");
-        Map map = new HashMap();
-        map.put("page", yehao);
-        map.put("pageSize", 9);
-        map.put("input", text);
-        map.put("size", "3");
+        Map<String, Object> inputCondition = searchList.get(0);
+        Map<String, Object> pageCondition = searchList.get(1);
 
-//        if (type.equals("spot")) {
-            PageInfo<Spot> spotPageInfo = spotservice.searchSpot(map);
-            System.out.println("当前页码：" + spotPageInfo.getPageNum());
-            System.out.println("每页记录条数：" + spotPageInfo.getPageSize());
-            System.out.println("总记录数：" + spotPageInfo.getTotal());
-            System.out.println("总页数：" + spotPageInfo.getPages());
-            System.out.println();
-            return spotPageInfo;
+        Map map = new HashMap();
+        String destination= (String) inputCondition.get("destination");
+        String location= (String) inputCondition.get("location");
+        String name= (String) inputCondition.get("name");
+        String price= (String) inputCondition.get("price");
+
+        List<String> condition= (List<String>) inputCondition.get("condition");
+        List<String> sources=new ArrayList<>();
+        List<String> degrees=new ArrayList<>();
+        for (int i=0;i<condition.size();i++){
+            String s = condition.get(i);
+            String[] split = StringUtils.split(s,"|");
+            if (split[0].equals("景区特色")){
+                degrees.add(split[1]);
+            }else if (split[0].equals("来源")){
+                sources.add(split[1]);
+            }
+        }
+
+        if (price.equals("")){
+            map.put("beginPrice",0);
+            map.put("maxPrice",666666);
+        }else {
+            String temp=StringUtils.split(price,"|")[1];
+            String[] split = temp.split("-");
+            map.put("beginPrice", Integer.parseInt(StringUtils.getDigits(split[0])));
+            map.put("maxPrice",Integer.parseInt(StringUtils.getDigits(split[1])));
+        }
+        map.put("destination",destination);
+        map.put("location",location);
+        map.put("name",name);
+
+        int page= (int) pageCondition.get("page");
+        int pageSize=(int )pageCondition.get("pageSize");
+        map.put("page",page);
+        map.put("pageSize",pageSize);
+
+        if (sources.size()==0){
+            sources.add("携程");
+            sources.add("同程");
+            sources.add("艺龙");
+            map.put("sources",sources);
+        }else {
+            map.put("sources",sources);
+        }
+
+        if (degrees.size()==0||degrees.size()==2){
+            map.put("degrees",null);
+        }else {
+            map.put("degrees",degrees.get(0));
+        }
+
+        PageInfo<Spot> SpotPageInfo = spotservice.selectSpotList(map);
+
+        System.out.println("当前页码：" + SpotPageInfo.getPageNum());
+        System.out.println("每页记录条数：" + SpotPageInfo.getPageSize());
+        System.out.println("总记录数：" + SpotPageInfo.getTotal());
+        System.out.println("总页数：" + SpotPageInfo.getPages());
+        System.out.println();
+        return SpotPageInfo;
 
 
     }

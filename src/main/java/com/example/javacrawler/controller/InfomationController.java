@@ -6,6 +6,7 @@ import com.example.javacrawler.entity.Spot;
 import com.example.javacrawler.service.GroupTravelService;
 import com.example.javacrawler.service.SpotService;
 import com.github.pagehelper.PageInfo;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -52,39 +53,72 @@ public class InfomationController {
     @RequestMapping("/onclick_searchgroup")
     @ResponseBody
     public PageInfo<GroupTravel> onclick_search(@RequestBody List<Map<String,Object>> searchList, HttpSession httpSession) {
-        String text = "";
-//        String type = "";
-        int yehao = 1;
-        int flag = 0;
-        Map<String, Object> searchifo = searchList.get(0);
-        text = (String) searchifo.get("text");
-//        type = (String) searchifo.get("type");
-        yehao = (int) searchifo.get("yehao");
-        if(searchifo.get("flag") !=null){
-            flag = (int) searchifo.get("flag");
-        }
-        Map map = new HashMap();
-        map.put("page", yehao);
-        map.put("pageSize", 9);
-        map.put("input", text);
-        map.put("size", "3");
+        Map<String, Object> inputCondition = searchList.get(0);
+        Map<String, Object> pageCondition = searchList.get(1);
 
-//        if (type.equals("spot")) {
-        PageInfo<GroupTravel> groupTravelPageInfo = grouptravelservice.searchGroup(map);
-        if(flag == 1){
-            Collections.sort(groupTravelPageInfo.getList(),new Comparator<GroupTravel>(){
-                @Override
-                public int compare(GroupTravel g1, GroupTravel g2){
-                    return  g1.getGroupPrice()-g2.getGroupPrice();
-                }
-            });
+        Map map = new HashMap();
+        String destination= (String) inputCondition.get("destination");
+        String departure= (String) inputCondition.get("departure");
+        String name= (String) inputCondition.get("name");
+        String price= (String) inputCondition.get("price");
+
+        List<String> condition= (List<String>) inputCondition.get("condition");
+        List<String> sources=new ArrayList<>();
+        List<String> degrees=new ArrayList<>();
+        for (int i=0;i<condition.size();i++){
+            String s = condition.get(i);
+            String[] split = StringUtils.split(s,"|");
+            if (split[0].equals("跟团游品质")){
+                degrees.add(split[1]);
+            }else if (split[0].equals("来源")){
+                sources.add(split[1]);
+            }
         }
-        System.out.println("当前页码：" + groupTravelPageInfo.getPageNum());
-        System.out.println("每页记录条数：" + groupTravelPageInfo.getPageSize());
-        System.out.println("总记录数：" + groupTravelPageInfo.getTotal());
-        System.out.println("总页数：" + groupTravelPageInfo.getPages());
+
+        if (price.equals("")){
+            map.put("beginPrice",0);
+            map.put("maxPrice",666666);
+        }else {
+            String temp=StringUtils.split(price,"|")[1];
+            String[] split = temp.split("-");
+            map.put("beginPrice", Integer.parseInt(StringUtils.getDigits(split[0])));
+            map.put("maxPrice",Integer.parseInt(StringUtils.getDigits(split[1])));
+        }
+        map.put("destination",destination);
+        map.put("departure",departure);
+        map.put("name",name);
+
+        int page= (int) pageCondition.get("page");
+        int pageSize=(int )pageCondition.get("pageSize");
+        int flag= (int) inputCondition.get("price_sort");
+        map.put("page",page);
+        map.put("pageSize",pageSize);
+        map.put("price_sort",String.valueOf(flag));
+
+
+        if (sources.size()==0){
+            sources.add("携程");
+            sources.add("同程");
+            sources.add("艺龙");
+            map.put("sources",sources);
+        }else {
+            map.put("sources",sources);
+        }
+
+        if (degrees.size()==0||degrees.size()==2){
+            map.put("degrees",null);
+        }else {
+            map.put("degrees",degrees.get(0));
+        }
+
+        PageInfo<GroupTravel> grouptravelPageInfo = grouptravelservice.selectGroupList(map);
+
+        System.out.println("当前页码：" + grouptravelPageInfo.getPageNum());
+        System.out.println("每页记录条数：" + grouptravelPageInfo.getPageSize());
+        System.out.println("总记录数：" + grouptravelPageInfo.getTotal());
+        System.out.println("总页数：" + grouptravelPageInfo.getPages());
         System.out.println();
-        return groupTravelPageInfo;
+        return grouptravelPageInfo;
 
 
     }

@@ -111,7 +111,7 @@ public class TicketController {
         }
 
 //        if (type.equals("spot")) {
-        PageInfo<Hotel> hotelPageInfo = hotelService.detailSearch(map);
+        PageInfo<Hotel> hotelPageInfo = hotelService.selectHotelList(map);
 //        if(flag == 1){
 //            Collections.sort(hotelPageInfo.getList(),new Comparator<Hotel>(){
 //                @Override

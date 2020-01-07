@@ -259,6 +259,11 @@
 
             window.onload = loaddata;
 
+            var pageIndex = 1;
+            var pageSize = 9;
+            var currentPageIndex = 1;
+            var recordCount = 0;
+            var spotlist = new Array();
             var result;
             $(".search_btn").click(function () {
                 search(1);
@@ -277,20 +282,26 @@
                 }, 4000);
             }
 
-            $(".searchBtn").click(function () {
-                var index = layer.msg('查询中，请稍候', {icon: 16, time: false, shade: 0.8});
-                setTimeout(function () {
-                    tosubmit(1, 0);
-                    toPage();
-                    layer.close(index);
-                }, 4000);
-            });
+            function loadnextpage(page){
+                result = searchHotel();
+                result.push({
+                    page:page,
+                    pageSize:9
+                });
+                tosubmit(result);
 
-            var pageIndex = 1;
-            var pageSize = 9;
-            var currentPageIndex = 1;
-            var recordCount = 0;
-            var spotlist = new Array();
+            }
+
+            // $(".searchBtn").click(function () {
+            //     var index = layer.msg('查询中，请稍候', {icon: 16, time: false, shade: 0.8});
+            //     setTimeout(function () {
+            //         tosubmit(1, 0);
+            //         toPage();
+            //         layer.close(index);
+            //     }, 4000);
+            // });
+
+
 
             function tosubmit(condition) {
 
@@ -356,7 +367,7 @@
                             console.log(obj);
                             pageIndex = obj.curr;
                             if (!first) { //一定要加此判断，否则初始时会无限刷新
-                                search(obj.curr);//一定要把翻页的ajax请求放到这里，不然会请求两次。
+                                loadnextpage(obj.curr);//一定要把翻页的ajax请求放到这里，不然会请求两次。
                             }
                         }
                     });
